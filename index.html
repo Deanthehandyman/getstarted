@@ -9,10 +9,11 @@
     <meta name="keywords" content="Handyman Pittsburg TX, Starlink Installer East Texas, Electrical Repair Pittsburg, RV Pad Setup, Virtual Handyman, Dean's Handyman Service">
     <meta name="author" content="Dean's Handyman Service LLC">
     
+    <link rel="icon" type="image/png" href="https://i.imgur.com/CtBcYkI.png">
+    
     <meta property="og:title" content="Dean's Handyman Service LLC - Industrial Grade Repairs">
     <meta property="og:description" content="Starlink installation, electrical, and fabrication. Serving Pittsburg, TX and Camp County.">
     <meta property="og:image" content="https://i.imgur.com/CtBcYkI.png">
-    <meta property="og:url" content="https://deezyklown.github.io/deans-handyman-service/">
     <meta property="og:type" content="business.business">
 
     <script type="application/ld+json">
@@ -21,48 +22,18 @@
       "@type": "HomeAndConstructionBusiness",
       "name": "Dean's Handyman Service LLC",
       "image": "https://i.imgur.com/CtBcYkI.png",
-      "@id": "https://deezyklown.github.io/deans-handyman-service/",
-      "url": "https://deezyklown.github.io/deans-handyman-service/",
       "telephone": "+12819179914",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "N/A",
         "addressLocality": "Pittsburg",
         "addressRegion": "TX",
         "postalCode": "75686",
         "addressCountry": "US"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 32.9960,
-        "longitude": -94.9674
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
       "priceRange": "$$",
       "sameAs": [
-        "https://www.facebook.com/DeansHandymanServiceLLC",
         "https://share.google/c7yv3c0NZ0660qyeD"
-      ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 32.9960,
-            "longitude": -94.9674
-        },
-        "geoRadius": "50000"
-      }
+      ]
     }
     </script>
     
@@ -71,7 +42,7 @@
     <style>
         /* --- RESET & BASICS --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; overflow-x: hidden; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; overflow-x: hidden; padding-bottom: 0; }
         html { scroll-behavior: smooth; }
 
         /* --- BRAND COLORS --- */
@@ -186,7 +157,8 @@
         .reviewer-icon { width: 40px; height: 40px; background: #2c3e50; color: white; border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
         
         /* --- FAQ SECTION (AEO Optimized) --- */
-        .faq-item { background: white; border: 1px solid #eee; padding: 20px; margin-bottom: 15px; border-radius: 6px; }
+        .faq-item { background: white; border: 1px solid #eee; padding: 20px; margin-bottom: 15px; border-radius: 6px; transition: 0.3s; }
+        .faq-item:hover { border-color: var(--primary); }
         .faq-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary); }
         .faq-item p { margin-bottom: 0; color: #555; }
 
@@ -206,7 +178,29 @@
         .footer-col a { color: #aaa; text-decoration: none; transition: 0.3s; }
         .footer-col a:hover { color: var(--accent); }
 
-        /* --- MOBILE --- */
+        /* --- MOBILE STICKY BAR (New) --- */
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 1000;
+        }
+        .sticky-btn {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        .sticky-call { background: var(--primary); color: white; }
+        .sticky-book { background: var(--accent); color: var(--dark); }
+
         @media (max-width: 768px) {
             .hero-layout, .split-layout { flex-direction: column; }
             .hero-text { text-align: center; }
@@ -215,6 +209,8 @@
             .mobile-cta { display: block; }
             h1 { font-size: 2rem; }
             .logo-text { display: none; }
+            .sticky-footer { display: flex; } /* Show sticky bar on mobile */
+            body { padding-bottom: 60px; } /* Add padding so footer doesn't hide content */
         }
     </style>
 </head>
@@ -401,6 +397,24 @@
         </div>
     </section>
 
+    <section class="section" style="background-color: #e9ecef;">
+        <div class="container">
+            <h2>Service Area</h2>
+            <p class="section-sub">Proudly serving Pittsburg, Camp County, and surrounding East Texas communities.</p>
+            <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106932.79374028656!2d-95.0336952796123!3d32.99602494192463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863660a5c2b3e5b3%3A0x2a0c7c3c5c5c5c5c!2sPittsburg%2C%20TX%2075686!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="faq" style="background-color: var(--white);">
         <div class="container">
             <h2>Common Questions</h2>
@@ -493,6 +507,11 @@
             </div>
         </div>
     </footer>
+
+    <div class="sticky-footer">
+        <a href="tel:2819179914" class="sticky-btn sticky-call">📞 Call Now</a>
+        <a href="#contact" class="sticky-btn sticky-book">📅 Book Online</a>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
