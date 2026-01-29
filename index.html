@@ -4,52 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Dean's Handyman Service LLC | Starlink & Electrical | Ark-La-Tex</title>
-    <meta name="description" content="Expert handyman, Starlink installer, and electrical repair based in Pittsburg, TX. Serving the entire Ark-La-Tex region. Book online or call (281) 917-9914.">
-    <meta name="keywords" content="Handyman Pittsburg TX, Starlink Installer East Texas, Electrical Repair Pittsburg, RV Pad Setup, Virtual Handyman, Dean's Handyman Service Pittsburg TX">
+    <title>Dean's Handyman Service | Starlink Installer & Virtual DIY Help | Pittsburg, TX</title>
+    <meta name="description" content="Expert handyman in Pittsburg, TX owned by Dean. Specializing in Starlink installation, industrial-grade home repairs, and nationwide Virtual DIY Video Consultations.">
+    <meta name="keywords" content="Handyman Pittsburg TX, Starlink Installer, Virtual Handyman, Dean, DIY Help, East Texas Construction, RV Repair Pittsburg">
     <meta name="author" content="Dean's Handyman Service LLC">
     <meta name="robots" content="index, follow">
     
     <link rel="icon" type="image/png" href="https://i.imgur.com/CtBcYkI.png">
     
-    <meta property="og:title" content="Dean's Handyman Service LLC - Industrial Grade Repairs">
-    <meta property="og:description" content="Starlink installation, electrical, and fabrication. Serving Pittsburg, TX and the entire Ark-La-Tex region.">
+    <meta property="og:title" content="Dean's Handyman Service - Starlink & Virtual Pros">
+    <meta property="og:description" content="Don't wait for an appointment. Fix it now with Dean's Virtual DIY Help or book an onsite Starlink install in East Texas.">
     <meta property="og:image" content="https://i.imgur.com/CtBcYkI.png">
     <meta property="og:type" content="business.business">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Dean's Handyman Service LLC",
-      "image": "https://i.imgur.com/CtBcYkI.png",
-      "telephone": "+12819179914",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pittsburg",
-        "addressRegion": "TX",
-        "postalCode": "75686",
-        "addressCountry": "US"
-      },
-      "priceRange": "$$",
-      "sameAs": [
-        "https://share.google/c7yv3c0NZ0660qyeD",
-        "https://www.amazon.com/shop/deanthehandyman"
-      ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://deanshandymanservice.me/#localbusiness",
+          "name": "Dean's Handyman Service LLC",
+          "image": "https://i.imgur.com/CtBcYkI.png",
+          "telephone": "+1-281-917-9914",
+          "url": "https://deanshandymanservice.me",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Pittsburg",
+            "addressLocality": "Pittsburg",
+            "addressRegion": "TX",
+            "postalCode": "75686",
+            "addressCountry": "US"
+          },
+          "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 32.9960,
-            "longitude": -94.9674
+            "latitude": 32.9972,
+            "longitude": -94.9683
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Pittsburg" },
+            { "@type": "City", "name": "Mount Pleasant" },
+            { "@type": "City", "name": "Gilmer" },
+            { "@type": "City", "name": "East Texas" }
+          ],
+          "priceRange": "$$",
+          "founder": {
+            "@type": "Person",
+            "name": "Dean",
+            "jobTitle": "Owner & Lead Technician",
+            "knowsAbout": ["Industrial Construction", "Starlink Installation", "Electrical", "Fabrication"]
+          }
         },
-        "geoRadius": "160000" 
-      }
+        {
+          "@type": "Service",
+          "name": "Virtual Handyman Consultation",
+          "description": "Remote video diagnostics and DIY guidance for home repairs, RV maintenance, and Starlink troubleshooting.",
+          "provider": { "@id": "https://deanshandymanservice.me/#localbusiness" }
+        }
+      ]
     }
     </script>
     
     <script src="https://www.paypal.com/sdk/js?client-id=BAAy9tb8K7YLIFkRATKENXVH7y-7Uc1Au3XwHxzdf5VXxCV0tD5xZw7S6dgRFaBCHZlHfd5S4NgDvWRCLo&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
@@ -59,7 +75,7 @@
         html { scroll-behavior: smooth; }
         img { max-width: 100%; height: auto; }
 
-        /* --- BRAND COLORS --- */
+        /* --- COLORS --- */
         :root {
             --primary: #008bd2; 
             --primary-dark: #006fa8;
@@ -122,7 +138,7 @@
         .form-submit { width: 100%; margin-top: 10px; }
         .secure-note { font-size: 0.8rem; color: #777; text-align: center; margin-top: 15px; }
 
-        /* --- PAYPAL SECTION --- */
+        /* --- PAYMENT SECTION --- */
         .payment-card { background: white; max-width: 500px; margin: 0 auto; padding: 30px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; }
         
         /* --- SPLIT SECTION --- */
@@ -145,13 +161,25 @@
         .gallery-item:hover img { transform: scale(1.05); }
         .gallery-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); color: white; padding: 12px; font-weight: 600; }
 
-        /* --- REVIEWS --- */
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .review-card { background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; }
-        .stars { color: var(--accent); font-size: 1.2rem; margin-bottom: 10px; letter-spacing: 2px; }
-        .reviewer { display: flex; align-items: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px; }
-        .reviewer-icon { width: 40px; height: 40px; background: #2c3e50; color: white; border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        
+        /* --- REVIEWS (NEW) --- */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .review-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid var(--accent); }
+        .review-stars { color: var(--accent); margin-bottom: 10px; font-size: 1.2rem; }
+        .review-text { font-style: italic; color: #555; margin-bottom: 20px; }
+        .review-author { font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .review-badge { background: #eef; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; color: var(--primary-dark); }
+
+        /* --- FAQ DROPDOWNS (NEW) --- */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        details { background: #fff; margin-bottom: 15px; border-radius: 8px; border: 1px solid #e0e0e0; overflow: hidden; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        details:hover { border-color: var(--primary); }
+        details[open] { border-left: 4px solid var(--primary); }
+        summary { padding: 20px; font-weight: 700; cursor: pointer; list-style: none; position: relative; font-size: 1.1rem; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; position: absolute; right: 20px; font-weight: 300; font-size: 1.5rem; color: var(--primary); }
+        details[open] summary::after { content: '-'; }
+        .faq-answer { padding: 0 20px 20px 20px; color: #555; line-height: 1.7; border-top: 1px solid #f0f0f0; margin-top: 10px; padding-top: 15px; }
+
         /* --- SERVICES --- */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #eee; transition: 0.3s; position: relative; overflow: hidden; }
@@ -200,8 +228,8 @@
             <nav class="nav-links">
                 <a href="#starlink">Starlink</a>
                 <a href="#virtual">Virtual Services</a>
-                <a href="#gear">Shop Gear</a>
                 <a href="#projects">Work</a>
+                <a href="#reviews">Reviews</a>
                 <a href="#payment" class="nav-pay-btn">Pay Invoice</a>
                 <a href="tel:2819179914" class="btn btn-primary" style="margin-left: 20px;">(281) 917-9914</a>
             </nav>
@@ -293,8 +321,8 @@
 
     <section class="section virtual-section" id="virtual">
         <div class="container">
-            <h2 data-aos="fade-up">Virtual Diagnostics & Consulting</h2>
-            <p class="section-sub" data-aos="fade-up">Expert advice without the service call fee. Available Nationwide.</p>
+            <h2 data-aos="fade-up">Don't Wait. Fix it Now.</h2>
+            <p class="section-sub" data-aos="fade-up">Get Dean on a video call instantly. Expert advice for DIYers, Starlink setups, and RV troubleshooting.</p>
             <div class="virtual-grid">
                 <div class="virtual-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="virtual-icon">💻</div>
@@ -377,11 +405,92 @@
         </div>
     </section>
 
-    <section class="section" style="background-color: #e9ecef;">
+    <section class="section" id="reviews" style="background-color: var(--white);">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <p class="section-sub">Trusted by homeowners in Pittsburg and across the US for virtual help.</p>
+            <div class="reviews-grid">
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Dean got my Starlink mounted on a steep metal roof when other installers said it couldn't be done. Cables are hidden perfectly. Highly recommend!"</p>
+                    <div class="review-author">
+                        <span>Local Customer</span> <span class="review-badge">Starlink Install</span>
+                    </div>
+                </div>
+                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I was stuck on an RV electrical issue for days. Booked a virtual call with Dean, and he walked me through the fix in 20 minutes. Saved me a service call fee!"</p>
+                    <div class="review-author">
+                        <span>Online Client</span> <span class="review-badge">Virtual Consult</span>
+                    </div>
+                </div>
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Professional, on time, and actually has the tools to do the job right. It's hard to find reliable help in East Texas, but Dean is the real deal."</p>
+                    <div class="review-author">
+                        <span>Property Owner</span> <span class="review-badge">General Repair</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <p class="section-sub">Answers about Virtual Services and Local Repairs.</p>
+            <div class="faq-container">
+                
+                <details data-aos="fade-up">
+                    <summary>Can I really fix my problem over a video call?</summary>
+                    <div class="faq-answer">
+                        <p>Yes! For many issues (RV troubleshooting, Starlink setup, simple electrical), you just need expert eyes on the problem. Dean will guide you step-by-step. If we determine the job is too dangerous or complex for DIY, we will let you know immediately.</p>
+                    </div>
+                </details>
+
+                <details data-aos="fade-up">
+                    <summary>How does the Virtual Consultation work?</summary>
+                    <div class="faq-answer">
+                        <p>It's simple. You book a time slot online. We send you a link. At the scheduled time, you click the link on your phone, point your camera at the problem, and Dean walks you through the solution.</p>
+                    </div>
+                </details>
+
+                <details data-aos="fade-up">
+                    <summary>Do you install Starlink in Pittsburg, TX?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, we specialize in Starlink installation in Pittsburg and Camp County. We handle roof mounting, cable routing, and Wi-Fi mesh optimization for the best signal.</p>
+                    </div>
+                </details>
+
+                <details data-aos="fade-up">
+                    <summary>What is your service area?</summary>
+                    <div class="faq-answer">
+                        <p>For physical repairs, we serve a 100-mile radius around Pittsburg, TX (including Mt. Pleasant, Gilmer, Longview, Tyler). For Virtual Consultations, we serve the entire USA.</p>
+                    </div>
+                </details>
+
+                <details data-aos="fade-up">
+                    <summary>Are you insured?</summary>
+                    <div class="faq-answer">
+                        <p>Absolutely. Dean's Handyman Service LLC is fully insured. We take safety and property protection seriously, bringing industrial standards to residential work.</p>
+                    </div>
+                </details>
+
+                <details data-aos="fade-up">
+                    <summary>Can I get a handyman estimate online?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, fill out our quote form to receive a fast callback, or book a virtual consultation to show us your project over video chat before we arrive.</p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--white);">
         <div class="container">
             <h2>Service Area: Ark-La-Tex</h2>
-            <p class="section-sub">Based in Pittsburg, TX - Serving a 100-mile radius including Longview, Tyler, Shreveport, and Texarkana.</p>
-            <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px;">
                 <iframe 
                     src="https://maps.google.com/maps?q=Pittsburg%2C%20TX&t=&z=8&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
@@ -402,27 +511,6 @@
             
             <div class="payment-card">
                 <div id="paypal-container-5K2C7REPQDQVU"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="faq" style="background-color: var(--white);">
-        <div class="container">
-            <h2>Common Questions</h2>
-            <p class="section-sub">Everything you need to know about our services.</p>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item" data-aos="fade-up">
-                    <h3>Do you install Starlink in Pittsburg, TX?</h3>
-                    <p>Yes, we specialize in Starlink installation in Pittsburg and Camp County. We handle roof mounting, cable routing, and Wi-Fi mesh optimization for the best signal.</p>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h3>What kind of handyman services do you offer?</h3>
-                    <p>Dean's Handyman Service LLC handles industrial and residential repairs, including electrical, plumbing fixtures, custom fabrication, carpentry, and RV pad maintenance.</p>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h3>Can I get a handyman estimate online?</h3>
-                    <p>Yes, fill out our quote form to receive a fast callback, or book a virtual consultation to show us your project over video chat before we arrive.</p>
-                </div>
             </div>
         </div>
     </section>
