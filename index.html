@@ -8,7 +8,7 @@
     <meta name="description" content="Industrial-grade Starlink installer & handyman based in Pittsburg, TX. Serving ALL of Texas. First 100 miles are NO TRIP FEE. Call Dean: (281) 917-9914.">
     <meta name="keywords" content="Starlink Installer Texas, Handyman Pittsburg TX, RV Starlink Setup, Virtual Handyman, Rural Internet Texas, Dean Elkins Handyman">
     <meta name="author" content="Dean's Handyman Service LLC">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="robots" content="index, follow">
     
     <link rel="icon" type="image/png" href="https://i.imgur.com/CtBcYkI.png">
     
@@ -16,13 +16,7 @@
     <meta property="og:url" content="https://deanshandymanservice.me/">
     <meta property="og:title" content="Dean's Starlink & Handyman - Texas Wide">
     <meta property="og:description" content="We travel Texas-wide. First 100 miles from Pittsburg, TX are FREE of trip charges. Book your Starlink or repair today.">
-    <meta property="og:image" content="https://i.imgur.com/CtBcYkI.png">
-    
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://deanshandymanservice.me/">
-    <meta property="twitter:title" content="Dean's Starlink & Handyman - Texas Wide">
-    <meta property="twitter:description" content="Industrial-grade Starlink installation. No trip fee for first 100 miles.">
-    <meta property="twitter:image" content="https://i.imgur.com/CtBcYkI.png">
+    <meta property="og:image" content="https://i.imgur.com/zjUqpb6.jpeg">
 
     <meta name="geo.region" content="US-TX">
     <meta name="geo.placename" content="Pittsburg">
@@ -36,7 +30,7 @@
         "@type": "LocalBusiness",
         "@id": "https://deanshandymanservice.me/#localbusiness",
         "name": "Dean's Handyman Service LLC",
-        "image": "https://i.imgur.com/CtBcYkI.png",
+        "image": "https://i.imgur.com/zjUqpb6.jpeg",
         "telephone": "+1-281-917-9914",
         "url": "https://deanshandymanservice.me",
         "address": {
@@ -52,26 +46,9 @@
           "latitude": 32.9972,
           "longitude": -94.9683
         },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "07:00",
-          "closes": "19:00"
-        },
         "areaServed": [
           { "@type": "State", "name": "Texas" },
-          { 
-             "@type": "GeoCircle", 
-             "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 32.9972, "longitude": -94.9683 }, 
-             "geoRadius": "160934" 
-          }
+          { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 32.9972, "longitude": -94.9683 }, "geoRadius": "160934" }
         ],
         "priceRange": "$$",
         "founder": {
@@ -83,24 +60,9 @@
           "@type": "OfferCatalog",
           "name": "Starlink Installation Packages",
           "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Standard Starlink Install" },
-              "price": "350.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Whole-Home Mesh Package" },
-              "price": "550.00",
-              "priceCurrency": "USD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Custom RV/Off-Grid Setup" },
-              "price": "750.00",
-              "priceCurrency": "USD"
-            }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Standard Starlink Install" }, "price": "350.00", "priceCurrency": "USD" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Whole-Home Mesh Package" }, "price": "550.00", "priceCurrency": "USD" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom RV/Off-Grid Setup" }, "price": "750.00", "priceCurrency": "USD" }
           ]
         }
       },
@@ -108,38 +70,7 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How far do you travel for Starlink installation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We travel Texas-Wide! The first 100 miles from Pittsburg, TX (zip 75686) are completely FREE of trip charges. If you are further out, we just charge a fair mileage rate for the difference."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you install Starlink in Pittsburg, TX?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, we serve Pittsburg, Camp County, Mt. Pleasant, and Gilmer. We handle roof mounts, obstruction clearing, and cable management."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does the Virtual Handyman service work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "It's easy. You book a time online, we send a link. You click the link on your phone, point your camera at the problem (RV, electrical, etc.), and Dean guides you through the fix."
-            }
-          },
-          {
-             "@type": "Question",
-             "name": "Can you do electrical work?",
-             "acceptedAnswer": {
-               "@type": "Answer",
-               "text": "Dean has an industrial electrical background. We handle fixture replacements, outlets, troubleshooting, and RV electrical systems."
-             }
-          }
+          { "@type": "Question", "name": "How far do you travel?", "acceptedAnswer": { "@type": "Answer", "text": "Texas-Wide! First 100 miles from Pittsburg, TX are FREE of trip charges." } }
         ]
       }
     ]
@@ -180,12 +111,13 @@
         .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
         .btn-accent { background-color: var(--accent); color: var(--dark); font-size: 1.1rem; box-shadow: 0 4px 15px rgba(240, 165, 0, 0.4); }
         .btn-accent:hover { background-color: #d48f00; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: white; }
         
         /* --- HEADER --- */
         header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; height: 80px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100%; position: relative; }
-        
         .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); }
         .logo-img { height: 60px; width: auto; display: block; }
         .logo-text { font-weight: 800; font-size: 1.2rem; line-height: 1.1; text-transform: uppercase; }
@@ -197,15 +129,9 @@
         .nav-links a:hover { color: var(--primary); }
         .nav-pay-btn { background: var(--venmo-blue); color: white !important; padding: 8px 16px; border-radius: 4px; }
 
-        /* Mobile Menu Button */
+        /* Mobile Menu */
         .mobile-menu-btn { display: none; font-size: 2.2rem; color: var(--dark); cursor: pointer; padding: 10px; z-index: 1002; }
-
-        /* Mobile Nav Overlay */
-        .mobile-nav-overlay {
-            position: fixed; top: 80px; left: 0; width: 100%; background: white;
-            box-shadow: 0 10px 10px rgba(0,0,0,0.1); padding: 20px;
-            display: none; flex-direction: column; gap: 15px; border-top: 1px solid #eee; z-index: 999;
-        }
+        .mobile-nav-overlay { position: fixed; top: 80px; left: 0; width: 100%; background: white; box-shadow: 0 10px 10px rgba(0,0,0,0.1); padding: 20px; display: none; flex-direction: column; gap: 15px; border-top: 1px solid #eee; z-index: 999; }
         .mobile-nav-overlay a { text-decoration: none; color: #333; font-weight: 700; font-size: 1.2rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; display: block; }
 
         /* --- HERO --- */
@@ -234,6 +160,21 @@
         .price-features { list-style: none; margin-bottom: 25px; text-align: left; }
         .price-features li { padding: 8px 0; border-bottom: 1px solid #f9f9f9; font-size: 0.95rem; }
         .price-features li::before { content: '✓'; color: var(--primary); margin-right: 8px; font-weight: bold; }
+
+        /* --- PROOF OF WORK (GRID) --- */
+        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .work-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition:0.3s; }
+        .work-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        .work-img-container { height: 250px; overflow: hidden; position: relative; background: #ddd; }
+        .work-img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .work-card:hover img { transform: scale(1.05); }
+        .work-details { padding: 20px; }
+        .work-title { font-weight: 800; color: var(--primary); font-size: 1.1rem; margin-bottom: 5px; }
+        .work-desc { font-size: 0.9rem; color: #666; }
+        
+        /* --- ABOUT (SPLIT LAYOUT) --- */
+        .split-layout { display: flex; align-items: center; gap: 50px; }
+        .split-image img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
 
         /* --- SECTIONS --- */
         .section { padding: 60px 0; }
@@ -276,9 +217,8 @@
         .sticky-call { background: var(--primary); color: white; }
         .sticky-book { background: var(--accent); color: var(--dark); }
 
-        /* --- MOBILE TWEAKS --- */
         @media (max-width: 900px) {
-            .hero-layout { flex-direction: column; }
+            .hero-layout, .split-layout { flex-direction: column; }
             .hero-text { text-align: center; }
             .hero-text ul { display: inline-block; text-align: left; }
             .nav-links { display: none; } 
@@ -300,7 +240,8 @@
             
             <nav class="nav-links">
                 <a href="#starlink-landing">Starlink</a>
-                <a href="#virtual">Virtual Services</a>
+                <a href="#projects">My Work</a>
+                <a href="#virtual">Virtual</a>
                 <a href="#gear">Shop Gear</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#faq">FAQ</a>
@@ -313,10 +254,10 @@
         
         <div class="mobile-nav-overlay" id="mobileMenu">
             <a href="#starlink-landing" onclick="toggleMenu()">Starlink Install</a>
+            <a href="#projects" onclick="toggleMenu()">Real Project Photos</a>
             <a href="#virtual" onclick="toggleMenu()">Virtual Services</a>
             <a href="#gear" onclick="toggleMenu()">Shop Gear</a>
             <a href="#reviews" onclick="toggleMenu()">Reviews</a>
-            <a href="#faq" onclick="toggleMenu()">Common Questions</a>
             <a href="#contact" onclick="toggleMenu()">Get Quote</a>
             <a href="#payment" style="color:var(--venmo-blue);">Pay Invoice</a>
         </div>
@@ -425,6 +366,78 @@
                     </ul>
                     <button onclick="selectPackage('Starlink Custom RV - $750')" class="btn btn-outline" style="width:100%">Select Plan</button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects" style="background-color: var(--white);">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Real Work. Real Results.</h2>
+                <p class="section-sub">We don't hide cables. We don't cut corners. We fix the messes other installers leave behind.</p>
+            </div>
+            
+            <div class="work-grid">
+                <div class="work-card" data-aos="fade-up">
+                    <div class="work-img-container">
+                        <img src="https://i.imgur.com/zjUqpb6.jpeg" alt="Professional Starlink Roof Mount">
+                    </div>
+                    <div class="work-details">
+                        <div class="work-title">Ridge Mount & Drip Loop</div>
+                        <div class="work-desc">Zero-leak roof penetration using industrial flashing. Clean "drip loop" prevents water entry.</div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="work-img-container">
+                        <img src="https://i.imgur.com/nKcvlwk.jpeg" alt="Custom Metal Fabrication">
+                    </div>
+                    <div class="work-details">
+                        <div class="work-title">Custom Fabrication</div>
+                        <div class="work-desc">We fabricate custom brackets and mounting solutions for shops, barndominiums, and off-grid setups.</div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="work-img-container">
+                        <img src="https://i.imgur.com/3a9CgTr.jpeg" alt="Electrical Panel Work">
+                    </div>
+                    <div class="work-details">
+                        <div class="work-title">Electrical & Code Compliance</div>
+                        <div class="work-desc">Industrial-background electrical work. Every wire is labeled, routed neatly, and secured to code.</div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="work-img-container">
+                        <img src="https://i.imgur.com/Bv3glmi.jpeg" alt="Mobile Handyman Unit">
+                    </div>
+                    <div class="work-details">
+                        <div class="work-title">Mobile Industrial Unit</div>
+                        <div class="work-desc">We arrive fully self-sufficient with power, welders, and heavy tools on board.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about" style="background-color: var(--light);">
+        <div class="container split-layout">
+            <div class="split-image" style="flex:1;" data-aos="fade-right">
+                <img src="https://i.imgur.com/Bv3glmi.jpeg" alt="Dean's Handyman Service Shop and Tools">
+            </div>
+            <div style="flex:1;" data-aos="fade-left">
+                <h2>Fully Equipped & Ready To Work</h2>
+                <p>When you hire <strong>Dean's Handyman Service LLC</strong>, you aren't just getting a guy with a hammer. You are getting a fully equipped mobile workshop.</p>
+                <p>We arrive on-site with the industrial tools and materials needed to handle everything from precision electrical work to heavy fabrication.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom:10px;">✅ <strong>Self-Sufficient:</strong> Power, tools, and parts on board.</li>
+                    <li style="margin-bottom:10px;">✅ <strong>Commercial Grade:</strong> We use professional equipment, not DIY homeowner tools.</li>
+                    <li style="margin-bottom:10px;">✅ <strong>Clean & Safe:</strong> We respect your property and leave the job site cleaner than we found it.</li>
+                </ul>
+                <br>
+                <a href="#contact" class="btn btn-primary">Schedule A Visit</a>
             </div>
         </div>
     </section>
@@ -579,7 +592,6 @@
     <script>
       AOS.init({ duration: 800, once: true });
 
-      // --- MOBILE MENU LOGIC ---
       function toggleMenu() {
           var menu = document.getElementById("mobileMenu");
           if (menu.style.display === "flex") {
@@ -589,31 +601,21 @@
           }
       }
 
-      // --- PRICING TABLE SELECTION LOGIC ---
       function selectPackage(packageName) {
-          // Scroll to form
           const formSection = document.getElementById('contact');
           formSection.scrollIntoView({ behavior: 'smooth' });
-          
-          // Set Dropdown
           const serviceSelect = document.getElementById('service');
           serviceSelect.value = "Starlink Install";
-          
-          // Pre-fill details
           const detailsArea = document.getElementById('details');
           detailsArea.value = "I am interested in the " + packageName + " package.";
       }
 
-      // --- PAYPAL LOGIC ---
       paypal.HostedButtons({
         hostedButtonId: "5K2C7REPQDQVU",
       }).render("#paypal-container-5K2C7REPQDQVU");
 
-      // --- FORM LOGIC ---
       const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl"; 
       const ONSITE_CALENDAR = "https://calendar.app.google/zJTuuvnVncbQg5LT9";
-      
-      // REFERRAL LINK EMBEDDED
       const REFERRAL_LINK = "https://starlink.com/residential?referral=RC-2034578-19016-61&app_source=share"; 
 
       document.getElementById('quoteForm').addEventListener('submit', function(e) {
@@ -638,7 +640,6 @@
           })
           .then(response => {
               if (response.ok) {
-                  // STARLINK SUCCESS POP-UP LOGIC
                   if (service === "Starlink Install") {
                        if(confirm("Request Received! Have you ordered your Starlink Kit yet?\n\nClick OK to use our link and get 1 MONTH FREE.")) {
                            window.open(REFERRAL_LINK, '_blank');
