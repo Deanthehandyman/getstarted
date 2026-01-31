@@ -179,6 +179,13 @@
         .btn-write { background: var(--google-blue); color: white; border: none; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; }
         .btn-write:hover { background: #3367d6; transform: translateY(-2px); }
 
+        /* --- COMPARISON TABLE --- */
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 5px 20px rgba(0,0,0,0.05); font-size: 0.9rem; }
+        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .comparison-table th { background: var(--primary-dark); color: white; text-transform: uppercase; font-size: 0.85rem; }
+        .comparison-table .check { color: green; font-weight: bold; }
+        .highlight-col { background: #f0f9ff; border-left: 2px solid var(--primary); border-right: 2px solid var(--primary); font-weight: 600; }
+
         /* --- FAQ --- */
         details { background: #fff; margin-bottom: 10px; border-radius: 6px; border: 1px solid #e0e0e0; overflow: hidden; }
         summary { padding: 15px 20px; font-weight: 700; cursor: pointer; list-style: none; position: relative; font-size: 1rem; background: #fdfdfd; color: var(--primary-dark); }
@@ -269,7 +276,7 @@
             <div class="action-card" id="contact" data-aos="fade-left">
                 <div class="card-tabs">
                     <button class="card-tab active" onclick="switchTab('bot', this)">🤖 Instant Estimate</button>
-                    <button class="card-tab" onclick="switchTab('form', this)">💬 WhatsApp</button>
+                    <button class="card-tab" onclick="switchTab('form', this)">📧 Send Message</button>
                 </div>
                 
                 <div class="card-content">
@@ -471,13 +478,13 @@
                     <div class="virtual-icon">💻</div>
                     <h3 style="color:white;">Remote Starlink Support</h3>
                     <p>Slow speeds? App issues? We can log in remotely or guide you through settings optimization over a video call.</p>
-                    <a href="https://calendar.app.google/3jvHznREqAbg2WaA8" class="btn btn-primary" style="margin-top:15px; width:100%;" target="_blank">Book Tech Session</a>
+                    <a href="javascript:void(0)" onclick="bookViaWhatsApp('Remote Starlink Support')" class="btn btn-primary" style="margin-top:15px; width:100%;">Schedule on WhatsApp</a>
                 </div>
                 <div class="virtual-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="virtual-icon">📹</div>
                     <h3 style="color:white;">DIY Video Consult</h3>
                     <p>Stuck on a repair? Video call us. Show us the problem, and we'll walk you through the fix step-by-step.</p>
-                    <a href="https://calendar.app.google/3jvHznREqAbg2WaA8" class="btn btn-primary" style="margin-top:15px; width:100%;" target="_blank">Book Video Consult</a>
+                    <a href="javascript:void(0)" onclick="bookViaWhatsApp('DIY Video Consult')" class="btn btn-primary" style="margin-top:15px; width:100%;">Schedule on WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -665,6 +672,13 @@
           document.getElementById('details').value = "I used the estimator for " + service + ". I accept the estimated range of " + price + ". Please contact me to schedule.";
       }
 
+      // --- NEW FUNCTION FOR VIRTUAL SERVICES ---
+      function bookViaWhatsApp(serviceName) {
+          let message = "Hi Dean, I'd like to book a " + serviceName + " session.";
+          let encodedMessage = encodeURIComponent(message);
+          window.location.href = "https://wa.me/12819179914?text=" + encodedMessage;
+      }
+
       paypal.HostedButtons({
         hostedButtonId: "5K2C7REPQDQVU",
       }).render("#paypal-container-5K2C7REPQDQVU");
@@ -691,11 +705,9 @@
           // Encode for URL
           const encodedMessage = encodeURIComponent(message);
           
-          // Open WhatsApp
+          // Open WhatsApp using window.location.href (Mobile Safe)
           // Using your direct number
-          const whatsappURL = "https://wa.me/12819179914?text=" + encodedMessage;
-          
-          window.open(whatsappURL, '_blank');
+          window.location.href = "https://wa.me/12819179914?text=" + encodedMessage;
       });
     </script>
 </body>
