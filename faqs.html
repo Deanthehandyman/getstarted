@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Customer FAQs | Dean's Handyman Service LLC | Pittsburg, TX</title>
-    <meta name="description" content="Frequently asked questions about Starlink installation, electrical repair costs, and service areas for Dean's Handyman Service LLC in East Texas.">
-    <meta name="keywords" content="Starlink Installation Cost Texas, Handyman Service Area Pittsburg, RV Repair FAQs, Electrical Troubleshooting Cost">
+    <title>Technical FAQs | Dean's Handyman Service LLC | Pittsburg, TX</title>
+    <meta name="description" content="Common questions about Starlink obstruction, electrical safety, and RV repair in East Texas. Real answers from Dean's Handyman Service LLC.">
+    <meta name="keywords" content="Starlink Trees East Texas, Handyman FAQ, RV Breaker Tripping, Electrical Repair Cost Pittsburg TX">
     <meta name="author" content="Dean's Handyman Service LLC">
     
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -14,8 +14,8 @@
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deanshandymanservice.me/faqs">
-    <meta property="og:title" content="Dean's Handyman FAQs - Answers & Pricing">
-    <meta property="og:description" content="Questions about Starlink or Repairs? Get answers and pricing here.">
+    <meta property="og:title" content="Dean's Handyman - Technical FAQ">
+    <meta property="og:description" content="Real answers about Starlink, Ranches, and Repairs.">
     <meta property="og:image" content="https://i.postimg.cc/4NzfWL81/20251230-113812.jpg">
 
     <link rel="icon" type="image/jpg" href="https://i.postimg.cc/qvsGMT1Z/IMG-20240820-102606-912.jpg">
@@ -32,7 +32,7 @@
         h1, h2, h3 { color: var(--primary-dark); font-weight: 800; letter-spacing: -0.5px; }
         h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; }
         h2 { font-size: 2rem; text-align: center; margin-bottom: 15px; }
-        h3 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h3 { font-size: 1.4rem; margin-top: 40px; margin-bottom: 20px; color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
         .section-sub { text-align: center; color: #666; margin-bottom: 50px; font-size: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;}
         
         /* --- BUTTONS --- */
@@ -56,14 +56,14 @@
         .nav-links a { color: var(--primary-dark); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
         
         /* --- FAQ STYLES --- */
-        details { background: #fff; margin-bottom: 10px; border-radius: 6px; border: 1px solid #e0e0e0; overflow: hidden; transition: 0.3s; }
-        details:hover { border-color: var(--primary); }
-        summary { padding: 15px 20px; font-weight: 700; cursor: pointer; list-style: none; position: relative; font-size: 1rem; background: #fdfdfd; color: var(--primary-dark); }
-        summary::after { content: '+'; position: absolute; right: 20px; font-weight: 300; font-size: 1.5rem; color: var(--accent); top: 50%; transform: translateY(-55%); }
-        details[open] summary::after { content: '-'; }
-        details[open] summary { background: #f0f9ff; border-bottom: 1px solid #eee; }
-        .faq-answer { padding: 20px; color: #555; line-height: 1.6; background: #fff; font-size: 0.95rem; }
-        .faq-answer a { color: var(--primary); font-weight: bold; text-decoration: underline; }
+        details { background: #fff; margin-bottom: 12px; border-radius: 6px; border: 1px solid #e0e0e0; overflow: hidden; transition: 0.3s; }
+        details:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        summary { padding: 18px 25px; font-weight: 700; cursor: pointer; list-style: none; position: relative; font-size: 1.05rem; background: #fff; color: #333; padding-right: 50px; }
+        summary::after { content: '+'; position: absolute; right: 25px; font-weight: 800; font-size: 1.5rem; color: var(--accent); top: 50%; transform: translateY(-55%); transition: 0.3s; }
+        details[open] summary::after { content: '-'; transform: translateY(-55%) rotate(180deg); }
+        details[open] summary { background: #f8fafc; border-bottom: 1px solid #eee; color: var(--primary); }
+        .faq-answer { padding: 25px; color: #555; line-height: 1.7; background: #fff; font-size: 0.95rem; }
+        .faq-answer strong { color: var(--dark); }
 
         /* --- FOOTER --- */
         footer { background: #0f172a; color: #94a3b8; padding: 50px 0; margin-bottom: 50px; }
@@ -127,65 +127,110 @@
     <div class="section" style="padding-top: 60px;">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h1>Technical Service FAQs</h1>
-                <p class="section-sub">Direct answers to common questions about Starlink, electrical repairs, and specialized handyman services in the Ark-La-Tex.</p>
+                <h1>Technical FAQ</h1>
+                <p class="section-sub">Straight answers about Starlink, Ranches, and Repairs. No corporate fluff—just the facts.</p>
             </div>
 
-            <div class="faq-container" style="max-width: 900px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto;">
                 
-                <h3 data-aos="fade-up">📡 Starlink Integration</h3>
+                <h3 data-aos="fade-right">📡 Starlink & Internet</h3>
                 <details data-aos="fade-up">
-                    <summary>How much does a professional Starlink installation cost?</summary>
+                    <summary>I live in the woods (East Texas Pine Curtain). Will Starlink work?</summary>
                     <div class="faq-answer">
-                        Our "White-Glove" residential installation starts at <strong>$300</strong>. This includes professional roof mounting, waterproofing, internal cable routing, and full network optimization to ensure you get the highest possible speeds.
+                        Maybe, but you probably need elevation. Starlink requires a roughly 100-degree clear view of the northern sky. If you have 80ft pine trees, a standard roof mount won't cut it. We specialize in <strong>custom tree-topping</strong> mounts and <strong>tower mounts</strong> to clear the canopy. I do a full obstruction test before drilling a single hole.
                     </div>
                 </details>
                 <details data-aos="fade-up">
-                    <summary>Can you install Starlink if I have a lot of trees?</summary>
+                    <summary>Can you get the wire inside without drilling a hole in my wall?</summary>
                     <div class="faq-answer">
-                        Yes. We perform a technical obstruction analysis to find the best mounting point. In heavy canopy areas like East Texas, we often use custom pole mounts, tower mounts, or elevated roof brackets to clear the tree line.
+                        Usually, yes. We prefer to route cables through <strong>soffit vents</strong>, <strong>attic spaces</strong>, or existing cable entry points to keep your siding sealed. If we absolutely must drill, we use industrial-grade feed-through bushings and silicone sealant to ensure it is 100% waterproof and pest-proof.
                     </div>
                 </details>
                 <details data-aos="fade-up">
-                    <summary>Do you sell the Starlink Kit?</summary>
+                    <summary>I'm a gamer. Will Starlink lag?</summary>
                     <div class="faq-answer">
-                        We can provide the hardware for you, or you can buy it directly from Starlink/Best Buy. We stock standard kits, pipe adapters, and high-end aftermarket mounts in our mobile unit.
-                    </div>
-                </details>
-
-                <h3 data-aos="fade-up">⚡ Electrical & Technical Repairs</h3>
-                <details data-aos="fade-up">
-                    <summary>What kind of electrical work do you handle?</summary>
-                    <div class="faq-answer">
-                        We specialize in troubleshooting and repair. This includes fixing dead outlets, replacing flickering light fixtures, ceiling fan installation, and diagnosing circuit breaker issues. We focus on maintenance rather than heavy new construction wiring.
+                        I play Xbox myself (Halo fan here), so I get it. Latency on Starlink is generally 25ms-50ms, which is decent for gaming. However, <strong>obstructions cause lag spikes</strong>. If your dish sees a tree branch every 45 seconds, you will lag out. My installation focuses on getting you 0% obstructions for the smoothest gaming experience possible.
                     </div>
                 </details>
                 <details data-aos="fade-up">
-                    <summary>Do you offer mobile RV repair?</summary>
+                    <summary>Can I take my Starlink dish camping?</summary>
                     <div class="faq-answer">
-                        Yes. We are mobile technical specialists. We can assist with RV electrical troubleshooting, Starlink-on-the-move setups, and general mechanical repairs at your home or campsite (e.g., Lake Bob Sandlin, Broken Bow).
+                        Yes, if you have the "Roam" plan or the Mini. However, moving the standard dish is a pain if it's bolted to your roof. For RVers, I recommend either a <strong>flat-mount conversion</strong> (for serious travelers) or a quick-disconnect pole mount on your ladder so you can grab it and go.
                     </div>
                 </details>
 
-                <h3 data-aos="fade-up">💼 Business & Booking</h3>
+                <h3 data-aos="fade-right">⚡ Electrical & Safety</h3>
                 <details data-aos="fade-up">
-                    <summary>Which areas do you serve without a trip fee?</summary>
+                    <summary>My outlet feels warm. Is that normal?</summary>
                     <div class="faq-answer">
-                        We serve a <strong>100-mile radius</strong> from Pittsburg, TX (75686) with NO trip fee for standard jobs. This includes Mt. Pleasant, Gilmer, Longview, and surrounding areas. Distances beyond 100 miles are charged a small mileage rate.
+                        <strong>No. Stop using it immediately.</strong> A warm dimmer switch is normal; a warm outlet is a fire hazard. It usually means the wire connection is loose and arcing (creating heat). Call me ASAP. Do not ignore it.
                     </div>
                 </details>
                 <details data-aos="fade-up">
-                    <summary>How do I pay my invoice?</summary>
+                    <summary>Can you install a ceiling fan where there is no light?</summary>
                     <div class="faq-answer">
-                        We offer secure online payments. You can pay your invoice via Square (Credit Card), PayPal, or Venmo directly through the links on our <a href="index.html#payment">Payment Section</a>.
+                        Yes, but it requires running new wire and installing a "fan-rated" brace box in the ceiling. A standard plastic light box will not hold a 50lb spinning fan (it will eventually fall). I only install fans on steel, structural-rated boxes for safety.
                     </div>
                 </details>
+                <details data-aos="fade-up">
+                    <summary>Do you do full panel upgrades?</summary>
+                    <div class="faq-answer">
+                        No. I focus on technical repairs and downstream electrical (outlets, switches, fixtures, sub-panels for sheds). For a full 200-amp main service panel replacement, you need a Master Electrician to pull a permit with the city. I stay in my lane.
+                    </div>
+                </details>
+
+                <h3 data-aos="fade-right">🚐 RV & Mobile Tech</h3>
+                <details data-aos="fade-up">
+                    <summary>My RV breaker keeps tripping when the AC is on.</summary>
+                    <div class="faq-answer">
+                        This is common in East Texas summers. It's often a "Soft Start" issue. Your AC pulls massive amps (LRA) to start up. I can install a <strong>Soft Start capacitor</strong> that reduces that startup spike by 70%, allowing you to run your AC on a smaller generator or a standard 30-amp hookup without tripping.
+                    </div>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Do you fix RV slide-outs?</summary>
+                    <div class="faq-answer">
+                        Yes. Whether it's a 12v motor failure, a sheared pin, or a hydraulic leak (I have hydraulics experience), I can diagnose it. Note: If the frame itself is bent/twisted, that is a body shop job, but 90% of issues are mechanical or electrical.
+                    </div>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>I live in my RV full-time. Can you help with winterizing?</summary>
+                    <div class="faq-answer">
+                        Absolutely. I lived full-time in an RV myself. I can help you skirt it, heat-tape your water hose, and inspect your furnace before the freeze hits.
+                    </div>
+                </details>
+
+                <h3 data-aos="fade-right">💼 Pricing & Policy</h3>
+                <details data-aos="fade-up">
+                    <summary>What is your "No-Fee" Radius?</summary>
+                    <div class="faq-answer">
+                        I drive <strong>100 miles from Pittsburg, TX (75686)</strong> for free. This covers Mt. Pleasant, Gilmer, Longview, Tyler, Texarkana, and even Broken Bow, OK. If you are 120 miles away, I just charge a small fuel fee for the extra 20 miles.
+                    </div>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Are you insured?</summary>
+                    <div class="faq-answer">
+                        Yes, fully insured for general liability. I take my work seriously. Coming from the funeral industry, professional standards and reliability are non-negotiable for me.
+                    </div>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Do you accept credit cards?</summary>
+                    <div class="faq-answer">
+                        Yes. I use Square, PayPal, and Venmo. You get a digital invoice immediately upon job completion.
+                    </div>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Can I just hire you for "a list of stuff"?</summary>
+                    <div class="faq-answer">
+                        Yes! These are my favorite jobs. Make a "Honey-Do" list (tighten door knobs, hang pictures, fix the gate, change bulbs), and hire me for a half-day or full-day rate. It's often cheaper than paying per item.
+                    </div>
+                </details>
+
             </div>
 
             <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--light); border-radius: 8px; border: 1px solid #e0e0e0;" data-aos="zoom-in">
-                <h3 style="margin-top:0; border:none;">Still have a question?</h3>
-                <p>Call or Text <strong>281-917-9914</strong> for an instant technical consultation.</p>
-                <a href="index.html#contact" class="btn btn-primary" style="margin-top: 15px;">Get an Instant Quote</a>
+                <h3 style="margin-top:0; border:none;">Did I miss your question?</h3>
+                <p>I answer my own phone. No robots.</p>
+                <a href="tel:2819179914" class="btn btn-primary" style="margin-top: 15px;">Call Dean: (281) 917-9914</a>
             </div>
         </div>
     </div>
