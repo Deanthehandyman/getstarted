@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://deanthehandyman.github.io/getstarted/index.html</loc></url>
-  <url><loc>https://deanthehandyman.github.io/getstarted/about.html</loc></url>
-  <url><loc>https://deanthehandyman.github.io/getstarted/faqs.html</loc></url>
-  <url><loc>https://deanthehandyman.github.io/getstarted/reviews.html</loc></url>
-  <url><loc>https://deanthehandyman.github.io/getstarted/blog.html</loc></url>
-  <url><loc>https://deanthehandyman.github.io/getstarted/contact.html</loc></url>
+  <url>
+    <loc>https://deanshandymanservice.me/</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
