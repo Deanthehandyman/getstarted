@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deanthehandyman.github.io/getstarted/sitemap.xml
