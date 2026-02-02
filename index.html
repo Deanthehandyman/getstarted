@@ -8,8 +8,13 @@
     <meta name="description" content="Dean's Handyman Service LLC. Premier Starlink Installation, Electrical Repair, RV Tech, and Carpentry. Serving Pittsburg, Mt Pleasant, Broken Bow & Shreveport.">
     <meta name="keywords" content="Handyman Pittsburg TX, Residential Electrical Repair, Starlink Installer Texas, Ranch Maintenance, RV Repair Broken Bow, Luxury Home Tech">
     <meta name="author" content="Dean's Handyman Service LLC">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deanshandymanservice.me/">
     <meta property="og:title" content="Dean's Handyman - Starlink & Technical Pros">
+    <meta property="og:description" content="Expert Starlink Setup, Electrical, and RV Repair. We fix what others can't. Book online.">
     <meta property="og:image" content="https://i.postimg.cc/4NzfWL81/20251230-113812.jpg">
+
     <link rel="icon" type="image/jpg" href="https://i.postimg.cc/qvsGMT1Z/IMG-20240820-102606-912.jpg">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,7 +24,7 @@
         
         /* --- RESET & TYPOGRAPHY --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); padding-bottom: 0; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); padding-bottom: 0; margin: 0; }
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; transition: 0.3s; color: inherit; }
         
@@ -86,9 +91,11 @@
 
         /* --- FOOTER --- */
         footer { background: #0f172a; color: #94a3b8; padding: 60px 0; margin-top: auto; }
-        .footer-links ul { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a:hover { color: var(--accent); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-col h4 { color: white; margin-bottom: 15px; font-size: 1rem; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a:hover { color: var(--accent); }
 
         /* --- STICKY FOOTER --- */
         .sticky-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 2000; padding: 10px; gap: 10px; display: none; justify-content: center; }
@@ -136,7 +143,7 @@
     </div>
 
     <section class="hero">
-        <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:50px;">
+        <div class="container hero-layout" style="display:flex; flex-wrap:wrap; align-items:center; gap:50px;">
             <div style="flex:1; min-width:300px;" data-aos="fade-right">
                 <div class="hero-badges">
                     <span style="background:rgba(255,255,255,0.1); padding:5px 10px; border-radius:4px; font-size:0.8rem; font-weight:bold; color:var(--accent);">TX • OK • AR • LA</span>
@@ -276,7 +283,7 @@
                 </div>
             </div>
             <div style="text-align:center; margin-top:40px;">
-                <a href="gallery.html" class="btn btn-outline" style="border:2px solid var(--primary); color:var(--primary); padding:10px 20px; border-radius:6px; display:inline-block;">View Full Gallery →</a>
+                <a href="gallery.html" class="btn btn-primary" style="background:transparent; border:2px solid var(--primary); color:var(--primary);">View Full Gallery →</a>
             </div>
         </div>
     </section>
@@ -307,13 +314,13 @@
 
     <footer>
         <div class="container">
-            <div class="footer-grid" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px;">
-                <div style="flex:1; min-width:250px;">
-                    <h3 style="color:white; margin-bottom:15px;">Dean's Handyman Service</h3>
-                    <p style="font-size:0.9rem;">Setting the standard for technical installation and fabrication in the Ark-La-Tex.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Dean's Handyman Service LLC</h4>
+                    <p>Setting the standard for technical installation and fabrication in the Ark-La-Tex.</p>
                 </div>
-                <div class="footer-links" style="flex:1; min-width:200px;">
-                    <h4 style="color:white; margin-bottom:15px;">Quick Links</h4>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="services.html">All Services</a></li>
                         <li><a href="areas.html">Service Areas</a></li>
@@ -321,9 +328,9 @@
                         <li><a href="gallery.html">Project Gallery</a></li>
                     </ul>
                 </div>
-                <div style="flex:1; min-width:200px;">
-                    <h4 style="color:white; margin-bottom:15px;">Contact</h4>
-                    <p style="font-size:0.9rem;">Pittsburg, TX (75686)</p>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Pittsburg, TX (75686)</p>
                     <p><a href="tel:2819179914" style="color:var(--accent); font-weight:bold;">(281) 917-9914</a></p>
                     <div style="margin-top:15px;">
                         <a href="contact.html" class="btn btn-accent" style="padding:8px 15px; font-size:0.8rem;">Get Quote</a>
