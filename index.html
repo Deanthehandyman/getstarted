@@ -1,61 +1,228 @@
-<style>
-    /* --- BASICS --- */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; overflow-x: hidden; padding-bottom: 70px; }
-    img { max-width: 100%; height: auto; }
-    :root { --primary: #005073; --primary-dark: #003a54; --accent: #d4af37; --dark: #1a1a1a; --light: #f4f7f6; --white: #ffffff; --venmo-blue: #008CFF; }
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    /* --- TYPOGRAPHY --- */
-    h1, h2, h3 { color: var(--primary-dark); font-weight: 800; letter-spacing: -0.5px; }
-    h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; }
-    h2 { font-size: 2rem; text-align: center; margin-bottom: 15px; }
-    .section-sub { text-align: center; color: #666; margin-bottom: 50px; font-size: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;}
+    <title>Dean's Handyman Service LLC | Pittsburg, TX</title>
+    <meta name="description" content="Starlink Installation, Electrical Repair, and RV Tech Services in East Texas.">
     
-    /* --- BUTTONS --- */
-    .btn { display: inline-block; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none; cursor: pointer; transition: 0.3s; border: none; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem;}
-    .btn-primary { background-color: var(--primary); color: #ffffff !important; box-shadow: 0 4px 10px rgba(0, 80, 115, 0.2); }
-    .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
-    
-    /* FIX: High contrast button for Gallery */
-    .btn-gallery-toggle { background-color: var(--dark); color: var(--white) !important; margin-top: 20px; min-width: 200px;}
-    .btn-gallery-toggle:hover { background-color: var(--accent); color: var(--dark) !important;}
-    
-    /* --- LAYOUT --- */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 70px 0; }
-    
-    /* --- ESTIMATOR CARD (FIXED SIZING) --- */
-    /* Added max-width and auto margins to stop it from being "too big" */
-    .action-card { 
-        background: var(--white); 
-        border-radius: 8px; 
-        width: 100%; 
-        max-width: 500px; /* FIX: Limits the width */
-        margin: 0 auto;   /* FIX: Centers the box */
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-        overflow: hidden; 
-        border: 1px solid #eee; 
-    }
-    .card-content { padding: 25px; }
-    
-    .est-list { max-height: 350px; overflow-y: auto; padding-right: 5px; margin-bottom: 20px; border: 1px solid #f1f5f9; background: #f9f9f9; padding:15px; border-radius: 6px; }
-    .qty-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0; }
-    .qty-label { font-weight: 700; font-size: 0.95rem; color: #444; flex: 1; text-align: left; }
-    .qty-input { width: 60px; text-align: center; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; color: var(--primary); font-size: 1rem;}
-    
-    /* FIX: Mileage Helper Text */
-    .mileage-help { display: block; font-size: 0.75rem; color: #666; font-weight: normal; margin-top: 2px; font-style: italic;}
+    <style>
+        /* --- BASICS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fdfdfd; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; }
+        :root { --primary: #005073; --primary-dark: #003a54; --accent: #d4af37; --dark: #1a1a1a; --light: #f4f7f6; --white: #ffffff; --venmo-blue: #008CFF; }
+        
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { color: var(--primary-dark); font-weight: 800; letter-spacing: -0.5px; }
+        h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; }
+        h2 { font-size: 2rem; text-align: center; margin-bottom: 15px; }
+        .section-sub { text-align: center; color: #666; margin-bottom: 50px; font-size: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;}
+        
+        /* --- BUTTONS --- */
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none; cursor: pointer; transition: 0.3s; border: none; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem;}
+        .btn-primary { background-color: var(--primary); color: #ffffff !important; box-shadow: 0 4px 10px rgba(0, 80, 115, 0.2); }
+        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+        
+        /* GALLERY BUTTON FIX */
+        .btn-gallery-toggle { background-color: var(--dark); color: var(--white) !important; margin-top: 20px; min-width: 200px;}
+        .btn-gallery-toggle:hover { background-color: var(--accent); color: var(--dark) !important;}
+        
+        /* --- LAYOUT --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 70px 0; }
+        
+        /* --- HEADER --- */
+        header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; height: 80px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .logo-text { font-weight: 900; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--primary-dark); text-decoration: none;}
+        .logo-text span { color: var(--accent); display: block; font-size: 0.65rem; letter-spacing: 1px; margin-top: 2px; font-weight: 600; }
+        
+        /* --- HERO --- */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); padding: 80px 0; text-align: center;}
+        .hero h1 { color: white; margin-bottom: 10px; }
+        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto; }
+        
+        /* --- ESTIMATOR CARD (FIXED SIZING) --- */
+        .action-card { 
+            background: var(--white); 
+            border-radius: 8px; 
+            width: 100%; 
+            max-width: 500px; /* Limits width so it isn't huge */
+            margin: 0 auto;   /* Centers it */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+            overflow: hidden; 
+            border: 1px solid #eee; 
+        }
+        .card-content { padding: 25px; }
+        
+        .est-list { max-height: 350px; overflow-y: auto; padding-right: 5px; margin-bottom: 20px; border: 1px solid #f1f5f9; background: #f9f9f9; padding:15px; border-radius: 6px; }
+        .qty-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0; }
+        .qty-label { font-weight: 700; font-size: 0.95rem; color: #444; flex: 1; text-align: left; }
+        .qty-input { width: 60px; text-align: center; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; color: var(--primary); font-size: 1rem;}
+        
+        /* Mileage Helper Text */
+        .mileage-help { display: block; font-size: 0.75rem; color: #666; font-weight: normal; margin-top: 2px; font-style: italic;}
 
-    .result-box { background: #e8f5e9; border: 1px solid #28a745; border-radius: 8px; padding: 20px; text-align: center; margin-top: 15px; display: none; }
-    .total-price { font-size: 2.2rem; font-weight: 800; color: #15803d; line-height: 1; margin: 10px 0; }
-    
-    /* --- GALLERY (FIXED) --- */
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-    .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; display: none; /* Hidden by default */ }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .gallery-item:hover img { transform: scale(1.05); }
-    /* Show first 3 items always */
-    .gallery-item:nth-child(-n+3) { display: block; } 
-    /* Show all when active class is added */
-    .gallery-grid.show-all .gallery-item { display: block; }
-</style>
+        .result-box { background: #e8f5e9; border: 1px solid #28a745; border-radius: 8px; padding: 20px; text-align: center; margin-top: 15px; display: none; }
+        .total-price { font-size: 2.2rem; font-weight: 800; color: #15803d; line-height: 1; margin: 10px 0; }
+        
+        /* --- GALLERY (FIXED) --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; display: none; /* Hidden by default */ }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        /* Show first 3 items always */
+        .gallery-item:nth-child(-n+3) { display: block; } 
+        /* Show all when active class is added */
+        .gallery-grid.show-all .gallery-item { display: block; }
+
+        /* --- FOOTER --- */
+        footer { background: #0f172a; color: #94a3b8; padding: 30px 0; text-align: center; margin-top: 50px;}
+        footer p { font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-text">
+                Dean's Handyman Service
+                <span>Pittsburg, TX</span>
+            </a>
+            <div>
+                <a href="tel:2819179914" class="btn btn-primary" style="font-size: 0.8rem; padding: 8px 16px;">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Reliable Handyman Services</h1>
+            <p>From Starlink to Electrical, we get it done right.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #f4f7f6;">
+        <div class="container">
+            <h2>Instant Quote Estimator</h2>
+            <p class="section-sub">Select your items below to get an estimated price range.</p>
+            
+            <div class="action-card">
+                <div class="card-content">
+                    <div class="est-list">
+                        <div class="qty-row">
+                            <div class="qty-label">
+                                Mileage Fee
+                                <span class="mileage-help">Round-trip miles from Pittsburg, TX</span>
+                            </div>
+                            <input type="number" class="qty-input item-qty" data-price="1.50" placeholder="0">
+                        </div>
+
+                        <div class="qty-row">
+                            <div class="qty-label">Ceiling Fan Installation</div>
+                            <input type="number" class="qty-input item-qty" data-price="125" placeholder="0">
+                        </div>
+                        <div class="qty-row">
+                            <div class="qty-label">Light Fixture Swap</div>
+                            <input type="number" class="qty-input item-qty" data-price="85" placeholder="0">
+                        </div>
+                        <div class="qty-row">
+                            <div class="qty-label">Outlet/Switch Replacement</div>
+                            <input type="number" class="qty-input item-qty" data-price="25" placeholder="0">
+                        </div>
+                        <div class="qty-row">
+                            <div class="qty-label">TV Mounting (up to 55")</div>
+                            <input type="number" class="qty-input item-qty" data-price="100" placeholder="0">
+                        </div>
+                        <div class="qty-row">
+                            <div class="qty-label">Faucet Replacement</div>
+                            <input type="number" class="qty-input item-qty" data-price="120" placeholder="0">
+                        </div>
+                        <div class="qty-row">
+                            <div class="qty-label">Starlink Install (Basic)</div>
+                            <input type="number" class="qty-input item-qty" data-price="250" placeholder="0">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width:100%;" onclick="calculateTotal()">Calculate Estimate</button>
+
+                    <div id="resultBox" class="result-box">
+                        <p style="font-size:0.9rem; text-transform:uppercase; font-weight:700; color:#555;">Estimated Total</p>
+                        <div class="total-price" id="totalDisplay">$0.00</div>
+                        <p style="font-size:0.8rem; color:#666;">*Final price may vary based on conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2>Recent Projects</h2>
+            <p class="section-sub">A collection of our recent work in Pittsburg and East Texas.</p>
+            
+            <div class="gallery-grid" id="projectGallery">
+                <div class="gallery-item"><img src="https://placehold.co/600x400/005073/FFF?text=Starlink+Install" alt="Project 1"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/d4af37/FFF?text=Electrical+Work" alt="Project 2"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333333/FFF?text=Plumbing+Repair" alt="Project 3"></div>
+                
+                <div class="gallery-item"><img src="https://placehold.co/600x400/005073/FFF?text=RV+Repair" alt="Project 4"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/d4af37/FFF?text=Carpentry" alt="Project 5"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/333333/FFF?text=Flooring" alt="Project 6"></div>
+            </div>
+
+            <button class="btn btn-gallery-toggle" id="viewAllBtn" onclick="toggleGallery()">View All Projects</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dean's Handyman Service LLC. All rights reserved.</p>
+            <p style="color: #64748b; font-size: 0.8rem; margin-top: 10px;">Serving Pittsburg, TX and surrounding areas.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- ESTIMATOR LOGIC ---
+        function calculateTotal() {
+            let total = 0;
+            const inputs = document.querySelectorAll('.item-qty');
+            
+            inputs.forEach(input => {
+                const qty = parseFloat(input.value) || 0;
+                const price = parseFloat(input.dataset.price) || 0;
+                total += (qty * price);
+            });
+
+            // Display Result
+            const resultBox = document.getElementById('resultBox');
+            const totalDisplay = document.getElementById('totalDisplay');
+            
+            if (total > 0) {
+                resultBox.style.display = 'block';
+                totalDisplay.textContent = '$' + total.toFixed(2);
+            } else {
+                resultBox.style.display = 'none';
+            }
+        }
+
+        // --- GALLERY LOGIC ---
+        function toggleGallery() {
+            const gallery = document.getElementById('projectGallery');
+            const btn = document.getElementById('viewAllBtn');
+            
+            // Toggle the 'show-all' class
+            gallery.classList.toggle('show-all');
+            
+            // Update Button Text
+            if (gallery.classList.contains('show-all')) {
+                btn.textContent = "Show Less";
+            } else {
+                btn.textContent = "View All Projects";
+            }
+        }
+    </script>
+</body>
+</html>
