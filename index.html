@@ -21,11 +21,12 @@
         h2 { font-size: 2rem; text-align: center; margin-bottom: 15px; }
         .section-sub { text-align: center; color: #666; margin-bottom: 50px; font-size: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;}
         
-        /* --- BUTTONS (High Visibility) --- */
+        /* --- BUTTONS --- */
         .btn { display: inline-block; padding: 12px 24px; border-radius: 4px; font-weight: 800; text-decoration: none; cursor: pointer; transition: 0.3s; border: none; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
         .btn-primary { background-color: var(--primary); color: #ffffff !important; box-shadow: 0 4px 10px rgba(0, 80, 115, 0.2); }
         .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
         .btn-accent { background-color: var(--accent); color: white !important; }
+        .btn-green { background-color: #28a745; color: white !important; }
         
         /* --- LAYOUT --- */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -46,14 +47,14 @@
         .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); padding: 60px 0; }
         .hero h1 { color: white; }
         
-        /* --- ESTIMATOR CARD (Compact) --- */
+        /* --- ESTIMATOR CARD (Expanded Options) --- */
         .action-card { background: var(--white); border-radius: 8px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; border: 1px solid #eee; }
         .card-tabs { display: flex; background: #eee; }
         .card-tab { flex: 1; padding: 12px; text-align: center; border: none; background: #e0e0e0; cursor: pointer; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: #666; }
         .card-tab.active { background: var(--white); color: var(--primary); border-top: 4px solid var(--accent); }
         .card-content { padding: 20px; }
         
-        .est-list { max-height: 250px; overflow-y: auto; padding-right: 5px; margin-bottom: 15px; border: 1px solid #f1f5f9; background: #f9f9f9; padding:5px; border-radius: 6px; }
+        .est-list { max-height: 300px; overflow-y: auto; padding-right: 5px; margin-bottom: 15px; border: 1px solid #f1f5f9; background: #f9f9f9; padding:5px; border-radius: 6px; }
         .qty-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 5px; border-bottom: 1px solid #eee; }
         .qty-label { font-weight: 600; font-size: 0.85rem; color: #444; flex: 1; }
         .qty-input { width: 50px; text-align: center; padding: 4px; border: 1px solid #ccc; border-radius: 4px; font-weight: bold; color: var(--primary); font-size: 0.9rem; }
@@ -154,16 +155,24 @@
                             <div class="category-header">⚡ Electrical</div>
                             <div class="qty-row"><span class="qty-label">Light Fixture Install</span> <input type="number" min="0" class="qty-input" data-price="125" data-name="Light Fixture"></div>
                             <div class="qty-row"><span class="qty-label">Ceiling Fan Install</span> <input type="number" min="0" class="qty-input" data-price="175" data-name="Ceiling Fan"></div>
-                            <div class="qty-row"><span class="qty-label">Outlet Repair</span> <input type="number" min="0" class="qty-input" data-price="75" data-name="Outlet Repair"></div>
+                            <div class="qty-row"><span class="qty-label">Outlet Replacement</span> <input type="number" min="0" class="qty-input" data-price="75" data-name="Outlet Repair"></div>
 
-                            <div class="category-header">🛠️ General</div>
+                            <div class="category-header">🚰 Plumbing</div>
+                            <div class="qty-row"><span class="qty-label">Faucet Replacement</span> <input type="number" min="0" class="qty-input" data-price="120" data-name="Faucet"></div>
+                            <div class="qty-row"><span class="qty-label">Toilet Repair/Swap</span> <input type="number" min="0" class="qty-input" data-price="150" data-name="Toilet"></div>
+                            <div class="qty-row"><span class="qty-label">Garbage Disposal</span> <input type="number" min="0" class="qty-input" data-price="125" data-name="Disposal"></div>
+
+                            <div class="category-header">🛠️ General & Labor</div>
                             <div class="qty-row"><span class="qty-label">TV Mounting</span> <input type="number" min="0" class="qty-input" data-price="125" data-name="TV Mount"></div>
+                            <div class="qty-row"><span class="qty-label">Furniture Assembly</span> <input type="number" min="0" class="qty-input" data-price="100" data-name="Assembly"></div>
+                            <div class="qty-row"><span class="qty-label">Hourly Labor (Est. Hours)</span> <input type="number" min="0" class="qty-input" data-price="100" data-name="Labor Hour"></div>
                         </div>
 
                         <div style="background:#f8fafc; padding:8px; border-radius:4px; margin-top:10px; display:flex; align-items:center;">
-                            <label style="font-size:0.8rem; font-weight:bold; flex:1;">Trip Miles (Over 100 free):</label>
-                            <input type="number" id="trip-miles" placeholder="0" style="padding:4px; width:50px; text-align:center;">
+                            <label style="font-size:0.8rem; font-weight:bold; flex:1;">Miles from 75686:</label>
+                            <input type="number" id="trip-miles" placeholder="0" style="padding:4px; width:60px; text-align:center;">
                         </div>
+                        <p style="font-size:0.7rem; color:#666; margin-top:2px; text-align:right;">(First 100 miles free. $1.50/mile after)</p>
 
                         <button onclick="calculateTotal()" class="btn btn-primary" style="width:100%; margin-top:15px;">Calculate Price</button>
                         
@@ -175,25 +184,21 @@
                     </div>
 
                     <div id="view-send" style="display:none;">
-                        <p style="font-size:0.9rem; color:#666; margin-bottom:10px;">Review quote and submit request.</p>
+                        <p style="font-size:0.9rem; color:#666; margin-bottom:10px;">Send this estimate directly to Dean.</p>
                         
-                        <form action="https://formspree.io/f/xzdgkqnp" method="POST">
-                            <input type="hidden" name="Quote Summary" id="hidden-summary">
-                            <input type="hidden" name="Estimated Total" id="hidden-total">
+                        <input type="text" id="client-name" placeholder="Your Name" required>
+                        <input type="text" id="client-loc" placeholder="City / Address" required>
+                        <textarea id="client-msg" placeholder="Any specific details?" style="height:60px;"></textarea>
+                        
+                        <div style="background:#f8fafc; padding:10px; border-radius:6px; margin-bottom:15px; border-left:3px solid var(--accent);">
+                            <strong style="font-size:0.8rem;">Quote Summary:</strong>
+                            <p id="summary-text" style="font-size:0.85rem; margin:5px 0 0 0; color:#555;">No items selected.</p>
+                        </div>
 
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <input type="tel" name="Phone" placeholder="Your Phone Number" required>
-                            <input type="text" name="Address" placeholder="City / Address" required>
-                            <textarea name="Message" placeholder="Any specific details?" style="height:60px;"></textarea>
-                            
-                            <div style="background:#f8fafc; padding:10px; border-radius:6px; margin-bottom:15px; border-left:3px solid var(--accent);">
-                                <strong style="font-size:0.8rem;">Quote Summary:</strong>
-                                <p id="summary-text" style="font-size:0.85rem; margin:5px 0 0 0; color:#555;">No items selected.</p>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary" style="width:100%;">🚀 Submit Request</button>
-                        </form>
+                        <div style="display:flex; gap:10px;">
+                            <button onclick="sendVia('email')" class="btn btn-primary" style="flex:1;">📧 Send Email</button>
+                            <button onclick="sendVia('text')" class="btn btn-green" style="flex:1;">💬 Send Text</button>
+                        </div>
                         
                         <button onclick="switchTab('calc')" style="background:none; border:none; color:#999; width:100%; margin-top:15px; cursor:pointer; font-size:0.8rem;">← Back to Estimate</button>
                     </div>
@@ -265,7 +270,7 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="services.html">All Services</a></li>
                         <li><a href="areas.html">Service Areas</a></li>
                         <li><a href="faqs.html">FAQs</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
@@ -346,12 +351,25 @@
               alert("Please select at least one service.");
               return;
           }
-          // Populate Formspree fields
-          document.getElementById('hidden-summary').value = window.quoteData.summary;
-          document.getElementById('hidden-total').value = "$" + window.quoteData.total;
           
           document.getElementById('summary-text').innerText = window.quoteData.summary + " (Est: $" + window.quoteData.total + ")";
           switchTab('send');
+      }
+
+      function sendVia(method) {
+          const name = document.getElementById('client-name').value;
+          const loc = document.getElementById('client-loc').value;
+          const msg = document.getElementById('client-msg').value;
+          
+          if(!name || !loc) { alert("Please enter your name and location."); return; }
+          
+          const fullMsg = `Hi Dean, this is ${name} from ${loc}.\n\nI need a quote for:\n${window.quoteData.summary}\n\nEst Total: $${window.quoteData.total}\n\nNote: ${msg}`;
+          
+          if(method === 'email') {
+              window.location.href = `mailto:DeanshandymanserviceLLC@gmail.com?subject=New Quote Request&body=${encodeURIComponent(fullMsg)}`;
+          } else {
+              window.location.href = `sms:2819179914?body=${encodeURIComponent(fullMsg)}`;
+          }
       }
     </script>
 </body>
