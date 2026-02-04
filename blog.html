@@ -247,34 +247,94 @@
             { status: 'future', day: 20, cat: "Local", title: "Local Hardware Stores", img: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800", excerpt: "Support Pittsburg businesses.", body: "<p>I try to source parts from local shops in town. They know our homes better than the big box stores.</p>" }
         ];
 
-        // --- 3. AUTO-GENERATOR FOR DAYS 21-100 ---
+        // --- 3. IMAGE BANKS (Curated for Dean's Services) ---
+        const imageBanks = {
+            Starlink: [
+                "https://images.unsplash.com/photo-1628126235206-52605511dc5a?w=800",
+                "https://images.unsplash.com/photo-1544724569-5f546fd6dd2d?w=800",
+                "https://images.unsplash.com/photo-1548348425-9f5b2b2b2f56?w=800",
+                "https://images.unsplash.com/photo-1622359557431-7a637db6f890?w=800",
+                "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800",
+                "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800"
+            ],
+            Electrical: [
+                "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800",
+                "https://images.unsplash.com/photo-1565514020128-2c26e1c6b306?w=800",
+                "https://images.unsplash.com/photo-1558211583-03ed8a0b3d5f?w=800",
+                "https://images.unsplash.com/photo-1565814329-81e3a6699633?w=800",
+                "https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?w=800",
+                "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800"
+            ],
+            Plumbing: [
+                "https://images.unsplash.com/photo-1606214555898-1e43c5b36481?w=800",
+                "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800",
+                "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
+                "https://images.unsplash.com/photo-1626326725832-601448b4e137?w=800",
+                "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800"
+            ],
+            RV: [
+                "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+                "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+                "https://images.unsplash.com/photo-1533630793084-85713609a54a?w=800",
+                "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800",
+                "https://images.unsplash.com/photo-1639572340227-1183e645a573?w=800"
+            ],
+            Handyman: [
+                "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
+                "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800",
+                "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=800",
+                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800",
+                "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800",
+                "https://images.unsplash.com/photo-1593784697956-14120257771e?w=800"
+            ],
+            SmartHome: [
+                 "https://images.unsplash.com/photo-1558002038-1091a166111c?w=800",
+                 "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800",
+                 "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800"
+            ],
+            Local: [
+                "https://images.unsplash.com/photo-1609101032943-4dc9197c36d0?w=800",
+                "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800",
+                "https://images.unsplash.com/photo-1621245781363-23945c711a3d?w=800"
+            ]
+        };
+
+        // --- 4. AUTO-GENERATOR FOR DAYS 21-100 ---
         const topics = [
-            { cat: "Starlink", title: "Mounting on Metal Roofs", body: "Metal roofs are tricky. We use non-penetrating clamps that grip the standing seam, so we don't drill holes in your expensive roof." },
-            { cat: "Electrical", title: "Replacing Old Breakers", body: "Breakers wear out. If yours trips instantly or feels hot to the touch, it needs replacing before it fails completely." },
-            { cat: "Plumbing", title: "Toilet Flange Repair", body: "If your toilet rocks, the flange might be broken. I can install a repair ring to secure it to the floor." },
-            { cat: "RV Life", title: "Leveling Your Rig", body: "Always use blocks under your jacks. Uneven ground twists the frame and jams your slide-outs." },
-            { cat: "Handyman", title: "Patching Stucco", body: "Stucco cracks let water in. I use a textured patch to match the existing finish and seal the wall." },
-            { cat: "Smart Home", title: "Automated Blinds", body: "Retrofit motors can turn your existing blinds smart. Open them with a voice command." },
-            { cat: "Local", title: "Camp County Service", body: "I love working in Pittsburg. I'm usually available for same-day emergency calls in town." }
+            { cat: "Starlink", bank: "Starlink", title: "Mounting on Metal Roofs", body: "Metal roofs are tricky. We use non-penetrating clamps that grip the standing seam, so we don't drill holes in your expensive roof." },
+            { cat: "Electrical", bank: "Electrical", title: "Replacing Old Breakers", body: "Breakers wear out. If yours trips instantly or feels hot to the touch, it needs replacing before it fails completely." },
+            { cat: "Plumbing", bank: "Plumbing", title: "Toilet Flange Repair", body: "If your toilet rocks, the flange might be broken. I can install a repair ring to secure it to the floor." },
+            { cat: "RV Life", bank: "RV", title: "Leveling Your Rig", body: "Always use blocks under your jacks. Uneven ground twists the frame and jams your slide-outs." },
+            { cat: "Handyman", bank: "Handyman", title: "Patching Stucco", body: "Stucco cracks let water in. I use a textured patch to match the existing finish and seal the wall." },
+            { cat: "Smart Home", bank: "SmartHome", title: "Automated Blinds", body: "Retrofit motors can turn your existing blinds smart. Open them with a voice command." },
+            { cat: "Local", bank: "Local", title: "Camp County Service", body: "I love working in Pittsburg. I'm usually available for same-day emergency calls in town." },
+            { cat: "RV Tech", bank: "RV", title: "Roof UV Sealant", body: "East Texas sun destroys rubber roofs. Apply a UV coating every two years to prevent chalking and leaks." },
+             { cat: "Electrical", bank: "Electrical", title: "Surge Protection", body: "Lightning strikes are common here. A whole-house surge protector at the panel is cheap insurance for your appliances." },
+              { cat: "Handyman", bank: "Handyman", title: "Door Adjustments", body: "Humidity makes doors swell and stick. A quick planing of the edge usually solves the issue for good." }
         ];
 
-        // Fill the array to 100
+        // Fill the array to 100 with ROTATING images
         const allPosts = [...specificPosts];
         
         for (let i = 21; i <= 100; i++) {
             const topic = topics[i % topics.length]; // Cycle through topics
+            
+            // Select image from appropriate bank, rotating through them based on the day index
+            const imgBank = imageBanks[topic.bank];
+            const specificImg = imgBank[i % imgBank.length];
+
             allPosts.push({
                 status: 'future',
                 day: i,
                 cat: topic.cat,
                 title: topic.title + " (Day " + i + ")",
-                img: "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
+                img: specificImg,
                 excerpt: topic.body,
                 body: `<p>${topic.body}</p><p>This is part of my daily maintenance series. Call me if you need help with this!</p>`
             });
         }
 
-        // --- 4. RENDER LOGIC ---
+        // --- 5. RENDER LOGIC ---
         const feed = document.getElementById('blog-feed');
         const today = new Date();
         const startDay = new Date(startDateStr + 'T00:00:00'); 
@@ -321,6 +381,8 @@
             document.getElementById('m-title').innerText = p.title;
             document.getElementById('m-body').innerHTML = p.body;
             document.getElementById('post-modal').style.display = 'block';
+            
+            // Lock body scroll BUT allow modal scroll
             document.body.style.overflow = 'hidden';
         }
 
