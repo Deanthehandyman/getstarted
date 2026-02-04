@@ -407,20 +407,26 @@
           }
       }
 
-      /* --- BLOG ENGINE --- */
+      /* --- UPDATED BLOG ENGINE (WITH FORCE REFRESH) --- */
       async function loadHandymanBlogs() {
           const repo = 'deanthehandyman/deanthehandyman.github.io';
-          const folderPath = 'posts'; // Corrected to point to your 'posts' folder in root
+          const folderPath = 'posts';
           const listDiv = document.getElementById('handyman-blog-list');
           const placeholder = document.getElementById('blog-placeholder');
 
           try {
-              const response = await fetch(`https://api.github.com/repos/${repo}/contents/${folderPath}`);
+              // The '?t=' + Date.now() is a cache-buster that forces GitHub to show the NEWEST files
+              const response = await fetch(`https://api.github.com/repos/${repo}/contents/${folderPath}?t=${Date.now()}`);
               
               if (!response.ok) { throw new Error(); }
               
               const files = await response.json();
-              const posts = files.filter(f => f.name.endsWith('.html')).reverse().slice(0, 3);
+              
+              // Sort by name descending (assuming date-based naming) to get newest first
+              const posts = files
+                .filter(f => f.name.endsWith('.html'))
+                .sort((a, b) => b.name.localeCompare(a.name))
+                .slice(0, 3);
 
               if (posts.length === 0) { throw new Error(); }
 
