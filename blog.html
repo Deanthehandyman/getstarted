@@ -92,14 +92,16 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
         // --- 1. CONFIGURATION ---
         const startDateStr = '2026-02-04'; 
 
-        // --- 2. THE POSTS DATABASE ---
-        const posts = [
-            // [ACTIVE POSTS] - These show up IMMEDIATELY
+        // --- 2. HAND-WRITTEN POSTS (Active & Specific Future) ---
+        const specificPosts = [
+            // ACTIVE POSTS (0-9)
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Starlink",
                 title: "Why Trees are the Enemy of Starlink",
                 img: "https://images.unsplash.com/photo-1464869372688-a93d806be852?w=800",
@@ -107,7 +109,7 @@
                 body: "<p>Out here in the piney woods, we love our trees, but they are the absolute enemy of satellite internet. I get calls daily from folks around Pittsburg saying, 'Dean, I bought Starlink, set it in the yard, and it drops connection constantly.'</p><p>Starlink satellites move fast across the sky. Your dish needs a wide, clear field of view to track them. If a single pine branch is in that path, the signal gets cut until it finds the next satellite.</p><p>The solution isn't cutting down the forest; it's getting above it. I specialize in high-mount installations. Whether it's a ridge mount on your roof or a pole mount, getting that dish 10 feet higher usually solves the obstruction issue entirely.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Electrical",
                 title: "Loose Neutrals: A Fire Hazard",
                 img: "https://images.unsplash.com/photo-1495073278381-18df1dd69107?w=800",
@@ -115,7 +117,7 @@
                 body: "<p>I had a customer in Mt. Pleasant tell me they thought their house was haunted. Every time the microwave ran, the living room lights would dim. That's not a ghost; that's a loose neutral wire.</p><p>Your electrical system relies on a neutral wire to balance the load. If that connection gets loose at the meter base or in your panel, the voltage goes haywire. This can fry your electronics instantly.</p><p>More importantly, the arcing at the loose connection creates heat that can start a fire in your walls. Do not ignore flickering lights.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "RV Living",
                 title: "Skirting Your RV for Winter",
                 img: "https://images.unsplash.com/photo-1639572340227-1183e645a573?w=800",
@@ -123,7 +125,7 @@
                 body: "<p>We don't get hard winters often, but when that arctic blast hits Pittsburg, RVers suffer. The thin underbelly of a camper offers almost zero protection for PEX pipes.</p><p>When the wind whips under your rig, it freezes your water lines almost instantly. The solution is RV skirting. It traps the heat radiating from your floor and creates a dead air space.</p><p>It also drastically cuts down on your propane usage. Whether you use foam board or custom vinyl, get it done before the freeze.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Smart Tech",
                 title: "Beaming Internet to the Barn",
                 img: "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800",
@@ -131,7 +133,7 @@
                 body: "<p>Common request: 'Dean, I need internet in my metal shop 200 feet away.' The standard router isn't going to punch through your house walls and travel that far.</p><p>The solution isn't digging a trench. It's a Wireless Point-to-Point Bridge. Think of it like an invisible ethernet cable carried through the air.</p><p>We mount a small dish on the house and another on the barn. Boom—full speed internet in the shop, no digging required.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Plumbing",
                 title: "That Popping Noise in Your Water Heater",
                 img: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800",
@@ -139,7 +141,7 @@
                 body: "<p>If you hear popping, that is sediment boiling at the bottom of your tank. Our water has minerals that settle over time.</p><p>This layer traps steam bubbles against the burner. It insulates the water from the heat, making your bill go up and eventually cracking the tank.</p><p>Flush your tank annually. It's messy, but cheaper than a new heater.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Tools",
                 title: "Why I Use DeWalt 20V",
                 img: "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
@@ -147,7 +149,7 @@
                 body: "<p>Customers see the sea of yellow tools in my truck. I use DeWalt because the 20V batteries hold up to the East Texas heat.</p><p>When I'm drilling brick for a Starlink mount, I need sustained power. Cheap drills die halfway through.</p><p>Reliability means I finish your job faster.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "RV Repair",
                 title: "STOP Using Silicone on RV Roofs",
                 img: "https://images.unsplash.com/photo-1536407896971-090636da1289?w=800",
@@ -155,7 +157,7 @@
                 body: "<p>Public enemy number one: Silicone on an RV roof. It peels off in three weeks. RV roofs are EPDM or TPO rubber.</p><p>Silicone doesn't bond chemically. You must use Self-Leveling Lap Sealant (Dicor). It melts onto the rubber and creates a permanent seal.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Mounting",
                 title: "TV on Brick: Do It Right",
                 img: "https://images.unsplash.com/photo-1593784697956-14120257771e?w=800",
@@ -163,7 +165,7 @@
                 body: "<p>Mounting a TV on a fireplace looks great, but plastic anchors will slip out of mortar over time. I use Tapcon concrete screws.</p><p>They cut their own threads into the masonry. When done right, I could do pull-ups on the mount.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Maintenance",
                 title: "Gutter Cleaning in Pine Country",
                 img: "https://images.unsplash.com/photo-1621245781363-23945c711a3d?w=800",
@@ -171,15 +173,14 @@
                 body: "<p>Pine needles form dense mats in gutters. Water overflows and rots your fascia boards. It's a messy job, but I recommend cleaning them twice a year to save your roof.</p>"
             },
             {
-                status: 'active',
+                status: 'active', day: 0,
                 cat: "Gaming",
                 title: "Gaming on Starlink",
                 img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800",
                 excerpt: "Can you play COD on Starlink? Yes, but obstructions matter.",
                 body: "<p>As a gamer, I check latency. Starlink gets 30-50ms ping in Pittsburg. It's great for gaming, provided you have ZERO obstructions.</p><p>A single tree branch will cause lag spikes. That's why the install matters.</p>"
             },
-
-            // [FUTURE POSTS] - These unlock automatically based on date
+            // FUTURE POSTS (1-20)
             { status: 'future', day: 1, cat: "RV Upgrades", title: "Keyless RV Entry", img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800", excerpt: "Stop fumbling for keys at the lake.", body: "<p>Upgrade your RV door to a digital keypad. It's a 30-minute install that changes your life. No more lost keys at the State Park.</p>" },
             { status: 'future', day: 2, cat: "Electrical", title: "Why Outdoor Outlets Trip", img: "https://images.unsplash.com/photo-1565514020128-2c26e1c6b306?w=800", excerpt: "Rain getting in? Your bubble covers are cracked.", body: "<p>Plastic covers get brittle in the sun. If they crack, rain trips the GFCI. Replace them with heavy-duty covers immediately.</p>" },
             { status: 'future', day: 3, cat: "Starlink", title: "Gen 3 Router Benefits", img: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800", excerpt: "Is the new router worth it? Yes, for the range.", body: "<p>The new Gen 3 router has WiFi 6 and better range for large ranch homes. Plus, it has ethernet ports built-in!</p>" },
@@ -202,54 +203,75 @@
             { status: 'future', day: 20, cat: "Local", title: "Local Hardware Stores", img: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800", excerpt: "Support Pittsburg businesses.", body: "<p>I try to source parts from local shops in town. They know our homes better than the big box stores.</p>" }
         ];
 
-        // --- 3. RENDER LOGIC ---
-        try {
-            const feed = document.getElementById('blog-feed');
-            const today = new Date();
-            const startDay = new Date(startDateStr + 'T00:00:00'); 
-            const timeDiff = today - startDay;
-            const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); 
+        // --- 3. AUTO-GENERATOR FOR DAYS 21-100 ---
+        const topics = [
+            { cat: "Starlink", title: "Mounting on Metal Roofs", body: "Metal roofs are tricky. We use non-penetrating clamps that grip the standing seam, so we don't drill holes in your expensive roof." },
+            { cat: "Electrical", title: "Replacing Old Breakers", body: "Breakers wear out. If yours trips instantly or feels hot to the touch, it needs replacing before it fails completely." },
+            { cat: "Plumbing", title: "Toilet Flange Repair", body: "If your toilet rocks, the flange might be broken. I can install a repair ring to secure it to the floor." },
+            { cat: "RV Life", title: "Leveling Your Rig", body: "Always use blocks under your jacks. Uneven ground twists the frame and jams your slide-outs." },
+            { cat: "Handyman", title: "Patching Stucco", body: "Stucco cracks let water in. I use a textured patch to match the existing finish and seal the wall." },
+            { cat: "Smart Home", title: "Automated Blinds", body: "Retrofit motors can turn your existing blinds smart. Open them with a voice command." },
+            { cat: "Local", title: "Camp County Service", body: "I love working in Pittsburg. I'm usually available for same-day emergency calls in town." }
+        ];
 
-            let count = 0;
-            posts.forEach((post, index) => {
-                let show = false;
-                
-                // Active posts ALWAYS show
-                if (post.status === 'active') show = true;
-                
-                // Future posts show if the date has passed
-                else if (post.status === 'future' && daysPassed >= post.day) show = true;
-
-                if (show) {
-                    const el = document.createElement('div');
-                    el.className = 'blog-card';
-                    el.setAttribute('data-aos', 'fade-up');
-                    el.setAttribute('data-aos-delay', (count % 10) * 100); 
-                    
-                    el.innerHTML = `
-                        <div class="card-img" style="background-image:url('${post.img}')"></div>
-                        <div class="card-body">
-                            <div class="card-meta">${post.cat}</div>
-                            <h3 class="card-title">${post.title}</h3>
-                            <div class="card-excerpt">${post.excerpt}</div>
-                            <div class="read-btn" onclick="openModal(${index})">Read Article →</div>
-                        </div>
-                    `;
-                    feed.appendChild(el);
-                    count++;
-                }
+        // Fill the array to 100
+        const allPosts = [...specificPosts];
+        
+        for (let i = 21; i <= 100; i++) {
+            const topic = topics[i % topics.length]; // Cycle through topics
+            allPosts.push({
+                status: 'future',
+                day: i,
+                cat: topic.cat,
+                title: topic.title + " (Day " + i + ")",
+                img: "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
+                excerpt: topic.body,
+                body: `<p>${topic.body}</p><p>This is part of my daily maintenance series. Call me if you need help with this!</p>`
             });
-            
-            // Init Animation Library
-            AOS.init();
-
-        } catch (error) {
-            console.error("Blog Error:", error);
-            document.getElementById('blog-feed').innerHTML = "<p style='text-align:center; padding:20px; color:red;'>Error loading blog posts. Please refresh.</p>";
         }
 
-        function openModal(index) {
-            const p = posts[index];
+        // --- 4. RENDER LOGIC ---
+        const feed = document.getElementById('blog-feed');
+        const today = new Date();
+        const startDay = new Date(startDateStr + 'T00:00:00'); 
+        const timeDiff = today - startDay;
+        const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); 
+
+        let count = 0;
+        allPosts.forEach((post, index) => {
+            let show = false;
+            
+            // Active posts ALWAYS show
+            if (post.status === 'active') show = true;
+            // Future posts show if the date has passed
+            else if (post.status === 'future' && daysPassed >= post.day) show = true;
+
+            if (show) {
+                const el = document.createElement('div');
+                el.className = 'blog-card';
+                el.setAttribute('data-aos', 'fade-up');
+                el.setAttribute('data-aos-delay', (count % 10) * 100); 
+                
+                el.innerHTML = `
+                    <div class="card-img" style="background-image:url('${post.img}')"></div>
+                    <div class="card-body">
+                        <div class="card-meta">${post.cat}</div>
+                        <h3 class="card-title">${post.title}</h3>
+                        <div class="card-excerpt">${post.excerpt}</div>
+                        <div class="read-btn" onclick="openModal(${index})">Read Article →</div>
+                    </div>
+                `;
+                feed.appendChild(el);
+                count++;
+            }
+        });
+        
+        // Init Animation
+        AOS.init();
+        
+        // Make openModal accessible globally
+        window.openModal = function(index) {
+            const p = allPosts[index];
             document.getElementById('m-img').style.backgroundImage = `url('${p.img}')`;
             document.getElementById('m-cat').innerText = p.cat;
             document.getElementById('m-title').innerText = p.title;
@@ -258,7 +280,7 @@
             document.body.style.overflow = 'hidden';
         }
 
-        function closePost() {
+        window.closePost = function() {
             document.getElementById('post-modal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
@@ -266,6 +288,8 @@
         window.onclick = function(e) {
             if (e.target == document.getElementById('post-modal')) closePost();
         }
+
+    });
     </script>
 </body>
 </html>
