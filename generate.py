@@ -1,23 +1,25 @@
 import os
 from datetime import datetime
+import glob
 
 # Configuration
-IDEAS_FILE = 'getstarted/ideas.txt'
-POSTS_DIR = 'getstarted/posts'
+IDEAS_FILE = 'ideas.txt'
+POSTS_DIR = 'posts' # The script will create this folder automatically
+SITEMAP_FILE = 'sitemap_blogs.xml'
 
-# Ensure the directory exists
+# 1. Create the folder automatically if it's missing
 if not os.path.exists(POSTS_DIR):
     os.makedirs(POSTS_DIR)
 
-# 1. Read the ideas
+# 2. Read the ideas
 if not os.path.exists(IDEAS_FILE):
-    with open(IDEAS_FILE, 'w') as f:
-        f.write("Starlink Installation in Pittsburg TX\nRV Repair in East Texas\nHome Maintenance Tips")
+    print("ideas.txt not found.")
+    exit()
 
 with open(IDEAS_FILE, 'r') as f:
     ideas = f.readlines()
 
-# 2. Process the first 3
+# 3. Process the first 3 ideas
 if len(ideas) > 0:
     to_post = [i.strip() for i in ideas[:3]]
     remaining = ideas[3:]
@@ -27,32 +29,46 @@ if len(ideas) > 0:
         date_str = datetime.now().strftime("%Y-%m-%d")
         filename = f"{POSTS_DIR}/{date_str}-{safe_name}.html"
         
-        # Professional SEO-focused HTML Template
         blog_content = f"""<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>{idea} | Dean's Handyman Service</title>
-    <meta name="description" content="Professional {idea} services in Pittsburg, TX and surrounding East Texas areas.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{idea} | Dean's Handyman Service LLC</title>
+    <meta name="description" content="Expert {idea} services in Pittsburg, TX.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deanthehandyman.github.io/posts/{date_str}-{safe_name}.html">
     <style>
         body {{ font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; }}
-        .button {{ background: #2ecc71; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; display: inline-block; }}
+        .btn {{ background: #d4af37; color: black; padding: 15px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; }}
     </style>
 </head>
 <body>
+    <a href="../index.html">← Back to Home</a>
     <h1>{idea}</h1>
-    <p>Are you looking for expert help with <strong>{idea}</strong> in the Pittsburg or East Texas area? You've come to the right place.</p>
-    <p>At Dean's Handyman Service LLC, we specialize in high-quality home repairs, custom fabrication, and Starlink networking solutions tailored to the unique needs of our local community.</p>
+    <p>Need professional help with <strong>{idea}</strong> in Pittsburg or East Texas?</p>
+    <p>Dean's Handyman Service LLC provides industrial-grade solutions for homes, ranches, and RVs.</p>
     <br>
-    <a href="https://deanshandymanservice.me" class="button">Visit DeansHandymanService.me for a Quote</a>
+    <a href="https://deanshandymanservice.me?utm_source=blog&utm_medium={safe_name}" class="btn">Get a Quote at DeansHandymanService.me</a>
     <hr>
-    <p><small>Serving Pittsburg, TX 75686 and surrounding areas. Call: 281-917-9914</small></p>
+    <p><small>© 2026 Dean's Handyman Service LLC | Pittsburg, TX 75686 | 281-917-9914</small></p>
 </body>
 </html>"""
         
         with open(filename, 'w') as f:
             f.write(blog_content)
 
-    # 3. Update the ideas file (removes the 3 we just used)
+    # 4. Update ideas.txt
     with open(IDEAS_FILE, 'w') as f:
         f.writelines([line + '\n' for line in remaining if line.strip()])
 
+# 5. Build the Blog Sitemap
+all_posts = glob.glob(f"{POSTS_DIR}/*.html")
+sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n'
+for post in all_posts:
+    base_file = os.path.basename(post)
+    sitemap_xml += f'  <url>\\n    <loc>https://deanthehandyman.github.io/posts/{base_file}</loc>\\n    <changefreq>monthly</changefreq>\\n  </url>\\n'
+sitemap_xml += '</urlset>'
+
+with open(SITEMAP_FILE, 'w') as f:
+    f.write(sitemap_xml)
