@@ -1,168 +1,198 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | Dean's Handyman Service 75686 Pittsburg TX</title>
-  
-  <meta name="description" content="Professional Starlink Gen 3 & Mini installation, electrical, plumbing, and smart home services. Serving Pittsburg, TX and a 200-mile radius.">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    /* --- SYSTEM STYLES --- */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #fdfdfd; }
-    :root { --primary: #005073; --primary-dark: #003a54; --accent: #d4af37; --white: #ffffff; --light-bg: #f8fafc; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Handyman & Starlink Services | Pittsburg TX | 200-Mile Radius</title>
+    
+    <meta name="description" content="Expert Starlink Gen 3 & Mini installation, electrical, plumbing, and industrial-grade home repairs. Serving Pittsburg, TX and a 200-mile radius across TX, AR, LA, and OK.">
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
 
-    /* --- HEADER --- */
-    .site-header { background: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
-    .site-header .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo a { font-weight: 900; font-size: 1.4rem; text-decoration: none; color: var(--primary-dark); text-transform: uppercase; }
-    .main-nav a { color: var(--primary-dark); text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-left: 20px; }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & BASICS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; overflow-x: hidden; }
+        :root {
+            --primary: #008bd2; 
+            --primary-dark: #006fa8;
+            --accent: #f0a500; 
+            --dark: #1e293b;
+            --white: #ffffff;
+            --light-bg: #f1f5f9;
+        }
 
-    /* --- PAGE TITLE --- */
-    .page-hero { background: var(--primary-dark); color: white; padding: 60px 0; text-align: center; }
-    .page-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* --- SERVICE GRID --- */
-    .services-section { padding: 80px 0; }
-    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-    .service-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 40px; transition: 0.3s; position: relative; overflow: hidden; }
-    .service-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
-    .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-dark); }
-    .service-card ul { list-style: none; margin-bottom: 25px; }
-    .service-card li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 0.95rem; }
-    .service-card li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: #22c55e; }
-    .starting-price { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: #64748b; letter-spacing: 1px; }
+        /* --- HEADER --- */
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--dark); }
+        .logo-img { height: 85px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; }
+        .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+        .btn-nav { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: bold; }
 
-    /* --- THE PROCESS --- */
-    .process-section { background: var(--light-bg); padding: 80px 0; }
-    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center; margin-top: 40px; }
-    .step-num { width: 40px; height: 40px; background: var(--accent); color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; margin: 0 auto 20px; }
+        /* --- PAGE HERO --- */
+        .page-hero { background: var(--dark); color: white; padding: 80px 0; text-align: center; }
+        .page-hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-hero p { font-size: 1.2rem; color: #cbd5e1; }
 
-    /* --- CTA --- */
-    .cta-bar { background: var(--accent); padding: 40px 0; text-align: center; font-weight: 800; font-size: 1.2rem; }
-    .btn-dark { background: var(--primary-dark); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 15px; }
+        /* --- SERVICE GRID --- */
+        .services-section { padding: 80px 0; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .service-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 40px; transition: 0.3s; position: relative; border-top: 6px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .service-card:hover { transform: translateY(-5px); border-top-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--dark); font-weight: 800; }
+        .service-card ul { list-style: none; margin-bottom: 25px; }
+        .service-card li { margin-bottom: 10px; padding-left: 30px; position: relative; font-size: 0.95rem; font-weight: 500; }
+        .service-card li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: #22c55e; }
+        .starting-price { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-dark); letter-spacing: 1px; margin-bottom: 5px; }
 
-    .site-footer { background: var(--primary-dark); color: white; padding: 40px 0; text-align: center; }
-  </style>
+        /* --- PROCESS --- */
+        .process-section { background: var(--light-bg); padding: 80px 0; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center; margin-top: 40px; }
+        .step-num { width: 50px; height: 50px; background: var(--accent); color: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; margin: 0 auto 20px; font-size: 1.2rem; }
+
+        /* --- CTA --- */
+        .cta-bar { background: var(--accent); padding: 60px 0; text-align: center; }
+        .cta-bar h2 { color: var(--dark); font-weight: 800; margin-bottom: 20px; }
+        .btn-dark { background: var(--dark); color: white !important; padding: 15px 35px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold; transition: 0.3s; }
+        .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* --- FOOTER --- */
+        footer { background: #1a1a1a; color: #aaa; padding: 60px 0; text-align: center; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            h1 { font-size: 2rem !important; }
+            .logo-text { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <div class="logo"><a href="index.html">Dean's Handyman</a></div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="starlink-install.html">Starlink</a>
-      <a href="areas.html">Areas</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
+                <div class="logo-text">Dean's<br><span style="color:var(--primary); font-size:0.7rem;">Handyman Service LLC</span></div>
+            </a>
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="areas.html">Areas</a>
+                <a href="gallery.html">Work</a>
+                <a href="contact.html" class="btn-nav">Get Quote</a>
+            </nav>
+        </div>
+    </header>
 
-<section class="page-hero">
-  <div class="container">
-    <h1>Our Professional Services</h1>
-    <p>Heritage Craftsmanship Meets Modern Technology</p>
-  </div>
-</section>
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down">
+            <h1>Industrial-Grade Solutions</h1>
+            <p>Providing Expert Installation & Skilled Trades Across the Ark-La-Tex</p>
+        </div>
+    </section>
 
-<section class="services-section">
-  <div class="container">
-    <div class="service-grid">
-      
-      <div class="service-card">
-        <i class="fas fa-satellite-dish"></i>
-        <div class="starting-price">Starting at $300</div>
-        <h3>Starlink Gen 3 & Mini</h3>
-        <ul>
-          <li>Gen 3 Standard Home Installation</li>
-          <li>RV & Van 12V/24V Hardwiring</li>
-          <li>Custom Non-Penetrating Ridge Mounts</li>
-          <li>Mesh System & Network Expansion</li>
-        </ul>
-        <a href="starlink-install.html" style="color:var(--primary); font-weight:bold; text-decoration:none;">Learn More →</a>
-      </div>
+    <section class="services-section">
+        <div class="container">
+            <div class="service-grid">
+                
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fas fa-satellite-dish"></i>
+                    <div class="starting-price">Starting at $300</div>
+                    <h3>Starlink Installation</h3>
+                    <ul>
+                        <li>Gen 3 Standard Home Mounting</li>
+                        <li>RV & Mobile 12V DC Conversions</li>
+                        <li>Non-Penetrating Peak & Wall Mounts</li>
+                        <li>Network Optimization & Mesh Setup</li>
+                    </ul>
+                    <a href="starlink-install.html" class="btn-dark" style="padding: 10px 20px; font-size: 0.9rem;">Service Details</a>
+                </div>
 
-      <div class="service-card">
-        <i class="fas fa-bolt"></i>
-        <div class="starting-price">Starting at $75</div>
-        <h3>Electrical & Smart Home</h3>
-        <ul>
-          <li>Ceiling Fan & Light Fixture Swaps</li>
-          <li>Ring, Nest & Security Cam Installs</li>
-          <li>Outlet, Switch & GFCi Replacement</li>
-          <li>TV Mounting with Hidden Cabling</li>
-        </ul>
-      </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-bolt"></i>
+                    <div class="starting-price">Hourly Rate: $100/hr</div>
+                    <h3>Skilled Tech & Electrical</h3>
+                    <ul>
+                        <li>Ceiling Fan & Industrial Fixtures</li>
+                        <li>Smart Security & Camera Systems</li>
+                        <li>Outlet, Switch & GFCi Troubleshooting</li>
+                        <li>Technical Fabrication & Hydraulics</li>
+                    </ul>
+                    <a href="contact.html" class="btn-dark" style="padding: 10px 20px; font-size: 0.9rem;">Book Tech Call</a>
+                </div>
 
-      <div class="service-card">
-        <i class="fas fa-faucet"></i>
-        <div class="starting-price">Starting at $120</div>
-        <h3>Plumbing & Fixtures</h3>
-        <ul>
-          <li>Kitchen & Bath Faucet Upgrades</li>
-          <li>Garbage Disposal Replacement</li>
-          <li>Toilet Repair & Full Installations</li>
-          <li>Showerhead & Valve Updates</li>
-        </ul>
-      </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-tools"></i>
+                    <div class="starting-price">Starting at $120</div>
+                    <h3>Plumbing & Maintenance</h3>
+                    <ul>
+                        <li>Faucet Upgrades & Leak Repair</li>
+                        <li>Garbage Disposal Replacement</li>
+                        <li>Toilet Repair & Professional Swaps</li>
+                        <li>Ranch & Cabin Honey-Do Lists</li>
+                    </ul>
+                    <a href="contact.html" class="btn-dark" style="padding: 10px 20px; font-size: 0.9rem;">Request Quote</a>
+                </div>
 
-      <div class="service-card">
-        <i class="fas fa-hammer"></i>
-        <div class="starting-price">Rate: $100/hr</div>
-        <h3>General Maintenance</h3>
-        <ul>
-          <li>Furniture & Outdoor Assembly</li>
-          <li>Cabinet Hardware & Hinge Repair</li>
-          <li>Door Lock & Deadbolt Installation</li>
-          <li>Ranch & Cabin "Honey-Do" Lists</li>
-        </ul>
-      </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <section class="process-section">
+        <div class="container">
+            <h2 style="text-align:center; color: var(--dark); font-weight: 800;">Our Professional Process</h2>
+            <div class="process-grid">
+                <div data-aos="zoom-in">
+                    <div class="step-num">1</div>
+                    <h4>Request a Quote</h4>
+                    <p>Use our estimator or contact form to describe your project and service city.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="step-num">2</div>
+                    <h4>Expert Review</h4>
+                    <p>I personally review your project specs and provide a transparent labor estimate.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-num">3</div>
+                    <h4>Industrial Execution</h4>
+                    <p>We arrive with a mobile workshop to complete the job to commercial standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="process-section">
-  <div class="container">
-    <h2 style="text-align:center;">How We Work</h2>
-    <div class="process-grid">
-      <div>
-        <div class="step-num">1</div>
-        <h4>Instant Quote</h4>
-        <p>Use our online estimator to get a baseline price for your project.</p>
-      </div>
-      <div>
-        <div class="step-num">2</div>
-        <h4>Schedule</h4>
-        <p>We confirm the details and set a time that works for your home or ranch.</p>
-      </div>
-      <div>
-        <div class="step-num">3</div>
-        <h4>Done Right</h4>
-        <p>We complete the job using 4 generations of building expertise.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="cta-bar">
+        <div class="container">
+            <h2>Serving Pittsburg & A 200-Mile Radius</h2>
+            <p style="font-weight: 600; margin-bottom: 20px;">Texas • Arkansas • Louisiana • Oklahoma</p>
+            <a href="contact.html" class="btn-dark" style="padding: 18px 40px; font-size: 1.1rem;">Start Your Estimate</a>
+        </div>
+    </section>
 
-<section class="cta-bar">
-  <div class="container">
-    Ready to get started? 
-    <br>
-    <a href="index.html#estimator" class="btn-dark">Get Your Quote Now</a>
-  </div>
-</section>
+    <footer>
+        <div class="container">
+            <p><strong>Dean's Handyman Service LLC</strong></p>
+            <p>Professional Tradesman | (281) 917-9914</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.5;">© 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<footer class="site-footer">
-  <p>© 2026 Dean's Handyman Service LLC | (281) 917-9914</p>
-  <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Pittsburg, TX 75686 | Serving a 200-Mile Radius</p>
-</footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
 </body>
 </html>
