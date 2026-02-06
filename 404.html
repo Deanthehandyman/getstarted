@@ -3,18 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>404 - Page Not Found | Dean's Handyman Service LLC</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; background: #f8fafc; color: #003a54; margin: 0; }
-        h1 { font-size: 4rem; margin: 0; }
-        p { font-size: 1.5rem; margin-bottom: 30px; }
-        a { background: #d4af37; color: black; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; text-transform: uppercase; }
-        a:hover { background: #bfa030; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f9f9f9; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        :root {
+            --primary: #008bd2; 
+            --accent: #f0a500; 
+            --dark: #111;
+            --white: #ffffff;
+        }
+
+        /* --- HEADER --- */
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-img { height: 60px; width: auto; }
+
+        /* --- MAIN CONTENT --- */
+        .main-error {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error-card {
+            max-width: 600px;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 8px solid var(--primary);
+        }
+
+        .error-code {
+            font-size: 6rem;
+            font-weight: 900;
+            color: #ddd;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        h1 { font-size: 2rem; color: var(--dark); margin-bottom: 20px; }
+        p { color: #666; margin-bottom: 30px; font-size: 1.1rem; }
+
+        .btn { 
+            display: inline-block; 
+            padding: 14px 28px; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            transition: 0.3s;
+            margin: 10px;
+        }
+        .btn-primary { background-color: var(--primary); color: white; }
+        .btn-accent { background-color: var(--accent); color: var(--dark); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        /* --- FOOTER --- */
+        footer { background: #1a1a1a; color: #777; padding: 30px 0; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>Oops! We can't find that page.</p>
-    <a href="index.html">Go Back Home</a>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
+            </a>
+        </div>
+    </header>
+
+    <main class="main-error">
+        <div class="error-card" data-aos="zoom-in">
+            <div class="error-code">404</div>
+            <h1>Looks like that tool is missing.</h1>
+            <p>The page you're looking for has been moved, renamed, or perhaps it never existed. Let's get you back on track.</p>
+            
+            <div class="button-group">
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+                <a href="index.html#estimator" class="btn btn-accent">Project Estimator</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Dean's Handyman Service LLC | Pittsburg, TX
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800 });</script>
 </body>
 </html>
