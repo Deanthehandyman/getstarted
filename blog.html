@@ -1,401 +1,119 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Handyman's Log | Dean's Handyman Service LLC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Handyman's Log | Dean's Handyman Service Blog</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="Read the latest updates, home repair tips, and Starlink installation news from Dean's Handyman Service in Katy and East Texas.">
+  <meta name="keywords" content="handyman blog, home repair tips, Starlink news Katy TX">
+
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="US-TX">
+  <meta name="geo.placename" content="Katy">
+  <meta name="geo.position" content="29.7858;-95.8240">
+  <meta name="ICBM" content="29.7858,-95.8240">
+
+  <link rel="canonical" href="https://deanthehandyman.github.io/blog.html">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f4f7f6; }
+    :root { --primary: #005073; --primary-dark: #003a54; --accent: #d4af37; --white: #ffffff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    /* HEADER */
+    .site-header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .site-header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo a { font-weight: 900; font-size: 1.5rem; text-decoration: none; color: var(--primary-dark); text-transform: uppercase; }
+    .main-nav a { color: var(--primary-dark); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
     
-    <style>
-        /* --- BRANDING --- */
-        :root { --primary: #005073; --primary-dark: #003a54; --accent: #d4af37; --text: #333; --light-bg: #f4f7f6; }
-        
-        /* --- SCROLL FIXES --- */
-        html { overflow-y: scroll; } /* Forces scrollbar to prevent jumps */
-        body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            background: var(--light-bg); 
-            color: var(--text); 
-            line-height: 1.6; 
-            overflow-x: hidden; /* Prevents horizontal scroll */
-        }
-        p { margin-bottom: 1.5em; }
-        
-        /* --- HEADER --- */
-        header { background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-        .nav-con { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 900; color: var(--primary); font-size: 1.2rem; text-transform: uppercase; line-height: 1; text-decoration: none; }
-        .logo span { color: var(--accent); font-size: 0.7rem; display: block; letter-spacing: 1px; }
-        .back-btn { color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; border: 2px solid var(--primary); padding: 8px 16px; border-radius: 4px; transition: 0.3s; text-decoration: none; }
-        .back-btn:hover { background: var(--primary); color: white; }
+    /* CONTENT */
+    .blog-hero { background: linear-gradient(135deg, #0f172a 0%, #005073 100%); color: white; padding: 100px 20px; text-align: center; }
+    
+    /* FOOTER */
+    .site-footer { background: #005073; color: #ffffff; padding: 50px 0; margin-top: 50px; }
+    .site-footer a { color: #ffffff; text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.9rem; }
+    .footer-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center; }
 
-        /* --- HERO --- */
-        .blog-hero { background: linear-gradient(135deg, #0f172a 0%, #005073 100%); color: white; padding: 100px 20px; text-align: center; }
-        .blog-hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 800; margin-top: 0; letter-spacing: -1px; }
-        .blog-hero p { color: #e2e8f0; max-width: 700px; margin: 0 auto; font-size: 1.2rem; font-weight: 500; }
-
-        /* --- GRID --- */
-        .container { max-width: 1100px; margin: 60px auto; padding: 0 25px; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 35px; min-height: 200px; }
-        
-        /* --- CARDS --- */
-        .blog-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease; }
-        .blog-card:hover { transform: translateY(-7px); box-shadow: 0 20px 40px rgba(0,80,115,0.15); border-color: var(--accent); }
-        .card-img { height: 220px; background-size: cover; background-position: center; background-color: #1e293b; }
-        .card-body { padding: 30px; flex: 1; display: flex; flex-direction: column; }
-        .card-meta { color: var(--accent); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px; }
-        .card-title { font-size: 1.4rem; font-weight: 800; color: var(--primary-dark); margin: 0 0 15px 0; line-height: 1.25; }
-        .card-excerpt { color: #555; font-size: 1rem; margin-bottom: 25px; flex: 1; line-height: 1.5; }
-        .read-btn { color: var(--primary); font-weight: 800; font-size: 0.9rem; text-transform: uppercase; cursor: pointer; margin-top: auto; letter-spacing: 0.5px; display: inline-block; }
-        .read-btn:hover { color: var(--accent); text-decoration: underline; }
-
-        /* --- MODAL (The Popup) --- */
-        .modal-overlay { 
-            position: fixed; 
-            top: 0; left: 0; right: 0; bottom: 0; 
-            background: rgba(15, 23, 42, 0.96); 
-            z-index: 10000; 
-            display: none; /* Hidden by default */
-            
-            /* SCROLL FIXES */
-            overflow-y: auto; 
-            -webkit-overflow-scrolling: touch; /* Smooth scroll on iPhone */
-            padding: 20px;
-        }
-
-        .modal-content { 
-            background: white; 
-            max-width: 800px; 
-            margin: 40px auto; /* Vertical spacing */
-            border-radius: 12px; 
-            overflow: hidden; 
-            position: relative; 
-            animation: fadeUp 0.4s ease; 
-        }
-
-        .close-modal { 
-            position: absolute; 
-            top: 20px; right: 20px; 
-            font-size: 2rem; 
-            color: white; 
-            cursor: pointer; 
-            z-index: 10; 
-            background: rgba(0,0,0,0.6); 
-            width: 44px; height: 44px; 
-            text-align: center; 
-            line-height: 38px; 
-            border-radius: 50%; 
-        }
-
-        .modal-header-img { height: 350px; background-size: cover; background-position: center; }
-        .modal-body { padding: 40px; }
-        .modal-body h2 { color: var(--primary-dark); font-size: 2.2rem; margin-top: 0; font-weight: 800; }
-        .article-content { font-size: 1.1rem; color: #334155; }
-        .cta-box { background: #f0f7fa; border-left: 5px solid var(--accent); padding: 25px; margin-top: 40px; border-radius: 4px; }
-        
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @media(max-width: 768px) { .modal-header-img { height: 200px; } .modal-body { padding: 20px; } .blog-hero h1 { font-size: 2.2rem; } }
-    </style>
+    @media (max-width: 900px) {
+      .site-header .container { flex-direction: column; gap: 10px; }
+      .main-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+      .main-nav a { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-con">
-            <a href="index.html" class="logo">Dean's<br><span>Handyman Service</span></a>
-            <a href="index.html" class="back-btn">← Back to Home</a>
-        </div>
-    </header>
-
-    <div class="blog-hero">
-        <h1>The Handyman's Log</h1>
-        <p>Expert Tips for East Texas Homeowners & RVers.</p>
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">Dean's Handyman Service</a>
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="areas.html">Service Areas</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="container">
-        <div class="blog-grid" id="blog-feed"></div>
+<section class="blog-hero">
+  <div class="container">
+    <h1>The Handyman's Log</h1>
+    <p>Insights and updates from the field</p>
+  </div>
+</section>
+
+<div class="container" style="padding:50px 20px;" data-aos="fade-up">
+  <h2>Recent Posts</h2>
+  <p>Coming soon...</p>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Dean's Handyman Service LLC</h3>
+        <p>Reliable home repair, smart home installs, and Starlink setup in Katy & East Texas.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="areas.html">Service Areas</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Katy, Texas</p>
+        <p>Phone: (281) 917-9914</p>
+        <p>Email: deanshandymanservice1@gmail.com</p>
+      </div>
     </div>
-
-    <div class="modal-overlay" id="post-modal">
-        <div class="modal-content">
-            <div class="close-modal" onclick="closePost()">×</div>
-            <div class="modal-header-img" id="m-img"></div>
-            <div class="modal-body">
-                <span style="color:var(--accent); font-weight:bold; text-transform:uppercase;" id="m-cat"></span>
-                <h2 id="m-title"></h2>
-                <div class="article-content" id="m-body"></div>
-                <div class="cta-box">
-                    <strong>Need help with this?</strong>
-                    <p>I serve Pittsburg, Mt. Pleasant, and East Texas. I can handle this job for you.</p>
-                    <a href="index.html#estimator" class="back-btn" style="display:inline-block; margin-top:10px;">Get a Quote</a>
-                </div>
-            </div>
-        </div>
+    <div class="footer-bottom">
+      <p>© 2026 Dean's Handyman Service LLC. All rights reserved.</p>
     </div>
+  </div>
+</footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
 
-        // --- 1. CONFIGURATION ---
-        const startDateStr = '2026-02-04'; 
+<!-- Zapier Chatbot -->
+<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
-        // --- 2. HAND-WRITTEN POSTS (Active & Specific Future) ---
-        const specificPosts = [
-            // ACTIVE POSTS (0-9)
-            {
-                status: 'active', day: 0,
-                cat: "Starlink",
-                title: "Why Trees are the Enemy of Starlink",
-                img: "https://images.unsplash.com/photo-1464869372688-a93d806be852?w=800",
-                excerpt: "In East Texas, pine trees kill your signal. Here is how we fix it.",
-                body: "<p>Out here in the piney woods, we love our trees, but they are the absolute enemy of satellite internet. I get calls daily from folks around Pittsburg saying, 'Dean, I bought Starlink, set it in the yard, and it drops connection constantly.'</p><p>Starlink satellites move fast across the sky. Your dish needs a wide, clear field of view to track them. If a single pine branch is in that path, the signal gets cut until it finds the next satellite.</p><p>The solution isn't cutting down the forest; it's getting above it. I specialize in high-mount installations. Whether it's a ridge mount on your roof or a pole mount, getting that dish 10 feet higher usually solves the obstruction issue entirely.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Electrical",
-                title: "Loose Neutrals: A Fire Hazard",
-                img: "https://images.unsplash.com/photo-1495073278381-18df1dd69107?w=800",
-                excerpt: "Do your lights dim when the microwave turns on? That is a major red flag.",
-                body: "<p>I had a customer in Mt. Pleasant tell me they thought their house was haunted. Every time the microwave ran, the living room lights would dim. That's not a ghost; that's a loose neutral wire.</p><p>Your electrical system relies on a neutral wire to balance the load. If that connection gets loose at the meter base or in your panel, the voltage goes haywire. This can fry your electronics instantly.</p><p>More importantly, the arcing at the loose connection creates heat that can start a fire in your walls. Do not ignore flickering lights.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "RV Living",
-                title: "Skirting Your RV for Winter",
-                img: "https://images.unsplash.com/photo-1639572340227-1183e645a573?w=800",
-                excerpt: "Living full-time in an RV means preparing for freezes. Skirting is non-negotiable.",
-                body: "<p>We don't get hard winters often, but when that arctic blast hits Pittsburg, RVers suffer. The thin underbelly of a camper offers almost zero protection for PEX pipes.</p><p>When the wind whips under your rig, it freezes your water lines almost instantly. The solution is RV skirting. It traps the heat radiating from your floor and creates a dead air space.</p><p>It also drastically cuts down on your propane usage. Whether you use foam board or custom vinyl, get it done before the freeze.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Smart Tech",
-                title: "Beaming Internet to the Barn",
-                img: "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800",
-                excerpt: "Your Starlink router isn't strong enough to reach the shop 200 feet away.",
-                body: "<p>Common request: 'Dean, I need internet in my metal shop 200 feet away.' The standard router isn't going to punch through your house walls and travel that far.</p><p>The solution isn't digging a trench. It's a Wireless Point-to-Point Bridge. Think of it like an invisible ethernet cable carried through the air.</p><p>We mount a small dish on the house and another on the barn. Boom—full speed internet in the shop, no digging required.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Plumbing",
-                title: "That Popping Noise in Your Water Heater",
-                img: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800",
-                excerpt: "Is your water heater sounding like a popcorn machine? It's dying.",
-                body: "<p>If you hear popping, that is sediment boiling at the bottom of your tank. Our water has minerals that settle over time.</p><p>This layer traps steam bubbles against the burner. It insulates the water from the heat, making your bill go up and eventually cracking the tank.</p><p>Flush your tank annually. It's messy, but cheaper than a new heater.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Tools",
-                title: "Why I Use DeWalt 20V",
-                img: "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
-                excerpt: "As a professional, time is money. Yellow and black tools run my business.",
-                body: "<p>Customers see the sea of yellow tools in my truck. I use DeWalt because the 20V batteries hold up to the East Texas heat.</p><p>When I'm drilling brick for a Starlink mount, I need sustained power. Cheap drills die halfway through.</p><p>Reliability means I finish your job faster.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "RV Repair",
-                title: "STOP Using Silicone on RV Roofs",
-                img: "https://images.unsplash.com/photo-1536407896971-090636da1289?w=800",
-                excerpt: "Silicone doesn't stick to rubber roofs. Use Dicor instead.",
-                body: "<p>Public enemy number one: Silicone on an RV roof. It peels off in three weeks. RV roofs are EPDM or TPO rubber.</p><p>Silicone doesn't bond chemically. You must use Self-Leveling Lap Sealant (Dicor). It melts onto the rubber and creates a permanent seal.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Mounting",
-                title: "TV on Brick: Do It Right",
-                img: "https://images.unsplash.com/photo-1593784697956-14120257771e?w=800",
-                excerpt: "Plastic anchors melt in brick. I use concrete screws.",
-                body: "<p>Mounting a TV on a fireplace looks great, but plastic anchors will slip out of mortar over time. I use Tapcon concrete screws.</p><p>They cut their own threads into the masonry. When done right, I could do pull-ups on the mount.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Maintenance",
-                title: "Gutter Cleaning in Pine Country",
-                img: "https://images.unsplash.com/photo-1621245781363-23945c711a3d?w=800",
-                excerpt: "Pine needles destroy fascia boards. Keep them clean.",
-                body: "<p>Pine needles form dense mats in gutters. Water overflows and rots your fascia boards. It's a messy job, but I recommend cleaning them twice a year to save your roof.</p>"
-            },
-            {
-                status: 'active', day: 0,
-                cat: "Gaming",
-                title: "Gaming on Starlink",
-                img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800",
-                excerpt: "Can you play COD on Starlink? Yes, but obstructions matter.",
-                body: "<p>As a gamer, I check latency. Starlink gets 30-50ms ping in Pittsburg. It's great for gaming, provided you have ZERO obstructions.</p><p>A single tree branch will cause lag spikes. That's why the install matters.</p>"
-            },
-            // FUTURE POSTS (1-20)
-            { status: 'future', day: 1, cat: "RV Upgrades", title: "Keyless RV Entry", img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800", excerpt: "Stop fumbling for keys at the lake.", body: "<p>Upgrade your RV door to a digital keypad. It's a 30-minute install that changes your life. No more lost keys at the State Park.</p>" },
-            { status: 'future', day: 2, cat: "Electrical", title: "Why Outdoor Outlets Trip", img: "https://images.unsplash.com/photo-1565514020128-2c26e1c6b306?w=800", excerpt: "Rain getting in? Your bubble covers are cracked.", body: "<p>Plastic covers get brittle in the sun. If they crack, rain trips the GFCI. Replace them with heavy-duty covers immediately.</p>" },
-            { status: 'future', day: 3, cat: "Starlink", title: "Gen 3 Router Benefits", img: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800", excerpt: "Is the new router worth it? Yes, for the range.", body: "<p>The new Gen 3 router has WiFi 6 and better range for large ranch homes. Plus, it has ethernet ports built-in!</p>" },
-            { status: 'future', day: 4, cat: "Handyman", title: "The Invisible Drywall Patch", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800", excerpt: "Fixing doorknob holes like a pro.", body: "<p>Use a 'California Patch' (hot patch). Keep the paper on the front of the patch to act as tape. It bonds tighter and disappears when painted.</p>" },
-            { status: 'future', day: 5, cat: "RV Tech", title: "12V vs 120V Systems", img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800", excerpt: "Why do the lights work but the microwave doesn't?", body: "<p>RVs have two systems. 120V is for big appliances (shore power). 12V is for lights (battery). Knowing the difference helps troubleshoot.</p>" },
-            { status: 'future', day: 6, cat: "Plumbing", title: "Jammed Garbage Disposal", img: "https://images.unsplash.com/photo-1606214555898-1e43c5b36481?w=800", excerpt: "It hums but won't spin? Use the key.", body: "<p>There is a hex hole on the bottom. Use the Allen wrench to break the jam free manually. Then hit the red reset button.</p>" },
-            { status: 'future', day: 7, cat: "Starlink", title: "Burying Starlink Cables", img: "https://images.unsplash.com/photo-1622359557431-7a637db6f890?w=800", excerpt: "Don't let the mower eat your internet.", body: "<p>Always run the cable in 1-inch PVC conduit if burying it. The cable is fragile and expensive to replace.</p>" },
-            { status: 'future', day: 8, cat: "AV Tech", title: "Hiding TV Cords", img: "https://images.unsplash.com/photo-1558211583-03ed8a0b3d5f?w=800", excerpt: "No more dangling wires.", body: "<p>I install in-wall power kits. It creates a recessed outlet behind the TV so it looks like it's floating. Clean and professional.</p>" },
-            { status: 'future', day: 9, cat: "RV Life", title: "Battling East Texas Heat", img: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800", excerpt: "Reflectix is your best friend.", body: "<p>Cut Reflectix insulation for every window. It drops the internal temp by 10 degrees. Also, clean your AC filters monthly.</p>" },
-            { status: 'future', day: 10, cat: "Handyman", title: "Fixing Squeaky Floors", img: "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=800", excerpt: "Silence the ghost in the hallway.", body: "<p>Squeaks are nails rubbing on wood. I use breakaway screws through the carpet to pull the subfloor tight to the joist.</p>" },
-            { status: 'future', day: 11, cat: "Starlink", title: "Starlink Roam vs Residential", img: "https://images.unsplash.com/photo-1544724569-5f546fd6dd2d?w=800", excerpt: "Which plan is right for you?", body: "<p>If you stay in Pittsburg, get Residential. It has priority data. Roam is deprioritized and slower in the evenings.</p>" },
-            { status: 'future', day: 12, cat: "Electrical", title: "LED Wafer Lights", img: "https://images.unsplash.com/photo-1565814329-81e3a6699633?w=800", excerpt: "Update your look instantly.", body: "<p>Old can lights are drafty. LED wafers seal the ceiling, use less power, and look modern. I install them in kitchens often.</p>" },
-            { status: 'future', day: 13, cat: "Plumbing", title: "Leaky Faucet Handles", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", excerpt: "It's usually just the cartridge.", body: "<p>You don't need a new faucet. Swapping the internal cartridge takes 20 minutes and stops the drip.</p>" },
-            { status: 'future', day: 14, cat: "RV Tech", title: "Slide-Out Maintenance", img: "https://images.unsplash.com/photo-1595846519845-68e298c2edd8?w=800", excerpt: "Don't let them squeak.", body: "<p>Lubricate your slide seals and tracks twice a year. It prevents the motor from working too hard and burning out.</p>" },
-            { status: 'future', day: 15, cat: "Handyman", title: "IKEA Assembly", img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800", excerpt: "Save your marriage.", body: "<p>Flat-pack furniture is frustrating. I have the tools and patience to knock it out fast. Call me.</p>" },
-            { status: 'future', day: 16, cat: "Electrical", title: "Ceiling Fan Direction", img: "https://images.unsplash.com/photo-1565514020128-2c26e1c6b306?w=800", excerpt: "Check the switch!", body: "<p>Counter-clockwise in summer pushes air down. Clockwise in winter pulls cool air up. It makes a 5-degree difference.</p>" },
-            { status: 'future', day: 17, cat: "Starlink", title: "Starlink in Storms", img: "https://images.unsplash.com/photo-1527664557558-a2b352fcf203?w=800", excerpt: "Does it work in rain?", body: "<p>Heavy rain fades the signal. However, the dish heats up to melt snow and ice automatically.</p>" },
-            { status: 'future', day: 18, cat: "RV Tech", title: "Sanitize Water Tanks", img: "https://images.unsplash.com/photo-1626326725832-601448b4e137?w=800", excerpt: "Kill the bacteria.", body: "<p>Once a year, run a bleach solution through your fresh tank and lines. Let it sit, then flush thoroughly.</p>" },
-            { status: 'future', day: 19, cat: "Plumbing", title: "Running Toilets", img: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800", excerpt: "Wasting water?", body: "<p>It's usually a $5 flapper valve. If it's warped, water leaks into the bowl constantly. Easy fix.</p>" },
-            { status: 'future', day: 20, cat: "Local", title: "Local Hardware Stores", img: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800", excerpt: "Support Pittsburg businesses.", body: "<p>I try to source parts from local shops in town. They know our homes better than the big box stores.</p>" }
-        ];
-
-        // --- 3. IMAGE BANKS (Curated for Dean's Services) ---
-        const imageBanks = {
-            Starlink: [
-                "https://images.unsplash.com/photo-1628126235206-52605511dc5a?w=800",
-                "https://images.unsplash.com/photo-1544724569-5f546fd6dd2d?w=800",
-                "https://images.unsplash.com/photo-1548348425-9f5b2b2b2f56?w=800",
-                "https://images.unsplash.com/photo-1622359557431-7a637db6f890?w=800",
-                "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800",
-                "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800"
-            ],
-            Electrical: [
-                "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800",
-                "https://images.unsplash.com/photo-1565514020128-2c26e1c6b306?w=800",
-                "https://images.unsplash.com/photo-1558211583-03ed8a0b3d5f?w=800",
-                "https://images.unsplash.com/photo-1565814329-81e3a6699633?w=800",
-                "https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?w=800",
-                "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800"
-            ],
-            Plumbing: [
-                "https://images.unsplash.com/photo-1606214555898-1e43c5b36481?w=800",
-                "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800",
-                "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800",
-                "https://images.unsplash.com/photo-1626326725832-601448b4e137?w=800",
-                "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800"
-            ],
-            RV: [
-                "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
-                "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
-                "https://images.unsplash.com/photo-1533630793084-85713609a54a?w=800",
-                "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800",
-                "https://images.unsplash.com/photo-1639572340227-1183e645a573?w=800"
-            ],
-            Handyman: [
-                "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800",
-                "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800",
-                "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=800",
-                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800",
-                "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800",
-                "https://images.unsplash.com/photo-1593784697956-14120257771e?w=800"
-            ],
-            SmartHome: [
-                 "https://images.unsplash.com/photo-1558002038-1091a166111c?w=800",
-                 "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800",
-                 "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800"
-            ],
-            Local: [
-                "https://images.unsplash.com/photo-1609101032943-4dc9197c36d0?w=800",
-                "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800",
-                "https://images.unsplash.com/photo-1621245781363-23945c711a3d?w=800"
-            ]
-        };
-
-        // --- 4. AUTO-GENERATOR FOR DAYS 21-100 ---
-        const topics = [
-            { cat: "Starlink", bank: "Starlink", title: "Mounting on Metal Roofs", body: "Metal roofs are tricky. We use non-penetrating clamps that grip the standing seam, so we don't drill holes in your expensive roof." },
-            { cat: "Electrical", bank: "Electrical", title: "Replacing Old Breakers", body: "Breakers wear out. If yours trips instantly or feels hot to the touch, it needs replacing before it fails completely." },
-            { cat: "Plumbing", bank: "Plumbing", title: "Toilet Flange Repair", body: "If your toilet rocks, the flange might be broken. I can install a repair ring to secure it to the floor." },
-            { cat: "RV Life", bank: "RV", title: "Leveling Your Rig", body: "Always use blocks under your jacks. Uneven ground twists the frame and jams your slide-outs." },
-            { cat: "Handyman", bank: "Handyman", title: "Patching Stucco", body: "Stucco cracks let water in. I use a textured patch to match the existing finish and seal the wall." },
-            { cat: "Smart Home", bank: "SmartHome", title: "Automated Blinds", body: "Retrofit motors can turn your existing blinds smart. Open them with a voice command." },
-            { cat: "Local", bank: "Local", title: "Camp County Service", body: "I love working in Pittsburg. I'm usually available for same-day emergency calls in town." },
-            { cat: "RV Tech", bank: "RV", title: "Roof UV Sealant", body: "East Texas sun destroys rubber roofs. Apply a UV coating every two years to prevent chalking and leaks." },
-             { cat: "Electrical", bank: "Electrical", title: "Surge Protection", body: "Lightning strikes are common here. A whole-house surge protector at the panel is cheap insurance for your appliances." },
-              { cat: "Handyman", bank: "Handyman", title: "Door Adjustments", body: "Humidity makes doors swell and stick. A quick planing of the edge usually solves the issue for good." }
-        ];
-
-        // Fill the array to 100 with ROTATING images
-        const allPosts = [...specificPosts];
-        
-        for (let i = 21; i <= 100; i++) {
-            const topic = topics[i % topics.length]; // Cycle through topics
-            
-            // Select image from appropriate bank, rotating through them based on the day index
-            const imgBank = imageBanks[topic.bank];
-            const specificImg = imgBank[i % imgBank.length];
-
-            allPosts.push({
-                status: 'future',
-                day: i,
-                cat: topic.cat,
-                title: topic.title + " (Day " + i + ")",
-                img: specificImg,
-                excerpt: topic.body,
-                body: `<p>${topic.body}</p><p>This is part of my daily maintenance series. Call me if you need help with this!</p>`
-            });
-        }
-
-        // --- 5. RENDER LOGIC ---
-        const feed = document.getElementById('blog-feed');
-        const today = new Date();
-        const startDay = new Date(startDateStr + 'T00:00:00'); 
-        const timeDiff = today - startDay;
-        const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); 
-
-        let count = 0;
-        allPosts.forEach((post, index) => {
-            let show = false;
-            
-            // Active posts ALWAYS show
-            if (post.status === 'active') show = true;
-            // Future posts show if the date has passed
-            else if (post.status === 'future' && daysPassed >= post.day) show = true;
-
-            if (show) {
-                const el = document.createElement('div');
-                el.className = 'blog-card';
-                el.setAttribute('data-aos', 'fade-up');
-                el.setAttribute('data-aos-delay', (count % 10) * 100); 
-                
-                el.innerHTML = `
-                    <div class="card-img" style="background-image:url('${post.img}')"></div>
-                    <div class="card-body">
-                        <div class="card-meta">${post.cat}</div>
-                        <h3 class="card-title">${post.title}</h3>
-                        <div class="card-excerpt">${post.excerpt}</div>
-                        <div class="read-btn" onclick="openModal(${index})">Read Article →</div>
-                    </div>
-                `;
-                feed.appendChild(el);
-                count++;
-            }
-        });
-        
-        // Init Animation
-        AOS.init();
-        
-        // Make openModal accessible globally
-        window.openModal = function(index) {
-            const p = allPosts[index];
-            document.getElementById('m-img').style.backgroundImage = `url('${p.img}')`;
-            document.getElementById('m-cat').innerText = p.cat;
-            document.getElementById('m-title').innerText = p.title;
-            document.getElementById('m-body').innerHTML = p.body;
-            document.getElementById('post-modal').style.display = 'block';
-            
-            // Lock body scroll BUT allow modal scroll
-            document.body.style.overflow = 'hidden';
-        }
-
-        window.closePost = function() {
-            document.getElementById('post-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(e) {
-            if (e.target == document.getElementById('post-modal')) closePost();
-        }
-
-    });
-    </script>
 </body>
 </html>
