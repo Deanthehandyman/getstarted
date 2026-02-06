@@ -13,7 +13,7 @@
 
     <meta property="og:title" content="Our 200-Mile Service Area | Dean's Handyman Service LLC">
     <meta property="og:description" content="Based in Pittsburg, TX. Serving 4 states with industrial-grade technical repairs.">
-    <meta property="og:image" content="https://i.imgur.com/CtBcYkI.png">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -66,10 +66,10 @@
             .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
         }
 
-        /* --- MAP HERO --- */
+        /* --- HERO (TRUCK BACKGROUND) --- */
         .map-hero { 
-            background: linear-gradient(rgba(0, 15, 30, 0.7), rgba(0, 15, 30, 0.7)), url('https://i.imgur.com/B9B1v2q.png'); 
-            background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;
+            background: linear-gradient(rgba(0, 15, 30, 0.7), rgba(0, 15, 30, 0.7)), url('https://i.imgur.com/KMsvpls.jpg'); 
+            background-size: cover; background-position: center; background-attachment: fixed; padding: 100px 0; text-align: center; color: white;
         }
 
         /* --- INFO BOX --- */
@@ -78,8 +78,8 @@
 
         /* --- SEARCH & GRID --- */
         .search-container { text-align: center; margin-bottom: 40px; }
-        .search-box { width: 100%; max-width: 600px; padding: 18px; border-radius: 50px; border: 2px solid #ddd; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); outline: none; }
-        .search-box:focus { border-color: var(--primary); }
+        .search-box { width: 100%; max-width: 600px; padding: 18px; border-radius: 50px; border: 2px solid #ddd; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); outline: none; transition: 0.3s; }
+        .search-box:focus { border-color: var(--primary); box-shadow: 0 4px 15px rgba(0, 139, 210, 0.2); }
 
         .area-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; padding-bottom: 80px; }
         .city-tag { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; font-size: 0.95rem; font-weight: 700; color: var(--dark); transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
@@ -92,7 +92,10 @@
             justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1500; text-decoration: none; 
         }
 
-        @media (max-width: 992px) { .mobile-fab { display: flex; } }
+        @media (max-width: 992px) { 
+            .mobile-fab { display: flex; } 
+            .map-hero { background-attachment: scroll; }
+        }
     </style>
 </head>
 <body>
@@ -156,7 +159,7 @@
             </div>
         </div>
         <div style="text-align: center; padding-top: 40px; border-top: 1px solid #1e293b; margin-top: 40px; font-size: 0.85rem;">
-            © 2026 Dean's Handyman Service LLC.
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
