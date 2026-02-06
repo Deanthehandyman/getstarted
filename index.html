@@ -6,7 +6,7 @@
   <title>Handyman Services 75686 & 200-Mile Radius | Dean's Handyman Service Pittsburg TX</title>
 
   <meta name="description" content="Dean's Handyman Service provides professional handyman repairs, smart home installs, and Starlink setup in 75686 (Pittsburg, TX) and within a 200-mile radius. Reliable, local, and affordable.">
-  <meta name="keywords" content="75686 Handyman, Pittsburg TX Handyman, handyman services near 75686, local handyman Pittsburg TX, home repair 75686, smart home installation 75686, Starlink installer 75686, handyman 200-mile radius 75686">
+  <meta name="keywords" content="75686 Handyman, Pittsburg TX Handyman, Starlink Installer Texas, Pittsburg Handyman Service, 200 mile radius handyman">
 
   <meta name="geo.region" content="US-TX">
   <meta name="geo.placename" content="Pittsburg">
@@ -38,6 +38,11 @@
     /* --- HERO --- */
     .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); padding: 60px 0; }
 
+    /* --- SPECIAL OFFERS BANNER --- */
+    .offers-banner { background: #fff3cd; border-bottom: 2px solid #ffeeba; padding: 20px 0; text-align: center; }
+    .offer-tag { display: inline-block; background: #856404; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; font-size: 0.8rem; }
+    .offer-text { font-size: 1.1rem; color: #856404; font-weight: 700; margin: 0 20px; display: inline-block; }
+
     /* --- ESTIMATOR STYLES --- */
     .est-box { background: white; padding: 30px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); color: #333; margin-top: 20px; }
     .cat-title { background: #f8fafc; padding: 10px; font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; margin-top: 20px; border-radius: 4px; text-align: left; }
@@ -64,6 +69,7 @@
     @media (max-width: 900px) {
       .site-header .container { flex-direction: column; gap: 10px; }
       .main-nav { justify-content: center; }
+      .offer-text { display: block; margin-bottom: 10px; }
     }
   </style>
 </head>
@@ -133,28 +139,33 @@
   </div>
 </section>
 
-<section class="container" style="padding: 60px 0;">
-    <h2>Our Recent Projects</h2>
-    <p style="text-align:center; margin-bottom:30px;">Real results for our clients across the Ark-La-Tex region.</p>
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-b44d4883-d56d-4b53-9744-7e78cc29adee" data-elfsight-app-lazy></div>
-</section>
+<div class="offers-banner">
+  <div class="container">
+    <div class="offer-tag">Limited Time Offers</div>
+    <div class="offer-text">📍 FREE travel for the first 100 miles!</div>
+    <div class="offer-text">🛰️ Use my Referral Link for Starlink Kit Deals!</div>
+  </div>
+</div>
 
-<section class="container" style="padding-bottom: 60px;">
+<section class="container" style="padding: 60px 0;">
     <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
         <div style="flex: 1; min-width: 320px; max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
             <div style="background: var(--primary); color: white; padding: 10px; text-align: center; font-weight: bold;">Assistant Chat</div>
             <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-            <zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmla3f83s001hfy8tds4wmpva' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+            <zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmla3f83s001hfy8tds4wmpva' height='550px' width='100%'></zapier-interfaces-chatbot-embed>
         </div>
 
         <div style="flex: 1; min-width: 320px; max-width: 500px; padding: 30px; background: var(--light); border-radius: 8px; text-align: center;">
             <h3>Direct Payment Links</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top:20px;">
+            <p style="margin-bottom: 20px; color:#666;">Choose your preferred method below:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <a href="https://square.link/u/dO7MQ0kc" target="_blank" class="btn btn-primary">Square</a>
                 <a href="https://www.venmo.com/u/DeanshandymanserviceLLC" target="_blank" class="btn" style="background:#008CFF; color:white;">Venmo</a>
                 <a href="https://www.paypal.com/ncp/payment/CVURGTVEWZ96J" target="_blank" class="btn" style="background:#003087; color:white;">PayPal</a>
                 <a href="https://cash.app/$HandymanDean" target="_blank" class="btn" style="background:#00D632; color:white;">Cash App</a>
+            </div>
+            <div style="margin-top: 30px;">
+                <a href="starlink-install.html" class="btn btn-accent" style="width: 100%;">View Starlink $0 Kit Info</a>
             </div>
         </div>
     </div>
