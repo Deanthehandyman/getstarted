@@ -1,56 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://deanshandyman.service/index.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/about.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/about.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/services.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/services.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/starlink-install.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/starlink-install.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/areas.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/areas.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/gallery.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/gallery.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/reviews.html</loc>
-    <lastmod>2026-02-06</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://deanshandyman.service/blog.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/blog.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/faqs.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/faqs.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://deanshandyman.service/contact.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://deanthehandyman.github.io/getstarted/contact.html</loc>
+    <lastmod>2026-02-09</lastmod>
     <priority>0.9</priority>
   </url>
 </urlset>
