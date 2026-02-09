@@ -6,12 +6,29 @@
     <title>Project Gallery | Dean's Handyman Service | Pittsburg TX & Ark-La-Tex</title>
     
     <meta name="description" content="View industrial-grade craftsmanship in our project gallery. Featuring Starlink installations, electrical work, and home repairs across a 200-mile radius from Pittsburg, TX.">
+    
+    <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/gallery.html" />
+
     <meta property="og:title" content="Work Gallery | Dean's Handyman Service LLC">
     <meta property="og:image" content="https://i.imgur.com/MZzro2B.jpg">
+    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/gallery.html">
     <meta name="twitter:card" content="summary_large_image">
 
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
     <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Dean's Handyman Service Project Gallery",
+      "description": "Portfolio of Starlink installations, skilled electrical repairs, and industrial-grade handyman projects.",
+      "author": {
+        "@type": "Person",
+        "name": "Dean Elkins"
+      }
+    }
+    </script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
@@ -46,12 +63,10 @@
         .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; color: var(--dark); }
         .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
         
-        /* Desktop Menu */
         .nav-links { display: flex; align-items: center; gap: 12px; }
         .nav-links a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; white-space: nowrap; transition: 0.2s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Mobile Menu Toggle */
         .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 2100; padding: 10px; }
         .menu-toggle span { width: 25px; height: 3px; background: var(--dark); border-radius: 3px; transition: 0.3s; }
 
@@ -66,7 +81,7 @@
             .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
         }
 
-        /* --- HERO (SHOP BACKGROUND) --- */
+        /* --- HERO --- */
         .hero-mini { 
             background: linear-gradient(rgba(0, 15, 30, 0.7), rgba(0, 15, 30, 0.7)), url('https://i.imgur.com/MZzro2B.jpg'); 
             background-size: cover; background-position: center; background-attachment: fixed; padding: 80px 0; text-align: center; color: white;
@@ -101,7 +116,7 @@
         }
         .btn-album:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(240, 165, 0, 0.4); }
 
-        /* --- FLOATING CALL BUTTON (LEFT SIDE) --- */
+        /* --- CALL BUTTON --- */
         .mobile-fab { 
             position: fixed; bottom: 20px; left: 20px; background: #28a745; color: white; 
             width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; 
@@ -148,6 +163,7 @@
     </section>
 
     <div class="container gallery-content">
+        
         <div class="widget-container" data-aos="fade-up">
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-b44d4883-d56d-4b53-9744-7e78cc29adee" data-elfsight-app-lazy></div>
@@ -164,7 +180,7 @@
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
             <div>
                 <h4 style="color: white; margin-bottom: 15px;">Dean's Handyman Service LLC</h4>
-                <p style="color: #94a3b8; font-weight: 600;">Technical technical tradesman serving the rural Ark-La-Tex with industrial precision.</p>
+                <p style="color: #94a3b8; font-weight: 600;">Technical tradesman serving the rural Ark-La-Tex with industrial precision.</p>
             </div>
             <div>
                 <h4 style="color: white; margin-bottom: 15px;">Contact Info</h4>
@@ -172,7 +188,7 @@
             </div>
         </div>
         <div style="text-align: center; padding-top: 40px; border-top: 1px solid #1e293b; margin-top: 40px; font-size: 0.85rem;">
-            © 2026 Dean's Handyman Service LLC.
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
