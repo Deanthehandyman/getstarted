@@ -6,39 +6,73 @@
     <title>Get a Quote | Dean's Handyman Service LLC | 200-Mile Radius</title>
     
     <meta name="description" content="Get an instant labor estimate for Starlink installation, electrical, and home repairs in Pittsburg, TX and surrounding 200 miles.">
+    
+    <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/contact.html" />
+
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
     <meta name="geo.placename" content="Pittsburg, Tyler, Texarkana, Shreveport">
+
+    <meta property="og:title" content="Instant Project Quote | Dean's Handyman Service LLC">
+    <meta property="og:description" content="Transparent labor estimates for technical trades and Starlink setup.">
+    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/contact.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Handyman Labor",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "offers": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Starlink Installation"
+            },
+            "price": "300.00"
+          }
+        ]
+      }
+    }
+    </script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         /* --- RESET & BASICS --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; overflow-x: hidden; }
         :root {
             --primary: #008bd2; 
             --primary-dark: #006fa8;
             --accent: #f0a500; 
-            --dark: #111;
-            --light: #f4f7f6;
+            --dark: #0f172a; 
+            --text-main: #1a1a1a; 
+            --text-muted: #475569; 
             --white: #ffffff;
-            --venmo-blue: #008CFF;
         }
 
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; }
+        
         /* --- HEADER --- */
         header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--dark); }
-        .logo-img { height: 85px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; }
-        .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); }
+        .logo-img { height: 50px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; }
+        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
         
-        .btn-primary { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
-        .btn-green { background-color: #28a745; color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
+        .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
+        
+        .btn-primary { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-green { background-color: #28a745; color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+        .btn-green:hover { background-color: #218838; }
 
         /* --- ESTIMATOR LAYOUT --- */
         .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        h1 { text-align: center; color: var(--dark); margin-bottom: 10px; font-size: 2.5rem; }
-        p.sub { text-align: center; color: #666; margin-bottom: 40px; }
+        h1 { text-align: center; color: var(--dark); margin-bottom: 10px; font-size: 2.5rem; font-weight: 800; }
+        p.sub { text-align: center; color: var(--text-muted); margin-bottom: 40px; font-weight: 600; }
 
         .est-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 8px solid var(--accent); }
         
@@ -52,15 +86,16 @@
 
         /* --- CONTACT FORM --- */
         .contact-area { display: none; margin-top: 30px; }
-        input[type="text"], textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; font-size: 1rem; font-family: inherit; }
+        input[type="text"], input[type="number"], textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; font-size: 1rem; font-family: inherit; font-weight: 600; }
         
         /* --- FOOTER --- */
-        footer { background: #1a1a1a; color: #aaa; padding: 60px 0; text-align: center; margin-top: 50px; }
+        footer { background: #0a0f1a; color: #cbd5e1; padding: 60px 0; text-align: center; margin-top: 50px; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             h1 { font-size: 2rem; }
             .logo-text { display: none; }
+            .est-box { padding: 25px; }
         }
     </style>
 </head>
@@ -70,7 +105,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo-wrapper">
                 <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
-                <div class="logo-text">Dean's<br><span style="color:var(--primary); font-size:0.7rem;">Handyman Service LLC</span></div>
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
             <nav class="nav-links">
                 <a href="about.html">About</a>
@@ -78,7 +113,6 @@
                 <a href="starlink-install.html">Starlink</a>
                 <a href="areas.html">Areas</a>
                 <a href="gallery.html">Work</a>
-                <a href="contact.html" class="btn-primary">Get Quote</a>
             </nav>
         </div>
     </header>
@@ -92,10 +126,10 @@
             <div class="cat-title">📡 Starlink & Internet</div>
             <div class="row"><span class="label">Residential Install</span><input type="number" min="0" class="input-qty" data-price="300" data-name="Res Starlink"></div>
             <div class="row"><span class="label">RV / Mobile / High Mount</span><input type="number" min="0" class="input-qty" data-price="350" data-name="RV Starlink"></div>
-            <div class="row"><span class="label">Troubleshooting / Relocate</span><input type="number" min="0" class="input-qty" data-price="200" data-name="Uninstall"></div>
+            <div class="row"><span class="label">Troubleshooting / Relocate</span><input type="number" min="0" class="input-qty" data-price="200" data-name="Relocate"></div>
 
             <div class="cat-title">⚡ Electrical</div>
-            <div class="row"><span class="label">Light Fixture / Outlet</span><input type="number" min="0" class="input-qty" data-price="125" data-name="Light Fixture"></div>
+            <div class="row"><span class="label">Light Fixture / Outlet</span><input type="number" min="0" class="input-qty" data-price="125" data-name="Light/Outlet"></div>
             <div class="row"><span class="label">Ceiling Fan Install</span><input type="number" min="0" class="input-qty" data-price="175" data-name="Ceiling Fan"></div>
 
             <div class="cat-title">🚰 Plumbing</div>
@@ -110,7 +144,7 @@
                 <label class="label">One-Way Mileage from Pittsburg (75686):</label>
                 <div style="display:flex; align-items:center; gap:10px;">
                     <input type="number" id="trip-miles" placeholder="0" class="input-qty">
-                    <span style="font-size:0.8rem; color:#666;">(First 100 miles free)</span>
+                    <span style="font-size:0.8rem; color:#666; font-weight: 700;">(First 100 miles free)</span>
                 </div>
             </div>
 
@@ -124,16 +158,16 @@
         </div>
 
         <div class="est-box contact-area" id="step2">
-            <h2 style="text-align:center; color:var(--primary-dark); margin-bottom:10px;">Send Your Request</h2>
-            <p style="text-align:center; margin-bottom:20px; color:#666;">Review your details and send directly to Dean.</p>
+            <h2 style="text-align:center; color:var(--primary-dark); margin-bottom:10px; font-weight: 800;">Send Your Request</h2>
+            <p style="text-align:center; margin-bottom:20px; color:var(--text-muted); font-weight: 600;">Review your details and send directly to Dean.</p>
             
             <input type="text" id="client-name" placeholder="Your Name" required>
             <input type="text" id="client-loc" placeholder="Your City & State" required>
             <textarea id="client-msg" placeholder="Tell me more about the project specifics..."></textarea>
             
             <div style="background:#f8fafc; padding:20px; border-radius:8px; margin-bottom:20px; border-left:4px solid var(--accent);">
-                <strong style="font-size:0.85rem; color:var(--primary);">SUMMARY:</strong>
-                <p id="summary-text" style="margin:5px 0 0 0; color:#555; font-size:0.95rem;">No items selected.</p>
+                <strong style="font-size:0.85rem; color:var(--primary); font-weight: 900;">SUMMARY:</strong>
+                <p id="summary-text" style="margin:5px 0 0 0; color:#555; font-size:0.95rem; font-weight: 600;">No items selected.</p>
             </div>
 
             <div style="display:flex; gap:15px; flex-wrap:wrap;">
@@ -141,15 +175,15 @@
                 <button onclick="sendVia('text')" class="btn-green" style="flex:1; min-width:150px;">💬 Text Dean</button>
             </div>
             
-            <button onclick="goBack()" style="background:none; border:none; width:100%; margin-top:20px; color:#999; cursor:pointer;">← Edit Project Items</button>
+            <button onclick="goBack()" style="background:none; border:none; width:100%; margin-top:20px; color:#999; cursor:pointer; font-weight: 700;">← Edit Project Items</button>
         </div>
     </div>
 
     <footer>
         <div class="container" style="padding:0;">
-            <p><strong>Dean's Handyman Service LLC</strong></p>
-            <p>Pittsburg, TX 75686 | (281) 917-9914</p>
-            <p style="margin-top:15px; font-size:0.8rem; opacity:0.5;">© 2026 All Rights Reserved.</p>
+            <p style="color: white; font-weight: 800; margin-bottom: 5px;">Dean's Handyman Service LLC</p>
+            <p style="font-weight: 600;">Pittsburg, TX 75686 | (281) 917-9914</p>
+            <p style="margin-top:15px; font-size:0.8rem; opacity:0.5;">© 2026 All Rights Reserved. Serving TX, AR, LA, and OK.</p>
         </div>
     </footer>
 
@@ -163,7 +197,7 @@
             
             document.querySelectorAll('.input-qty').forEach(input => {
                 const qty = parseInt(input.value) || 0;
-                if(qty > 0) {
+                if(qty > 0 && input.dataset.price) {
                     const price = parseInt(input.dataset.price);
                     total += (qty * price);
                     items.push(`${qty}x ${input.dataset.name}`);
@@ -215,7 +249,7 @@
             }
         }
     </script>
-
+    
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
     <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
