@@ -6,5 +6,5 @@ Allow: /
 Disallow: /ideas.txt
 Disallow: /404.html
 
-# Sitemaps help search engines find your 200-mile service radius faster
-Sitemap: https://deanshandymanservice.com/sitemap.xml
+# Updated to match your GitHub Pages location
+Sitemap: https://deanthehandyman.github.io/getstarted/sitemap.xml
