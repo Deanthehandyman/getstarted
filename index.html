@@ -143,6 +143,7 @@
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="starlink-install.html">Starlink</a>
+                <a href="reviews.html">Reviews</a>
                 <a href="areas.html">Service Areas</a>
                 <a href="gallery.html">Work</a>
                 <a href="blog.html">Blog</a>
@@ -255,6 +256,9 @@
             <div>
                 <h4 style="color: white; margin-bottom: 15px;">Contact</h4>
                 <p style="color: #94a3b8; font-weight: 500;">Phone: (281) 917-9914<br>Email: deanshandymanservice1@gmail.com</p>
+                <div style="margin-top: 10px;">
+                    <a href="privacy.html" style="color: #64748b; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+                </div>
             </div>
         </div>
         <div style="text-align: center; padding-top: 40px; border-top: 1px solid #1e293b; margin-top: 40px; font-size: 0.85rem;">
@@ -266,19 +270,31 @@
     <script>
         AOS.init({ duration: 800, once: true });
 
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
-        menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const spans = menuBtn.getElementsByTagName('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
-        });
+        
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const spans = menuBtn.getElementsByTagName('span');
+                // Simple animation for the hamburger icon
+                if(navMenu.classList.contains('active')) {
+                   spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                   spans[1].style.opacity = '0';
+                   spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+                } else {
+                   spans[0].style.transform = 'none';
+                   spans[1].style.opacity = '1';
+                   spans[2].style.transform = 'none';
+                }
+            });
+        }
 
+        // Pushbullet Integration
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
+            const PUSHBULLET_TOKEN = "o.rhGUXC6n1xurxfiry2V56xBs5gsRv5bs"; // Your Token
             const CALENDAR_LINK = "https://calendar.app.google/zJTuuvnVncbQg5LT9";
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerText;
@@ -315,4 +331,3 @@
 
 </body>
 </html>
-
