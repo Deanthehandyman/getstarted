@@ -1,4 +1,4 @@
-<CTRL_A><BACKSPACE><!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en-US">
     <head>
         <meta charset="UTF-8">
@@ -15,28 +15,6 @@
         <meta property="og:title" content="Instant Project Quote | Dean's Handyman Service LLC">
         <meta property="og:description" content="Transparent labor estimates for technical trades and Starlink setup.">
         <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/contact.html">
-    
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Service",
-          "name": "Handyman Labor",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "USD",
-            "offers": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Starlink Installation"
-                },
-                "price": "300.00"
-              }
-            ]
-          }
-        }
-        </script>
     
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <style>
@@ -108,12 +86,14 @@
                     <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
                 </a>
                 <nav class="nav-links">
+                    <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="services.html">Services</a>
                     <a href="starlink-install.html">Starlink</a>
                     <a href="areas.html">Areas</a>
                     <a href="reviews.html">Reviews</a>
                     <a href="gallery.html">Work</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
             </div>
         </header>
@@ -218,48 +198,5 @@
                 window.quoteData = { total: total.toFixed(2), summary: items.join(", ") };
             }
     
-            function showContact() {
-                if(!window.quoteData || window.quoteData.summary === "") {
-                    alert("Please select at least one service.");
-                    return;
-                }
-                document.getElementById('summary-text').innerText = window.quoteData.summary + " (Est Total: $" + window.quoteData.total + ")";
-                document.getElementById('step1').style.display = 'none';
-                document.getElementById('step2').style.display = 'block';
-                window.scrollTo(0,0);
-            }
+            function showContact ( ) { if ( ! window . quoteData || window . quoteData . summary === "" ) { alert ( "Please select at least one service." ) ; return ; } document . getElementById ( 'summary-text' ) . innerText = window . quoteData . summary + " (Est Total: $" + window . quoteData . total + ")" ; document . getElementById ( 'step1' ) . style . display = 'none' ; document . getElementById ( 'step2' ) . style . display = 'block' ; window . scrollTo ( 0 , 0 ) ; } function goBack ( ) { document . getElementById ( 'step1' ) . style . display = 'block' ; document . getElementById ( 'step2' ) . style . display = 'none' ; } function sendVia ( method ) { const name = document . getElementById ( 'client-name' ) . value ; const loc = document . getElementById ( 'client-loc' ) . value ; const note = document . getElementById ( 'client-msg' ) . value ; if ( ! name || ! loc ) { alert ( "Please enter your name and location." ) ; return ; } const fullMsg = `Hi Dean, this is ${ name } from ${ loc } . Quote Request: ${ window . quoteData . summary } Estimated Total: $ ${ window . quoteData . total } Notes: ${ note } ` ; if ( method === 'email' ) { window . location . href = `mailto:deanshandymanservice1@gmail.com?subject=New Job Request&body= ${ encodeURIComponent ( fullMsg ) } ` ; } else { window . location . href = `sms:2819179914?body= ${ encodeURIComponent ( fullMsg ) } ` ; } } </script> <script async type =' module ' src =' https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js ' > </ script > < zapier-interfaces-chatbot-embed is-popup =' true ' chatbot-id =' cmla3f83s001hfy8tds4wmpva ' > </ zapier-interfaces-chatbot-embed > </ body > </ html >
     
-            function goBack() {
-                document.getElementById('step1').style.display = 'block';
-                document.getElementById('step2').style.display = 'none';
-            }
-    
-            function sendVia(method) {
-                const name = document.getElementById('client-name').value;
-                const loc = document.getElementById('client-loc').value;
-                const note = document.getElementById('client-msg').value;
-                
-                if(!name || !loc) { alert("Please enter your name and location."); return; }
-                
-                const fullMsg = `Hi Dean, this is ${name} from ${loc}.
-
-Quote Request:
-${window.quoteData.summary}
-
-Estimated Total: $${window.quoteData.total}
-
-Notes: ${note}`;
-                
-                if(method === 'email') {
-                    window.location.href = `mailto:deanshandymanservice1@gmail.com?subject=New Job Request&body=${encodeURIComponent(fullMsg)}`;
-                } else {
-                    window.location.href = `sms:2819179914?body=${encodeURIComponent(fullMsg)}`;
-                }
-            }
-        </script>
-        
-        <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-        <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
-    
-    </body>
-    </html>
