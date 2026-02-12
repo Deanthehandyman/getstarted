@@ -1,196 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Services | Dean's Handyman Service LLC | Pittsburg TX</title>
-    
-    <meta name="description" content="Industrial-grade handyman services in Pittsburg, TX. Starlink, Electrical, Plumbing, RV maintenance, and technical trades across the Ark-La-Tex.">
-    
-    <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/services.html" />
-
-    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
-    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
-
-    <meta property="og:title" content="Expert Technical Services | Dean's Handyman Service LLC">
-    <meta property="og:description" content="From Starlink installs to industrial fabrication. High-precision home and RV solutions.">
-    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/services.html">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        /* --- RESET & BASICS --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --primary: #008bd2; 
-            --primary-dark: #006fa8;
-            --accent: #f0a500; 
-            --dark: #0f172a; 
-            --text-main: #1a1a1a; 
-            --text-muted: #475569; 
-            --white: #ffffff;
-        }
-
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; }
-        
-        /* --- HEADER --- */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); }
-        .logo-img { height: 50px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; }
-        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-        .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
-
-        /* --- HERO --- */
-        .page-hero { 
-            background: linear-gradient(rgba(0, 15, 30, 0.8), rgba(0, 15, 30, 0.8)), url('https://i.imgur.com/KMsvpls.jpg'); 
-            background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;
-        }
-        .page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 10px; }
-
-        /* --- SERVICE CATEGORIES --- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        .intro-text { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-muted); font-weight: 500; }
-        
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        .service-card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--primary); transition: 0.3s; }
-        .service-card:hover { transform: translateY(-10px); border-top-color: var(--accent); }
-        .card-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-        .service-card h3 { color: var(--dark); margin-bottom: 15px; font-size: 1.5rem; font-weight: 800; }
-        .service-card ul { list-style: none; }
-        .service-card li { margin-bottom: 10px; padding-left: 25px; position: relative; font-weight: 600; color: #444; }
-        .service-card li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: 900; }
-
-        /* --- ESTIMATOR --- */
-        .est-section { background: white; padding: 60px 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-        .est-header { text-align: center; margin-bottom: 40px; }
-        .cat-title { background: #f8fafc; padding: 12px 20px; font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.85rem; margin-top: 30px; border-radius: 8px; border-left: 4px solid var(--accent); }
-        .row { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid #f1f5f9; }
-        .label { font-weight: 700; font-size: 1rem; color: #334155; }
-        .input-qty { width: 90px; padding: 12px; text-align: center; border: 2px solid #e2e8f0; border-radius: 8px; font-weight: 800; font-size: 1.1rem; color: var(--primary-dark); transition: 0.2s; }
-        .input-qty:focus { border-color: var(--primary); outline: none; background: #f0f9ff; }
-
-        .btn-primary { background: var(--primary); color: white !important; padding: 18px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; border: none; cursor: pointer; width: 100%; font-size: 1.2rem; transition: 0.3s; margin-top: 40px; }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 139, 210, 0.3); }
-        
-        .result-area { background: #f0f9ff; border: 2px solid var(--primary); border-radius: 12px; padding: 40px; text-align: center; margin-top: 40px; display: none; }
-        .total-price { font-size: 3.5rem; font-weight: 900; color: var(--primary-dark); display: block; margin: 15px 0; }
-        .btn-green { background: #22c55e; color: white !important; padding: 18px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; border: none; cursor: pointer; width: 100%; font-size: 1.2rem; transition: 0.3s; }
-        .btn-green:hover { background: #16a34a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3); }
-
-        .contact-area { display: none; margin-top: 40px; animation: fadeIn 0.5s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        input[type="text"], textarea { width: 100%; padding: 18px; border: 2px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; font-size: 1rem; font-family: inherit; font-weight: 600; }
-        input[type="text"]:focus, textarea:focus { border-color: var(--primary); outline: none; }
-
-        /* --- FOOTER --- */
-        footer { background: #0f172a; color: #94a3b8; padding: 80px 0; text-align: center; margin-top: 100px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .est-section { padding: 30px 20px; }
-            .total-price { font-size: 2.5rem; }
-        }
-    </style>
+    <title>Services | Dean's Handyman Service LLC</title>
+    <meta name="description" content="Expert technical handyman services for homes, ranches, and RVs in Pittsburg, TX. Starlink installs, custom electrical, RV maintenance, and specialized fabrication.">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
-                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html" style="color:var(--primary);">Services</a>
-                <a href="starlink-install.html">Starlink</a>
-                <a href="areas.html">Areas</a>
-                <a href="reviews.html">Reviews</a>
-                <a href="gallery.html">Work</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="page-hero">
-        <div class="container" data-aos="fade-down">
-            <h1>Expert Technical Trades</h1>
-            <p style="font-weight: 800; font-size: 1.5rem; letter-spacing: 1px; color: var(--accent);">INDUSTRIAL PRECISION FOR YOUR HOME & PROPERTY</p>
-        </div>
-    </section>
-
     <div class="container">
         
-        <p class="intro-text" data-aos="fade-up">
-            With a background in electrical, industrial fabrication, and heavy construction, I provide a level of technical expertise and precision that typical handyman services can't match. Whether it's high-speed connectivity or industrial-grade repairs, I build it right the first time.
-        </p>
+        <section class="hero-section">
+            <h1 style="text-transform: uppercase;">Professional Services for Homes, Ranches & RVs</h1>
+            <p style="font-weight: bold; color: #d9534f;">INDUSTRIAL-GRADE PRECISION FOR YOUR PROPERTY & MOBILE LIFESTYLE</p>
+        </section>
 
-        <div class="service-grid">
-            <div class="service-card" data-aos="fade-up">
-                <span class="card-icon">📡</span>
+        <section class="intro-text" style="margin: 20px 0; line-height: 1.6;">
+            <p>
+                With a background in heavy construction, electrical, and industrial fabrication, I bring a level of technical expertise to your home, ranch, or RV that typical handyman services can't match. Whether you need high-speed Starlink connectivity on a rural property, custom electrical solutions for your shop, or specialized RV infrastructure, I build it right the first time.
+            </p>
+        </section>
+
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <div class="service-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
                 <h3>Starlink & Connectivity</h3>
                 <ul>
-                    <li>Gen 3 & Mini Custom Mounting</li>
-                    <li>12V DC Power Conversions (RV/Off-Grid)</li>
-                    <li>High-Obstruction Pole Installs</li>
-                    <li>Mesh Wi-Fi & Ethernet Backhaul</li>
-                    <li>Starlink Mini Magnetic Car Mounts</li>
+                    <li>Residential & Ranch Wide-Area Wi-Fi</li>
+                    <li>Custom Roof & Pole Mounts</li>
+                    <li>RV Starlink 12V DC Conversions</li>
+                    <li>Off-Grid Network Setup</li>
                 </ul>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <span class="card-icon">⚡</span>
-                <h3>Electrical & Tech</h3>
+            <div class="service-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
+                <h3>RV & Property Infrastructure</h3>
                 <ul>
-                    <li>Smart Security Camera Systems</li>
-                    <li>Ceiling Fan & Light Fixture Swaps</li>
-                    <li>Outlet & Dimmer Installations</li>
-                    <li>Cat6 Ethernet Data Drops</li>
-                    <li>TV Wall Mounting & Cable Hiding</li>
+                    <li>RV Pad Development & Hookups</li>
+                    <li>Solar & Battery Power Systems</li>
+                    <li>Mobile Technical Maintenance</li>
+                    <li>Winterization & Skirting Repairs</li>
                 </ul>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <span class="card-icon">🚐</span>
-                <h3>RV & Property Support</h3>
+            <div class="service-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
+                <h3>Ranch & Specialized Trades</h3>
                 <ul>
-                    <li>RV Pad Electrical Pedestals</li>
-                    <li>RV Skirting & Winterization</li>
-                    <li>Plumbing: Faucet & Toilet Repair</li>
-                    <li>Shop Organization & Development</li>
-                    <li>Full RV Tech Infrastructure</li>
+                    <li>Custom Gate & Fence Repairs</li>
+                    <li>Shop & Barn Technical Setup</li>
+                    <li>Industrial-Grade Fabrication</li>
+                    <li>Electrical & Hydraulic Troubleshooting</li>
                 </ul>
             </div>
 
-            <div class="service-card" data-aos="fade-up">
-                <span class="card-icon">🛠️</span>
-                <h3>Technical Trades</h3>
-                <ul>
-                    <li>Industrial Machinist & Repair</li>
-                    <li>Custom Fabrication & Hydraulics</li>
-                    <li>Technical Pipefitting & Assembly</li>
-                    <li>Heavy-Duty Mechanical Repairs</li>
-                    <li>Precision Hardware Installation</li>
-                </ul>
-            </div>
         </div>
 
-        <div class="est-section" id="estimator" data-aos="zoom-in">
-            <div class="est-header">
-                <h2 style="border:none; margin:0; transform:none; position:static;">Labor Price Estimator</h2>
-                <p style="color:var(--text-muted); font-weight: 600; margin-top:10px;">Select your needs for an instant labor quote. First 100 miles of travel are FREE.</p>
-            </div>
+        <footer style="margin-top: 40px; text-align: center; padding: 20px; background: #f4f4f4;">
+            <p><strong>Ready to upgrade your property?</strong></p>
+            <p>Call Dean: 281-917-9914</p>
+            <p><a href="index.html">Return Home</a></p>
+        </footer>
 
-            <div id="step1">
-                <div class="cat-title">📡 Starlink Installation</div>
-                <div class="row"><span class="label">Residential Gen 3 Install</span><input type="number" min="0" class="input-qty" data-price="300" data-name="Res Starlink"></div>
-                <div class="row"><span class="label">RV / Custom Mounting</span><input type="number" min="0" class="input-qty" data-price="350" data-name="RV Starlink"></div>
-                <div class="row"><span class="label">12V DC Conversion (Hardwire)</span><input type="number" min="0" class="input-qty" data-price="250" data-name="Starlink 12V"></div>
+    </div>
 
-                <div class="cat-title">⚡ Electrical & Smart Home</div>
-                <div class="row"><span class="label">Ceiling Fan Install</span><input type="number" min="0" class="input-qty" data-price="175" data-name="Ceiling Fan"></div>
-                <div class="row"><span class="label">Light / Outlet Swap</span><input type="number" min="0" class="input-qty" data-price="125" data-name="Light/Outlet"></div>
-                <div class="row"><span class="label">Security Camera (Each)</span><input type="number" min="0" class="input-qty" data-price="150" data-name="Camera"></div>
-                <div class="row"><span class="label">Ethernet / Data Drop</span><input type="number" min="0" class="input-qty" data-price="150" data-name="Data Drop"></div>
+</body>
+</html>
