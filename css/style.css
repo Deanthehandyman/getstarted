@@ -1,0 +1,19 @@
+
+         :root { --primary: #0047AB; --accent: #FF6B00; --dark: #1A1A1A; --light: #F4F4F4; --white: #FFFFFF; }
+         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: var(--dark); line-height: 1.6; }
+         header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem; }
+         .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+         .verified-badge { font-size: 0.8rem; background: #e6f4ea; color: #1e8e3e; padding: 2px 8px; border-radius: 4px; margin-left: 10px; }
+         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
+         .cta-button { background: var(--accent); color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none; }
+         .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 20px; }
+         .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+         .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+         .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); transition: transform 0.2s; }
+         .card:hover { transform: translateY(-5px); }
+         footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; }
+         .service-areas { color: #aaa; font-size: 0.9rem; margin-top: 20px; }
+         @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 1.8rem; } }
+         
