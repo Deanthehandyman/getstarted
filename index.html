@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dean's Handyman Service LLC | 200-Mile Starlink & Tech Expert</title>
+    <title>Services | Dean's Handyman Service LLC | Starlink, RV & Ranch Tech</title>
     
     <meta name="google-site-verification" content="Ppwb67jnNZqenhH9knICRsS0JoWsvO_G5isyaixaDwk" />
 
-    <meta name="description" content="Industrial-grade handyman and Starlink installation serving a 200-mile radius from Pittsburg, TX. Professional service across Texas, Arkansas, Louisiana, and Oklahoma.">
-    <meta property="og:title" content="Dean's Handyman Service LLC | 200-Mile Tech Expert">
-    <meta property="og:description" content="Professional Starlink setup and industrial-grade home repairs serving TX, AR, LA, and OK.">
-    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta name="description" content="Expert Starlink installation, RV pad development, ranch infrastructure, and technical home repairs. Serving Pittsburg, TX and a 200-mile radius (TX, AR, LA, OK).">
+    <meta name="keywords" content="Starlink Installer Pittsburg TX, RV Repair, Ranch Handyman, Barndominium Electrical, RV Pad Setup, Starlink Gen 3 Mount, Technical Handyman">
     
-    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/">
+    <meta property="og:title" content="Services | Dean's Handyman Service LLC">
+    <meta property="og:description" content="Industrial-grade precision for your Home, Ranch, and RV. Starlink, Electrical, and Custom Fabrication.">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/services.html">
     
     <meta name="twitter:card" content="summary_large_image">
 
@@ -24,7 +25,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* --- RESET & BASICS --- */
+        /* --- RESET & BASICS (Matches Main Page) --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
             --primary: #008bd2; 
@@ -76,7 +77,7 @@
             .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
         }
 
-        /* --- HERO (TRUCK BACKGROUND) --- */
+        /* --- HERO (SAME BG AS INDEX) --- */
         .hero { 
             background: linear-gradient(rgba(0, 15, 30, 0.6), rgba(0, 15, 30, 0.6)), url('https://i.imgur.com/KMsvpls.jpg'); 
             background-size: cover;
@@ -100,14 +101,21 @@
         .form-group label { display: block; margin-bottom: 4px; font-size: 0.85rem; font-weight: 800; color: var(--dark); }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 0.95rem; color: var(--text-main); font-family: inherit; font-weight: 600; }
 
-        /* --- SERVICES --- */
+        /* --- SERVICES SPECIFIC CSS --- */
         .section { padding: 80px 0; }
         .section-sub { text-align: center; color: var(--text-muted); font-size: 1.1rem; font-weight: 600; margin-bottom: 40px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; } /* Wider cards for services */
+        
+        .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
         .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--primary); }
-        .icon-box { width: 50px; height: 50px; background: #eaf4ff; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px; font-size: 1.5rem; font-weight: bold; }
+        
+        .service-card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
+        .service-card ul { list-style: none; margin-top: 15px; margin-bottom: 20px; }
+        .service-card li { margin-bottom: 8px; padding-left: 20px; position: relative; color: var(--text-muted); font-weight: 500; }
+        .service-card li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        
+        .icon-box { width: 60px; height: 60px; background: #eaf4ff; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px; font-size: 1.8rem; font-weight: bold; }
 
         /* --- FLOATING CALL BUTTON --- */
         .mobile-fab { 
@@ -141,7 +149,7 @@
 
             <nav class="nav-links" id="nav-menu">
                 <a href="about.html">About</a>
-                <a href="services.html">Services</a>
+                <a href="services.html" style="color: var(--primary);">Services</a>
                 <a href="starlink-install.html">Starlink</a>
                 <a href="reviews.html">Reviews</a>
                 <a href="areas.html">Service Areas</a>
@@ -160,18 +168,18 @@
         <section class="hero">
             <div class="container hero-layout">
                 <div class="hero-text" data-aos="fade-right">
-                    <h1>200-Mile Professional Service Radius</h1>
-                    <p style="font-size: 1.25rem;">Industrial Starlink Installation & Skilled Repair in TX, AR, LA, and OK.</p>
+                    <h1>Services for Homes, Ranches & RVs</h1>
+                    <p style="font-size: 1.25rem;">We bring heavy industrial experience to residential and rural projects. Done once. Done right.</p>
                     <ul style="list-style:none;">
-                        <li>Serving Pittsburg, Tyler, Texarkana, Shreveport & Beyond</li>
-                        <li>First 100 Miles of Travel are FREE</li>
-                        <li>Industrial-Grade Tools & Mobile Workshop</li>
-                        <li>Starlink Gen 3 & Mini Expert Installer</li>
+                        <li>Starlink Installation & Networking</li>
+                        <li>RV Pad Development & Hookups</li>
+                        <li>Ranch Fabrication & Gate Repair</li>
+                        <li>Technical Home & Electrical Repair</li>
                     </ul>
                 </div>
                 
                 <div class="lead-card" id="contact" data-aos="fade-left">
-                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--dark);">Get A Free Quote</h3>
+                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--dark);">Request Service</h3>
                     <form id="quoteForm">
                         <div class="form-group">
                             <label>Full Name</label>
@@ -188,12 +196,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Service Needed</label>
+                            <label>I Need Help With...</label>
                             <select id="service" name="service">
                                 <option>Starlink Installation</option>
-                                <option>Electrical / Wiring</option>
-                                <option>Handyman / General Repair</option>
-                                <option>Virtual Consultation</option>
+                                <option>RV / Trailer Repair</option>
+                                <option>Ranch / Barn Maintenance</option>
+                                <option>Electrical / Technical</option>
+                                <option>Custom Fabrication</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -202,7 +211,7 @@
                         </div>
                         <div class="form-group">
                             <label>Job Details</label>
-                            <textarea id="details" rows="2" placeholder="Tell me what you need done..."></textarea>
+                            <textarea id="details" rows="2" placeholder="Tell me about the project..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-accent" style="width:100%;" id="submitBtn">Check Availability</button>
                     </form>
@@ -212,24 +221,88 @@
 
         <section class="section">
             <div class="container">
-                <h2>Technical Trades Handled Correctly</h2>
-                <p class="section-sub">Industrial-trained expertise delivered directly to your home or shop.</p>
+                <h2 data-aos="fade-up">Technical Capabilities</h2>
+                <p class="section-sub" data-aos="fade-up">Servicing Pittsburg, TX and the surrounding 200-mile Ark-La-Tex area.</p>
+                
                 <div class="services-grid">
+                    
                     <div class="service-card" data-aos="fade-up">
                         <div class="icon-box">📡</div>
-                        <h3>Starlink Setup</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">Specializing in Gen 3 and Mini installs. Professional mounting, ridge mounts, and network optimization.</p>
+                        <h3>Starlink & Connectivity</h3>
+                        <p>Complete internet solutions for rural properties and mobile setups.</p>
+                        <ul>
+                            <li>Gen 3 & Mini Professional Mounting</li>
+                            <li>Tree Obstruction Solutions</li>
+                            <li>Ranch-Wide Wi-Fi Mesh Systems</li>
+                            <li>Ethernet Drops & Hardwiring</li>
+                        </ul>
+                        <div style="margin-top: auto;">
+                            <a href="starlink-install.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Learn More &rarr;</a>
+                        </div>
                     </div>
+
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon-box">⚡</div>
-                        <h3>Skilled Repairs</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">From complex electrical troubleshooting to industrial maintenance and fabrication. We fix what others avoid.</p>
+                        <div class="icon-box">🚐</div>
+                        <h3>RV & Mobile Living</h3>
+                        <p>Infrastructure and repair for RV owners, parks, and off-grid living.</p>
+                        <ul>
+                            <li>RV Pad Development (Water/Electric)</li>
+                            <li>50 Amp / 30 Amp Pedestal Setup</li>
+                            <li>12V DC Electrical Conversions</li>
+                            <li>Skirting & Winter Preparation</li>
+                        </ul>
                     </div>
+
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon-box">🚚</div>
-                        <h3>Fully Mobile</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">A mobile workshop arriving on-site ready to execute high-standard repairs anywhere in our 200-mile radius.</p>
+                        <div class="icon-box">🚜</div>
+                        <h3>Ranch & Property</h3>
+                        <p>Heavy-duty maintenance for your land, gates, and outbuildings.</p>
+                        <ul>
+                            <li>Gate & Fence Repairs (Welding)</li>
+                            <li>Barn & Shop Electrical Setup</li>
+                            <li>Tractor & Equipment Maintenance</li>
+                            <li>Water Line & Pipe Repair</li>
+                        </ul>
                     </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">⚙️</div>
+                        <h3>Custom Fabrication</h3>
+                        <p>If you can't buy it at the store, we build it to spec.</p>
+                        <ul>
+                            <li>Custom Metal Brackets & Mounts</li>
+                            <li>On-Site Welding Repairs</li>
+                            <li>Industrial Shelving & Storage</li>
+                            <li>Unique Problem Solving</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box">🏠</div>
+                        <h3>Technical Home Repair</h3>
+                        <p>Applying industrial standards to residential problems.</p>
+                        <ul>
+                            <li>Electrical Troubleshooting</li>
+                            <li>Smart Home & Camera Install</li>
+                            <li>Hydraulic Systems</li>
+                            <li>Fixture Replacement</li>
+                        </ul>
+                    </div>
+
+                     <div class="service-card" data-aos="fade-up" data-aos-delay="500" style="background: var(--dark); border: none;">
+                        <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--accent);">📞</div>
+                        <h3 style="color: white;">Need Something Else?</h3>
+                        <p style="color: #cbd5e1;">We specialize in the hard stuff. If you don't see it listed, give us a call to discuss.</p>
+                        <ul style="border-top: 1px solid #334155; padding-top: 15px;">
+                           <li style="color: white; padding: 0;">Fully Insured</li>
+                           <li style="color: white; padding: 0;">Mobile Workshop</li>
+                           <li style="color: white; padding: 0;">Free Travel (First 100 Miles)</li>
+                        </ul>
+                        <div style="margin-top: auto;">
+                            <a href="tel:2819179914" class="btn btn-accent" style="width: 100%;">Call Dean</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -291,7 +364,7 @@
             });
         }
 
-        // Pushbullet Integration
+        // Pushbullet Integration (Linked to your account)
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const PUSHBULLET_TOKEN = "o.rhGUXC6n1xurxfiry2V56xBs5gsRv5bs"; // Your Token
@@ -313,7 +386,7 @@
             fetch('https://api.pushbullet.com/v2/pushes', {
                 method: 'POST',
                 headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
+                body: JSON.stringify({ type: 'note', title: '🛠️ New Service Request', body: noteBody })
             })
             .then(response => {
                 if (response.ok) {
@@ -331,3 +404,4 @@
 
 </body>
 </html>
+
