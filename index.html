@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dean's Handyman Service LLC | Starlink, RV & Ranch Tech</title>
+    <title>Services | Dean's Handyman Service LLC | Starlink & RV Tech</title>
     
     <meta name="google-site-verification" content="Ppwb67jnNZqenhH9knICRsS0JoWsvO_G5isyaixaDwk" />
 
-    <meta name="description" content="Expert Starlink installation, RV pad development, ranch infrastructure, and technical home repairs. Serving Pittsburg, TX and a 200-mile radius (TX, AR, LA, OK).">
-    <meta name="keywords" content="Starlink Installer Pittsburg TX, RV Repair, Ranch Handyman, Barndominium Electrical, RV Pad Setup, Starlink Gen 3 Mount, Technical Handyman">
+    <meta name="description" content="Specialized handyman services for Ranches, RVs, and Homes in Pittsburg, TX. Starlink installation, RV pad setup, barn electrical, and custom fabrication.">
+    <meta name="keywords" content="Starlink Installer, RV Repair Pittsburg TX, Ranch Handyman, Gate Repair, 50 Amp Hookup, Mobile Welder, Home Tech Repair">
     
     <meta property="og:title" content="Services | Dean's Handyman Service LLC">
-    <meta property="og:description" content="Industrial-grade precision for your Home, Ranch, and RV. Starlink, Electrical, and Custom Fabrication.">
+    <meta property="og:description" content="Industrial-grade technical services for your Home, Ranch, and RV. Serving TX, AR, LA, OK.">
     <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
     <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/services.html">
     
@@ -25,7 +25,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* --- RESET & BASICS (Matches Main Page) --- */
+        /* --- RESET & BASICS --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
             --primary: #008bd2; 
@@ -77,7 +77,7 @@
             .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
         }
 
-        /* --- HERO (SAME BG AS INDEX) --- */
+        /* --- HERO (TRUCK BACKGROUND) --- */
         .hero { 
             background: linear-gradient(rgba(0, 15, 30, 0.6), rgba(0, 15, 30, 0.6)), url('https://i.imgur.com/KMsvpls.jpg'); 
             background-size: cover;
@@ -101,21 +101,19 @@
         .form-group label { display: block; margin-bottom: 4px; font-size: 0.85rem; font-weight: 800; color: var(--dark); }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 0.95rem; color: var(--text-main); font-family: inherit; font-weight: 600; }
 
-        /* --- SERVICES SPECIFIC CSS --- */
+        /* --- SERVICES --- */
         .section { padding: 80px 0; }
         .section-sub { text-align: center; color: var(--text-muted); font-size: 1.1rem; font-weight: 600; margin-bottom: 40px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; } /* Wider cards for services */
-        
-        .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
         .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--primary); }
+        .icon-box { width: 50px; height: 50px; background: #eaf4ff; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px; font-size: 1.5rem; font-weight: bold; }
         
-        .service-card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
-        .service-card ul { list-style: none; margin-top: 15px; margin-bottom: 20px; }
-        .service-card li { margin-bottom: 8px; padding-left: 20px; position: relative; color: var(--text-muted); font-weight: 500; }
-        .service-card li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
-        
-        .icon-box { width: 60px; height: 60px; background: #eaf4ff; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px; font-size: 1.8rem; font-weight: bold; }
+        /* Sub-list inside service cards */
+        .service-card ul { list-style: none; margin-top: 15px; color: var(--text-muted); }
+        .service-card li { margin-bottom: 8px; font-size: 0.95rem; font-weight: 600; }
+        .service-card li::before { content: "• "; color: var(--accent); font-weight: bold; }
 
         /* --- FLOATING CALL BUTTON --- */
         .mobile-fab { 
@@ -169,17 +167,17 @@
             <div class="container hero-layout">
                 <div class="hero-text" data-aos="fade-right">
                     <h1>Services for Homes, Ranches & RVs</h1>
-                    <p style="font-size: 1.25rem;">We bring heavy industrial experience to residential and rural projects. Done once. Done right.</p>
+                    <p style="font-size: 1.25rem;">Industrial-grade technical support for your property and mobile lifestyle.</p>
                     <ul style="list-style:none;">
-                        <li>Starlink Installation & Networking</li>
-                        <li>RV Pad Development & Hookups</li>
-                        <li>Ranch Fabrication & Gate Repair</li>
-                        <li>Technical Home & Electrical Repair</li>
+                        <li>Starlink Installation & Rural Networking</li>
+                        <li>RV Pad Development & 50 Amp Hookups</li>
+                        <li>Ranch Gate, Barn & Equipment Repair</li>
+                        <li>Technical Home Maintenance & Fabrication</li>
                     </ul>
                 </div>
                 
                 <div class="lead-card" id="contact" data-aos="fade-left">
-                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--dark);">Request Service</h3>
+                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--dark);">Get A Free Quote</h3>
                     <form id="quoteForm">
                         <div class="form-group">
                             <label>Full Name</label>
@@ -196,13 +194,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>I Need Help With...</label>
+                            <label>Service Needed</label>
                             <select id="service" name="service">
                                 <option>Starlink Installation</option>
                                 <option>RV / Trailer Repair</option>
                                 <option>Ranch / Barn Maintenance</option>
                                 <option>Electrical / Technical</option>
-                                <option>Custom Fabrication</option>
+                                <option>General Handyman</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -211,7 +209,7 @@
                         </div>
                         <div class="form-group">
                             <label>Job Details</label>
-                            <textarea id="details" rows="2" placeholder="Tell me about the project..."></textarea>
+                            <textarea id="details" rows="2" placeholder="Tell me what you need done..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-accent" style="width:100%;" id="submitBtn">Check Availability</button>
                     </form>
@@ -221,58 +219,54 @@
 
         <section class="section">
             <div class="container">
-                <h2 data-aos="fade-up">Technical Capabilities</h2>
-                <p class="section-sub" data-aos="fade-up">Servicing Pittsburg, TX and the surrounding 200-mile Ark-La-Tex area.</p>
-                
+                <h2>Our Service Capabilities</h2>
+                <p class="section-sub">We bring industrial experience to residential and rural problems.</p>
                 <div class="services-grid">
                     
                     <div class="service-card" data-aos="fade-up">
                         <div class="icon-box">📡</div>
                         <h3>Starlink & Connectivity</h3>
-                        <p>Complete internet solutions for rural properties and mobile setups.</p>
+                        <p style="color: var(--text-muted); font-weight: 500;">Complete internet solutions for rural properties.</p>
                         <ul>
-                            <li>Gen 3 & Mini Professional Mounting</li>
-                            <li>Tree Obstruction Solutions</li>
-                            <li>Ranch-Wide Wi-Fi Mesh Systems</li>
-                            <li>Ethernet Drops & Hardwiring</li>
+                            <li>Gen 3 & Mini Pro Mounting</li>
+                            <li>Ranch-Wide Wi-Fi Mesh</li>
+                            <li>Ethernet Hardwiring</li>
+                            <li>Obstruction Management</li>
                         </ul>
-                        <div style="margin-top: auto;">
-                            <a href="starlink-install.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Learn More &rarr;</a>
-                        </div>
                     </div>
 
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">🚐</div>
                         <h3>RV & Mobile Living</h3>
-                        <p>Infrastructure and repair for RV owners, parks, and off-grid living.</p>
+                        <p style="color: var(--text-muted); font-weight: 500;">Infrastructure for RV owners and parks.</p>
                         <ul>
-                            <li>RV Pad Development (Water/Electric)</li>
-                            <li>50 Amp / 30 Amp Pedestal Setup</li>
-                            <li>12V DC Electrical Conversions</li>
-                            <li>Skirting & Winter Preparation</li>
+                            <li>RV Pad Development</li>
+                            <li>50 Amp & 30 Amp Pedestals</li>
+                            <li>12V DC Conversions</li>
+                            <li>Skirting & Winter Prep</li>
                         </ul>
                     </div>
 
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">🚜</div>
                         <h3>Ranch & Property</h3>
-                        <p>Heavy-duty maintenance for your land, gates, and outbuildings.</p>
+                        <p style="color: var(--text-muted); font-weight: 500;">Heavy-duty maintenance for land and structures.</p>
                         <ul>
-                            <li>Gate & Fence Repairs (Welding)</li>
-                            <li>Barn & Shop Electrical Setup</li>
-                            <li>Tractor & Equipment Maintenance</li>
-                            <li>Water Line & Pipe Repair</li>
+                            <li>Gate & Fence Welding</li>
+                            <li>Barn & Shop Electrical</li>
+                            <li>Equipment Maintenance</li>
+                            <li>Water Line Repair</li>
                         </ul>
                     </div>
 
                     <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">⚙️</div>
                         <h3>Custom Fabrication</h3>
-                        <p>If you can't buy it at the store, we build it to spec.</p>
+                        <p style="color: var(--text-muted); font-weight: 500;">If you can't buy it, we build it.</p>
                         <ul>
-                            <li>Custom Metal Brackets & Mounts</li>
-                            <li>On-Site Welding Repairs</li>
-                            <li>Industrial Shelving & Storage</li>
+                            <li>Custom Brackets & Mounts</li>
+                            <li>On-Site Welding</li>
+                            <li>Storage Solutions</li>
                             <li>Unique Problem Solving</li>
                         </ul>
                     </div>
@@ -280,26 +274,21 @@
                     <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="icon-box">🏠</div>
                         <h3>Technical Home Repair</h3>
-                        <p>Applying industrial standards to residential problems.</p>
+                        <p style="color: var(--text-muted); font-weight: 500;">Industrial standards for home projects.</p>
                         <ul>
                             <li>Electrical Troubleshooting</li>
-                            <li>Smart Home & Camera Install</li>
+                            <li>Smart Home & Cameras</li>
                             <li>Hydraulic Systems</li>
-                            <li>Fixture Replacement</li>
+                            <li>Fixture Upgrades</li>
                         </ul>
                     </div>
 
-                     <div class="service-card" data-aos="fade-up" data-aos-delay="500" style="background: var(--dark); border: none;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500" style="background: var(--dark); border-color: var(--dark);">
                         <div class="icon-box" style="background: rgba(255,255,255,0.1); color: var(--accent);">📞</div>
-                        <h3 style="color: white;">Need Something Else?</h3>
-                        <p style="color: #cbd5e1;">We specialize in the hard stuff. If you don't see it listed, give us a call to discuss.</p>
-                        <ul style="border-top: 1px solid #334155; padding-top: 15px;">
-                           <li style="color: white; padding: 0;">Fully Insured</li>
-                           <li style="color: white; padding: 0;">Mobile Workshop</li>
-                           <li style="color: white; padding: 0;">Free Travel (First 100 Miles)</li>
-                        </ul>
-                        <div style="margin-top: auto;">
-                            <a href="tel:2819179914" class="btn btn-accent" style="width: 100%;">Call Dean</a>
+                        <h3 style="color: white;">Need Custom Work?</h3>
+                        <p style="color: #cbd5e1; font-weight: 500;">We specialize in the hard stuff. If it's technical, heavy, or weird, we can probably fix it.</p>
+                        <div style="margin-top: 20px;">
+                             <a href="tel:2819179914" class="btn btn-accent" style="width:100%;">Call Dean</a>
                         </div>
                     </div>
 
@@ -364,7 +353,7 @@
             });
         }
 
-        // Pushbullet Integration (Linked to your account)
+        // Pushbullet Integration
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const PUSHBULLET_TOKEN = "o.rhGUXC6n1xurxfiry2V56xBs5gsRv5bs"; // Your Token
@@ -386,7 +375,7 @@
             fetch('https://api.pushbullet.com/v2/pushes', {
                 method: 'POST',
                 headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ type: 'note', title: '🛠️ New Service Request', body: noteBody })
+                body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
             })
             .then(response => {
                 if (response.ok) {
@@ -404,4 +393,3 @@
 
 </body>
 </html>
-
