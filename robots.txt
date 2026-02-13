@@ -1,10 +1,31 @@
-# Dean's Handyman Service LLC - Robots.txt
-# Optimized for SEO/AEO/GEO in 2026
+# robots.txt for Dean's Handyman Service LLC
+# https://deanshandymanservice.me
+# Last updated: February 2026
 
 User-agent: *
 Allow: /
-Disallow: /ideas.txt
-Disallow: /404.html
 
-# Updated to match your GitHub Pages location
-Sitemap: https://deanthehandyman.github.io/getstarted/sitemap.xml
+# Block any non-public or temporary files (add more if you create them later)
+Disallow: /ideas.txt
+Disallow: /temp/
+Disallow: /private/
+Disallow: /*?*sort=   # optional: block URL params if you don't want them indexed
+
+# Prevent indexing of error pages or duplicates
+Disallow: /404.html
+Disallow: /500.html
+
+# Explicitly allow important directories/files (optional but good practice)
+Allow: /index.html
+Allow: /services.html
+Allow: /starlink-install.html
+Allow: /contact.html
+Allow: /gallery.html
+Allow: /blog.html
+Allow: /reviews.html
+
+# Point to your sitemap (use your real domain)
+Sitemap: https://deanshandymanservice.me/sitemap.xml
+
+# Crawl-delay (optional – helps with polite crawling, especially useful for small sites)
+Crawl-delay: 10
