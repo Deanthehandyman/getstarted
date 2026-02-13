@@ -1,142 +1,280 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Reviews | Dean's Handyman Service LLC | Pittsburg TX</title>
+    <title>Customer Reviews | Dean's Handyman Service LLC – Pittsburg, TX</title>
     
-    <meta name="description" content="Read real reviews from satisfied customers across East Texas, Arkansas, Louisiana, and Oklahoma. Industrial-grade handyman and Starlink installation services.">
+    <meta name="description" content="Read verified 5-star customer reviews for Dean's Handyman Service LLC. Real feedback on Starlink installations, electrical repairs, and skilled handyman work across TX, AR, LA, OK.">
+    
+    <link rel="canonical" href="https://deanshandymanservice.me/reviews.html" />
+    
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
-    <meta name="geo.placename" content="Pittsburg, Tyler, Texarkana, Shreveport">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+    
+    <meta property="og:title" content="Customer Reviews | Dean's Handyman Service LLC">
+    <meta property="og:description" content="See what homeowners say about our professional Starlink setups, electrical work, and reliable repairs in the Ark-La-Tex region.">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta property="og:url" content="https://deanshandymanservice.me/reviews.html">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/reviews.html" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        /* --- RESET & BASICS --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --primary: #008bd2; 
+            --primary: #008bd2;
             --primary-dark: #006fa8;
-            --accent: #f0a500; 
-            --dark: #0f172a; 
-            --text-main: #1a1a1a; 
-            --text-muted: #475569; 
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
             --white: #ffffff;
+            --trust-green: #22c55e;
         }
 
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; }
-        
-        /* --- HEADER --- */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); }
-        .logo-img { height: 50px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; }
-        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-        
-        .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
-
-        /* --- REVIEWS HERO --- */
-        .hero-mini { background: linear-gradient(135deg, #005a8d 0%, #008bd2 100%); color: white; padding: 60px 20px; text-align: center; }
-        .hero-mini h1 { font-size: 2.5rem; margin-bottom: 10px; color: white; font-weight: 800; }
-
-        /* --- CONTENT AREA --- */
-        .reviews-content { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .widget-box { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            min-height: 450px; 
-            border: 1px solid #eee;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
         }
+        html { scroll-behavior: smooth; }
 
-        /* --- CTA --- */
-        .review-cta { 
-            text-align: center; 
-            margin-top: 60px; 
-            background: var(--dark); 
-            color: white; 
-            padding: 50px 20px; 
-            border-radius: 12px; 
-            border-bottom: 6px solid var(--accent);
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-        .btn-outline { 
-            display: inline-block; 
-            border: 2px solid var(--accent); 
-            color: var(--accent); 
-            padding: 15px 30px; 
-            font-weight: 800; 
-            text-decoration: none; 
-            border-radius: 6px; 
-            transition: 0.3s; 
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
             text-transform: uppercase;
-            margin-top: 20px;
+            color: var(--dark);
         }
-        .btn-outline:hover { background: var(--accent); color: var(--dark); }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
 
-        /* --- FOOTER --- */
-        footer { background: #0a0f1a; color: #cbd5e1; padding: 60px 0; text-align: center; margin-top: 50px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            h1 { font-size: 2rem !important; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .reviews-section { padding: 100px 0; }
+        .widget-container {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 600px;
+            overflow: hidden;
+        }
+        .review-cta {
+            text-align: center;
+            margin-top: 5rem;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+            border-radius: 16px;
+            border-top: 8px solid var(--accent);
+        }
+        .review-cta h3 { color: white; margin-bottom: 1.5rem; }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+            .widget-container { min-height: 500px; }
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
+        <div class="container nav-container">
             <a href="index.html" class="logo-wrapper">
-                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
-            <nav class="nav-links">
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="starlink-install.html">Starlink</a>
-                <a href="areas.html">Areas</a>
-                <a href="reviews.html" style="color: var(--primary);">Reviews</a>
+                <a href="areas.html">Service Areas</a>
                 <a href="gallery.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="tel:2819179914" class="btn btn-primary">(281) 917-9914</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-mini">
-        <div class="container" data-aos="fade-down">
-            <h1>Customer Testimonials</h1>
-            <p style="font-weight: 600;">Verified Feedback From Pittsburg, East Texas, and the Ark-La-Tex Region</p>
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
+
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Customer Reviews</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 800px; margin: 1.5rem auto 0;">Real 5-star feedback from homeowners across TX, AR, LA, OK.</p>
         </div>
     </section>
 
-    <div class="reviews-content">
-        <div class="widget-box" data-aos="fade-up">
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-012b6ebd-624b-4c5a-adf0-894136b6d32b" data-elfsight-app-lazy></div>
-        </div>
+    <section class="reviews-section">
+        <div class="container">
+            <div class="widget-container" data-aos="fade-up">
+                <!-- Your Elfsight Google Reviews Widget -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-012b6ebd-624b-4c5a-adf0-894136b6d32b" data-elfsight-app-lazy></div>
+                <div style="text-align: center; padding: 2rem; color: var(--gray); font-style: italic;" id="loading-fallback">
+                    Loading reviews... If nothing appears, <a href="https://g.page/r/CSyLvaLRoMg_EBM/reviews" target="_blank" style="color: var(--primary);">view them directly on Google</a>.
+                </div>
+            </div>
 
-        <div class="review-cta" data-aos="zoom-in">
-            <h3>Have we worked together?</h3>
-            <p>Your feedback helps me provide better service to our community and helps neighbors find reliable technical support.</p>
-            <a href="https://share.google/c7yv3c0NZ0660qyeD" target="_blank" class="btn-outline">Leave a Review on Google Maps</a>
+            <div class="review-cta" data-aos="zoom-in">
+                <h3>Have We Helped You?</h3>
+                <p>Your honest review helps neighbors find reliable, professional service in the Ark-La-Tex region.</p>
+                <a href="https://g.page/r/CSyLvaLRoMg_EBM/review" target="_blank" class="btn btn-accent" style="font-size: 1.3rem; padding: 1.2rem 3rem; margin-top: 1.5rem;">
+                    Leave Your Review on Google <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p style="color: white; font-weight: 800; margin-bottom: 5px;">Dean's Handyman Service LLC</p>
-            <p style="font-weight: 600;">Pittsburg, TX 75686 | (281) 917-9914</p>
-            <p style="margin-top:15px; font-size:0.8rem; opacity:0.5;">© 2026 All Rights Reserved. Serving TX, AR, LA, OK.</p>
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
     </script>
 
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
