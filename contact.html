@@ -1,202 +1,486 @@
 <!DOCTYPE html>
-    <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Get a Quote | Dean's Handyman Service LLC | 200-Mile Radius</title>
-        
-        <meta name="description" content="Get an instant labor estimate for Starlink installation, electrical, and home repairs in Pittsburg, TX and surrounding 200 miles.">
-        
-        <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/contact.html" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Quote | Dean's Handyman Service LLC – 200-Mile Radius</title>
     
-        <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
-        <meta name="geo.placename" content="Pittsburg, Tyler, Texarkana, Shreveport">
+    <meta name="description" content="Get a transparent labor estimate for Starlink installation, electrical repairs, plumbing, painting, and more. Serving TX, AR, LA, OK within 200 miles of Pittsburg, TX – first 100 miles FREE travel.">
     
-        <meta property="og:title" content="Instant Project Quote | Dean's Handyman Service LLC">
-        <meta property="og:description" content="Transparent labor estimates for technical trades and Starlink setup.">
-        <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/contact.html">
+    <link rel="canonical" href="https://deanshandymanservice.me/contact.html" />
     
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <style>
-            /* --- RESET & BASICS --- */
-            * { box-sizing: border-box; margin: 0; padding: 0; }
-            :root {
-                --primary: #008bd2; 
-                --primary-dark: #006fa8;
-                --accent: #f0a500; 
-                --dark: #0f172a; 
-                --text-main: #1a1a1a; 
-                --text-muted: #475569; 
-                --white: #ffffff;
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+    
+    <meta property="og:title" content="Get a Free Quote | Dean's Handyman Service LLC">
+    <meta property="og:description" content="Instant project estimates for skilled repairs and Starlink setups – mobile service across the Ark-La-Tex.">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta property="og:url" content="https://deanshandymanservice.me/contact.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #008bd2;
+            --primary-dark: #006fa8;
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --trust-green: #22c55e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
             }
-    
-            body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; }
-            
-            /* --- HEADER --- */
-            header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-            .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-            .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); }
-            .logo-img { height: 50px; width: auto; }
-            .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; }
-            .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-            
-            .nav-links a { color: var(--dark); text-decoration: none; margin-left: 15px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
-            
-            .btn-primary { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
-            .btn-primary:hover { background: var(--primary-dark); }
-            .btn-green { background-color: #28a745; color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
-            .btn-green:hover { background-color: #218838; }
-    
-            /* --- ESTIMATOR LAYOUT --- */
-            .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-            h1 { text-align: center; color: var(--dark); margin-bottom: 10px; font-size: 2.5rem; font-weight: 800; }
-            p.sub { text-align: center; color: var(--text-muted); margin-bottom: 40px; font-weight: 600; }
-    
-            .est-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 8px solid var(--accent); }
-            
-            .cat-title { background: #f8fafc; padding: 12px; font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.85rem; margin-top: 25px; border-radius: 4px; border-left: 4px solid var(--accent); }
-            .row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee; }
-            .label { font-weight: 600; font-size: 0.95rem; color: #444; }
-            .input-qty { width: 80px; padding: 10px; text-align: center; border: 1px solid #ddd; border-radius: 5px; font-weight: bold; font-size: 1rem; color: var(--primary-dark); }
-    
-            .result-area { background: #eaf4ff; border: 1px solid var(--primary); border-radius: 8px; padding: 30px; text-align: center; margin-top: 30px; display: none; }
-            .total-price { font-size: 3rem; font-weight: 900; color: var(--primary-dark); display: block; margin: 10px 0; }
-    
-            /* --- CONTACT FORM --- */
-            .contact-area { display: none; margin-top: 30px; }
-            input[type="text"], input[type="number"], textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 15px; font-size: 1rem; font-family: inherit; font-weight: 600; }
-            
-            /* --- FOOTER --- */
-            footer { background: #0a0f1a; color: #cbd5e1; padding: 60px 0; text-align: center; margin-top: 50px; }
-    
-            @media (max-width: 768px) {
-                .nav-links { display: none; }
-                h1 { font-size: 2rem; }
-                .logo-text { display: none; }
-                .est-box { padding: 25px; }
-            }
-        </style>
-    </head>
-    <body>
-    
-        <header>
-            <div class="nav-container">
-                <a href="index.html" class="logo-wrapper">
-                    <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service" class="logo-img">
-                    <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
-                </a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="starlink-install.html">Starlink</a>
-                    <a href="areas.html">Areas</a>
-                    <a href="reviews.html">Reviews</a>
-                    <a href="gallery.html">Work</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .estimator-section { padding: 100px 0; background: var(--light); }
+        .est-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-top: 8px solid var(--accent);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .cat-title {
+            background: #f1f5f9;
+            padding: 1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin: 2rem 0 1rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--accent);
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .label { font-weight: 600; font-size: 1.05rem; color: #333; flex: 1; }
+        .input-qty {
+            width: 90px;
+            padding: 0.8rem;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+        }
+        .mileage-row {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .result-area {
+            background: #eaf4ff;
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+            display: none;
+        }
+        .total-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin: 1rem 0;
+        }
+
+        .contact-area { margin-top: 4rem; display: none; }
+        .contact-area input, .contact-area textarea {
+            width: 100%; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 8px; margin-bottom: 1.5rem; font-size: 1rem;
+        }
+        .contact-area textarea { min-height: 120px; }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+            .row { flex-direction: column; align-items: flex-start; }
+            .mileage-row { flex-direction: column; }
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
             </div>
-        </header>
-    
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="areas.html">Service Areas</a>
+                <a href="gallery.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="tel:2819179914" class="btn btn-primary">(281) 917-9914</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
+
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Get Your Free Quote</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 800px; margin: 1.5rem auto 0;">Transparent labor estimates for Starlink installs, electrical, plumbing, painting & more – first 100 miles FREE travel.</p>
+        </div>
+    </section>
+
+    <section class="estimator-section" id="estimator">
         <div class="container">
-            <h1 data-aos="fade-down">Instant Project Quote</h1>
-            <p class="sub" data-aos="fade-up">Select your services for a labor estimate across our 200-mile service area.</p>
-    
-            <div class="est-box" id="step1" data-aos="zoom-in">
-                
+            <div class="est-box" data-aos="fade-up">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Build Your Project Estimate</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 3rem; font-size: 1.1rem;">Select services below – we'll calculate labor only (materials extra). First 100 miles free!</p>
+
                 <div class="cat-title">📡 Starlink & Internet</div>
-                <div class="row"><span class="label">Residential Install</span><input type="number" min="0" class="input-qty" data-price="300" data-name="Res Starlink"></div>
+                <div class="row"><span class="label">Residential Install</span><input type="number" min="0" class="input-qty" data-price="300" data-name="Residential Starlink"></div>
                 <div class="row"><span class="label">RV / Mobile / High Mount</span><input type="number" min="0" class="input-qty" data-price="350" data-name="RV Starlink"></div>
-                <div class="row"><span class="label">Troubleshooting / Relocate</span><input type="number" min="0" class="input-qty" data-price="200" data-name="Relocate"></div>
-    
+                <div class="row"><span class="label">Troubleshooting / Relocate</span><input type="number" min="0" class="input-qty" data-price="200" data-name="Troubleshooting / Relocate"></div>
+
                 <div class="cat-title">⚡ Electrical</div>
-                <div class="row"><span class="label">Light Fixture / Outlet</span><input type="number" min="0" class="input-qty" data-price="125" data-name="Light/Outlet"></div>
+                <div class="row"><span class="label">Light Fixture / Outlet Install</span><input type="number" min="0" class="input-qty" data-price="125" data-name="Light Fixture / Outlet"></div>
                 <div class="row"><span class="label">Ceiling Fan Install</span><input type="number" min="0" class="input-qty" data-price="175" data-name="Ceiling Fan"></div>
-    
+
                 <div class="cat-title">🚰 Plumbing</div>
-                <div class="row"><span class="label">Faucet Replacement</span><input type="number" min="0" class="input-qty" data-price="120" data-name="Faucet"></div>
-                <div class="row"><span class="label">Toilet Repair/Swap</span><input type="number" min="0" class="input-qty" data-price="150" data-name="Toilet"></div>
-    
-                <div class="cat-title">🛠️ General Labor</div>
-                <div class="row"><span class="label">TV Mounting</span><input type="number" min="0" class="input-qty" data-price="125" data-name="TV Mount"></div>
-                <div class="row"><span class="label">Hourly Skilled Labor</span><input type="number" min="0" class="input-qty" data-price="100" data-name="Labor Hour"></div>
-    
-                <div style="margin-top:30px; background:#f1f5f9; padding:20px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-                    <label class="label">One-Way Mileage from Pittsburg (75686):</label>
-                    <div style="display:flex; align-items:center; gap:10px;">
-                        <input type="number" id="trip-miles" placeholder="0" class="input-qty">
-                        <span style="font-size:0.8rem; color:#666; font-weight: 700;">(First 100 miles free)</span>
+                <div class="row"><span class="label">Faucet Replacement</span><input type="number" min="0" class="input-qty" data-price="120" data-name="Faucet Replacement"></div>
+                <div class="row"><span class="label">Toilet Repair / Replacement</span><input type="number" min="0" class="input-qty" data-price="150" data-name="Toilet Repair / Replacement"></div>
+
+                <div class="cat-title">🛠️ General & Other</div>
+                <div class="row"><span class="label">TV Mounting</span><input type="number" min="0" class="input-qty" data-price="125" data-name="TV Mounting"></div>
+                <div class="row"><span class="label">Hourly Skilled Labor</span><input type="number" min="0" class="input-qty" data-price="100" data-name="Hourly Skilled Labor"></div>
+
+                <div class="mileage-row">
+                    <label class="label" for="trip-miles">One-Way Miles from Pittsburg (75686):</label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <input type="number" id="trip-miles" min="0" placeholder="0" class="input-qty">
+                        <span style="font-size: 0.95rem; color: #666; font-weight: 600;">(First 100 miles free – $1.50/mile after)</span>
                     </div>
                 </div>
-    
-                <button onclick="calculateTotal()" class="btn-primary" style="width:100%; margin-top:30px; padding:18px; font-size:1.1rem;">Calculate Total</button>
-    
+
+                <button onclick="calculateTotal()" class="btn btn-accent" style="width:100%; margin-top: 2.5rem; font-size: 1.3rem; padding: 1.2rem;">Calculate Estimate</button>
+
                 <div id="result-area" class="result-area">
-                    <span style="font-size:0.9rem; font-weight:bold; color:var(--primary-dark); text-transform:uppercase;">Estimated Labor Total</span>
+                    <span style="font-size: 1rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Estimated Labor Total</span>
                     <div id="final-price" class="total-price">$0.00</div>
-                    <button onclick="showContact()" class="btn-green" style="width:100%; padding:18px; font-size:1.1rem;">✅ Proceed to Booking</button>
+                    <button onclick="showContact()" class="btn btn-primary" style="width:100%; margin-top: 2rem; font-size: 1.3rem; padding: 1.2rem;">Proceed to Send Request</button>
                 </div>
             </div>
-    
-            <div class="est-box contact-area" id="step2">
-                <h2 style="text-align:center; color:var(--primary-dark); margin-bottom:10px; font-weight: 800;">Send Your Request</h2>
-                <p style="text-align:center; margin-bottom:20px; color:var(--text-muted); font-weight: 600;">Review your details and send directly to Dean.</p>
-                
-                <input type="text" id="client-name" placeholder="Your Name" required>
-                <input type="text" id="client-loc" placeholder="Your City & State" required>
-                <textarea id="client-msg" placeholder="Tell me more about the project specifics..."></textarea>
-                
-                <div style="background:#f8fafc; padding:20px; border-radius:8px; margin-bottom:20px; border-left:4px solid var(--accent);">
-                    <strong style="font-size:0.85rem; color:var(--primary); font-weight: 900;">SUMMARY:</strong>
-                    <p id="summary-text" style="margin:5px 0 0 0; color:#555; font-size:0.95rem; font-weight: 600;">No items selected.</p>
-                </div>
-    
-                <div style="display:flex; gap:15px; flex-wrap:wrap;">
-                    <button onclick="sendVia('email')" class="btn-primary" style="flex:1; min-width:150px;">📧 Email Dean</button>
-                    <button onclick="sendVia('text')" class="btn-green" style="flex:1; min-width:150px;">💬 Text Dean</button>
-                </div>
-                
-                <button onclick="goBack()" style="background:none; border:none; width:100%; margin-top:20px; color:#999; cursor:pointer; font-weight: 700;">← Edit Project Items</button>
+
+            <div class="est-box contact-area" id="contact-area">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Send Your Quote Request</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 2.5rem;">Review your estimate and send directly to Dean.</p>
+
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="client-name">Your Name</label>
+                        <input type="text" id="client-name" placeholder="First & Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-loc">Your City & State</label>
+                        <input type="text" id="client-loc" placeholder="e.g., Tyler, TX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-msg">Additional Details</label>
+                        <textarea id="client-msg" rows="4" placeholder="Any extra info about your project..."></textarea>
+                    </div>
+
+                    <div style="background: #eaf4ff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; border-left: 6px solid var(--accent);">
+                        <strong style="color: var(--primary); display: block; margin-bottom: 0.5rem;">Your Estimate Summary:</strong>
+                        <p id="summary-text" style="margin: 0; color: #333; font-weight: 600;">No items selected yet.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent" style="width:100%; font-size: 1.3rem; padding: 1.2rem;" id="submitBtn">Send Quote Request</button>
+                </form>
+
+                <button onclick="goBack()" style="background: none; border: none; width: 100%; margin-top: 1.5rem; color: var(--gray); font-weight: 600; cursor: pointer;">← Edit Estimate</button>
             </div>
         </div>
-    
-        <footer>
-            <div class="container" style="padding:0;">
-                <p style="color: white; font-weight: 800; margin-bottom: 5px;">Dean's Handyman Service LLC</p>
-                <p style="font-weight: 600;">Pittsburg, TX 75686 | (281) 917-9914</p>
-                <p style="margin-top:15px; font-size:0.8rem; opacity:0.5;">© 2026 All Rights Reserved. Serving TX, AR, LA, and OK.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
             </div>
-        </footer>
-    
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({ duration: 800, once: true });
-    
-            function calculateTotal() {
-                let total = 0;
-                let items = [];
-                
-                document.querySelectorAll('.input-qty').forEach(input => {
-                    const qty = parseInt(input.value) || 0;
-                    if(qty > 0 && input.dataset.price) {
-                        const price = parseInt(input.dataset.price);
-                        total += (qty * price);
-                        items.push(`${qty}x ${input.dataset.name}`);
-                    }
-                });
-    
-                const miles = parseInt(document.getElementById('trip-miles').value) || 0;
-                if(miles > 100) {
-                    const fee = (miles - 100) * 1.50;
-                    total += fee;
-                    items.push(`Trip Fee (${miles} miles)`);
-                }
-    
-                document.getElementById('final-price').innerText = "$" + total.toFixed(2);
-                document.getElementById('result-area').style.display = 'block';
-                
-                window.quoteData = { total: total.toFixed(2), summary: items.join(", ") };
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
             }
-    
-            function showContact ( ) { if ( ! window . quoteData || window . quoteData . summary === "" ) { alert ( "Please select at least one service." ) ; return ; } document . getElementById ( 'summary-text' ) . innerText = window . quoteData . summary + " (Est Total: $" + window . quoteData . total + ")" ; document . getElementById ( 'step1' ) . style . display = 'none' ; document . getElementById ( 'step2' ) . style . display = 'block' ; window . scrollTo ( 0 , 0 ) ; } function goBack ( ) { document . getElementById ( 'step1' ) . style . display = 'block' ; document . getElementById ( 'step2' ) . style . display = 'none' ; } function sendVia ( method ) { const name = document . getElementById ( 'client-name' ) . value ; const loc = document . getElementById ( 'client-loc' ) . value ; const note = document . getElementById ( 'client-msg' ) . value ; if ( ! name || ! loc ) { alert ( "Please enter your name and location." ) ; return ; } const fullMsg = `Hi Dean, this is ${ name } from ${ loc } . Quote Request: ${ window . quoteData . summary } Estimated Total: $ ${ window . quoteData . total } Notes: ${ note } ` ; if ( method === 'email' ) { window . location . href = `mailto:deanshandymanservice1@gmail.com?subject=New Job Request&body= ${ encodeURIComponent ( fullMsg ) } ` ; } else { window . location . href = `sms:2819179914?body= ${ encodeURIComponent ( fullMsg ) } ` ; } } </script> <script async type =' module ' src =' https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js ' > </ script > < zapier-interfaces-chatbot-embed is-popup =' true ' chatbot-id =' cmla3f83s001hfy8tds4wmpva ' > </ zapier-interfaces-chatbot-embed > </ body > </ html >
-    
+        });
+
+        // Quote estimator logic
+        function calculateTotal() {
+            let total = 0;
+            let items = [];
+
+            document.querySelectorAll('.input-qty').forEach(input => {
+                const qty = parseInt(input.value) || 0;
+                if (qty > 0 && input.dataset.price) {
+                    const price = parseInt(input.dataset.price);
+                    total += (qty * price);
+                    items.push(`${qty}x ${input.dataset.name}`);
+                }
+            });
+
+            const miles = parseInt(document.getElementById('trip-miles').value) || 0;
+            let tripFee = 0;
+            if (miles > 100) {
+                tripFee = (miles - 100) * 1.5;
+                total += tripFee;
+                items.push(`Trip fee (${miles} miles)`);
+            }
+
+            document.getElementById('final-price').innerText = "$" + total.toFixed(2);
+            document.getElementById('result-area').style.display = 'block';
+
+            window.quoteData = {
+                total: total.toFixed(2),
+                summary: items.join(", ") + (tripFee > 0 ? ` + Trip fee $${tripFee.toFixed(2)}` : '')
+            };
+        }
+
+        function showContact() {
+            if (!window.quoteData || window.quoteData.summary === "") {
+                alert("Please select at least one service.");
+                return;
+            }
+            document.getElementById('summary-text').innerText = window.quoteData.summary + " (Est. Total: $" + window.quoteData.total + ")";
+            document.querySelector('.est-box:not(#contact-area)').style.display = 'none';
+            document.getElementById('contact-area').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('contact-area').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function goBack() {
+            document.getElementById('contact-area').style.display = 'none';
+            document.querySelector('.est-box:not(#contact-area)').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('estimator').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        // Form submission with Pushbullet + calendar redirect
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            const requiredFields = ['client-name', 'client-loc'];
+            let valid = true;
+            requiredFields.forEach(id => {
+                if (!document.getElementById(id).value.trim()) valid = false;
+            });
+            if (!valid) {
+                alert("Please fill your name and location.");
+                btn.innerText = originalText;
+                btn.disabled = false;
+                return;
+            }
+
+            const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
+            const CALENDAR_LINK = "https://calendar.app.google/zJTuuvnVncbQg5LT9";
+
+            const name = document.getElementById('client-name').value;
+            const loc = document.getElementById('client-loc').value;
+            const msg = document.getElementById('client-msg').value || "No additional details";
+
+            const noteBody = `New Quote Request!\nName: ${name}\nLocation: ${loc}\nEstimate: ${window.quoteData?.summary || "Not calculated"}\nTotal Est: $${window.quoteData?.total || "N/A"}\nMessage: ${msg}`;
+
+            fetch('https://api.pushbullet.com/v2/pushes', {
+                method: 'POST',
+                headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type: 'note', title: '🛠️ New Quote Request (Contact Page)', body: noteBody })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Request sent! Redirecting to calendar to book a time.");
+                    window.location.href = CALENDAR_LINK;
+                } else {
+                    alert("There was an issue sending. Please call (281) 917-9914 directly.");
+                }
+            })
+            .catch(() => {
+                alert("Connection error. Call us at (281) 917-9914 – we're here to help!");
+            })
+            .finally(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
+        });
+    </script>
+
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
+
+</body>
+</html>
