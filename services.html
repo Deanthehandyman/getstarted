@@ -3,94 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Services | Dean's Handyman Service LLC</title>
+    <title>Handyman Services Near Me | Dean's Handyman Service LLC – Pittsburg, TX</title>
     
-    <meta name="description" content="Expert technical handyman services for homes, ranches, and RVs. Starlink installs, custom fabrication, and industrial-grade repairs in the Ark-La-Tex area.">
-    <meta property="og:title" content="Services | Dean's Handyman Service LLC">
-    <meta property="og:description" content="Industrial-grade precision for your home, ranch, and mobile lifestyle. Serving TX, AR, LA, and OK.">
-    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta name="description" content="Professional handyman near me in Pittsburg TX and 200-mile Ark-La-Tex radius (Tyler, Longview, Texarkana, Shreveport). Starlink installation, rural home repairs, RV setups, electrical – first 100 miles FREE travel.">
+    
+    <link rel="canonical" href="https://deanshandymanservice.me/services.html" />
+    
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
-        /* --- DESIGN SYSTEM (From Index) --- */
         :root {
-            --primary: #008bd2; 
+            --primary: #008bd2;
             --primary-dark: #006fa8;
-            --accent: #f0a500; 
-            --dark: #0f172a; 
-            --text-main: #1a1a1a; 
-            --text-muted: #475569; 
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
             --white: #ffffff;
-            --danger-red: #dc3545;
         }
 
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; }
-        
-        /* --- HEADER & NAV --- */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 2000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-img { height: 50px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; color: var(--dark); }
-        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-        
-        .nav-links { display: flex; align-items: center; gap: 12px; }
-        .nav-links a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; white-space: nowrap; transition: 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-
-        /* --- HERO SECTION --- */
-        .hero-services { 
-            background: linear-gradient(rgba(0, 15, 30, 0.7), rgba(0, 15, 30, 0.7)), url('https://images.unsplash.com/photo-1581094794329-cd28b6d7a820?auto=format&fit=crop&w=1350&q=80'); 
-            background-size: cover; background-position: center; background-attachment: fixed;
-            color: var(--white); padding: 100px 0; text-align: center;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
         }
-        .hero-services h1 { font-size: clamp(2.5rem, 6vw, 4rem); text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .tagline { color: var(--accent); font-weight: 800; letter-spacing: 1px; }
+        html { scroll-behavior: smooth; }
 
-        /* --- SERVICE CARDS --- */
-        .service-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e2e8f0;
-            height: 100%;
-            border-radius: 12px;
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
             background: white;
-            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-color: var(--primary);
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
         }
-        .icon-box {
-            font-size: 2.5rem;
-            color: var(--danger-red);
-            margin-bottom: 20px;
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
         }
-        .list-group-item { border: none; padding: 8px 0; font-size: 0.95rem; font-weight: 500; }
-        
-        /* Mobile Menu Toggle */
-        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
-        .menu-toggle span { width: 25px; height: 3px; background: var(--dark); border-radius: 3px; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
 
-        .mobile-fab { 
-            position: fixed; bottom: 20px; left: 20px; background: #28a745; color: white; 
-            width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; 
-            justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1500; text-decoration: none; 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary); }
+
+        .btn-pill {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.9rem 1.8rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,139,210,0.25);
+            transition: all 0.3s;
+        }
+        .btn-pill:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
 
         @media (max-width: 992px) {
             .menu-toggle { display: flex; }
-            .nav-links { 
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; 
-                background: var(--white); flex-direction: column; align-items: flex-start; 
-                padding: 100px 40px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: 0.4s; 
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
             }
             .nav-links.active { right: 0; }
-            .mobile-fab { display: flex; }
+            .nav-links a { font-size: 1.2rem; }
         }
+
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .services-section { padding: 100px 0; }
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            border-top: 6px solid var(--primary);
+        }
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-top-color: var(--accent);
+        }
+        .service-icon { font-size: 3.5rem; color: var(--primary); margin-bottom: 1.5rem; text-align: center; }
+        .service-list li { margin-bottom: 0.8rem; font-size: 1.05rem; }
+
+        .cta-section {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
 </head>
 <body>
@@ -98,15 +198,16 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo-wrapper">
-                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service Logo" class="logo-img">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
-            
-            <div class="menu-toggle" id="mobile-menu-btn">
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
                 <span></span><span></span><span></span>
             </div>
 
             <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html" class="active">Services</a>
                 <a href="starlink-install.html">Starlink</a>
@@ -115,167 +216,150 @@
                 <a href="blog.html">Blog</a>
                 <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact</a>
-                <a href="tel:2819179914" class="btn btn-primary text-white d-none d-lg-inline-block">(281) 917-9914</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="tel:2819179914" class="btn-pill">
+                    <i class="fas fa-phone-alt me-2"></i>(281) 917-9914
+                </a>
             </nav>
         </div>
     </header>
 
-    <a href="tel:2819179914" class="mobile-fab">📞</a>
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
 
-    <main>
-        <header class="hero-services">
-            <div class="container" data-aos="zoom-in">
-                <h1 class="display-3 fw-bold text-uppercase mb-2">Technical Services</h1>
-                <p class="tagline text-uppercase mb-3">Industrial Precision for Homes, Ranches & RVs</p>
-                <p class="lead text-light">Professional solutions delivered across Texas, Arkansas, Louisiana, and Oklahoma.</p>
-            </div>
-        </header>
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Handyman Services Near Me</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 900px; margin: 1.5rem auto 0;">
+                Expert Starlink installation East Texas, rural home repairs, RV setups & technical fixes – Pittsburg TX & 200-mile Ark-La-Tex radius. First 100 miles FREE travel.
+            </p>
+        </div>
+    </section>
 
-        <section class="py-5">
-            <div class="container">
-                
-                <div class="row text-center mb-5" data-aos="fade-up">
-                    <div class="col-lg-9 mx-auto">
-                        <h2 class="fw-bold text-uppercase mb-3">Specialized Trades for Every Property</h2>
-                        <p class="text-muted lead">We bring heavy industrial experience to residential and rural challenges. From Starlink installations on remote ranches to complex RV electrical systems, we build it to a higher standard.</p>
+    <section class="services-section">
+        <div class="container">
+            <h2 style="margin-bottom: 3rem;">Our Core Handyman Services</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h3>Starlink Installation & Connectivity</h3>
+                        <ul class="service-list">
+                            <li>Gen 3 & Mini dish mounting (roof, pole, high-mount)</li>
+                            <li>Custom obstruction clearing & pivot alignment</li>
+                            <li>RV / mobile 12V conversions & magnetic mounts</li>
+                            <li>Troubleshooting, relocation & network extension</li>
+                        </ul>
+                        <a href="starlink-install.html" class="btn btn-primary mt-3">Learn More</a>
                     </div>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card service-card p-4">
-                            <div class="text-center">
-                                <div class="icon-box"><i class="fas fa-satellite-dish"></i></div>
-                                <h4 class="fw-bold">Starlink & Connectivity</h4>
-                                <p class="text-muted">High-speed internet for rural and mobile properties.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Custom Roof & Pole Mounts</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> RV Starlink Conversions (12V)</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Barn & Shop Wi-Fi Extension</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Network Troubleshooting</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card service-card p-4">
-                            <div class="text-center">
-                                <div class="icon-box"><i class="fas fa-tractor"></i></div>
-                                <h4 class="fw-bold">Ranch & Property</h4>
-                                <p class="text-muted">Heavy-duty infrastructure maintenance.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Gate & Fence Repairs (Welding)</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Equipment Maintenance</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Water Line & Pipe Repair</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Outbuilding Electrical Setup</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card service-card p-4">
-                            <div class="text-center">
-                                <div class="icon-box"><i class="fas fa-caravan"></i></div>
-                                <h4 class="fw-bold">RV & Mobile Living</h4>
-                                <p class="text-muted">Expert support for the nomadic lifestyle.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> RV Pad Development & Hookups</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Skirting & Winterization</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Solar & Battery Systems</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> 12V Electrical Repair</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="card service-card p-4">
-                            <div class="text-center">
-                                <div class="icon-box"><i class="fas fa-hammer"></i></div>
-                                <h4 class="fw-bold">Custom Fabrication</h4>
-                                <p class="text-muted">Metal and wood solutions for unique problems.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Custom Brackets & Mounts</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> On-Site Welding Repairs</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Specialized Storage Systems</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Technical Prototype Builds</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card service-card p-4">
-                            <div class="text-center">
-                                <div class="icon-box"><i class="fas fa-bolt"></i></div>
-                                <h4 class="fw-bold">Technical Trades</h4>
-                                <p class="text-muted">Advanced repairs other handymen won't touch.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Electrical Troubleshooting</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Hydraulic & Mechanical Systems</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> Security & Camera Systems</li>
-                                <li class="list-group-item"><i class="fas fa-check text-danger me-2"></i> High-Level Problem Solving</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card service-card p-4 bg-dark text-white border-0 text-center d-flex flex-column justify-content-center">
-                            <div class="icon-box text-white mb-3"><i class="fas fa-phone-alt"></i></div>
-                            <h4 class="fw-bold mb-3">Need Something Else?</h4>
-                            <p class="mb-4">We specialize in the "hard stuff." If you have a complex technical problem that isn't listed, let's talk.</p>
-                            <a href="tel:2819179914" class="btn btn-danger btn-lg w-100 fw-bold py-3">CALL DEAN NOW</a>
-                        </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                        <h3>Rural Home & Ranch Repairs</h3>
+                        <ul class="service-list">
+                            <li>Gate, fence & structural repairs</li>
+                            <li>Well pump, water line & plumbing fixes</li>
+                            <li>Barn/shop electrical & lighting upgrades</li>
+                            <li>Custom brackets, mounts & storage solutions</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary mt-3">Get Quote</a>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer style="background: #0a0f1a; color: #cbd5e1; padding: 60px 0;">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
-            <div>
-                <h4 style="color: white; margin-bottom: 15px;">Dean's Handyman Service LLC</h4>
-                <p style="color: #94a3b8; font-weight: 500;">Pittsburg, TX 75686. Serving TX, AR, LA, and OK. Fully insured tradesman.</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 15px;">Quick Links</h4>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a>
-                    <a href="starlink-install.html" style="color: #94a3b8; text-decoration: none;">Starlink Installation</a>
-                    <a href="contact.html" style="color: #94a3b8; text-decoration: none;">Get a Quote</a>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-caravan"></i></div>
+                        <h3>RV & Mobile Living Support</h3>
+                        <ul class="service-list">
+                            <li>50-amp pedestals & surge protection</li>
+                            <li>Skirting, winterization & leveling</li>
+                            <li>Solar/battery & 12V electrical upgrades</li>
+                            <li>Starlink Mini vehicle & off-grid installs</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary mt-3">Get Quote</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 15px;">Contact</h4>
-                <p style="color: #94a3b8; font-weight: 500;">Phone: (281) 917-9914<br>Email: deanshandymanservice1@gmail.com</p>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Electrical & Technical Trades</h3>
+                        <ul class="service-list">
+                            <li>Light fixture, outlet & ceiling fan installs</li>
+                            <li>Whole-home wiring repairs & upgrades</li>
+                            <li>Camera, smart lock & security setups</li>
+                            <li>Complex troubleshooting & problem solving</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary mt-3">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Custom Fabrication & Repairs</h3>
+                        <ul class="service-list">
+                            <li>Heavy-duty mounting & brackets</li>
+                            <li>Structural reinforcement & custom builds</li>
+                            <li>Specialized storage & equipment solutions</li>
+                            <li>Hourly skilled labor for any project</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary mt-3">Get Quote</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div style="text-align: center; padding-top: 40px; border-top: 1px solid #1e293b; margin-top: 40px; font-size: 0.85rem;">
+    </section>
+
+    <section class="cta-section">
+        <div class="container" data-aos="zoom-in">
+            <h2>Need Service in Your Area?</h2>
+            <p style="font-size: 1.3rem; margin: 1.5rem 0 2rem;">Handyman near me in Pittsburg TX & Ark-La-Tex – fast, reliable, no job too technical.</p>
+            <a href="contact.html" class="btn btn-primary" style="font-size: 1.4rem; padding: 1.2rem 3rem;">Get Your Free Quote Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
             © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 900, once: true, offset: 100 });
 
-        // Mobile Menu Toggle logic
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            const spans = menuBtn.getElementsByTagName('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
         });
     </script>
-    
+
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
     <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
