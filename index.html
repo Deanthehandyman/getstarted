@@ -3,125 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dean's Handyman Service LLC | 200-Mile Starlink & Tech Expert</title>
+    <title>Dean's Handyman Service LLC | Starlink Expert & Reliable Repairs – TX, AR, LA, OK</title>
     
     <meta name="google-site-verification" content="Ppwb67jnNZqenhH9knICRsS0JoWsvO_G5isyaixaDwk" />
-
-    <meta name="description" content="Industrial-grade handyman and Starlink installation serving a 200-mile radius from Pittsburg, TX. Professional service across Texas, Arkansas, Louisiana, and Oklahoma.">
-    <meta property="og:title" content="Dean's Handyman Service LLC | 200-Mile Tech Expert">
-    <meta property="og:description" content="Professional Starlink setup and industrial-grade home repairs serving TX, AR, LA, and OK.">
+    <meta name="description" content="Professional Starlink Gen 3/Mini installation and skilled handyman repairs. 200-mile radius from Pittsburg, TX – first 100 miles FREE travel. Industrial-trained, mobile, trusted service.">
+    <meta property="og:title" content="Dean's Handyman Service LLC | Starlink Expert & Skilled Repairs">
+    <meta property="og:description" content="Reliable on-site service for Starlink setup, electrical, maintenance & more across Texas, Arkansas, Louisiana, and Oklahoma.">
     <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
-    
-    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/">
-    
+    <meta property="og:url" content="https://deanshandymanservice.me/">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Geo tags -->
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
     <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
     <meta name="geo.position" content="32.9997;-94.9675">
     <meta name="ICBM" content="32.9997, -94.9675">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
-        /* --- RESET & BASICS --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --primary: #008bd2; 
+            --primary: #008bd2;
             --primary-dark: #006fa8;
-            --accent: #f0a500; 
-            --dark: #0f172a; 
-            --text-main: #1a1a1a; 
-            --text-muted: #475569; 
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
             --white: #ffffff;
-            --tech-bg: #1e293b;
+            --trust-green: #22c55e;
         }
 
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
         html { scroll-behavior: smooth; }
 
-        h1, h2, h3, h4 { color: var(--dark); font-weight: 700; line-height: 1.2; }
-        h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 20px; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-        h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); text-align: center; margin-bottom: 10px; color: var(--dark); }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; cursor: pointer; transition: 0.3s; border: none; text-align: center; }
-        .btn-primary { background-color: var(--primary); color: var(--white) !important; }
-        .btn-accent { background-color: var(--accent); color: var(--dark) !important; box-shadow: 0 4px 15px rgba(240, 165, 0, 0.4); }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 2.8rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+        h3 { font-size: 1.6rem; margin-bottom: 1rem; }
 
-        /* --- HEADER & NAVIGATION --- */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 2000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; z-index: 2100; }
-        .logo-img { height: 50px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; color: var(--dark); }
-        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-        
-        .nav-links { display: flex; align-items: center; gap: 12px; }
-        .nav-links a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; white-space: nowrap; transition: 0.2s; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Mobile Menu Toggle */
-        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 2100; padding: 10px; }
-        .menu-toggle span { width: 25px; height: 3px; background: var(--dark); border-radius: 3px; transition: 0.3s; }
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
 
         @media (max-width: 992px) {
             .menu-toggle { display: flex; }
-            .nav-links { 
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; 
-                background: var(--white); flex-direction: column; align-items: flex-start; 
-                padding: 100px 40px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 300px; height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 120px 40px;
+                gap: 1.5rem;
+                transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
             }
             .nav-links.active { right: 0; }
-            .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
+            .nav-links a { font-size: 1.2rem; }
         }
 
-        /* --- HERO (TRUCK BACKGROUND) --- */
-        .hero { 
-            background: linear-gradient(rgba(0, 15, 30, 0.6), rgba(0, 15, 30, 0.6)), url('https://i.imgur.com/KMsvpls.jpg'); 
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--white); 
-            padding: 60px 0; 
-            min-height: 650px; 
-            display: flex; 
-            align-items: center; 
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
         }
-        .hero-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
-        .hero-text p { color: #fff; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.8); margin-bottom: 20px; }
-        .hero-text ul { list-style: none; margin: 25px 0; }
-        .hero-text li { margin-bottom: 12px; font-size: 1.1rem; display: flex; align-items: center; gap: 12px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.8); color: white; }
-        .hero-text li::before { content: "✓"; color: var(--accent); font-weight: 900; font-size: 1.3rem; text-shadow: none; }
-
-        /* --- LEAD CARD --- */
-        .lead-card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); color: var(--dark); border-top: 6px solid var(--accent); }
-        .form-group { margin-bottom: 12px; }
-        .form-group label { display: block; margin-bottom: 4px; font-size: 0.85rem; font-weight: 800; color: var(--dark); }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 0.95rem; color: var(--text-main); font-family: inherit; font-weight: 600; }
-
-        /* --- SERVICES --- */
-        .section { padding: 80px 0; }
-        .section-sub { text-align: center; color: var(--text-muted); font-size: 1.1rem; font-weight: 600; margin-bottom: 40px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .service-card { background: var(--white); padding: 35px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; position: relative; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
-        .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--primary); }
-        .icon-box { width: 50px; height: 50px; background: #eaf4ff; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 20px; font-size: 1.5rem; font-weight: bold; }
-
-        /* --- FLOATING CALL BUTTON --- */
-        .mobile-fab { 
-            position: fixed; bottom: 20px; left: 20px; background: #28a745; color: white; 
-            width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; 
-            justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1500; text-decoration: none; 
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
         }
+        .hero-text p { font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7); }
+        .hero-text ul { list-style: none; margin: 2rem 0; }
+        .hero-text li {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+        }
+        .hero-text li::before {
+            content: "✓";
+            color: var(--accent);
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .hero-kicker {
+            background: rgba(34,197,94,0.2);
+            color: var(--trust-green);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .why-choose {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: -4rem auto 4rem;
+            max-width: 1100px;
+            text-align: center;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .why-item {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .lead-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            border-top: 8px solid var(--accent);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 700; color: var(--dark); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 0.9rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,139,210,0.15);
+        }
+
+        .section { padding: 100px 0; }
+        .section-sub { text-align: center; color: var(--gray); font-size: 1.2rem; font-weight: 500; margin-bottom: 3rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .service-card {
+            background: white; padding: 2.5rem; border-radius: 16px; border: 1px solid #e2e8f0;
+            transition: all 0.4s ease; box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+        .service-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); border-color: var(--primary); }
+        .icon-box {
+            width: 70px; height: 70px; background: rgba(0,139,210,0.1); color: var(--primary);
+            display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 1.5rem; font-size: 2rem;
+        }
+
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .testimonial-card {
+            background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-left: 6px solid var(--accent);
+        }
+
+        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .payment-grid a { padding: 1rem; border-radius: 12px; font-weight: 700; text-align: center; text-decoration: none; color: white; transition: transform 0.3s; }
+        .payment-grid a:hover { transform: scale(1.05); }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
 
         @media (max-width: 992px) {
+            .hero { padding: 80px 0 60px; background-attachment: scroll; }
             .hero-layout { grid-template-columns: 1fr; text-align: center; }
             .hero-text ul { display: inline-block; text-align: left; }
-            .hero { padding: 40px 0; background-attachment: scroll; }
             .mobile-fab { display: flex; }
+            .hero-ctas { flex-direction: column; gap: 1rem; }
+            .why-grid { grid-template-columns: 1fr; }
         }
+
+        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
 </head>
 <body>
@@ -129,14 +266,12 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo-wrapper">
-                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service Logo" class="logo-img">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
-            
-            <div class="menu-toggle" id="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
             </div>
 
             <nav class="nav-links" id="nav-menu">
@@ -153,42 +288,56 @@
         </div>
     </header>
 
-    <a href="tel:2819179914" class="mobile-fab">📞</a>
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Now">📞</a>
 
     <main>
         <section class="hero">
             <div class="container hero-layout">
-                <div class="hero-text" data-aos="fade-right">
-                    <h1>200-Mile Professional Service Radius</h1>
-                    <p style="font-size: 1.25rem;">Industrial Starlink Installation & Skilled Repair in TX, AR, LA, and OK.</p>
-                    <ul style="list-style:none;">
-                        <li>Serving Pittsburg, Tyler, Texarkana, Shreveport & Beyond</li>
-                        <li>First 100 Miles of Travel are FREE</li>
-                        <li>Industrial-Grade Tools & Mobile Workshop</li>
-                        <li>Starlink Gen 3 & Mini Expert Installer</li>
+                <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+                    <div class="hero-kicker">⭐ 5-Star Rated • Professional & Reliable</div>
+                    <h1>Starlink Setup or Home Repairs – Done Right, On Time</h1>
+                    <p>Expert mobile service across TX, AR, LA, OK – first 100 miles free, fully equipped, no job too remote.</p>
+                    
+                    <div class="trust-badges" style="justify-content: flex-start; margin: 2rem 0;">
+                        <div class="trust-badge"><span aria-label="Star">⭐</span> 5-Star Reviews</div>
+                        <div class="trust-badge"><span aria-label="Map">📍</span> 200-Mile Radius</div>
+                        <div class="trust-badge"><span aria-label="Truck">🚚</span> Free First 100 Miles</div>
+                    </div>
+
+                    <ul>
+                        <li>Starlink Gen 3 & Mini specialist – clean, optimized installs</li>
+                        <li>Electrical, fabrication, tough repairs – done right first time</li>
+                        <li>Fully mobile workshop – equipped and ready</li>
+                        <li>Serving Pittsburg, Tyler, Shreveport, Texarkana & beyond</li>
                     </ul>
+
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-accent" style="font-size: 1.3rem; padding: 1rem 2.5rem;">Get Free Quote Now</a>
+                        <a href="tel:2819179914" class="btn btn-primary" style="font-size: 1.3rem; padding: 1rem 2.5rem;">Call (281) 917-9914</a>
+                    </div>
                 </div>
-                
-                <div class="lead-card" id="contact" data-aos="fade-left">
-                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--dark);">Get A Free Quote</h3>
+
+                <div class="lead-card" id="contact" data-aos="fade-left" data-aos-duration="900">
+                    <h3 style="text-align: center; margin-bottom: 1.8rem;">Request a Free Quote</h3>
                     <form id="quoteForm">
                         <div class="form-group">
-                            <label>Full Name</label>
+                            <label for="client-name">Full Name</label>
                             <input type="text" id="client-name" placeholder="First & Last Name" required>
                         </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div class="form-group">
-                                <label>Phone Number</label>
+                                <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" placeholder="(555) 555-5555" required>
                             </div>
                             <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" id="email" placeholder="email@example.com" required>
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Service Needed</label>
-                            <select id="service" name="service">
+                            <label for="service">Service Needed</label>
+                            <select id="service" required>
+                                <option value="">Select one...</option>
                                 <option>Starlink Installation</option>
                                 <option>Electrical / Wiring</option>
                                 <option>Handyman / General Repair</option>
@@ -196,101 +345,187 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Service Address / City</label>
-                            <input type="text" id="address" placeholder="Street Address & City" required>
+                            <label for="address">Service Address / City</label>
+                            <input type="text" id="address" placeholder="Street & City" required>
                         </div>
                         <div class="form-group">
-                            <label>Job Details</label>
-                            <textarea id="details" rows="2" placeholder="Tell me what you need done..."></textarea>
+                            <label for="details">Job Details</label>
+                            <textarea id="details" rows="4" placeholder="Describe your project..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-accent" style="width:100%;" id="submitBtn">Check Availability</button>
+                        <button type="submit" class="btn btn-accent" style="width:100%; font-size: 1.2rem;" id="submitBtn">Check Availability & Get Quote</button>
                     </form>
                 </div>
             </div>
         </section>
 
+        <div class="why-choose" data-aos="fade-up">
+            <h2>Why Homeowners Choose Dean</h2>
+            <div class="why-grid">
+                <div class="why-item">✅ Industrial-trained expertise</div>
+                <div class="why-item">✅ Fully mobile – we come to you</div>
+                <div class="why-item">✅ First 100 miles free travel</div>
+                <div class="why-item">✅ Transparent pricing, no surprises</div>
+                <div class="why-item">✅ 5-star rated service</div>
+                <div class="why-item">✅ Quick response & reliable work</div>
+            </div>
+        </div>
+
         <section class="section">
             <div class="container">
-                <h2>Technical Trades Handled Correctly</h2>
-                <p class="section-sub">Industrial-trained expertise delivered directly to your home or shop.</p>
+                <h2>Our Full Range of Services</h2>
+                <p class="section-sub">From specialized Starlink installs to everyday home fixes – professional, on-site, and ready for rural Texas properties.</p>
                 <div class="services-grid">
                     <div class="service-card" data-aos="fade-up">
-                        <div class="icon-box">📡</div>
+                        <div class="icon-box" aria-label="Starlink satellite">📡</div>
                         <h3>Starlink Setup</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">Specializing in Gen 3 and Mini installs. Professional mounting, ridge mounts, and network optimization.</p>
+                        <p>Gen 3 & Mini installations, professional mounting (ridge/ground), cable routing, network testing & optimization for reliable high-speed internet.</p>
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon-box">⚡</div>
-                        <h3>Skilled Repairs</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">From complex electrical troubleshooting to industrial maintenance and fabrication. We fix what others avoid.</p>
+                        <div class="icon-box" aria-label="Electrical bolt">⚡</div>
+                        <h3>Electrical Repairs & Wiring</h3>
+                        <p>Troubleshooting, outlet/switch installs, lighting fixtures, minor wiring – safe, code-compliant fixes for homes and shops.</p>
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon-box">🚚</div>
-                        <h3>Fully Mobile</h3>
-                        <p style="color: var(--text-muted); font-weight: 500;">A mobile workshop arriving on-site ready to execute high-standard repairs anywhere in our 200-mile radius.</p>
+                        <div class="icon-box" aria-label="Mobile truck">🚚</div>
+                        <h3>Fully Mobile Workshop</h3>
+                        <p>Equipped van brings tools and parts to you – no job too remote in our 200-mile TX/AR/LA/OK radius.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box" aria-label="Drywall patch">🧱</div>
+                        <h3>Drywall Repair</h3>
+                        <p>Patching holes, fixing cracks, texturing, sanding, and painting prep – seamless results for walls and ceilings.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box" aria-label="Paint roller">🎨</div>
+                        <h3>Interior/Exterior Painting</h3>
+                        <p>Fresh coats, touch-ups, trim work – prep, prime, and paint for a clean, durable finish inside or out.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box" aria-label="Plumbing faucet">🚰</div>
+                        <h3>Minor Plumbing</h3>
+                        <p>Leaky faucets, toilet repairs, showerhead installs, drain unclogging, caulking – quick fixes without major disruption.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon-box" aria-label="Fence post">🛡️</div>
+                        <h3>Fence & Gate Repair</h3>
+                        <p>Fixing posts, panels, gates, hinges – wood, metal, or chain link for rural properties and homes.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="icon-box" aria-label="Deck boards">🌳</div>
+                        <h3>Deck & Porch Repairs</h3>
+                        <p>Board replacement, railing fixes, staining/sealing – keep your outdoor space safe and looking great.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="icon-box" aria-label="Furniture box">🪑</div>
+                        <h3>Furniture Assembly & Installs</h3>
+                        <p>Putting together flat-pack furniture, shelves, TV mounts, smart home devices – fast and sturdy setup.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: #f8fafc;">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <p class="section-sub">Real feedback from homeowners in Texas, Arkansas, Louisiana & Oklahoma.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <p>"Dean installed our Starlink Gen 3 perfectly – professional, clean, and fast. Highly recommend!"</p>
+                        <p class="testimonial-author">– Sarah M., Tyler, TX</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <p>"Fixed our electrical issue others couldn't solve. Courteous, on-time, and left everything spotless."</p>
+                        <p class="testimonial-author">– Mike R., Shreveport, LA</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <p>"Great handyman service – reliable and fairly priced. We'll call Dean again for sure."</p>
+                        <p class="testimonial-author">– Lisa K., Texarkana, AR</p>
+                    </div>
+                </div>
+                <a href="https://g.page/r/CSyLvaLRoMg_EBM/review" target="_blank" class="btn btn-primary" style="display: block; margin: 2rem auto 0; width: fit-content; font-size: 1.1rem;">Read Reviews & Leave Yours on Google</a>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Your feedback helps us serve more families just like yours!</p>
             </div>
         </section>
 
         <section class="section" style="background: var(--dark); color: white; text-align: center;">
             <div class="container">
-                <h2 style="color: white; margin-bottom: 20px;">Secure Payments</h2>
-                <div class="payment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 20px;">
-                    <a href="https://square.link/u/dO7MQ0kc" target="_blank" style="background: var(--primary); text-decoration: none; color: white; padding: 12px; border-radius: 6px; font-weight: 800;">Square</a>
-                    <a href="https://venmo.com/u/DeanshandymanserviceLLC" target="_blank" style="background: #008CFF; text-decoration: none; color: white; padding: 12px; border-radius: 6px; font-weight: 800;">Venmo</a>
-                    <a href="https://www.paypal.com/ncp/payment/CVURGTVEWZ96J" target="_blank" style="background: #003087; text-decoration: none; color: white; padding: 12px; border-radius: 6px; font-weight: 800;">PayPal</a>
-                    <a href="https://cash.app/$HandymanDean" target="_blank" style="background: #00D632; text-decoration: none; color: white; padding: 12px; border-radius: 6px; font-weight: 800;">Cash App</a>
+                <h2 style="color: white;">Secure & Convenient Payments</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">Multiple trusted options – pay after the job is completed to your satisfaction.</p>
+                <div class="payment-grid">
+                    <a href="https://square.link/u/dO7MQ0kc" target="_blank" style="background: var(--primary);">Square</a>
+                    <a href="https://venmo.com/u/DeanshandymanserviceLLC" target="_blank" style="background: #008CFF;">Venmo</a>
+                    <a href="https://www.paypal.com/ncp/payment/CVURGTVEWZ96J" target="_blank" style="background: #003087;">PayPal</a>
+                    <a href="https://cash.app/$HandymanDean" target="_blank" style="background: #00D632;">Cash App</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="background: #0a0f1a; color: #cbd5e1; padding: 60px 0;">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
+    <footer>
+        <div class="container">
             <div>
-                <h4 style="color: white; margin-bottom: 15px;">Dean's Handyman Service LLC</h4>
-                <p style="color: #94a3b8; font-weight: 500;">Pittsburg, TX 75686. Serving TX, AR, LA, and OK. Fully insured tradesman.</p>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
             </div>
             <div>
-                <h4 style="color: white; margin-bottom: 15px;">Contact</h4>
-                <p style="color: #94a3b8; font-weight: 500;">Phone: (281) 917-9914<br>Email: deanshandymanservice1@gmail.com</p>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
             </div>
         </div>
-        <div style="text-align: center; padding-top: 40px; border-top: 1px solid #1e293b; margin-top: 40px; font-size: 0.85rem;">
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
             © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 900, once: true, offset: 100 });
 
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            const spans = menuBtn.getElementsByTagName('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
         });
 
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
-            const CALENDAR_LINK = "https://calendar.app.google/zJTuuvnVncbQg5LT9";
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerText;
-            btn.innerText = "Processing...";
+            btn.innerText = "Sending...";
             btn.disabled = true;
+
+            const requiredFields = ['client-name', 'phone', 'email', 'address', 'service'];
+            let valid = true;
+            requiredFields.forEach(id => {
+                if (!document.getElementById(id).value.trim()) valid = false;
+            });
+            if (!valid) {
+                alert("Please fill all required fields.");
+                btn.innerText = originalText;
+                btn.disabled = false;
+                return;
+            }
+
+            const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
+            const CALENDAR_LINK = "https://calendar.app.google/zJTuuvnVncbQg5LT9";
 
             const name = document.getElementById('client-name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
             const service = document.getElementById('service').value;
             const address = document.getElementById('address').value;
-            const details = document.getElementById('details').value;
+            const details = document.getElementById('details').value || "No additional details";
 
             const noteBody = `New Lead!\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nAddress: ${address}\nDetails: ${details}`;
 
@@ -301,15 +536,22 @@
             })
             .then(response => {
                 if (response.ok) {
-                    alert("Details received! Redirecting to Dean's calendar to pick a time.");
+                    alert("Quote request received! Redirecting to calendar to book a time.");
                     window.location.href = CALENDAR_LINK;
-                } else { alert("Error sending request. Please call (281) 917-9914."); }
+                } else {
+                    alert("There was an issue submitting. Please call (281) 917-9914 directly.");
+                }
             })
-            .catch(error => { alert("Connection error. Please call (281) 917-9914."); })
-            .finally(() => { btn.innerText = originalText; btn.disabled = false; });
+            .catch(() => {
+                alert("Connection error. Call us at (281) 917-9914 – we're here to help!");
+            })
+            .finally(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
         });
     </script>
-    
+
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
     <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
