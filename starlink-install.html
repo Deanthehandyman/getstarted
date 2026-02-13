@@ -3,124 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starlink Gen 3 & Mini Expert Installation | Pittsburg TX | 200-Mile Radius</title>
+    <title>Starlink Installation Near Me | Gen 3 & Mini Expert Setup – Pittsburg TX</title>
     
-    <meta name="description" content="Industrial-grade Starlink Gen 3 & Mini mounting, 12V DC power conversions, and mesh Wi-Fi optimization. Serving the Ark-La-Tex region within a 200-mile radius of Pittsburg, TX.">
+    <meta name="description" content="Expert Starlink Gen 3 & Mini installation near me in Pittsburg TX and 200-mile Ark-La-Tex radius (Tyler, Longview, Texarkana, Shreveport). Professional roof/pole mounts, 12V RV conversions, obstruction clearing – first 100 miles FREE travel. Get your 2nd month free with our referral.">
     
-    <link rel="canonical" href="https://deanthehandyman.github.io/getstarted/starlink-install.html" />
-
+    <link rel="canonical" href="https://deanshandymanservice.me/starlink-install.html" />
+    
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
     <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport, Broken Bow">
-
-    <meta property="og:title" content="Expert Starlink Installation | Dean's Handyman Service LLC">
-    <meta property="og:description" content="Professional Starlink Gen 3 & Mini setup and 12V DC hardwiring in the Ark-La-Tex region.">
+    
+    <meta property="og:title" content="Starlink Installation Expert | Dean's Handyman Service LLC – Pittsburg TX">
+    <meta property="og:description" content="Professional Starlink Gen 3 & Mini setup, RV 12V hardwiring, and rural optimization in East Texas & Ark-La-Tex. Free travel first 100 miles + referral deal for 2nd month free.">
     <meta property="og:image" content="https://i.imgur.com/edr3uRy.jpg">
-    <meta property="og:url" content="https://deanthehandyman.github.io/getstarted/starlink-install.html">
+    <meta property="og:url" content="https://deanshandymanservice.me/starlink-install.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        /* --- RESET & BASICS --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --primary: #008bd2; 
+            --primary: #008bd2;
             --primary-dark: #006fa8;
-            --accent: #f0a500; 
-            --dark: #0f172a; 
-            --text-main: #1a1a1a; 
-            --text-muted: #475569; 
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
             --white: #ffffff;
         }
 
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background-color: #f9f9f9; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
         html { scroll-behavior: smooth; }
 
-        h1, h2, h3, h4 { color: var(--dark); font-weight: 700; line-height: 1.2; }
-        h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; color: var(--white); text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-        h2 { font-size: 2rem; margin-top: 60px; margin-bottom: 30px; text-align: center; border-bottom: 3px solid var(--accent); display: inline-block; width: auto; margin-left: 50%; transform: translateX(-50%); padding-bottom: 10px;}
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin: 4rem 0 2rem; color: var(--dark); }
 
-        /* --- HEADER & NAVIGATION --- */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 2000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-img { height: 50px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1rem; line-height: 1; text-transform: uppercase; color: var(--dark); }
-        .logo-text span { color: var(--primary); font-size: 0.7rem; display: block; font-weight: 900; }
-        
-        .nav-links { display: flex; align-items: center; gap: 15px; }
-        .nav-links a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
 
-        /* Mobile Nav Toggle */
-        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 2100; }
-        .menu-toggle span { width: 25px; height: 3px; background: var(--dark); transition: 0.3s; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary); }
+
+        .btn-pill {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.9rem 1.8rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,139,210,0.25);
+            transition: all 0.3s;
+        }
+        .btn-pill:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
 
         @media (max-width: 992px) {
             .menu-toggle { display: flex; }
-            .nav-links { 
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; 
-                background: var(--white); flex-direction: column; align-items: flex-start; 
-                padding: 100px 40px; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: 0.4s; 
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
             }
             .nav-links.active { right: 0; }
-            .nav-links a { font-size: 1.1rem; width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
+            .nav-links a { font-size: 1.2rem; }
         }
 
-        /* --- HUB HERO --- */
-        .hub-hero { 
-            background: linear-gradient(rgba(0, 15, 30, 0.65), rgba(0, 15, 30, 0.65)), url('https://i.imgur.com/edr3uRy.jpg'); 
-            background-size: cover; background-position: center; padding: 120px 0; text-align: center; color: white;
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/edr3uRy.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
 
-        /* --- PROMO BOX --- */
-        .promo-box { 
-            background: #fff3cd; 
-            border: 3px dashed #856404; 
-            padding: 40px; 
-            border-radius: 12px; 
-            margin: -60px auto 60px; 
-            max-width: 900px; 
-            text-align: center; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .promo-box {
+            background: #fff3cd;
+            border: 3px dashed #856404;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: -5rem auto 5rem;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             position: relative;
             z-index: 10;
         }
-        .btn-gold { display: inline-block; background: #856404; color: white; padding: 18px 35px; text-decoration: none; font-weight: 900; border-radius: 6px; margin-top: 20px; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(133, 100, 4, 0.3); }
-        .btn-gold:hover { background: #6b5003; transform: scale(1.05); }
+        .promo-box h3 { color: #856404; font-size: 1.8rem; margin-bottom: 1rem; }
 
-        /* --- HARDWARE CARDS --- */
-        .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin: 50px 0; }
-        .hw-card { background: white; padding: 45px; border-radius: 16px; border-top: 8px solid var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
-        .hw-card:hover { transform: translateY(-10px); border-top-color: var(--accent); }
-        .hw-card h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--dark); }
-        .hw-card ul { list-style: none; margin-top: 20px; }
-        .hw-card li { margin-bottom: 12px; padding-left: 25px; position: relative; font-weight: 500; color: var(--text-muted); }
-        .hw-card li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: 900; }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border-top: 6px solid var(--primary);
+        }
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-top-color: var(--accent);
+        }
+        .service-icon { font-size: 3.5rem; color: var(--primary); margin-bottom: 1.5rem; text-align: center; }
 
-        /* --- TECH SPECS BOX --- */
-        .tech-box { background: var(--dark); color: white; padding: 60px; border-radius: 16px; margin: 80px 0; }
-        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .tech-item h4 { color: var(--accent); margin-bottom: 10px; font-size: 1.2rem; }
-        .tech-item p { color: #cbd5e1; font-size: 0.95rem; }
+        .tech-box {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            margin: 6rem 0;
+            text-align: center;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .tech-item h4 { color: var(--accent); margin-bottom: 1rem; font-size: 1.4rem; }
 
-        /* --- PLAN TABLE --- */
-        .plan-wrapper { overflow-x: auto; margin: 40px 0; }
-        .plan-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .plan-table th { background: var(--primary-dark); color: white; padding: 20px; text-align: left; }
-        .plan-table td { padding: 20px; border-bottom: 1px solid #eee; font-weight: 600; color: var(--text-main); }
-        .plan-table tr:hover { background-color: #f8fafc; }
+        .plan-table-wrapper { overflow-x: auto; margin: 4rem 0; }
+        .plan-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .plan-table th {
+            background: var(--primary-dark);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+        }
+        .plan-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .plan-table tr:hover { background: #f8fafc; }
 
-        .btn-primary { display: inline-block; background: var(--primary); color: white; padding: 15px 35px; text-decoration: none; border-radius: 6px; font-weight: 700; transition: 0.3s; }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
 
-        /* --- MOBILE FAB --- */
-        .mobile-fab { 
-            position: fixed; bottom: 20px; left: 20px; background: #28a745; color: white; 
-            width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; 
-            justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1500; text-decoration: none; 
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+            .promo-box { margin: -3rem auto 4rem; padding: 2rem; }
         }
 
-        @media (max-width: 992px) { .mobile-fab { display: flex; } }
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
 </head>
 <body>
@@ -128,139 +251,159 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo-wrapper">
-                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service Logo" class="logo-img">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
-            <div class="menu-toggle" id="mobile-menu-btn">
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
                 <span></span><span></span><span></span>
             </div>
+
             <nav class="nav-links" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="areas.html">Areas</a>
+                <a href="starlink-install.html" class="active">Starlink</a>
+                <a href="areas.html">Service Areas</a>
                 <a href="gallery.html">Work</a>
                 <a href="blog.html">Blog</a>
                 <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact</a>
-                <a href="tel:2819179914" style="background:var(--primary); color:white; padding: 8px 12px; border-radius:6px; text-decoration:none;">(281) 917-9914</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="tel:2819179914" class="btn-pill">
+                    <i class="fas fa-phone-alt me-2"></i>(281) 917-9914
+                </a>
             </nav>
         </div>
     </header>
 
-    <a href="tel:2819179914" class="mobile-fab">📞</a>
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
 
-    <section class="hub-hero">
-        <div class="container" data-aos="fade-down">
-            <h1>Starlink Installation Hub</h1>
-            <p style="font-weight: 800; text-shadow: 0 2px 6px black; font-size: 1.4rem;">Industrial-Grade Internet for Rural TX, AR, LA, and OK</p>
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Starlink Installation Near Me</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 900px; margin: 1.5rem auto 0;">
+                Expert Gen 3 & Mini setup for rural homes, ranches, RVs & off-grid properties in East Texas & Ark-La-Tex. First 100 miles FREE travel.
+            </p>
         </div>
     </section>
 
     <div class="container">
         <div class="promo-box" data-aos="zoom-in">
-            <p style="color: #856404; font-weight: 900; font-size: 1.4rem; text-transform: uppercase;">🎁 Limited Time Referral Offer</p>
-            <p style="font-size: 1.1rem; margin-top: 10px; font-weight: 600; color: #5a4302;">Order via my link and Starlink will credit your account for the <strong style="color: #856404;">2nd Month of Service for FREE!</strong></p>
-            <a href="https://starlink.com/residential?referral=RC-2034578-19016-61&app_source=share" target="_blank" class="btn-gold">CLAIM FREE MONTH HERE</a>
+            <h3>🎁 Exclusive Referral Deal – 2nd Month FREE!</h3>
+            <p style="font-size: 1.2rem; margin: 1.5rem 0; font-weight: 600;">
+                Order your Starlink kit through my referral link and Starlink will automatically credit your account for the <strong>entire 2nd month of service FREE</strong> (up to $120–$165 value depending on plan).
+            </p>
+            <a href="https://starlink.com/residential?referral=RC-2034578-19016-61&app_source=share" target="_blank" class="btn-accent" style="font-size: 1.4rem; padding: 1.2rem 3rem;">
+                Get Your 2nd Month FREE Now
+            </a>
+            <p style="margin-top: 1.5rem; font-size: 1rem; color: #856404;">
+                No extra cost to you – just faster, more reliable rural internet.
+            </p>
         </div>
 
-        <h2>Professional Mounting Solutions</h2>
-        <div class="hw-grid">
-            <div class="hw-card" data-aos="fade-up">
-                <span style="font-size: 0.8rem; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 1px;">Standard Gen 3</span>
-                <h3>Residential & Ranch</h3>
-                <p>We handle the complex mounting requirements of the East Texas Piney Woods where ground-level installs fail due to timber.</p>
-                <ul>
-                    <li><strong>Custom Peak Mounts:</strong> Maximum elevation to clear tree lines.</li>
-                    <li><strong>Pivot Mounting:</strong> Precisely aligned for the shingle pitch.</li>
-                    <li><strong>Wall/Eave Installs:</strong> Clean, industrial-grade cable routing.</li>
-                    <li><strong>Industrial Penetrations:</strong> Waterproof wall plates and interior finishing.</li>
+        <h2>Why Choose Professional Starlink Installation?</h2>
+        <div class="service-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+                <h3>Gen 3 – Residential & Ranch</h3>
+                <p>In the Piney Woods of East Texas, trees block signal. We mount high and align precisely so you get full performance.</p>
+                <ul class="service-list">
+                    <li>Roof-peak, ridge-line & tall pole mounts</li>
+                    <li>Digital obstruction scan before install</li>
+                    <li>Weatherproof cable routing & wall plates</li>
+                    <li>Mesh Wi-Fi backhaul for large properties</li>
                 </ul>
             </div>
-            <div class="hw-card" data-aos="fade-up" data-aos-delay="150">
-                <span style="font-size: 0.8rem; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 1px;">Starlink Mini</span>
-                <h3>RV & Off-Grid Setup</h3>
-                <p>Stay connected on the move with professional power management and vehicle-integrated mounting.</p>
-                <ul>
-                    <li><strong>12V DC Conversions:</strong> Hardwire directly to house batteries.</li>
-                    <li><strong>Bypass Inverters:</strong> Save 20-40% battery life by skipping AC power.</li>
-                    <li><strong>Magnetic Vehicle Mounts:</strong> Secure, temporary mounting for transit.</li>
-                    <li><strong>Speedmount/Trio Installs:</strong> Flush-mounted frames for RV roofs.</li>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon"><i class="fas fa-caravan"></i></div>
+                <h3>Starlink Mini – RV & Mobile</h3>
+                <p>Stay connected while traveling or boondocking. We convert to 12V DC so you don't waste battery on inverters.</p>
+                <ul class="service-list">
+                    <li>Native 12V PoE hardwiring (saves 20–40% power)</li>
+                    <li>Magnetic roof/vehicle mounts for transit</li>
+                    <li>Speedmount & Trio flush RV roof installs</li>
+                    <li>Off-grid power optimization</li>
                 </ul>
             </div>
         </div>
 
         <div class="tech-box" data-aos="fade-up">
+            <h2>2026 Starlink Plans – Speeds & Pricing</h2>
             <div class="tech-grid">
                 <div class="tech-item">
-                    <h4>Why 12V DC Conversion?</h4>
-                    <p>Standard Starlink routers run on AC power. Converting to a native 12V DC PoE injector allows your RV to power the dish directly, eliminating the "phantom draw" of an inverter and keeping your internet live even when boondocking.</p>
+                    <h4>Residential</h4>
+                    <p><strong>$50–$120/mo</strong><br>50–220+ Mbps download<br>Unlimited data (priority varies by tier)<br>Best for fixed rural homes & ranches</p>
                 </div>
                 <div class="tech-item">
-                    <h4>Obstruction Surveys</h4>
-                    <p>Before drilling, we perform a 360-degree digital obstruction scan. In rural Ark-La-Tex, we often recommend 15ft+ pole mounts to reach above local foliage for stable 4K streaming.</p>
+                    <h4>Residential MAX</h4>
+                    <p><strong>$120/mo</strong><br>220+ Mbps download<br>Highest priority data<br>Ideal for 4K streaming, gaming, remote work</p>
                 </div>
                 <div class="tech-item">
-                    <h4>Mesh Optimization</h4>
-                    <p>For large properties or steel-frame shops, we install wired backhaul mesh nodes (Cat6) to ensure Wi-Fi signal reaches every corner of your property.</p>
+                    <h4>Roam Unlimited</h4>
+                    <p><strong>$165/mo</strong><br>50–220+ Mbps (mobile)<br>Unlimited high-speed data on land<br>Perfect for RVers & nomads</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Starlink Mini</h4>
+                    <p><strong>$50/mo + hardware</strong><br>Up to 100 Mbps<br>Portable, low-power dish<br>Great for travel, backup, or small setups</p>
                 </div>
             </div>
+            <p style="margin-top: 2rem; font-size: 1.1rem; font-style: italic;">
+                Prices, speeds & availability vary by location — we confirm your best plan during the quote.
+            </p>
         </div>
 
-        <h2 style="text-align: center;">2026 Service Tiers</h2>
-        <div class="plan-wrapper" data-aos="fade-up">
-            <table class="plan-table">
-                <thead>
-                    <tr><th>Service Plan</th><th>Monthly Cost</th><th>Performance Target</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Residential 100</strong></td><td>$50/mo</td><td>Basic Streaming & Browsing</td></tr>
-                    <tr><td><strong>Residential 200</strong></td><td>$80/mo</td><td>Standard Home / Multi-User</td></tr>
-                    <tr><td><strong>Residential MAX</strong></td><td>$120/mo</td><td>4K Gaming & Rural Business</td></tr>
-                    <tr><td><strong>Roam Unlimited</strong></td><td>$165/mo</td><td>Mobile Professionals / RVers</td></tr>
-                </tbody>
-            </table>
-            <p style="text-align: right; font-size: 0.8rem; margin-top: 10px; color: var(--text-muted);">*Prices and speeds determined by Starlink and subject to local availability.</p>
-        </div>
-
-        <div style="background: var(--dark); color: white; padding: 70px 20px; border-radius: 16px; margin: 80px 0; text-align: center; border-left: 10px solid var(--primary);" data-aos="zoom-in">
-            <h3 style="color: white; font-size: 1.8rem;">Ready for Reliable Rural Internet?</h3>
-            <p style="font-weight: 600; color: #94a3b8; margin-top: 15px; font-size: 1.1rem;">FREE travel for the first 100 miles from Pittsburg, TX! Covering TX, AR, LA, and OK.</p>
-            <a href="contact.html" class="btn-primary" style="margin-top: 30px; padding: 18px 50px; font-size: 1.2rem;">Request Starlink Quote</a>
+        <div style="text-align: center; margin: 6rem 0;" data-aos="zoom-in">
+            <h2>Ready for Fast, Reliable Rural Internet?</h2>
+            <p style="font-size: 1.4rem; margin: 1.5rem 0 2.5rem;">
+                Free travel for the first 100 miles from Pittsburg, TX – covering most of East Texas, AR, LA & OK.
+            </p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.5rem; padding: 1.3rem 4rem;">
+                Request Your Starlink Install Quote
+            </a>
         </div>
     </div>
 
-    <footer style="background: #0a0f1a; color: #cbd5e1; padding: 80px 0;">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+    <footer>
+        <div class="container">
             <div>
-                <h4 style="color: white; margin-bottom: 20px;">Dean's Handyman Service LLC</h4>
-                <p style="color:#94a3b8; font-weight:600;">Technical tradesman serving the rural Ark-La-Tex with industrial precision and commercial standards.</p>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
             </div>
             <div>
-                <h4 style="color: white; margin-bottom: 20px;">Direct Contact</h4>
-                <p style="color:#94a3b8; font-weight:600; font-size: 1.1rem;">(281) 917-9914</p>
-                <p style="color:#94a3b8; font-weight:600;">deanshandymanservice1@gmail.com</p>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #1e293b; font-size: 0.85rem;">
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
             © 2026 Dean's Handyman Service LLC. All rights reserved.
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            const spans = menuBtn.getElementsByTagName('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
         });
     </script>
-    
+
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
     <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
