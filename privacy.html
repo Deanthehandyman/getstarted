@@ -1,30 +1,295 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy | Dean's Handyman Service LLC</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.6; color: #333; padding: 40px; max-width: 800px; margin: 0 auto; }
-    h1 { color: #005073; }
-    .back-link { display: block; margin-bottom: 20px; text-decoration: none; color: #005073; font-weight: bold; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Dean's Handyman Service LLC – Pittsburg, TX</title>
+    
+    <meta name="description" content="Privacy Policy for Dean's Handyman Service LLC. We explain how we collect, use, and protect your personal information when you request quotes or use our services.">
+    
+    <link rel="canonical" href="https://deanshandymanservice.me/privacy.html" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #008bd2;
+            --primary-dark: #006fa8;
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); margin: 3rem 0 1.5rem; color: var(--dark); }
+        h3 { font-size: 1.6rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white;
+            padding: 140px 0 100px;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .privacy-section { padding: 100px 0; }
+        .privacy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .privacy-content p { margin-bottom: 1.5rem; color: #333; font-size: 1.1rem; }
+        .privacy-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .privacy-content li { margin-bottom: 0.8rem; }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+            .privacy-content { padding: 2rem; }
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+    </style>
 </head>
 <body>
-  <a href="index.html" class="back-link">← Back to Home</a>
-  <h1>Privacy Policy</h1>
-  <p>Last Updated: February 2026</p>
-  <p>At Dean's Handyman Service LLC, we value your privacy. This policy explains how we handle your information.</p>
-  
-  <h3>1. Information We Collect</h3>
-  <p>We collect information you provide directly to us through our contact forms, chatbot, or quote estimator, such as your name, phone number, email address, and service location.</p>
 
-  <h3>2. How We Use Information</h3>
-  <p>We use this information solely to provide handyman services, provide quotes, and communicate with you about your projects.</p>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
+            </a>
 
-  <h3>3. Third-Party Services</h3>
-  <p>Our website uses Zapier for chatbot functionality and third-party payment processors (Square, PayPal, Venmo, Cash App). These services have their own privacy policies regarding your data.</p>
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
 
-  <h3>4. Contact Us</h3>
-  <p>If you have questions, contact us at deanshandymanservice1@gmail.com.</p>
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="areas.html">Service Areas</a>
+                <a href="gallery.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="tel:2819179914" class="btn btn-primary">(281) 917-9914</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
+
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Privacy Policy</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 800px; margin: 1.5rem auto 0;">How we collect, use, and protect your information at Dean's Handyman Service LLC.</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <div class="privacy-content" data-aos="fade-up">
+            <p style="font-style: italic; color: var(--gray); margin-bottom: 3rem;">Last Updated: February 2026</p>
+
+            <h2>1. Introduction</h2>
+            <p>At Dean's Handyman Service LLC, your privacy is important to us. This Privacy Policy explains what information we collect when you visit our website, request a quote, use our estimator tool, interact with our chatbot, or contact us, and how we use and protect that information.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>We collect only the information you voluntarily provide to us, including:</p>
+            <ul>
+                <li>Name, phone number, email address, city/state, and project details when you submit a quote request or contact form.</li>
+                <li>Service preferences, photos, or additional notes you share for accurate estimates.</li>
+                <li>Any information provided through our Zapier-powered chatbot.</li>
+            </ul>
+            <p>We do not collect sensitive financial data directly — payments are processed securely via third-party providers (Square, PayPal, Venmo, Cash App).</p>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use your information solely to:</p>
+            <ul>
+                <li>Provide quotes, schedule jobs, and deliver handyman services.</li>
+                <li>Communicate with you about your project (calls, texts, emails).</li>
+                <li>Improve our services and respond to inquiries.</li>
+                <li>Send occasional updates or promotions (you can opt out anytime).</li>
+            </ul>
+            <p>We never sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+            <h2>4. Third-Party Services</h2>
+            <p>Our website integrates trusted third-party tools:</p>
+            <ul>
+                <li><strong>Zapier</strong> – powers our chatbot; see their <a href="https://zapier.com/privacy" target="_blank">privacy policy</a>.</li>
+                <li><strong>Google Calendar</strong> – for booking links; see <a href="https://policies.google.com/privacy" target="_blank">Google's policy</a>.</li>
+                <li><strong>Payment processors</strong> (Square, PayPal, Venmo, Cash App) – handle secure transactions; refer to their individual privacy policies.</li>
+                <li><strong>Google Photos</strong> (gallery embeds) – public albums only; no personal data collected.</li>
+            </ul>
+
+            <h2>5. Data Security</h2>
+            <p>We take reasonable measures to protect your information, including secure form submissions and limited data retention. However, no method of transmission over the internet is 100% secure.</p>
+
+            <h2>6. Your Rights</h2>
+            <p>You may request access to, correction of, or deletion of your personal information by contacting us. We will respond promptly and in accordance with applicable law.</p>
+
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Changes will be posted here with an updated "Last Updated" date.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our data practices, please reach out:</p>
+            <p><strong>Email:</strong> <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary); font-weight: 600;">deanshandymanservice1@gmail.com</a><br>
+            <strong>Phone:</strong> <a href="tel:2819179914" style="color: var(--primary); font-weight: 600;">(281) 917-9914</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    </script>
+
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
+
 </body>
 </html>
