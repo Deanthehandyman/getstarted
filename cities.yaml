@@ -1,0 +1,46 @@
+cities:
+      - slug: tyler-tx
+        name: Tyler
+        state: TX
+        full_name: Tyler, TX
+        landmark: Lake Tyler
+        area: Loop 323
+        local_content: |
+          <ul style="font-size: 1.1rem; line-height: 1.7;">
+            <li>Starlink Gen 3 & Mini high mounts to clear tall pines near Lake Tyler, Flint, or The Woods</li>
+            <li>Electrical troubleshooting and upgrades for older farmhouses and metal buildings around Tyler</li>
+            <li>Fence, gate & deck repairs after East Texas storms – wood, chain link, common here</li>
+            <li>Drywall patching and painting for humidity-related issues in Cascades or south Tyler neighborhoods</li>
+            <li>Minor plumbing fixes for well systems and rural acreage properties</li>
+          </ul>
+          <p>Whether you're in Smith County near the square or out toward Lindale/Bullard, we bring the mobile workshop directly to you with no travel charge for the first 100 miles from Pittsburg.</p>
+    
+      - slug: longview-tx
+        name: Longview
+        state: TX
+        full_name: Longview, TX
+        landmark: Lake Cherokee
+        area: Eastman Road
+        local_content: |
+          <ul style="font-size: 1.1rem; line-height: 1.7;">
+            <li>Professional Starlink installs overcoming pine coverage near Lake Cherokee and Judson areas</li>
+            <li>Safe electrical repairs for Gregg County homes, shops, and older subdivisions</li>
+            <li>Deck staining/sealing and porch fixes for East Texas weather exposure</li>
+            <li>Fence post replacement and gate hardware upgrades common in rural Longview outskirts</li>
+          </ul>
+          <p>Serving Longview from the downtown area to Pine Tree and Hallsville – fast response, first 100 miles free.</p>
+    
+      - slug: texarkana-tx
+        name: Texarkana
+        state: TX/AR
+        full_name: Texarkana, TX / AR
+        landmark: Spring Lake Park
+        area: I-30 corridor
+        local_content: |
+          <ul style="font-size: 1.1rem; line-height: 1.7;">
+            <li>Starlink roof and pole mounts for reliable internet across the state line</li>
+            <li>Electrical, lighting, and wiring services for homes in both Texas and Arkansas sides</li>
+            <li>Minor plumbing and drain work for properties near Spring Lake Park and Nash</li>
+          </ul>
+          <p>Covering Texarkana TX, Texarkana AR, Wake Village, Nash – mobile service with the same quality and free first-100-mile travel.</p>
+    
