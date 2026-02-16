@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Gallery | Dean's Handyman Service LLC – Pittsburg, TX</title>
     
+    <title>Project Gallery | Dean's Handyman Service LLC – Pittsburg, TX</title>
     <meta name="description" content="See real project photos of Starlink installations, electrical repairs, RV setups, and skilled home maintenance. Industrial-grade work across a 200-mile radius from Pittsburg, TX – serving TX, AR, LA, OK.">
+    <meta name="keywords" content="Starlink installation photos, handyman before and after, RV repair gallery, custom fabrication pictures, Dean's Handyman projects">
     
     <link rel="canonical" href="https://deanshandymanservice.me/gallery.html" />
     
@@ -18,7 +19,21 @@
     <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
     <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
 
-    <!-- Google Fonts -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Dean's Handyman Service Project Portfolio",
+      "description": "Photos of Starlink installations, custom fabrication, and home repairs.",
+      "url": "https://deanshandymanservice.me/gallery.html",
+      "provider": {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "Dean's Handyman Service LLC",
+        "image": "https://i.imgur.com/CtBcYkI.png"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -159,6 +174,11 @@
         }
         .album-cta h3 { color: white; margin-bottom: 1rem; }
         .album-cta p { color: #94a3b8; margin-bottom: 2rem; font-size: 1.1rem; }
+        
+        /* New FAQ Styles */
+        .faq-item { margin-bottom: 1.5rem; text-align: left; }
+        .faq-item h3 { font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 0.5rem; }
+        .faq-item p { color: var(--gray); font-size: 0.95rem; }
 
         .mobile-fab {
             position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
@@ -222,7 +242,6 @@
     <section class="gallery-section">
         <div class="container">
             <div class="widget-container" data-aos="fade-up">
-                <!-- Public Album Embed (Google Photos) -->
                 <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
                 <div class="pa-gallery-player-widget" 
                      style="width:100%; height:600px; display:block;" 
@@ -239,9 +258,29 @@
                     Open Google Photo Album <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
                 </a>
             </div>
+        </div>
+    </section>
 
-            <div style="text-align: center; margin: 4rem 0; color: var(--gray); font-size: 1.1rem;">
-                <p>Want similar results for your project? <a href="contact.html" style="color: var(--primary); font-weight: 600;">Get your free quote today</a>.</p>
+    <section style="padding: 0 0 80px; background: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Common Questions About Our Work</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="faq-item">
+                    <h3>Are these real photos of your projects?</h3>
+                    <p>Yes. Every photo in this gallery is a real job completed by Dean's Handyman Service LLC in Texas, Arkansas, Louisiana, or Oklahoma. We do not use stock photos of fake repairs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you do custom fabrication like in the photos?</h3>
+                    <p>Absolutely. I have a background in industrial fabrication and welding. If you see a custom mount, bracket, or repair that looks unique, I likely built it from scratch to solve a specific problem.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you take before and after photos of my job?</h3>
+                    <p>Yes. I document every job for transparency. You will see exactly what was broken and exactly how it was fixed, ensuring you have peace of mind about the quality of the work.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.1rem; color: var(--gray);">Want results like this? <a href="contact.html" style="color: var(--primary); font-weight: 700;">Get your free quote today</a>.</p>
             </div>
         </div>
     </section>
@@ -259,7 +298,8 @@
             </div>
         </div>
         <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
-            © 2026 Dean's Handyman Service LLC. All rights reserved.
+            © 2026 Dean's Handyman Service LLC. All rights reserved.<br>
+            A 3% processing fee applies to credit card payments.
         </div>
     </footer>
 
