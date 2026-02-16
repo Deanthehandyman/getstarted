@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Handyman's Log | Dean's Handyman Service LLC – Pittsburg, TX</title>
     
+    <title>The Handyman's Log | Dean's Handyman Service LLC – Pittsburg, TX</title>
     <meta name="description" content="Expert tips, field reports, and updates on Starlink installation, industrial repairs, RV tech, and home maintenance from Dean's Handyman Service LLC. Serving TX, AR, LA, OK.">
+    <meta name="keywords" content="Starlink tips Texas, handyman advice, RV internet setup, home repair blog, Dean's Handyman news, DIY vs pro handyman">
     
     <link rel="canonical" href="https://deanshandymanservice.me/blog.html" />
     
@@ -20,11 +21,43 @@
     <meta property="og:url" content="https://deanshandymanservice.me/blog.html">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "The Handyman's Log",
+      "url": "https://deanshandymanservice.me/blog.html",
+      "description": "Field reports and technical tips from Dean's Handyman Service LLC.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dean's Handyman Service LLC"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Why Professional Mounting is Critical in the Piney Woods",
+          "datePublished": "2026-02-06",
+          "author": { "@type": "Person", "name": "Dean Elkins" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Storm Prep 101: Securing Your Starlink & Property",
+          "datePublished": "2026-01-29",
+          "author": { "@type": "Person", "name": "Dean Elkins" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The Hidden Cost of 'Cheap' Repairs",
+          "datePublished": "2026-01-15",
+          "author": { "@type": "Person", "name": "Dean Elkins" }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -61,7 +94,7 @@
             align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 50px; /* PILL SHAPE */
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -78,41 +111,14 @@
             top: 0;
             z-index: 1000;
         }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 90px;
-        }
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-img { height: 60px; width: auto; }
-        .logo-text {
-            font-weight: 800;
-            font-size: 1.1rem;
-            line-height: 1.1;
-            text-transform: uppercase;
-            color: var(--dark);
-        }
+        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--dark); }
         .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: var(--dark);
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
         .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
@@ -132,60 +138,30 @@
 
         .page-hero {
             background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
-            color: white;
-            padding: 140px 0 100px;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
+            color: white; padding: 140px 0 100px; min-height: 70vh; display: flex; align-items: center; text-align: center;
         }
 
         .post-card {
-            background: white;
-            border-radius: 16px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            border-left: 8px solid var(--primary);
+            background: white; border-radius: 16px; padding: 3rem; margin-bottom: 4rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 8px solid var(--primary);
             transition: all 0.4s ease;
         }
         .post-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-            border-left-color: var(--accent);
+            transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); border-left-color: var(--accent);
         }
         .post-meta {
-            font-size: 0.95rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 0.95rem; color: var(--gray); margin-bottom: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
         }
-        .post-content p {
-            margin-bottom: 1.5rem;
-            color: #333;
-            font-size: 1.1rem;
-        }
-        .post-content h3 {
-            margin: 2.5rem 0 1rem;
-            color: var(--primary-dark);
-        }
-        .post-content ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .post-content li {
-            margin-bottom: 0.8rem;
-            color: #444;
-        }
+        .post-content p { margin-bottom: 1.5rem; color: #333; font-size: 1.1rem; }
+        .post-content h3 { margin: 2.5rem 0 1rem; color: var(--primary-dark); }
+        .post-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .post-content li { margin-bottom: 0.8rem; color: #444; }
+        
+        .faq-item { margin-bottom: 1.5rem; text-align: left; }
+        .faq-item h3 { font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 0.5rem; margin-top: 0; }
+        .faq-item p { color: var(--gray); font-size: 0.95rem; }
 
-        .cta-section {
-            background: var(--light);
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-        }
+        .cta-section { background: var(--light); padding: 80px 0; text-align: center; border-top: 1px solid #e2e8f0; }
 
         .mobile-fab {
             position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
@@ -200,11 +176,7 @@
             .post-card { padding: 2rem; }
         }
 
-        footer {
-            background: var(--dark);
-            color: #cbd5e1;
-            padding: 80px 0 40px;
-        }
+        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
         footer h4 { color: white; margin-bottom: 1.5rem; }
         footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
@@ -262,7 +234,17 @@
         </article>
 
         <article class="post-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="post-meta">February 4, 2026 | Service Standards</div>
+            <div class="post-meta">January 29, 2026 | Storm Safety</div>
+            <h2>Storm Prep 101: Securing Your Starlink & Property</h2>
+            <div class="post-content">
+                <p>When storm season hits the Ark-La-Tex, wind speeds can easily top 60mph. If your satellite dish, antennas, or outdoor fixtures aren't secured with industrial fasteners, they become projectiles.</p>
+                <h3>The "Wiggle Test"</h3>
+                <p>Go outside and check your mounts. If you can wiggle your Starlink mast by hand, the wind will rip it off. I use heavy-duty lag bolts and structural reinforcement for every install to ensure your internet stays up even when the weather goes down.</p>
+            </div>
+        </article>
+
+        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="post-meta">January 20, 2026 | Service Standards</div>
             <h2>From Embalming to Industrial Trades: Why Precision Matters</h2>
             <div class="post-content">
                 <p>My background is a little different—I’ve worked as a funeral director and embalmer, alongside heavy construction involving hydraulics and fabrication. What ties it all together? <strong>Precision under pressure.</strong></p>
@@ -272,8 +254,18 @@
             </div>
         </article>
 
-        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-meta">January 29, 2026 | RV Technology</div>
+        <article class="post-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="post-meta">January 15, 2026 | Homeowner Tips</div>
+            <h2>The Hidden Cost of "Cheap" Repairs</h2>
+            <div class="post-content">
+                <p>I get called out to fix "DIY gone wrong" projects at least once a week. Often, a homeowner or a cheap unlicensed handyman used the wrong materials—like indoor wire for outdoor runs or non-galvanized screws on a deck.</p>
+                <h3>Do It Right, Once.</h3>
+                <p>Saving $50 now often costs $500 later in water damage or electrical shorts. My pricing reflects the use of quality, code-compliant materials and the expertise to know exactly which part allows you to sleep soundly at night.</p>
+            </div>
+        </article>
+
+        <article class="post-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="post-meta">January 10, 2026 | RV Technology</div>
             <h2>Optimizing Your RV Pads for 2026 Tech Standards</h2>
             <div class="post-content">
                 <p>I’ve developed my own property in Pittsburg to include RV pads and a handyman shop. Having lived full-time in a 40-foot Forest River Wildwood, I understand exactly what long-term RV living requires for comfort and connectivity.</p>
@@ -283,6 +275,26 @@
             </div>
         </article>
     </div>
+
+    <section style="padding: 0 0 80px; background: white;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Common Technical Questions</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="faq-item">
+                    <h3>Do you recommend Starlink Gen 3 or the Mini for RVs?</h3>
+                    <p>It depends. If you are stationary, Gen 3 offers better speeds. If you are mobile and need 12V DC power efficiency, the Mini is a game changer. I install both and can advise based on your specific rig.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you fix wiring done by a previous handyman?</h3>
+                    <p>Yes. Troubleshooting "spaghetti wiring" is a specialty of mine. I trace circuits, label breakers, and bring unsafe connections up to code.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I pay for a consultation?</h3>
+                    <p>I accept Cash, Checks, Venmo, Cash App, and Credit Cards via Square (3% processing fee applies). Consultations within 100 miles are free if we proceed with the work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="cta-section">
         <div class="container" data-aos="zoom-in">
@@ -305,7 +317,8 @@
             </div>
         </div>
         <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
-            © 2026 Dean's Handyman Service LLC. All rights reserved.
+            © 2026 Dean's Handyman Service LLC. All rights reserved.<br>
+            A 3% processing fee applies to credit card payments.
         </div>
     </footer>
 
