@@ -171,9 +171,30 @@
         footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
         footer h4 { color: white; margin-bottom: 1.5rem; font-size: 1.2rem; }
         footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+
+        /* CUSTOM SUCCESS MODAL CSS */
+        .success-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.85); z-index: 2000;
+            align-items: center; justify-content: center; backdrop-filter: blur(4px);
+        }
+        .success-modal-content {
+            background: white; padding: 3rem 2rem; border-radius: 16px;
+            text-align: center; max-width: 420px; width: 90%;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5); border-top: 8px solid var(--trust-green);
+        }
+        .success-icon { font-size: 4rem; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
+
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon">✅</div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Project Details Sent!</h3>
+            <p style="color: var(--gray); font-size: 1.05rem;">Taking you to Dean's secure calendar to book your quick review call...</p>
+        </div>
+    </div>
 
     <header>
         <div class="container nav-container">
@@ -225,6 +246,8 @@
                         <input type="hidden" name="_next" value="https://calendar.app.google/vxkiALxDdAJNGYfe8">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        
+                        <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Dean's Handyman Service LLC! I have received your project details and I am reviewing them now. If you haven't already, please make sure to pick a time on the calendar page so we can have a quick phone consultation to discuss the job. Talk soon, Dean.">
 
                         <div class="form-row">
                             <div class="form-group">
@@ -232,9 +255,14 @@
                                 <input type="text" id="client-name" name="Client_Name" placeholder="First & Last Name" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="Phone_Number" placeholder="(555) 555-5555" required>
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="Email" placeholder="your@email.com" required>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="Phone_Number" placeholder="(555) 555-5555" required>
                         </div>
 
                         <div class="form-group">
@@ -280,9 +308,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="photo">Upload Photos (Optional)</label>
+                            <label for="photo">Upload Photos (Max 10MB limit)</label>
                             <input type="file" id="photo" name="attachment" class="file-upload" accept="image/*" multiple>
-                            <small style="color: var(--gray); font-size: 0.8rem; margin-top: 4px; display: block;">Show me what we're working with so I can gauge the job.</small>
+                            <small style="color: var(--gray); font-size: 0.8rem; margin-top: 4px; display: block;">Show me what we're working with. (Keep total file size under 10MB to ensure delivery).</small>
                         </div>
 
                         <button type="submit" id="submitBtn" class="btn btn-accent" style="width:100%; font-size: 1.1rem; margin-top: 0.5rem;">Send Project Details to Dean</button>
@@ -419,29 +447,44 @@
             }
         });
 
-        // Hybrid Pushbullet + FormSubmit Script
+        // Hybrid Form Handler (Size Check + Pushbullet + Modal + FormSubmit)
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop form submission for a split second
+            e.preventDefault(); // Stop immediate submission
             
             const form = this;
             const btn = document.getElementById('submitBtn');
             btn.innerText = "Processing...";
             btn.disabled = true;
 
+            // --- SAFETY CHECK: Block files over 10MB ---
+            const fileInput = document.getElementById('photo');
+            if (fileInput.files.length > 0) {
+                let totalSize = 0;
+                for (let i = 0; i < fileInput.files.length; i++) {
+                    totalSize += fileInput.files[i].size;
+                }
+                if (totalSize > 10485760) { // 10MB Limit
+                    alert("Whoops! Your photos are too large (over the 10MB limit). Please select fewer or smaller photos so they can securely send.");
+                    btn.innerText = "Send Project Details to Dean";
+                    btn.disabled = false;
+                    return; // Stop the script here
+                }
+            }
+
             const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
 
-            // Gather quick intel for your phone text
+            // Gather intel for your phone text
             const name = document.getElementById('client-name').value;
+            const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const service = document.getElementById('service').value;
             const urgency = document.getElementById('urgency').value;
             const address = document.getElementById('address').value;
             
-            const fileInput = document.getElementById('photo');
             const hasPhoto = fileInput.files.length > 0 ? "YES (Check Gmail for the pics!)" : "No";
 
             // SPACED OUT PUSHBULLET FORMAT
-            const noteBody = `🚨 LEAD TRAP SPRUNG!\n\nName: ${name}\n\nPhone: ${phone}\n\nService: ${service}\n\nUrgency: ${urgency}\n\nLocation: ${address}\n\nPhotos Attached: ${hasPhoto}`;
+            const noteBody = `🚨 LEAD TRAP SPRUNG!\n\nName: ${name}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nService: ${service}\n\nUrgency: ${urgency}\n\nLocation: ${address}\n\nPhotos Attached: ${hasPhoto}`;
 
             // Step 1: Ping your phone via Pushbullet
             fetch('https://api.pushbullet.com/v2/pushes', {
@@ -450,14 +493,24 @@
                 body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
             })
             .then(() => {
-                // Step 2: Once phone is pinged, let FormSubmit handle the rest (email photos & calendar redirect)
-                form.submit();
+                triggerSuccessAndSubmit(form);
             })
             .catch(() => {
-                // Failsafe: If Pushbullet is down, STILL submit the form so you get the email!
-                form.submit();
+                // Failsafe: If Pushbullet fails, STILL submit the form!
+                triggerSuccessAndSubmit(form);
             });
         });
+
+        // Function to show the modal, wait 2 seconds, then submit to FormSubmit
+        function triggerSuccessAndSubmit(form) {
+            // Show the popup overlay
+            document.getElementById('successModal').style.display = 'flex';
+            
+            // Wait 2 seconds so they can read it, then physically submit the form
+            setTimeout(() => {
+                form.submit();
+            }, 2000);
+        }
     </script>
 
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
