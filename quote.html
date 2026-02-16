@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dean's Handyman Service LLC | Professional Repairs & Tech Setup</title>
+    
+    <meta name="google-site-verification" content="Ppwb67jnNZqenhH9knICRsS0JoWsvO_G5isyaixaDwk" />
+    <meta name="description" content="Professional Handyman, custom fabrication, and specialized Starlink installations. I solve the problems others walk away from. Do it right the first time.">
+    <meta property="og:title" content="Dean's Handyman Service LLC | Professional Problem Solver">
+    <meta property="og:description" content="Why fix it yourself? Reliable on-site service for heavy repairs, custom builds, and Starlink setup across TX, AR, LA, and OK.">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta property="og:url" content="https://deanshandymanservice.me/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+    <meta name="geo.position" content="32.9997;-94.9675">
+    <meta name="ICBM" content="32.9997, -94.9675">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #008bd2;
+            --primary-dark: #006fa8;
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --trust-green: #22c55e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 2.8rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,139,210,0.3); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--dark); }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white; padding: 120px 0 100px; min-height: 85vh; display: flex; align-items: center;
+        }
+        .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .hero-text p { font-size: 1.3rem; font-weight: 500; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7); line-height: 1.5; color: #e2e8f0; }
+        
+        .trust-badges { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .trust-badge { background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+
+        .lead-card {
+            background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-top: 6px solid var(--accent); color: var(--dark);
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 700; color: var(--dark); font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 0.95rem; font-family: inherit; transition: all 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,139,210,0.15);
+        }
+        .radio-group { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
+        .radio-label { display: flex; align-items: center; gap: 0.5rem; font-weight: 500; font-size: 0.95rem; cursor: pointer; }
+        .file-upload { border: 2px dashed #cbd5e1 !important; background: #f8fafc; cursor: pointer; padding: 1rem !important; text-align: center; }
+
+        .section { padding: 100px 0; }
+        .section-sub { text-align: center; color: var(--gray); font-size: 1.15rem; font-weight: 500; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card {
+            background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0;
+            transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .icon-box {
+            width: 60px; height: 60px; background: rgba(0,139,210,0.1); color: var(--primary);
+            display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 1.5rem; font-size: 1.8rem;
+        }
+
+        .problem-solver-banner {
+            background: var(--dark); color: white; padding: 4rem 2rem; border-radius: 16px; text-align: center; margin-top: 4rem; position: relative; overflow: hidden;
+        }
+        .problem-solver-banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--accent); }
+        .problem-solver-banner h3 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .problem-solver-banner p { font-size: 1.2rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem; }
+
+        .payment-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+        .payment-grid a, .payment-grid div { padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; color: white; transition: transform 0.3s; min-width: 120px; text-align: center; }
+        .payment-grid a:hover { transform: scale(1.05); }
+
+        .mobile-fab {
+            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
+            width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
+        }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .hero { padding: 60px 0; background-attachment: scroll; }
+            .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-text { text-align: center; }
+            .trust-badges { justify-content: center; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
+        footer h4 { color: white; margin-bottom: 1.5rem; font-size: 1.2rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="gallery.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="tel:2819179914" class="btn btn-primary">Call (281) 917-9914</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Now">📞</a>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-layout">
+                <div class="hero-text" data-aos="fade-right">
+                    <div style="background: rgba(240,165,0,0.2); color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px; display: inline-block; font-weight: 700; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        THE ULTIMATE PROPERTY PROBLEM SOLVER
+                    </div>
+                    <h1>Professional Handyman, Custom Fabrication & Tech Setup</h1>
+                    <p>Why fix it yourself and risk a bigger headache? From heavy construction and custom carpentry to seamless Starlink installations, get a professional on the job and <strong>do it right the first time</strong>.</p>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge">🛠️ Multi-Trade Expertise</div>
+                        <div class="trust-badge">📍 200-Mile Radius</div>
+                        <div class="trust-badge">⭐ 5-Star Rated Service</div>
+                    </div>
+                </div>
+
+                <div class="lead-card" id="contact" data-aos="fade-left">
+                    <h3 style="text-align: center; margin-bottom: 0.5rem;">Let's Get Your Project Sorted</h3>
+                    <p style="text-align: center; color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem;">I review every request to ensure high-quality results. If I can fix it or build it, I'll be in touch.</p>
+                    
+                    <form id="quoteForm" action="https://formsubmit.co/deanshandymanservice1@gmail.com" method="POST" enctype="multipart/form-data">
+                        
+                        <input type="hidden" name="_subject" value="🚨 NEW VETTED LEAD!">
+                        <input type="hidden" name="_next" value="https://calendar.app.google/vxkiALxDdAJNGYfe8">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-name">Full Name</label>
+                                <input type="text" id="client-name" name="Client_Name" placeholder="First & Last Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="Phone_Number" placeholder="(555) 555-5555" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Property Type</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="Property_Type" value="Residential" required checked> 🏠 Residential</label>
+                                <label class="radio-label"><input type="radio" name="Property_Type" value="Commercial"> 🏢 Commercial</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Primary Service Needed</label>
+                                <select id="service" name="Service_Requested" required>
+                                    <option value="">Select one...</option>
+                                    <option>Handyman / General Repair</option>
+                                    <option>Custom Build / Fabrication</option>
+                                    <option>Starlink / Smart Home</option>
+                                    <option>Electrical / Pipefitting</option>
+                                    <option>Weird / Odd Job</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="urgency">Urgency Level</label>
+                                <select id="urgency" name="Urgency" required>
+                                    <option value="">Select timeline...</option>
+                                    <option>🚨 Emergency (Needs fixing ASAP)</option>
+                                    <option>📅 This Week</option>
+                                    <option>🗓️ Next Few Weeks</option>
+                                    <option>⏳ Flexible (No rush)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Project Location (City & State)</label>
+                            <input type="text" id="address" name="Location" placeholder="e.g. Pittsburg, TX" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">What's the problem? (Don't hold back)</label>
+                            <textarea id="details" name="Project_Details" rows="3" placeholder="Describe what's broken, what needs building, or what tech you need installed..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photo">Upload Photos (Optional)</label>
+                            <input type="file" id="photo" name="attachment" class="file-upload" accept="image/*" multiple>
+                            <small style="color: var(--gray); font-size: 0.8rem; margin-top: 4px; display: block;">Show me what we're working with so I can gauge the job.</small>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn btn-accent" style="width:100%; font-size: 1.1rem; margin-top: 0.5rem;">Send Project Details to Dean</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: white;">
+            <div class="container">
+                <h2>I Don't Settle For "Good Enough"</h2>
+                <p class="section-sub">With a deep background across multiple trades, I approach every job with a builder's eye. Here is how I solve your property's problems.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="icon-box">🛠️</div>
+                        <h3>The Fixer</h3>
+                        <p><strong>Professional Handyman & Repairs</strong><br>From patching drywall and painting to minor plumbing fixes and deck repairs. When your property starts falling apart, I put it back together correctly.</p>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">🏗️</div>
+                        <h3>The Builder</h3>
+                        <p><strong>Carpentry, Electrical & Fabrication</strong><br>Heavy-duty construction background. Need custom fabrication, safe electrical troubleshooting, or pipefitting? I have the tools and training to execute.</p>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">📡</div>
+                        <h3>The Tech Guy</h3>
+                        <p><strong>Starlink & Smart Home Integrations</strong><br>Pittsburg’s premier tech installer. Gen 3 mounts, eliminating Wi-Fi dead zones, and wiring up smart home devices. Fast internet, installed flawlessly.</p>
+                    </div>
+                </div>
+
+                <div class="problem-solver-banner" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>The "Figure It Out" Guarantee</h3>
+                    <p>"Got a weird repair, a custom build, or a problem no other contractor wants to touch? Send it my way. I’m the one they call when others can't figure it out. If it’s broken, I fix it. If it doesn't exist, I build it. There is nothing we can't figure out together."</p>
+                    <a href="#contact" class="btn btn-accent">Tell Me About Your Unique Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: #f8fafc;">
+            <div class="container">
+                <h2>Verified Google Reviews</h2>
+                <p class="section-sub">Real feedback from property owners across TX, AR, LA, & OK who trusted us to do it right the first time.</p>
+                
+                <div class="services-grid" style="margin-top: 2rem;">
+                    <div class="service-card" data-aos="fade-up" style="border-top: 4px solid #4285F4;">
+                        <div style="color: #fbbc05; font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">★★★★★</div>
+                        <p style="font-size: 0.95rem;">"Dean installed our Starlink Gen 3 perfectly – professional, clean, and fast. Highly recommend!"</p>
+                        <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span style="font-weight: 800; color: var(--dark);">Sarah M.</span>
+                            <span style="font-weight: 800; font-size: 0.9rem;"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="border-top: 4px solid #EA4335;">
+                        <div style="color: #fbbc05; font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">★★★★★</div>
+                        <p style="font-size: 0.95rem;">"Fixed our electrical issue others couldn't solve. Courteous, on-time, and left everything spotless."</p>
+                        <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span style="font-weight: 800; color: var(--dark);">Mike R.</span>
+                            <span style="font-weight: 800; font-size: 0.9rem;"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200" style="border-top: 4px solid #34A853;">
+                        <div style="color: #fbbc05; font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">★★★★★</div>
+                        <p style="font-size: 0.95rem;">"Great handyman service – reliable and fairly priced. We'll call Dean again for sure."</p>
+                        <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span style="font-weight: 800; color: var(--dark);">Lisa K.</span>
+                            <span style="font-weight: 800; font-size: 0.9rem;"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://g.page/r/CSyLvaLRoMg_EBM/review" target="_blank" class="btn" style="display: flex; justify-content: center; margin: 3rem auto 0; width: fit-content; font-size: 1.1rem; background: white; color: #4285F4; border: 2px solid #4285F4; border-radius: 50px; padding: 0.8rem 2rem; font-weight: bold;">
+                    Read All Our 5-Star Reviews on Google
+                </a>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--dark); padding-top: 60px;">
+            <div class="container">
+                <h2 style="color: white;">Frictionless Payments</h2>
+                <p class="section-sub" style="color: #cbd5e1;">Paying for professional service shouldn't be a hassle. I accept multiple payment methods for your convenience.</p>
+                <div class="payment-grid">
+                    <div style="background: #334155;">💵 Cash</div>
+                    <div style="background: #334155;">📝 Check</div>
+                    <a href="https://cash.app/$HandymanDean" target="_blank" style="background: #00D632;">Cash App</a>
+                    <a href="https://venmo.com/u/DeanshandymanserviceLLC" target="_blank" style="background: #008CFF;">Venmo</a>
+                    <a href="https://square.link/u/dO7MQ0kc" target="_blank" style="background: var(--primary);">Square</a>
+                    <a href="https://www.paypal.com/ncp/payment/CVURGTVEWZ96J" target="_blank" style="background: #003087;">PayPal</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman, relentless problem solver.</p>
+            </div>
+            <div>
+                <h4>Contact Me directly</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary); text-decoration: none;">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary); text-decoration: none;">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.6;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved. No Handyman License Required in Texas.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Hybrid Pushbullet + FormSubmit Script
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop form submission for a split second
+            
+            const form = this;
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "Processing...";
+            btn.disabled = true;
+
+            const PUSHBULLET_TOKEN = "o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl";
+
+            // Gather quick intel for your phone text
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const urgency = document.getElementById('urgency').value;
+            const address = document.getElementById('address').value;
+            
+            const fileInput = document.getElementById('photo');
+            const hasPhoto = fileInput.files.length > 0 ? "YES (Check Gmail for the pics!)" : "No";
+
+            // SPACED OUT PUSHBULLET FORMAT
+            const noteBody = `🚨 LEAD TRAP SPRUNG!\n\nName: ${name}\n\nPhone: ${phone}\n\nService: ${service}\n\nUrgency: ${urgency}\n\nLocation: ${address}\n\nPhotos Attached: ${hasPhoto}`;
+
+            // Step 1: Ping your phone via Pushbullet
+            fetch('https://api.pushbullet.com/v2/pushes', {
+                method: 'POST',
+                headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
+            })
+            .then(() => {
+                // Step 2: Once phone is pinged, let FormSubmit handle the rest (email photos & calendar redirect)
+                form.submit();
+            })
+            .catch(() => {
+                // Failsafe: If Pushbullet is down, STILL submit the form so you get the email!
+                form.submit();
+            });
+        });
+    </script>
+
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
+
+</body>
+</html>
