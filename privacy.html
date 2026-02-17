@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Dean's Handyman Service LLC – Pittsburg, TX</title>
+    <title>Privacy Policy | Dean's Handyman Service LLC</title>
     
-    <meta name="description" content="Privacy Policy for Dean's Handyman Service LLC. We explain how we collect, use, and protect your personal information when you request quotes or use our services.">
+    <meta name="description" content="Privacy Policy for Dean's Handyman Service LLC. We respect your data and privacy.">
+    <meta name="robots" content="noindex">
     
-    <link rel="canonical" href="https://deanshandymanservice.me/privacy.html" />
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
@@ -25,6 +23,7 @@
             --gray: #475569;
             --light: #f8fafc;
             --white: #ffffff;
+            --trust-green: #22c55e;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,67 +37,40 @@
         html { scroll-behavior: smooth; }
 
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
-        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
-        h2 { font-size: clamp(2rem, 5vw, 3rem); margin: 3rem 0 1.5rem; color: var(--dark); }
-        h3 { font-size: 1.6rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
+        p { margin-bottom: 1rem; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
 
-        .btn {
+        .btn-pill {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.9rem 1.8rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,139,210,0.25);
+            transition: all 0.3s;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
         }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-pill:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
 
-        header {
-            background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 90px;
-        }
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+        header { background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-img { height: 60px; width: auto; }
-        .logo-text {
-            font-weight: 800;
-            font-size: 1.1rem;
-            line-height: 1.1;
-            text-transform: uppercase;
-            color: var(--dark);
-        }
+        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--dark); }
         .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: var(--dark);
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
         .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
@@ -106,57 +78,21 @@
 
         @media (max-width: 992px) {
             .menu-toggle { display: flex; }
-            .nav-links {
-                position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
-                background: white; flex-direction: column; align-items: flex-start;
-                padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.15);
-            }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: white; flex-direction: column; align-items: flex-start; padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.15); }
             .nav-links.active { right: 0; }
             .nav-links a { font-size: 1.2rem; }
         }
 
         .page-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
-            color: white;
-            padding: 140px 0 100px;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
+            color: white; padding: 100px 0 80px; text-align: center;
         }
 
-        .privacy-section { padding: 100px 0; }
-        .privacy-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .privacy-content p { margin-bottom: 1.5rem; color: #333; font-size: 1.1rem; }
-        .privacy-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
-        .privacy-content li { margin-bottom: 0.8rem; }
-
-        .mobile-fab {
-            position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white;
-            width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center;
-            font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s;
-        }
-        .mobile-fab:hover { transform: scale(1.1); }
-
-        @media (max-width: 992px) {
-            .mobile-fab { display: flex; }
-            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
-            .privacy-content { padding: 2rem; }
+        .content-box {
+            background: white; padding: 3rem; margin: 4rem auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        footer {
-            background: var(--dark);
-            color: #cbd5e1;
-            padding: 80px 0 40px;
-        }
+        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
         footer h4 { color: white; margin-bottom: 1.5rem; }
         footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     </style>
@@ -170,9 +106,7 @@
                 <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
             </a>
 
-            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="menu-toggle" id="mobile-menu-btn"><span></span><span></span><span></span></div>
 
             <nav class="nav-links" id="nav-menu">
                 <a href="index.html">Home</a>
@@ -184,77 +118,52 @@
                 <a href="blog.html">Blog</a>
                 <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="tel:2819179914" class="btn btn-primary">(281) 917-9914</a>
+                <a href="privacy.html" class="active">Privacy</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="tel:2819179914" class="btn-pill"><i class="fas fa-phone-alt me-2"></i>(281) 917-9914</a>
             </nav>
         </div>
     </header>
 
-    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
-
     <section class="page-hero">
-        <div class="container" data-aos="fade-down" data-aos-duration="900">
+        <div class="container">
             <h1>Privacy Policy</h1>
-            <p style="font-size: 1.6rem; font-weight: 600; max-width: 800px; margin: 1.5rem auto 0;">How we collect, use, and protect your information at Dean's Handyman Service LLC.</p>
+            <p style="font-size: 1.2rem;">Last Updated: February 2026</p>
         </div>
     </section>
 
-    <section class="privacy-section">
-        <div class="privacy-content" data-aos="fade-up">
-            <p style="font-style: italic; color: var(--gray); margin-bottom: 3rem;">Last Updated: February 2026</p>
+    <div class="container">
+        <div class="content-box">
+            <p>At <strong>Dean's Handyman Service LLC</strong>, we are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you visit our website or use our services.</p>
 
-            <h2>1. Introduction</h2>
-            <p>At Dean's Handyman Service LLC, your privacy is important to us. This Privacy Policy explains what information we collect when you visit our website, request a quote, use our estimator tool, interact with our chatbot, or contact us, and how we use and protect that information.</p>
+            <h2>1. Information We Collect</h2>
+            <p>We may collect personal information such as your name, phone number, email address, and service location when you fill out our contact forms or request a quote. This information is used solely for the purpose of communicating with you about your project.</p>
 
-            <h2>2. Information We Collect</h2>
-            <p>We collect only the information you voluntarily provide to us, including:</p>
-            <ul>
-                <li>Name, phone number, email address, city/state, and project details when you submit a quote request or contact form.</li>
-                <li>Service preferences, photos, or additional notes you share for accurate estimates.</li>
-                <li>Any information provided through our Zapier-powered chatbot.</li>
-            </ul>
-            <p>We do not collect sensitive financial data directly — payments are processed securely via third-party providers (Square, PayPal, Venmo, Cash App).</p>
+            <h2>2. How We Use Your Information</h2>
+            <p>We use your information to:
+                <ul>
+                    <li>Provide quotes and schedule services.</li>
+                    <li>Respond to your inquiries via text, email, or phone.</li>
+                    <li>Send invoices or payment requests via secure platforms (Square, etc.).</li>
+                </ul>
+            </p>
 
-            <h2>3. How We Use Your Information</h2>
-            <p>We use your information solely to:</p>
-            <ul>
-                <li>Provide quotes, schedule jobs, and deliver handyman services.</li>
-                <li>Communicate with you about your project (calls, texts, emails).</li>
-                <li>Improve our services and respond to inquiries.</li>
-                <li>Send occasional updates or promotions (you can opt out anytime).</li>
-            </ul>
-            <p>We never sell, rent, or share your personal information with third parties for marketing purposes.</p>
+            <h2>3. Information Sharing</h2>
+            <p>We do <strong>not</strong> sell, trade, or rent your personal information to third parties. We may share data with trusted third-party service providers (like Square for payments or Google Calendar for scheduling) only as necessary to operate our business.</p>
 
-            <h2>4. Third-Party Services</h2>
-            <p>Our website integrates trusted third-party tools:</p>
-            <ul>
-                <li><strong>Zapier</strong> – powers our chatbot; see their <a href="https://zapier.com/privacy" target="_blank">privacy policy</a>.</li>
-                <li><strong>Google Calendar</strong> – for booking links; see <a href="https://policies.google.com/privacy" target="_blank">Google's policy</a>.</li>
-                <li><strong>Payment processors</strong> (Square, PayPal, Venmo, Cash App) – handle secure transactions; refer to their individual privacy policies.</li>
-                <li><strong>Google Photos</strong> (gallery embeds) – public albums only; no personal data collected.</li>
-            </ul>
+            <h2>4. Security</h2>
+            <p>We implement reasonable security measures to protect your data. However, no method of transmission over the Internet is 100% secure.</p>
 
-            <h2>5. Data Security</h2>
-            <p>We take reasonable measures to protect your information, including secure form submissions and limited data retention. However, no method of transmission over the internet is 100% secure.</p>
-
-            <h2>6. Your Rights</h2>
-            <p>You may request access to, correction of, or deletion of your personal information by contacting us. We will respond promptly and in accordance with applicable law.</p>
-
-            <h2>7. Changes to This Policy</h2>
-            <p>We may update this policy from time to time. Changes will be posted here with an updated "Last Updated" date.</p>
-
-            <h2>8. Contact Us</h2>
-            <p>If you have questions about this Privacy Policy or our data practices, please reach out:</p>
-            <p><strong>Email:</strong> <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary); font-weight: 600;">deanshandymanservice1@gmail.com</a><br>
-            <strong>Phone:</strong> <a href="tel:2819179914" style="color: var(--primary); font-weight: 600;">(281) 917-9914</a></p>
+            <h2>5. Contact Us</h2>
+            <p>If you have questions about this policy, please contact us at <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a>.</p>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="container">
             <div>
                 <h4>Dean's Handyman Service LLC</h4>
-                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK</p>
             </div>
             <div>
                 <h4>Contact Us</h4>
@@ -267,10 +176,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 900, once: true, offset: 100 });
-
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
         menuBtn.addEventListener('click', () => {
@@ -287,9 +193,6 @@
             }
         });
     </script>
-
-    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmla3f83s001hfy8tds4wmpva'></zapier-interfaces-chatbot-embed>
 
 </body>
 </html>
