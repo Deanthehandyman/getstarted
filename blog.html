@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2BSN968QN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F2BSN968QN');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2BSN968QN');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -43,21 +43,24 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
-          "headline": "Why Professional Mounting is Critical in the Piney Woods",
-          "datePublished": "2026-02-06",
-          "author": { "@type": "Person", "name": "Dean Elkins" }
+          "headline": "How to Safely Mount a Starlink Gen 3 on a Metal Roof",
+          "url": "https://deanshandymanservice.me/blog-starlink-metal-roof.html",
+          "datePublished": "2026-02-19",
+          "author": { "@type": "Person", "name": "Dean" }
         },
         {
           "@type": "BlogPosting",
-          "headline": "Storm Prep 101: Securing Your Starlink & Property",
-          "datePublished": "2026-01-29",
-          "author": { "@type": "Person", "name": "Dean Elkins" }
+          "headline": "Why Cabin & Rural Repairs Require an Industrial Mindset",
+          "url": "https://deanshandymanservice.me/blog-cabin-repairs.html",
+          "datePublished": "2026-02-19",
+          "author": { "@type": "Person", "name": "Dean" }
         },
         {
           "@type": "BlogPosting",
-          "headline": "The Hidden Cost of 'Cheap' Repairs",
-          "datePublished": "2026-01-15",
-          "author": { "@type": "Person", "name": "Dean Elkins" }
+          "headline": "The Ultimate RV Maintenance Checklist",
+          "url": "https://deanshandymanservice.me/blog-rv-maintenance.html",
+          "datePublished": "2026-02-19",
+          "author": { "@type": "Person", "name": "Dean" }
         }
       ]
     }
@@ -67,6 +70,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
@@ -93,32 +97,20 @@
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
         h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
         h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark); }
-        h3 { font-size: 1.6rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-            border-radius: 50px; /* PILL SHAPE */
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 1rem 2rem; border-radius: 50px; font-weight: 700;
+            text-decoration: none; transition: all 0.3s ease;
         }
         .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
-        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
-        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+        .btn-pill { background: var(--primary); color: white !important; padding: 0.9rem 1.8rem; border-radius: 9999px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-block; box-shadow: 0 4px 12px rgba(0,139,210,0.25); transition: all 0.3s; }
+        .btn-pill:hover { background: var(--primary-dark); transform: translateY(-1px); }
 
-        header {
-            background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        header { background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-img { height: 60px; width: auto; }
@@ -127,7 +119,7 @@
 
         .nav-links { display: flex; align-items: center; gap: 2rem; }
         .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
         .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
         .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
@@ -146,25 +138,25 @@
 
         .page-hero {
             background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
-            color: white; padding: 140px 0 100px; min-height: 70vh; display: flex; align-items: center; text-align: center;
+            color: white; padding: 140px 0 100px; min-height: 60vh; display: flex; align-items: center; text-align: center;
         }
 
-        .post-card {
-            background: white; border-radius: 16px; padding: 3rem; margin-bottom: 4rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 8px solid var(--primary);
-            transition: all 0.4s ease;
+        /* NEW BLOG GRID STYLES */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; padding: 80px 0; }
+        .blog-card { 
+            background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            transition: all 0.4s ease; text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid #e2e8f0; 
         }
-        .post-card:hover {
-            transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); border-left-color: var(--accent);
-        }
-        .post-meta {
-            font-size: 0.95rem; color: var(--gray); margin-bottom: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        .post-content p { margin-bottom: 1.5rem; color: #333; font-size: 1.1rem; }
-        .post-content h3 { margin: 2.5rem 0 1rem; color: var(--primary-dark); }
-        .post-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
-        .post-content li { margin-bottom: 0.8rem; color: #444; }
-        
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .blog-img { width: 100%; height: 240px; object-fit: cover; border-bottom: 4px solid var(--accent); }
+        .blog-content { padding: 2.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-tag { background: rgba(0,139,210,0.1); color: var(--primary-dark); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 1rem; align-self: flex-start; text-transform: uppercase; }
+        .blog-title { font-size: 1.5rem; margin-bottom: 1rem; line-height: 1.3; transition: color 0.3s; color: var(--dark); }
+        .blog-card:hover .blog-title { color: var(--primary); }
+        .blog-excerpt { color: var(--gray); font-size: 1.05rem; margin-bottom: 1.5rem; flex-grow: 1; line-height: 1.6; }
+        .read-more { color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
+        .blog-card:hover .read-more { gap: 10px; }
+
         .faq-item { margin-bottom: 1.5rem; text-align: left; }
         .faq-item h3 { font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 0.5rem; margin-top: 0; }
         .faq-item p { color: var(--gray); font-size: 0.95rem; }
@@ -181,7 +173,7 @@
         @media (max-width: 992px) {
             .mobile-fab { display: flex; }
             .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
-            .post-card { padding: 2rem; }
+            .blog-content { padding: 1.5rem; }
         }
 
         footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
@@ -209,10 +201,10 @@
                 <a href="starlink-install.html">Starlink</a>
                 <a href="areas.html">Service Areas</a>
                 <a href="gallery.html">Work</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" class="active">Blog</a>
                 <a href="faqs.html">FAQs</a>
                 <a href="contact.html">Contact</a>
-                <a href="tel:2819179914" class="btn btn-primary">(281) 917-9914</a>
+                <a href="tel:2819179914" class="btn-pill"><i class="fas fa-phone-alt me-2"></i>(281) 917-9914</a>
             </nav>
         </div>
     </header>
@@ -226,67 +218,75 @@
         </div>
     </section>
 
-    <div class="container" style="margin: 6rem 0;">
-        <article class="post-card" data-aos="fade-up">
-            <div class="post-meta">February 6, 2026 | Starlink Installation</div>
-            <h2>Why Professional Mounting is Critical in the Piney Woods</h2>
-            <div class="post-content">
-                <p>In Pittsburg, TX and surrounding East Texas areas, trees are the #1 enemy of high-speed satellite internet. The Starlink Gen 3 "kickstand" works great in open fields, but most homes here need elevation to clear the tree line.</p>
+    <div class="container">
+        <div class="blog-grid">
+            
+            <a href="blog-starlink-metal-roof.html" class="blog-card" data-aos="fade-up">
+                <img src="https://i.imgur.com/KMsvpls.jpg" alt="Starlink mounted on a roof" class="blog-img" style="object-position: top;">
+                <div class="blog-content">
+                    <span class="blog-tag">Starlink Installation</span>
+                    <h3 class="blog-title">How to Safely Mount a Starlink Gen 3 on a Metal Roof</h3>
+                    <p class="blog-excerpt">Metal roofs are incredibly durable, but drilling into them to mount a Starlink dish can cause massive leaks if done improperly. Learn how a pro does it.</p>
+                    <span class="read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
 
-                <h3>Overcoming Tree Obstructions</h3>
-                <p>We specialize in custom roof-peak mounts, ridge-line installations, and tall pole setups that get the dish above the canopy. Even a few branches in the way can cause frequent dropouts. Using industrial-grade pivot mounts, we find the exact "sweet spot" for maximum signal.</p>
+            <a href="blog-cabin-repairs.html" class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-img" style="background: linear-gradient(rgba(0,139,210,0.5), rgba(0,139,210,0.5)), url('https://i.imgur.com/KMsvpls.jpg') center/cover;"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">Property Maintenance</span>
+                    <h3 class="blog-title">Why Cabin & Rural Repairs Require an Industrial Mindset</h3>
+                    <p class="blog-excerpt">When you own property out in rural Texas or Oklahoma, basic residential fixes won't survive the elements. Discover why industrial construction skills matter.</p>
+                    <span class="read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
 
-                <h3>Industrial-Grade Cabling & Protection</h3>
-                <p>We don’t just run a cable—we use commercial-grade routing, weatherproof conduits, and interior wall plates to protect your connection from rain, pests, and long-term wear. Clean installs that last.</p>
+            <a href="blog-rv-maintenance.html" class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-img" style="background: linear-gradient(rgba(240,165,0,0.5), rgba(240,165,0,0.5)), url('https://i.imgur.com/KMsvpls.jpg') center/cover;"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">RV Living</span>
+                    <h3 class="blog-title">The Ultimate RV Maintenance Checklist Before Hitting the Road</h3>
+                    <p class="blog-excerpt">As someone who lived full-time in an RV and developed RV pads from scratch, here is exactly what you need to check before your next major trip.</p>
+                    <span class="read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <div class="blog-card" data-aos="fade-up">
+                <div class="blog-img" style="background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;"><i class="fas fa-bolt"></i></div>
+                <div class="blog-content">
+                    <span class="blog-tag" style="background: #f1f5f9; color: #64748b;">Coming Soon</span>
+                    <h3 class="blog-title">The Hidden Cost of "Cheap" Repairs</h3>
+                    <p class="blog-excerpt">Saving $50 now often costs $500 later in water damage or electrical shorts. My pricing reflects the use of quality, code-compliant materials.</p>
+                    <span class="read-more" style="color: #94a3b8;">Publishing Soon...</span>
+                </div>
             </div>
-        </article>
 
-        <article class="post-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="post-meta">January 29, 2026 | Storm Safety</div>
-            <h2>Storm Prep 101: Securing Your Starlink & Property</h2>
-            <div class="post-content">
-                <p>When storm season hits the Ark-La-Tex, wind speeds can easily top 60mph. If your satellite dish, antennas, or outdoor fixtures aren't secured with industrial fasteners, they become projectiles.</p>
-                <h3>The "Wiggle Test"</h3>
-                <p>Go outside and check your mounts. If you can wiggle your Starlink mast by hand, the wind will rip it off. I use heavy-duty lag bolts and structural reinforcement for every install to ensure your internet stays up even when the weather goes down.</p>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-img" style="background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;"><i class="fas fa-cloud-showers-heavy"></i></div>
+                <div class="blog-content">
+                    <span class="blog-tag" style="background: #f1f5f9; color: #64748b;">Coming Soon</span>
+                    <h3 class="blog-title">Storm Prep 101: Securing Your Property</h3>
+                    <p class="blog-excerpt">When storm season hits the Ark-La-Tex, wind speeds top 60mph. Learn the "Wiggle Test" to ensure your Starlink mast and exterior fixtures are safe.</p>
+                    <span class="read-more" style="color: #94a3b8;">Publishing Soon...</span>
+                </div>
             </div>
-        </article>
 
-        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-meta">January 20, 2026 | Service Standards</div>
-            <h2>From Embalming to Industrial Trades: Why Precision Matters</h2>
-            <div class="post-content">
-                <p>My background is a little different—I’ve worked as a funeral director and embalmer, alongside heavy construction involving hydraulics and fabrication. What ties it all together? <strong>Precision under pressure.</strong></p>
-
-                <h3>No Room for Error</h3>
-                <p>Whether ensuring a dignified, exact environment in a funeral home or wiring a critical electrical system, the details matter. That same mindset drives every job I take—whether it’s a Starlink dish alignment or troubleshooting complex home wiring, I aim for flawless execution the first time.</p>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-img" style="background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;"><i class="fas fa-hard-hat"></i></div>
+                <div class="blog-content">
+                    <span class="blog-tag" style="background: #f1f5f9; color: #64748b;">Coming Soon</span>
+                    <h3 class="blog-title">From Embalming to Industrial Trades</h3>
+                    <p class="blog-excerpt">Precision under pressure. How my unique background translates to flawless execution on complex home wiring and custom fabrication jobs.</p>
+                    <span class="read-more" style="color: #94a3b8;">Publishing Soon...</span>
+                </div>
             </div>
-        </article>
 
-        <article class="post-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-meta">January 15, 2026 | Homeowner Tips</div>
-            <h2>The Hidden Cost of "Cheap" Repairs</h2>
-            <div class="post-content">
-                <p>I get called out to fix "DIY gone wrong" projects at least once a week. Often, a homeowner or a cheap unlicensed handyman used the wrong materials—like indoor wire for outdoor runs or non-galvanized screws on a deck.</p>
-                <h3>Do It Right, Once.</h3>
-                <p>Saving $50 now often costs $500 later in water damage or electrical shorts. My pricing reflects the use of quality, code-compliant materials and the expertise to know exactly which part allows you to sleep soundly at night.</p>
-            </div>
-        </article>
-
-        <article class="post-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-meta">January 10, 2026 | RV Technology</div>
-            <h2>Optimizing Your RV Pads for 2026 Tech Standards</h2>
-            <div class="post-content">
-                <p>I’ve developed my own property in Pittsburg to include RV pads and a handyman shop. Having lived full-time in a 40-foot Forest River Wildwood, I understand exactly what long-term RV living requires for comfort and connectivity.</p>
-
-                <h3>Power & Connectivity Upgrades</h3>
-                <p>We help RV park owners install proper 50-amp pedestals, surge protection, and high-speed Wi-Fi infrastructure. For individual travelers, we specialize in Starlink Mini 12V DC power conversions—stay connected off-grid without needing a massive inverter setup.</p>
-            </div>
-        </article>
+        </div>
     </div>
 
     <section style="padding: 0 0 80px; background: white;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Common Technical Questions</h2>
+            <h2 style="text-align: center; margin-bottom: 3rem;">Common Technical Questions</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="faq-item">
                     <h3>Do you recommend Starlink Gen 3 or the Mini for RVs?</h3>
