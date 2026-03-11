@@ -1,6 +1,9 @@
 import os
 from datetime import datetime
 
+# Configuration
+BASE_URL = "https://deanshandymanservice.me"
+
 locations = [
     {"city": "Antlers", "state": "OK", "region": "Pushmataha County"},
     {"city": "Ashdown", "state": "AR", "region": "Little River County"},
@@ -85,6 +88,19 @@ locations = [
     {"city": "Winnsboro", "state": "TX", "region": "Wood County"}
 ]
 
+service_types = [
+    {"id": "starlink-installation", "name": "Starlink Installation & Setup"},
+    {"id": "wifi-extender-setup", "name": "Wi-Fi Extender & Mesh Setup"},
+    {"id": "tv-mounting-service", "name": "Professional TV Mounting"},
+    {"id": "amazon-assembly", "name": "Amazon Furniture Assembly"},
+    {"id": "ikea-assembly", "name": "IKEA Furniture Assembly"},
+    {"id": "walmart-assembly", "name": "Walmart Product Assembly"},
+    {"id": "box-to-built", "name": "Out-of-the-Box Product Assembly"},
+    {"id": "moving-reassembly", "name": "Moving Disassembly & Reassembly"},
+    {"id": "smart-home-setup", "name": "Smart Home Device Installation"},
+    {"id": "ethernet-cabling", "name": "Ethernet & Low Voltage Cabling"}
+]
+
 try:
     with open('tech-template.html', 'r', encoding='utf-8') as file:
         template = file.read()
@@ -98,41 +114,45 @@ for loc in locations:
     city = loc["city"]
     state = loc["state"]
     region = loc["region"]
-    
     url_city = city.lower().replace(" ", "-")
     url_state = state.lower()
-    
-    filename = f"starlink-installation-{url_city}-{url_state}.html"
-    new_urls.append(f"https://deanshandymanservice.me/{filename}")
-    
-    page_content = template.replace("{{CITY}}", city)
-    page_content = page_content.replace("{{STATE}}", state)
-    page_content = page_content.replace("{{REGION}}", region)
-    page_content = page_content.replace("{{URL_CITY}}", url_city)
-    page_content = page_content.replace("{{URL_STATE}}", url_state)
-    
-    with open(filename, 'w', encoding='utf-8') as new_file:
-        new_file.write(page_content)
 
-# Update sitemap
+    for service in service_types:
+        filename = f"{service['id']}-{url_city}-{url_state}.html"
+        full_url = f"{BASE_URL}/{filename}"
+        new_urls.append(full_url)
+
+        # Inject all required variables, including the ones from your very first script
+        page_content = template.replace("{{SERVICE_NAME}}", service['name'])
+        page_content = page_content.replace("{{CITY}}", city)
+        page_content = page_content.replace("{{STATE}}", state)
+        page_content = page_content.replace("{{REGION}}", region)
+        page_content = page_content.replace("{{URL_CITY}}", url_city)
+        page_content = page_content.replace("{{URL_STATE}}", url_state)
+
+        with open(filename, 'w', encoding='utf-8') as new_file:
+            new_file.write(page_content)
+
+# Update sitemap safely without duplicating URLs
 try:
     if os.path.exists('sitemap.xml'):
         with open('sitemap.xml', 'r', encoding='utf-8') as f:
             sitemap_content = f.read()
     else:
-        # Create a basic sitemap structure if it doesn't exist
         sitemap_content = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n</urlset>'
-        
+
     if "</urlset>" in sitemap_content:
         urls_to_add = ""
+        today = datetime.today().strftime('%Y-%m-%d')
         for url in new_urls:
-            if url not in sitemap_content:
-                urls_to_add += f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{datetime.today().strftime('%Y-%m-%d')}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
+            # Only add to sitemap if it's not already in there
+            if f"<loc>{url}</loc>" not in sitemap_content:
+                urls_to_add += f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
         
         sitemap_content = sitemap_content.replace("</urlset>", urls_to_add + "</urlset>")
         
         with open('sitemap.xml', 'w', encoding='utf-8') as f:
             f.write(sitemap_content)
-    print("Process complete. Pages generated and sitemap updated.")
+    print(f"Process complete! Successfully generated {len(new_urls)} landing pages and updated sitemap.")
 except Exception as e:
     print(f"Sitemap error: {e}")
