@@ -122,8 +122,9 @@ for loc in locations:
         full_url = f"{BASE_URL}/{filename}"
         new_urls.append(full_url)
 
-        # Inject all required variables, including the ones from your very first script
+        # Inject all required variables, including the crucial SERVICE_ID
         page_content = template.replace("{{SERVICE_NAME}}", service['name'])
+        page_content = page_content.replace("{{SERVICE_ID}}", service['id'])
         page_content = page_content.replace("{{CITY}}", city)
         page_content = page_content.replace("{{STATE}}", state)
         page_content = page_content.replace("{{REGION}}", region)
