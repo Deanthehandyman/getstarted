@@ -1,27 +1,32 @@
 name: Generate Tech Pages
+
 on:
-      push:
-        branches:
-          - main
-      workflow_dispatch:
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        permissions:
-          contents: write
-        steps:
-          - uses: actions/checkout@v3
-          - name: Set up Python
-            uses: actions/setup-python@v4
-            with:
-              python-version: '3.10'
-          - name: Run script
-            run: python generate_tech_pages.py
-          - name: Commit and push changes
-            run: |
-              git config --global user.name 'github-actions[bot]'
-              git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-              git add .
-              git commit -m "Auto-generate Starlink tech pages and update sitemap" || echo "No changes to commit"
-              git push
-    
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run script
+        run: python generate_tech_pages.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Auto-generate Starlink tech pages and update sitemap" || echo "No changes to commit"
+          git push
