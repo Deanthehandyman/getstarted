@@ -1,5 +1,5 @@
 name: Generate Tech Pages
-    "on":
+    on:
       push:
         branches:
           - main
