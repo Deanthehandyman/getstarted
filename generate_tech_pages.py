@@ -3,6 +3,12 @@ from datetime import datetime
 
 # Configuration
 BASE_URL = "https://deanshandymanservice.me"
+# Define the output folder for the generated pages
+OUTPUT_DIR = "service-areas"
+
+# Ensure the output directory exists
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
 
 locations = [
     {"city": "Antlers", "state": "OK", "region": "Pushmataha County"},
@@ -89,16 +95,16 @@ locations = [
 ]
 
 service_types = [
-    {"id": "starlink-installation", "name": "Starlink Installation & Setup"},
-    {"id": "wifi-extender-setup", "name": "Wi-Fi Extender & Mesh Setup"},
-    {"id": "tv-mounting-service", "name": "Professional TV Mounting"},
-    {"id": "amazon-assembly", "name": "Amazon Furniture Assembly"},
-    {"id": "ikea-assembly", "name": "IKEA Furniture Assembly"},
-    {"id": "walmart-assembly", "name": "Walmart Product Assembly"},
-    {"id": "box-to-built", "name": "Out-of-the-Box Product Assembly"},
-    {"id": "moving-reassembly", "name": "Moving Disassembly & Reassembly"},
-    {"id": "smart-home-setup", "name": "Smart Home Device Installation"},
-    {"id": "ethernet-cabling", "name": "Ethernet & Low Voltage Cabling"}
+    {"id": "starlink-installation", "name": "Starlink Installation & Setup", "desc": "Professional Starlink Gen 3 and Mini installation and mounting services"},
+    {"id": "wifi-extender-setup", "name": "Wi-Fi Extender & Mesh Setup", "desc": "Custom Wi-Fi network extensions and mesh router configurations"},
+    {"id": "tv-mounting-service", "name": "Professional TV Mounting", "desc": "Secure, level, and wire-free professional TV mounting services"},
+    {"id": "amazon-assembly", "name": "Amazon Furniture Assembly", "desc": "Fast and reliable assembly for all Amazon furniture orders"},
+    {"id": "ikea-assembly", "name": "IKEA Furniture Assembly", "desc": "Expert assembly and installation for flat-pack IKEA furniture"},
+    {"id": "walmart-assembly", "name": "Walmart Product Assembly", "desc": "Quick and sturdy assembly for Walmart furniture and products"},
+    {"id": "box-to-built", "name": "Out-of-the-Box Product Assembly", "desc": "Professional assembly for treadmills, grills, and other boxed products"},
+    {"id": "moving-reassembly", "name": "Moving Disassembly & Reassembly", "desc": "Careful tear-down and reassembly of large items for moving"},
+    {"id": "smart-home-setup", "name": "Smart Home Device Installation", "desc": "Expert installation for security cameras, smart locks, and thermostats"},
+    {"id": "ethernet-cabling", "name": "Ethernet & Low Voltage Cabling", "desc": "Clean and professional low-voltage cable routing and ethernet drops"}
 ]
 
 try:
@@ -119,10 +125,13 @@ for loc in locations:
 
     for service in service_types:
         filename = f"{service['id']}-{url_city}-{url_state}.html"
-        full_url = f"{BASE_URL}/{filename}"
+        # Adjusted full_url to reflect the new subfolder structure
+        full_url = f"{BASE_URL}/{OUTPUT_DIR}/{filename}"
         new_urls.append(full_url)
 
-        # Inject all required variables, including the crucial SERVICE_ID
+        # Generate a unique Meta Description
+        dynamic_desc = f"{service['desc']} in {city}, {state}. Dean's Handyman Service provides expert mobile tech solutions for {region}."
+
         page_content = template.replace("{{SERVICE_NAME}}", service['name'])
         page_content = page_content.replace("{{SERVICE_ID}}", service['id'])
         page_content = page_content.replace("{{CITY}}", city)
@@ -130,11 +139,15 @@ for loc in locations:
         page_content = page_content.replace("{{REGION}}", region)
         page_content = page_content.replace("{{URL_CITY}}", url_city)
         page_content = page_content.replace("{{URL_STATE}}", url_state)
+        # Added a new replacement variable for the Meta Description
+        page_content = page_content.replace("{{META_DESC}}", dynamic_desc)
 
-        with open(filename, 'w', encoding='utf-8') as new_file:
+        # Save to the specific output directory
+        file_path = os.path.join(OUTPUT_DIR, filename)
+        with open(file_path, 'w', encoding='utf-8') as new_file:
             new_file.write(page_content)
 
-# Update sitemap safely without duplicating URLs
+# Update sitemap safely
 try:
     if os.path.exists('sitemap.xml'):
         with open('sitemap.xml', 'r', encoding='utf-8') as f:
@@ -146,7 +159,6 @@ try:
         urls_to_add = ""
         today = datetime.today().strftime('%Y-%m-%d')
         for url in new_urls:
-            # Only add to sitemap if it's not already in there
             if f"<loc>{url}</loc>" not in sitemap_content:
                 urls_to_add += f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
         
@@ -154,6 +166,6 @@ try:
         
         with open('sitemap.xml', 'w', encoding='utf-8') as f:
             f.write(sitemap_content)
-    print(f"Process complete! Successfully generated {len(new_urls)} landing pages and updated sitemap.")
+    print(f"Process complete! Successfully generated {len(new_urls)} landing pages in the '{OUTPUT_DIR}' folder and updated sitemap.")
 except Exception as e:
     print(f"Sitemap error: {e}")
