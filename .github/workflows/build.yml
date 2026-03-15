@@ -30,3 +30,12 @@ jobs:
           git add .
           git commit -m "Auto-generate Starlink tech pages and update sitemap" || echo "No changes to commit"
           git push
+      - name: Send Pushbullet Alert
+        if: always() # This ensures it runs whether it passes or fails
+        run: |
+          STATUS="${{ job.status }}"
+          curl --header 'Access-Token: o.ZS7JlD9tJxXKORXgsQspxFV5fK7iDFPl' \
+               --header 'Content-Type: application/json' \
+               --data-binary "{\"body\":\"Your 670 Service Area pages finished updating.\\n\\nStatus: $STATUS\\n\\nView details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\",\"title\":\"🤖 SEO Bot Update: $STATUS\",\"type\":\"note\"}" \
+               --request POST \
+               https://api.pushbullet.com/v2/pushes
