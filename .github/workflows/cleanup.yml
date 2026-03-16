@@ -1,0 +1,18 @@
+name: Cleanup Old Root Files
+    on: workflow_dispatch
+    jobs:
+      cleanup:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - name: Delete old generated files
+            run: |
+              rm -f amazon-assembly-*.html box-to-built-*.html ethernet-cabling-*.html handyman-*.html ikea-assembly-*.html moving-reassembly-*.html smart-home-setup-*.html starlink-installation-*.html tv-mounting-service-*.html walmart-assembly-*.html wifi-extender-setup-*.html
+          - name: Commit and Push
+            run: |
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add -A
+              git diff-index --quiet HEAD || git commit -m "chore: delete old generated html files from root"
+              git push
+    
