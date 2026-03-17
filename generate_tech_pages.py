@@ -477,3 +477,316 @@ for service in services:
             f.write(page_content)
 
 print(f"Successfully generated {len(services) * len(cities)} SEO-safe service pages in the '{output_dir}' folder.")
+# ==========================================
+# 7. AUTO-UPDATE THE AREAS.HTML DIRECTORY
+# ==========================================
+
+print("Updating the areas.html directory page...")
+
+# We will use your exact areas.html structure
+areas_html_template = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2BSN968QN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2BSN968QN');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Areas | Dean's Handyman Service LLC – TX, AR, LA, OK</title>
+    
+    <meta name="description" content="Dean's Handyman Service LLC covers a 200-mile radius from Pittsburg, TX. Expert Starlink installation and skilled repairs across Texas, Arkansas, Louisiana, and Oklahoma – first 100 miles FREE travel.">
+    <link rel="canonical" href="https://deanshandymanservice.me/areas.html" />
+    
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport, Broken Bow">
+    <meta name="geo.position" content="32.9997;-94.9675">
+    <meta name="ICBM" content="32.9997, -94.9675">
+    
+    <meta property="og:title" content="Service Areas | Dean's Handyman Service LLC">
+    <meta property="og:description" content="200-mile mobile service radius from Pittsburg, TX – serving rural and urban areas in TX, AR, LA, OK with free travel for the first 100 miles.">
+    <meta property="og:image" content="https://i.imgur.com/KMsvpls.jpg">
+    <meta property="og:url" content="https://deanshandymanservice.me/areas.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #008bd2;
+            --primary-dark: #006fa8;
+            --accent: #f0a500;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --trust-green: #22c55e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
+        h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); color: white; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 1.5rem; color: var(--dark); }
+        h3 { font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 0.5rem; }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* BUTTONS */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s ease; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-accent { background: var(--accent); color: var(--dark); box-shadow: 0 6px 20px rgba(240,165,0,0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(240,165,0,0.4); }
+        .btn-pill { background: var(--primary); color: white !important; padding: 0.9rem 1.8rem; border-radius: 9999px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,139,210,0.25); transition: all 0.3s; }
+        .btn-pill:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+        /* HEADER */
+        header { background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--dark); }
+        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: white; flex-direction: column; align-items: flex-start; padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.15); }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+        }
+
+        .page-hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed; color: white; padding: 140px 0 100px; min-height: 70vh; display: flex; align-items: center; text-align: center; }
+        .radius-info { background: white; padding: 3rem 2rem; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin: -4rem auto 4rem; max-width: 1100px; text-align: center; border-top: 8px solid var(--accent); }
+        .radius-info h2 { margin-bottom: 1.5rem; }
+
+        .search-container { text-align: center; margin: 3rem 0; }
+        .search-box { width: 100%; max-width: 600px; padding: 1rem 1.5rem; border: 2px solid #e2e8f0; border-radius: 50px; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); outline: none; transition: all 0.3s; }
+        .search-box:focus { border-color: var(--primary); box-shadow: 0 4px 20px rgba(0,139,210,0.2); }
+
+        /* NEW DIRECTORY GRID STYLES */
+        .area-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; padding-bottom: 6rem; }
+        
+        .city-card-container { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
+        .city-card-container h3 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.4rem; color: var(--dark); border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; margin-bottom: 1rem; }
+        .service-list { list-style: none; padding: 0; margin: 0; }
+        .service-list li { margin-bottom: 0.5rem; }
+        .service-list a { color: var(--primary-dark); text-decoration: none; font-weight: 500; transition: color 0.2s; display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .service-list a::before { content: "→"; color: var(--accent); font-weight: bold; }
+        .service-list a:hover { color: var(--accent); text-decoration: underline; }
+
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: left; margin-top: 2rem; }
+        .faq-item p { color: var(--gray); font-size: 0.95rem; }
+        .cta-section { background: var(--accent); color: var(--dark); padding: 80px 0; text-align: center; }
+
+        .mobile-fab { position: fixed; bottom: 30px; left: 30px; background: #22c55e; color: white; width: 70px; height: 70px; border-radius: 50%; display: none; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 25px rgba(0,0,0,0.25); z-index: 999; text-decoration: none; transition: transform 0.3s; }
+        .mobile-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 992px) {
+            .mobile-fab { display: flex; }
+            .page-hero { padding: 100px 0 60px; background-attachment: scroll; }
+            .radius-info { margin: -3rem auto 3rem; padding: 2rem 1.5rem; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+
+        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
+        footer h4 { color: white; margin-bottom: 1.5rem; }
+        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
+            </a>
+            <div class="menu-toggle" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="areas.html" class="active">Service Areas</a>
+                <a href="gallery.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="tel:2819179914" class="btn-pill"><i class="fas fa-phone-alt me-2"></i>(281) 917-9914</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
+
+    <section class="page-hero">
+        <div class="container" data-aos="fade-down" data-aos-duration="900">
+            <h1>Our 200-Mile Service Area</h1>
+            <p style="font-size: 1.6rem; font-weight: 600; max-width: 800px; margin: 1.5rem auto 0;">Expert mobile repairs and Starlink installs across TX, AR, LA, OK – first 100 miles FREE travel.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="radius-info" data-aos="zoom-in">
+            <h2>200-Mile Ark-La-Tex Coverage from Pittsburg, TX</h2>
+            <p>We bring a fully equipped mobile workshop directly to you – no job too far or too technical. Specializing in Starlink Gen 3/Mini setups and skilled trades for rural homes, shops, and properties.</p>
+            <p style="margin-top: 1.5rem; font-weight: 900; color: var(--primary-dark); font-size: 1.3rem;">📍 First 100 miles of travel always FREE!</p>
+        </div>
+
+        <div class="search-container" data-aos="fade-up">
+            <input type="text" id="citySearch" class="search-box" placeholder="Search your city or town (e.g., Tyler, Shreveport)...">
+        </div>
+
+        <div class="area-grid" id="areaGrid">
+            [DYNAMIC_CITY_GRIDS_GO_HERE]
+        </div>
+    </div>
+
+    <section style="padding: 0 0 80px; background: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Service Area Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do you charge for travel?</h3>
+                    <p>The first 100 miles from Pittsburg, TX (75686) are completely FREE. For jobs beyond 100 miles, a small mileage fee may apply to cover fuel, but this will always be discussed upfront.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you really go to Oklahoma and Louisiana?</h3>
+                    <p>Yes! We frequently service Broken Bow, Idabel, Hugo, Shreveport, and Bossier City. Our mobile workshop is designed for long-distance jobs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I pay with a credit card on-site?</h3>
+                    <p>Absolutely. We accept all major cards via Square (subject to a 3% processing fee), as well as Cash, Check, Venmo, and Cash App.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container" data-aos="zoom-in">
+            <h2>Need Service in Your Area?</h2>
+            <p style="font-size: 1.3rem; margin: 1.5rem 0 2rem;">We cover hundreds of cities and rural spots across four states – get a free quote today.</p>
+            <a href="contact.html" class="btn btn-primary" style="font-size: 1.4rem; padding: 1.2rem 3rem;">Request Your Free Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary);">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved.<br>
+            A 3% processing fee applies to credit card transactions.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = menuBtn.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Search Filter Logic updated for cards
+        const searchInput = document.getElementById('citySearch');
+        const cityCards = document.querySelectorAll('.city-card-container');
+        const grid = document.getElementById('areaGrid');
+        
+        let noResultsMsg = document.createElement('div');
+        noResultsMsg.style = 'grid-column: 1/-1; text-align:center; padding:3rem; color:#666; font-size:1.1rem; display:none;';
+        noResultsMsg.innerText = 'No matching locations found – but we likely still cover your area! Call us to confirm.';
+        grid.appendChild(noResultsMsg);
+
+        searchInput.addEventListener('input', (e) => {
+            const filter = e.target.value.toLowerCase();
+            let visibleCount = 0;
+            
+            cityCards.forEach(card => {
+                const cityName = card.getAttribute('data-name').toLowerCase();
+                if (cityName.includes(filter)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+"""
+
+# Build the dynamic grid layout
+city_cards_html = ""
+
+for city_data in cities:
+    city = city_data["name"]
+    state = city_data["state"]
+    
+    city_cards_html += f'<div class="city-card-container" data-name="{city} {state}">\n'
+    city_cards_html += f'<h3><span aria-label="Location pin">📍</span> {city}, {state}</h3>\n'
+    city_cards_html += '<ul class="service-list">\n'
+    
+    for service in services:
+        safe_service = service.lower().replace(" ", "-").replace("&", "and").replace(",", "")
+        safe_city = city.lower().replace(" ", "-")
+        safe_state = state.lower()
+        filename = f"{safe_service}-{safe_city}-{safe_state}.html"
+        link_path = f"service-areas/{filename}"
+        
+        city_cards_html += f'<li><a href="{link_path}">{service}</a></li>\n'
+        
+    city_cards_html += '</ul>\n</div>\n'
+
+# Insert the built grid into the template
+final_areas_html = areas_html_template.replace("[DYNAMIC_CITY_GRIDS_GO_HERE]", city_cards_html)
+
+# Overwrite the existing areas.html
+with open("areas.html", "w", encoding="utf-8") as f:
+    f.write(final_areas_html)
+
+print("Successfully updated areas.html directory!")
