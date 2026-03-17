@@ -31,11 +31,43 @@ services = [
 
 # 2. Target Cities
 cities = [
-    {"name": "Tyler", "state": "TX"},
-    {"name": "Shreveport", "state": "LA"},
-    {"name": "Bossier City", "state": "LA"},
-    {"name": "Longview", "state": "TX"},
-    {"name": "Pittsburg", "state": "TX"}
+    {"name": "Pittsburg", "state": "TX"}, {"name": "Tyler", "state": "TX"}, 
+    {"name": "Longview", "state": "TX"}, {"name": "Texarkana", "state": "TX"}, 
+    {"name": "Texarkana", "state": "AR"}, {"name": "Shreveport", "state": "LA"}, 
+    {"name": "Broken Bow", "state": "OK"}, {"name": "Mount Pleasant", "state": "TX"}, 
+    {"name": "Gilmer", "state": "TX"}, {"name": "Daingerfield", "state": "TX"}, 
+    {"name": "Ore City", "state": "TX"}, {"name": "Hughes Springs", "state": "TX"}, 
+    {"name": "Avinger", "state": "TX"}, {"name": "Naples", "state": "TX"}, 
+    {"name": "Omaha", "state": "TX"}, {"name": "Big Sandy", "state": "TX"}, 
+    {"name": "Hawkins", "state": "TX"}, {"name": "Winfield", "state": "TX"}, 
+    {"name": "Leesburg", "state": "TX"}, {"name": "Cason", "state": "TX"}, 
+    {"name": "Sulphur Springs", "state": "TX"}, {"name": "Mineola", "state": "TX"}, 
+    {"name": "Lindale", "state": "TX"}, {"name": "Gladewater", "state": "TX"}, 
+    {"name": "White Oak", "state": "TX"}, {"name": "Kilgore", "state": "TX"}, 
+    {"name": "Marshall", "state": "TX"}, {"name": "Henderson", "state": "TX"}, 
+    {"name": "Carthage", "state": "TX"}, {"name": "Center", "state": "TX"}, 
+    {"name": "Nacogdoches", "state": "TX"}, {"name": "Palestine", "state": "TX"}, 
+    {"name": "Athens", "state": "TX"}, {"name": "Canton", "state": "TX"}, 
+    {"name": "Van", "state": "TX"}, {"name": "Grand Saline", "state": "TX"}, 
+    {"name": "Wills Point", "state": "TX"}, {"name": "Terrell", "state": "TX"}, 
+    {"name": "Forney", "state": "TX"}, {"name": "Rockwall", "state": "TX"}, 
+    {"name": "Royse City", "state": "TX"}, {"name": "Greenville", "state": "TX"}, 
+    {"name": "Commerce", "state": "TX"}, {"name": "Sulphur Bluff", "state": "TX"}, 
+    {"name": "Cooper", "state": "TX"}, {"name": "Bonham", "state": "TX"}, 
+    {"name": "Paris", "state": "TX"}, {"name": "Hugo", "state": "OK"}, 
+    {"name": "Idabel", "state": "OK"}, {"name": "Valliant", "state": "OK"}, 
+    {"name": "Antlers", "state": "OK"}, {"name": "Durant", "state": "OK"}, 
+    {"name": "Sherman", "state": "TX"}, {"name": "Denison", "state": "TX"}, 
+    {"name": "Pottsboro", "state": "TX"}, {"name": "Whitesboro", "state": "TX"}, 
+    {"name": "Gainesville", "state": "TX"}, {"name": "Minden", "state": "LA"}, 
+    {"name": "Bossier City", "state": "LA"}, {"name": "Haughton", "state": "LA"}, 
+    {"name": "Vivian", "state": "LA"}, {"name": "Springhill", "state": "LA"}, 
+    {"name": "Homer", "state": "LA"}, {"name": "Mansfield", "state": "LA"}, 
+    {"name": "Ashdown", "state": "AR"}, {"name": "De Queen", "state": "AR"}, 
+    {"name": "Nashville", "state": "AR"}, {"name": "Hope", "state": "AR"}, 
+    {"name": "Prescott", "state": "AR"}, {"name": "Magnolia", "state": "AR"}, 
+    {"name": "Clarksville", "state": "TX"}, {"name": "Lone Star", "state": "TX"}, 
+    {"name": "Atlanta", "state": "TX"}, {"name": "Linden", "state": "TX"}
 ]
 
 # 3. Create the output directory
