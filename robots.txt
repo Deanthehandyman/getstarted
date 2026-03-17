@@ -1,31 +1,20 @@
 # robots.txt for Dean's Handyman Service LLC
 # https://deanshandymanservice.me
-# Last updated: February 2026
+# Last updated: March 2026
 
 User-agent: *
 Allow: /
+Allow: /service-areas/
 
-# Block any non-public or temporary files (add more if you create them later)
+# Block any non-public or temporary files
 Disallow: /ideas.txt
 Disallow: /temp/
 Disallow: /private/
-Disallow: /*?*sort=   # optional: block URL params if you don't want them indexed
+Disallow: /*?*sort=
 
-# Prevent indexing of error pages or duplicates
+# Prevent indexing of error pages
 Disallow: /404.html
 Disallow: /500.html
 
-# Explicitly allow important directories/files (optional but good practice)
-Allow: /index.html
-Allow: /services.html
-Allow: /starlink-install.html
-Allow: /contact.html
-Allow: /gallery.html
-Allow: /blog.html
-Allow: /reviews.html
-
-# Point to your sitemap (use your real domain)
+# Point to your sitemap so Google finds all 1,700+ new pages instantly
 Sitemap: https://deanshandymanservice.me/sitemap.xml
-
-# Crawl-delay (optional – helps with polite crawling, especially useful for small sites)
-Crawl-delay: 10
