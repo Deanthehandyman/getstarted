@@ -822,3 +822,59 @@ with open("areas.html", "w", encoding="utf-8") as f:
     f.write(final_areas_html)
 
 print("Successfully updated areas.html directory!")
+# ==========================================
+# 8. AUTO-GENERATE THE SITEMAP (sitemap.xml)
+# ==========================================
+from datetime import datetime
+
+print("Generating sitemap.xml...")
+
+BASE_URL = "https://deanshandymanservice.me"
+now = datetime.now().strftime("%Y-%m-%d")
+
+sitemap_content = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+]
+
+# 1. Add your core website pages (Priority 1.0)
+core_pages = [
+    "", "about.html", "services.html", "starlink-install.html", 
+    "areas.html", "gallery.html", "blog.html", "faqs.html", 
+    "contact.html", "privacy.html", "reviews.html"
+]
+
+for page in core_pages:
+    sitemap_content.append(f"""  <url>
+    <loc>{BASE_URL}/{page}</loc>
+    <lastmod>{now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>""")
+
+# 2. Add all the newly generated service area pages (Priority 0.8)
+for service in services:
+    for city_data in cities:
+        city = city_data["name"]
+        state = city_data["state"]
+        
+        safe_service = service.lower().replace(" ", "-").replace("&", "and").replace(",", "")
+        safe_city = city.lower().replace(" ", "-")
+        safe_state = state.lower()
+        filename = f"{safe_service}-{safe_city}-{safe_state}.html"
+        
+        sitemap_content.append(f"""  <url>
+    <loc>{BASE_URL}/service-areas/{filename}</loc>
+    <lastmod>{now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+
+# Close the XML tag
+sitemap_content.append('</urlset>')
+
+# Write the sitemap file to the root directory
+with open("sitemap.xml", "w", encoding="utf-8") as f:
+    f.write("\n".join(sitemap_content))
+
+print("Successfully generated sitemap.xml!")
