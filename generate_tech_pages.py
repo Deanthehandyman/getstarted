@@ -48,7 +48,7 @@ cities = [
 output_dir = "service-areas"
 os.makedirs(output_dir, exist_ok=True)
 
-# 3. CONTENT POOLS FOR UNIQUE SEO/GEO/AEO GENERATION
+# 3. CONTENT POOLS
 title_templates = [
     "Expert Handyman & Tech Services in [CITY], [STATE] | Deans Handyman",
     "Top-Rated Handyman & Starlink Installer in [CITY] | Fast & Reliable",
@@ -89,7 +89,6 @@ bullet_pool = [
     "Backed by years of diverse construction and technical experience."
 ]
 
-# AEO (Answer Engine Optimization) FAQs
 faq_pool = [
     {"q": "Who installs Starlink in [CITY], [STATE]?", "a": "Deans Handyman Service LLC specializes in Starlink Gen 3 and Mini installations throughout [CITY] and the surrounding areas. We handle roof mounts, wire hiding, and mesh network setups."},
     {"q": "Do you offer mobile handyman services in [CITY]?", "a": "Yes! We operate a fully equipped mobile workshop and travel directly to properties in [CITY] to perform on-site repairs, fabrication, and tech installations."},
@@ -98,12 +97,11 @@ faq_pool = [
     {"q": "Can you help with smart home setup in [CITY]?", "a": "Absolutely. We install and configure smart home security cameras, smart thermostats, Ethernet cabling, and whole-home Wi-Fi networks in [CITY]."}
 ]
 
-# 4. Generate the dynamic dropdown list for the form
 dropdown_options = ""
 for s in services:
     dropdown_options += f'                                <option value="{s}">{s}</option>\n'
 
-# 5. Full HTML Template with new dynamic placeholders
+# 4. Full HTML Template
 html_template = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +122,7 @@ html_template = """<!DOCTYPE html>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="[META_TITLE]">
     <meta property="og:description" content="[META_DESCRIPTION]">
-    <meta property="og:image" content="https://deanshandymanservice.me/truck.jpg">
+    <meta property="og:image" content="../assets/hero-bg.jpg">
 
     <script type="application/ld+json">
     [SCHEMA_JSON]
@@ -174,7 +172,7 @@ html_template = """<!DOCTYPE html>
             .nav-links.active { right: 0; }
         }
 
-        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed; color: white; padding: 100px 0 80px; min-height: 85vh; display: flex; align-items: center; }
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../assets/hero-bg.jpg') center/cover no-repeat fixed; color: white; padding: 100px 0 80px; min-height: 85vh; display: flex; align-items: center; }
         .hero-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start; }
         .hero-text p { font-size: 1.2rem; font-weight: 400; margin-bottom: 2rem; color: #e2e8f0; }
         .hero-text ul { list-style: none; margin: 2rem 0; }
@@ -190,7 +188,12 @@ html_template = """<!DOCTYPE html>
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border 0.3s; }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,139,210,0.15); }
 
-        .faq-section { padding: 80px 0; background: white; }
+        /* GALLERY & CONTENT STYLES */
+        .local-section { padding: 80px 0; background: white; }
+        .local-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .gallery-img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
         .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
         .faq-card { background: var(--light); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary); }
         .faq-card h4 { font-size: 1.2rem; color: var(--dark); margin-bottom: 1rem; }
@@ -207,7 +210,7 @@ html_template = """<!DOCTYPE html>
 
         @media (max-width: 992px) {
             .hero { padding: 80px 0 60px; background-attachment: scroll; }
-            .hero-layout { grid-template-columns: 1fr; }
+            .hero-layout, .local-grid { grid-template-columns: 1fr; }
             .lead-card { position: relative; top: 0; }
             .mobile-fab { display: flex; }
         }
@@ -322,10 +325,32 @@ html_template = """<!DOCTYPE html>
             </div>
         </section>
         
-        <section class="faq-section">
+        <section class="local-section">
+            <div class="container local-grid">
+                <div data-aos="fade-right">
+                    <h2>Local Service in [CITY], [STATE]</h2>
+                    <p style="font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem;">We take pride in our work. Check out some of our recent technical installations and property upgrades. From hidden Starlink wires to custom ranch repairs, we treat your property like our own.</p>
+                    
+                    <iframe 
+                        width="100%" 
+                        height="250" 
+                        style="border:0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        src="https://maps.google.com/maps?q=[MAP_CITY],+[STATE]&t=&z=11&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+                
+                <div class="gallery-grid" data-aos="fade-left">
+                    <img src="../assets/work1.jpg" alt="Starlink Installation in [CITY]" class="gallery-img" onerror="this.src='https://i.imgur.com/KMsvpls.jpg'">
+                    <img src="../assets/work2.jpg" alt="Handyman Repairs in [CITY]" class="gallery-img" onerror="this.src='https://i.imgur.com/KMsvpls.jpg'">
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0; background: var(--light);">
             <div class="container">
-                <h2>Frequently Asked Questions in [CITY]</h2>
-                <p style="text-align: center; max-width: 600px; margin: 0 auto; color: var(--gray);">Common questions from homeowners and property managers in the [CITY] area regarding our technical and repair services.</p>
+                <h2 style="text-align: center;">Frequently Asked Questions in [CITY]</h2>
                 <div class="faq-grid">
                     [DYNAMIC_FAQS]
                 </div>
@@ -383,7 +408,8 @@ html_template = """<!DOCTYPE html>
             }
         });
 
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        // ASYNC/AWAIT ADDED HERE TO GUARANTEE PUSHBULLET FIRES BEFORE REDIRECT
+        document.getElementById('quoteForm').addEventListener('submit', async function(e) {
             e.preventDefault(); 
             const form = this;
             const btn = document.getElementById('submitBtn');
@@ -399,58 +425,55 @@ html_template = """<!DOCTYPE html>
 
             const noteBody = `🚨 NEW LEAD ([CITY] Hub Page)!\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nLocation: ${address}\nDetails: ${details}`;
 
-            fetch('https://api.pushbullet.com/v2/pushes', {
-                method: 'POST',
-                headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
-            })
-            .then(() => { triggerSuccessAndSubmit(form); })
-            .catch(() => { triggerSuccessAndSubmit(form); });
-        });
+            try {
+                // We use AWAIT so the browser pauses and finishes sending the text to you
+                await fetch('https://api.pushbullet.com/v2/pushes', {
+                    method: 'POST',
+                    headers: { 'Access-Token': PUSHBULLET_TOKEN, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'note', title: '🛠️ New Handyman Lead', body: noteBody })
+                });
+            } catch (error) {
+                console.error("Pushbullet failed, but form will still submit:", error);
+            }
 
-        function triggerSuccessAndSubmit(form) {
+            // ONLY AFTER the text is sent do we show the modal and submit the email form
             document.getElementById('successModal').style.display = 'flex';
             setTimeout(() => { form.submit(); }, 2000);
-        }
+        });
     </script>
 </body>
 </html>
 """
 
-# 6. Generate the Pages (1 PER CITY with UNIQUE Content)
+# 6. Generate the Pages
 for city_data in cities:
     city = city_data["name"]
     state = city_data["state"]
-    
-    # Use the city name to seed the randomizer so it picks the SAME unique layout for this city every time it builds
     random.seed(city)
     
     safe_city = city.lower().replace(" ", "-")
     safe_state = state.lower()
+    safe_map_city = city.replace(" ", "+") # Google Maps requires a plus sign for spaces
     filename = f"handyman-services-{safe_city}-{safe_state}.html"
     filepath = os.path.join(output_dir, filename)
     
-    # Select unique text pieces
     meta_title = random.choice(title_templates).replace("[CITY]", city).replace("[STATE]", state)
     meta_description = random.choice(desc_templates).replace("[CITY]", city).replace("[STATE]", state)
     hero_h1 = random.choice(h1_pool).replace("[CITY]", city).replace("[STATE]", state)
     hero_p = random.choice(hero_p_pool).replace("[CITY]", city).replace("[STATE]", state)
     
-    # Pick 3 random bullet points
     selected_bullets = random.sample(bullet_pool, 3)
     bullets_html = ""
     for bullet in selected_bullets:
         bullets_html += f"<li>{bullet.replace('[CITY]', city)}</li>\n"
         
-    # Pick 3 random services for the visual grid so they aren't always in the exact same order
     shuffled_services = services.copy()
     random.shuffle(shuffled_services)
     services_grid_html = '<div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">'
-    for s in shuffled_services[:12]: # Show top 12 randomly arranged services
+    for s in shuffled_services[:12]: 
         services_grid_html += f'<div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-weight: 500; font-size: 0.85rem;"><i class="fas fa-wrench" style="color: var(--accent); margin-right: 5px;"></i> {s}</div>'
     services_grid_html += '</div>'
     
-    # Pick 3 random FAQs for AEO optimization
     selected_faqs = random.sample(faq_pool, 3)
     faqs_html = ""
     faq_schema_elements = []
@@ -459,53 +482,18 @@ for city_data in cities:
         q = faq['q'].replace("[CITY]", city).replace("[STATE]", state)
         a = faq['a'].replace("[CITY]", city).replace("[STATE]", state)
         faqs_html += f'<div class="faq-card"><h4>{q}</h4><p>{a}</p></div>\n'
-        
-        faq_schema_elements.append({
-            "@type": "Question",
-            "name": q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": a
-            }
-        })
+        faq_schema_elements.append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}})
     
-    # AEO FAQ Schema Build
-    faq_schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faq_schema_elements
-    }
+    faq_schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_elements}
     faq_schema_json = json.dumps(faq_schema, indent=4)
     
-    # Create Advanced LocalBusiness Schema
     offers_list = [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": s}} for s in services]
-    schema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Deans Handyman Service LLC",
-        "telephone": "281-917-9914",
-        "areaServed": {"@type": "City", "name": city, "containedInPlace": {"@type": "State", "name": state}},
-        "makesOffer": offers_list
-    }
+    schema = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Deans Handyman Service LLC", "telephone": "281-917-9914", "areaServed": {"@type": "City", "name": city, "containedInPlace": {"@type": "State", "name": state}}, "makesOffer": offers_list}
     schema_json = json.dumps(schema, indent=4)
     
-    # String replacement
-    page_content = html_template.replace("[META_TITLE]", meta_title)
-    page_content = page_content.replace("[META_DESCRIPTION]", meta_description)
-    page_content = page_content.replace("[SCHEMA_JSON]", schema_json)
-    page_content = page_content.replace("[FAQ_SCHEMA_JSON]", faq_schema_json)
-    page_content = page_content.replace("[CITY]", city)
-    page_content = page_content.replace("[STATE]", state)
+    page_content = html_template.replace("[META_TITLE]", meta_title).replace("[META_DESCRIPTION]", meta_description).replace("[SCHEMA_JSON]", schema_json).replace("[FAQ_SCHEMA_JSON]", faq_schema_json).replace("[CITY]", city).replace("[STATE]", state).replace("[MAP_CITY]", safe_map_city).replace("[HERO_H1]", hero_h1).replace("[HERO_P]", hero_p).replace("[DYNAMIC_BULLETS]", bullets_html).replace("[SERVICES_GRID]", services_grid_html).replace("[DYNAMIC_FAQS]", faqs_html).replace("[DROPDOWN_OPTIONS]", dropdown_options)
     
-    page_content = page_content.replace("[HERO_H1]", hero_h1)
-    page_content = page_content.replace("[HERO_P]", hero_p)
-    page_content = page_content.replace("[DYNAMIC_BULLETS]", bullets_html)
-    page_content = page_content.replace("[SERVICES_GRID]", services_grid_html)
-    page_content = page_content.replace("[DYNAMIC_FAQS]", faqs_html)
-    page_content = page_content.replace("[DROPDOWN_OPTIONS]", dropdown_options)
-    
-    # Write to file
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(page_content)
 
-print(f"Successfully generated {len(cities)} highly unique City Hub pages in the '{output_dir}' folder.")
+print(f"Successfully generated {len(cities)} highly unique City Hub pages with Maps and Photo Support in the '{output_dir}' folder.")
