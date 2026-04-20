@@ -2,15 +2,16 @@ import os
 import random
 import json
 import hashlib
-import requests
+import urllib.request
+import urllib.parse
 
 # --- CONFIGURATION ---
-# Set this in GitHub Secrets as PUSHBULLET_TOKEN
+# Ensure PUSHBULLET_TOKEN is set in your GitHub Secrets
 PUSHBULLET_TOKEN = os.getenv("PUSHBULLET_TOKEN") 
 OUTPUT_DIR = "service-areas"
 MANIFEST_FILE = "page_manifest.json"
 
-# 1. Business Info (Dean's Handyman Service LLC)
+# 1. Business Info
 BUSINESS_NAME = "Deans Handyman Service LLC"
 PHONE = "281-917-9914"
 URL = "https://share.google/mbSD0mHW19fklhEiR"
@@ -25,12 +26,9 @@ services = [
 ]
 
 cities = [
-    {"name": "Pittsburg", "state": "TX"}, 
-    {"name": "Tyler", "state": "TX"}, 
-    {"name": "Longview", "state": "TX"}, 
-    {"name": "Texarkana", "state": "TX"},
-    {"name": "Mineola", "state": "TX"},
-    {"name": "Daingerfield", "state": "TX"}
+    {"name": "Pittsburg", "state": "TX"}, {"name": "Tyler", "state": "TX"}, 
+    {"name": "Longview", "state": "TX"}, {"name": "Texarkana", "state": "TX"},
+    {"name": "Mineola", "state": "TX"}, {"name": "Daingerfield", "state": "TX"}
 ]
 
 # 3. HTML Template
@@ -50,29 +48,15 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <header>
-        <h1>{service} in {city}</h1>
-    </header>
+    <header><h1>{service} in {city}</h1></header>
     <main>
-        <p>Looking for reliable <strong>{service}</strong> in {city}, {state}? {business} provides white-glove technical installations and handyman services for residential and business clients.</p>
-        
+        <p>Looking for <strong>{service}</strong> in {city}, {state}? {business} provides white-glove technical installations and handyman services.</p>
         <div class="cta">
-            <h2>Get Started Today</h2>
             <p>Call or Text: <strong>{phone}</strong></p>
-            <p>Visit us: <a href="{url}">Online Booking</a></p>
+            <p><a href="{url}">Book Online Now</a></p>
         </div>
-
-        <h3>Our Specialties include:</h3>
-        <ul>
-            <li>Starlink & High-Speed Satellite Internet Setup</li>
-            <li>Custom Wi-Fi Networking & Mesh Systems</li>
-            <li>Smart Home & Security Camera Integration</li>
-            <li>General Handyman Repairs & Fabrication</li>
-        </ul>
     </main>
-    <footer>
-        <p>&copy; 2024 {business} | Serving {city} and surrounding East Texas areas.</p>
-    </footer>
+    <footer><p>&copy; 2024 {business}</p></footer>
 </body>
 </html>
 """
@@ -81,29 +65,40 @@ def get_content_hash(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 def send_push_summary(new_count, updated_count, total):
+    """Sends summary using built-in urllib (No 'requests' needed)."""
     if not PUSHBULLET_TOKEN:
-        print("Pushbullet token not found. Notification skipped.")
+        print("Pushbullet token missing. Skipping alert.")
         return
 
-    summary = (
+    body_text = (
         f"🛠️ SEO Bot Report\n"
         f"----------------------\n"
-        f"🆕 New Cities: {new_count}\n"
+        f"🆕 New: {new_count}\n"
         f"🔄 Updated: {updated_count}\n"
-        f"📁 Total Pages: {total}\n"
-        f"----------------------\n"
-        f"Leads: Check FormSubmit/Sheets"
+        f"📁 Total: {total}\n"
+        f"----------------------"
     )
     
+    data = json.dumps({
+        "type": "note",
+        "title": "Site Update Complete",
+        "body": body_text
+    }).encode('utf-8')
+
+    req = urllib.request.Request(
+        "https://api.pushbullet.com/v2/pushes",
+        data=data,
+        headers={
+            "Access-Token": PUSHBULLET_TOKEN,
+            "Content-Type": "application/json"
+        }
+    )
+
     try:
-        r = requests.post(
-            "https://api.pushbullet.com/v2/pushes",
-            headers={"Access-Token": PUSHBULLET_TOKEN},
-            json={"type": "note", "title": "Site Update Complete", "body": summary}
-        )
-        r.raise_for_status()
+        with urllib.request.urlopen(req) as response:
+            print("Pushbullet notification sent.")
     except Exception as e:
-        print(f"Failed to send Pushbullet: {e}")
+        print(f"Failed to send notification: {e}")
 
 # --- EXECUTION ---
 def main():
@@ -120,37 +115,28 @@ def main():
 
     for city_data in cities:
         city, state = city_data["name"], city_data["state"]
-        # Select a primary service for this specific page
         random.seed(city) 
         primary_service = random.choice(services)
         
         filename = f"handyman-services-{city.lower().replace(' ', '-')}-{state.lower()}.html"
         filepath = os.path.join(OUTPUT_DIR, filename)
 
-        # Generate HTML
         content = HTML_TEMPLATE.format(
-            service=primary_service,
-            city=city,
-            state=state,
-            business=BUSINESS_NAME,
-            phone=PHONE,
-            url=URL
+            service=primary_service, city=city, state=state,
+            business=BUSINESS_NAME, phone=PHONE, url=URL
         )
 
         current_hash = get_content_hash(content)
         old_hash = manifest.get(filename)
 
         if old_hash != current_hash:
-            if old_hash is None:
-                new_pages += 1
-            else:
-                updated_pages += 1
+            if old_hash is None: new_pages += 1
+            else: updated_pages += 1
             
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(content)
             manifest[filename] = current_hash
 
-    # Save manifest and push report
     with open(MANIFEST_FILE, 'w') as f:
         json.dump(manifest, f, indent=4)
 
