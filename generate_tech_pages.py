@@ -5,100 +5,159 @@ import hashlib
 import requests
 
 # --- CONFIGURATION ---
-PUSHBULLET_TOKEN = os.getenv("PUSHBULLET_TOKEN") # Set this in GitHub Secrets or your env
+# Set this in GitHub Secrets as PUSHBULLET_TOKEN
+PUSHBULLET_TOKEN = os.getenv("PUSHBULLET_TOKEN") 
 OUTPUT_DIR = "service-areas"
 MANIFEST_FILE = "page_manifest.json"
 
-# 1. Services & Cities (Kept from your original script)
+# 1. Business Info (Dean's Handyman Service LLC)
+BUSINESS_NAME = "Deans Handyman Service LLC"
+PHONE = "281-917-9914"
+URL = "https://share.google/mbSD0mHW19fklhEiR"
+
+# 2. Service & City Data
 services = [
     "Starlink Installation", "Smart Home Setup", "Wi-Fi & Network Optimization",
-    "Security Camera Installation", "Ethernet Cabling", "Smart Home Consultation",
-    "TV Mounting Service", "Home Office Setup", "Remote Troubleshooting",
-    "Virtual Technical Support", "IKEA Assembly", "Amazon Assembly", 
-    "Moving Reassembly", "Handyman Services", "Box To Built", 
-    "Rural Home and Ranch Repairs", "RV Electrical Setup", 
-    "Custom Fabrication", "Furniture Assembly", "Property Maintenance", 
-    "Emergency Repairs", "Outdoor Lighting Installation", 
-    "Gutter Cleaning and Repair", "Deck and Fence Restoration", 
-    "Drywall and Paint Touch ups"
+    "Security Camera Installation", "Ethernet Cabling", "TV Mounting Service",
+    "Home Office Setup", "Remote Troubleshooting", "Virtual Technical Support",
+    "RV Electrical Setup", "Custom Fabrication", "Property Maintenance", 
+    "Emergency Repairs", "Outdoor Lighting Installation"
 ]
 
 cities = [
-    {"name": "Pittsburg", "state": "TX"}, {"name": "Tyler", "state": "TX"}, 
-    {"name": "Longview", "state": "TX"}, {"name": "Texarkana", "state": "TX"}
-    # ... rest of your cities list
+    {"name": "Pittsburg", "state": "TX"}, 
+    {"name": "Tyler", "state": "TX"}, 
+    {"name": "Longview", "state": "TX"}, 
+    {"name": "Texarkana", "state": "TX"},
+    {"name": "Mineola", "state": "TX"},
+    {"name": "Daingerfield", "state": "TX"}
 ]
 
-# (Content pools and html_template omitted for brevity, keep your existing ones here)
+# 3. HTML Template
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{service} in {city}, {state} | {business}</title>
+    <meta name="description" content="Professional {service} and technical support in {city}, {state}. Call {phone} today.">
+    <style>
+        body {{ font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: auto; padding: 20px; }}
+        header {{ background: #222; color: #fff; padding: 1rem; text-align: center; }}
+        .cta {{ background: #f4f4f4; padding: 20px; border-left: 5px solid #007bff; margin: 20px 0; }}
+        a {{ color: #007bff; }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{service} in {city}</h1>
+    </header>
+    <main>
+        <p>Looking for reliable <strong>{service}</strong> in {city}, {state}? {business} provides white-glove technical installations and handyman services for residential and business clients.</p>
+        
+        <div class="cta">
+            <h2>Get Started Today</h2>
+            <p>Call or Text: <strong>{phone}</strong></p>
+            <p>Visit us: <a href="{url}">Online Booking</a></p>
+        </div>
+
+        <h3>Our Specialties include:</h3>
+        <ul>
+            <li>Starlink & High-Speed Satellite Internet Setup</li>
+            <li>Custom Wi-Fi Networking & Mesh Systems</li>
+            <li>Smart Home & Security Camera Integration</li>
+            <li>General Handyman Repairs & Fabrication</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 {business} | Serving {city} and surrounding East Texas areas.</p>
+    </footer>
+</body>
+</html>
+"""
 
 def get_content_hash(content):
-    """Creates a unique fingerprint of the page content."""
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 def send_push_summary(new_count, updated_count, total):
-    """Sends a single summary to Pushbullet."""
     if not PUSHBULLET_TOKEN:
-        print("Pushbullet token not found. Skipping notification.")
+        print("Pushbullet token not found. Notification skipped.")
         return
 
     summary = (
-        f"🚀 SEO Update Complete\n"
+        f"🛠️ SEO Bot Report\n"
         f"----------------------\n"
-        f"🆕 New Pages: {new_count}\n"
+        f"🆕 New Cities: {new_count}\n"
         f"🔄 Updated: {updated_count}\n"
-        f"📁 Total Live: {total}\n"
+        f"📁 Total Pages: {total}\n"
         f"----------------------\n"
-        f"View changes at: https://github.com/Deanthehandyman/getstarted"
+        f"Leads: Check FormSubmit/Sheets"
     )
     
-    requests.post(
-        "https://api.pushbullet.com/v2/pushes",
-        headers={"Access-Token": PUSHBULLET_TOKEN},
-        json={"type": "note", "title": "🛠️ Site Sync Summary", "body": summary}
-    )
+    try:
+        r = requests.post(
+            "https://api.pushbullet.com/v2/pushes",
+            headers={"Access-Token": PUSHBULLET_TOKEN},
+            json={"type": "note", "title": "Site Update Complete", "body": summary}
+        )
+        r.raise_for_status()
+    except Exception as e:
+        print(f"Failed to send Pushbullet: {e}")
 
-# --- MAIN EXECUTION ---
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+# --- EXECUTION ---
+def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Load existing manifest
-if os.path.exists(MANIFEST_FILE):
-    with open(MANIFEST_FILE, 'r') as f:
-        manifest = json.load(f)
-else:
-    manifest = {}
+    if os.path.exists(MANIFEST_FILE):
+        with open(MANIFEST_FILE, 'r') as f:
+            manifest = json.load(f)
+    else:
+        manifest = {}
 
-new_pages = 0
-updated_pages = 0
+    new_pages = 0
+    updated_pages = 0
 
-for city_data in cities:
-    city, state = city_data["name"], city_data["state"]
-    random.seed(city) # Keep it consistent
+    for city_data in cities:
+        city, state = city_data["name"], city_data["state"]
+        # Select a primary service for this specific page
+        random.seed(city) 
+        primary_service = random.choice(services)
+        
+        filename = f"handyman-services-{city.lower().replace(' ', '-')}-{state.lower()}.html"
+        filepath = os.path.join(OUTPUT_DIR, filename)
+
+        # Generate HTML
+        content = HTML_TEMPLATE.format(
+            service=primary_service,
+            city=city,
+            state=state,
+            business=BUSINESS_NAME,
+            phone=PHONE,
+            url=URL
+        )
+
+        current_hash = get_content_hash(content)
+        old_hash = manifest.get(filename)
+
+        if old_hash != current_hash:
+            if old_hash is None:
+                new_pages += 1
+            else:
+                updated_pages += 1
+            
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(content)
+            manifest[filename] = current_hash
+
+    # Save manifest and push report
+    with open(MANIFEST_FILE, 'w') as f:
+        json.dump(manifest, f, indent=4)
+
+    if new_pages > 0 or updated_pages > 0:
+        send_push_summary(new_pages, updated_pages, len(manifest))
     
-    filename = f"handyman-services-{city.lower().replace(' ', '-')}-{state.lower()}.html"
-    filepath = os.path.join(OUTPUT_DIR, filename)
+    print(f"Process complete. New: {new_pages}, Updated: {updated_pages}")
 
-    # ... [Insert your existing logic to build 'page_content' here] ...
-    page_content = "Generated HTML here..." 
-
-    current_hash = get_content_hash(page_content)
-    old_hash = manifest.get(filename)
-
-    if old_hash is None:
-        new_pages += 1
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(page_content)
-        manifest[filename] = current_hash
-    elif old_hash != current_hash:
-        updated_pages += 1
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(page_content)
-        manifest[filename] = current_hash
-
-# Save updated manifest
-with open(MANIFEST_FILE, 'w') as f:
-    json.dump(manifest, f, indent=4)
-
-# Final Summary Push
-send_push_summary(new_pages, updated_pages, len(manifest))
-
-print(f"Done! New: {new_pages}, Updated: {updated_pages}")
+if __name__ == "__main__":
+    main()
