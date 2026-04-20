@@ -1,260 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2BSN968QN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2BSN968QN');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deans Handyman Service - Remote Tech Support</title>
-    <style>
-        :root {
-            --primary-color: #0056b3; /* A shade of blue */
-            --secondary-color: #e9ecef; /* Light grey */
-            --text-color: #343a40; /* Dark grey */
-            --white-color: #ffffff;
-            --accent-color: #28a745; /* Green for success/action */
-        }
+    
+    <title>Dean's Tech & Handyman Services | Starlink, Wi-Fi & Smart Home Expert</title>
+    <meta name="description" content="Expert tech and property solutions across TX, AR, LA, and OK. Specializing in professional Starlink Gen 3/Mini installations, custom Wi-Fi networking, and smart home setups.">
+    <meta name="keywords" content="Starlink installation, Wi-Fi network setup, smart home installation, tech handyman, network solutions, property maintenance, Dean's Handyman Service">
+    
+    <link rel="canonical" href="https://deanshandymanservice.me/" />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            font-size: 1.2em; /* Large base font size */
-        }
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deanshandymanservice.me/" />
+    <meta property="og:title" content="Dean's Handyman Service LLC | Starlink, Wi-Fi & Smart Home Expert">
+    <meta property="og:description" content="Your local expert for professional Starlink installations, custom Wi-Fi networking, and smart home security setups across the Ark-La-Tex.">
+    <meta property="og:image" content="https://deanshandymanservice.me/truck.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://deanshandymanservice.me/">
+    <meta name="twitter:title" content="Dean's Handyman Service LLC | Starlink, Wi-Fi & Smart Home Expert">
+    <meta name="twitter:description" content="Your local expert for professional Starlink installations, custom Wi-Fi networking, and smart home security setups across the Ark-La-Tex.">
+    <meta name="twitter:image" content="https://deanshandymanservice.me/truck.jpg">
 
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: var(--white-color);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    <meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+    <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+    <meta name="geo.position" content="32.9997;-94.9675">
+    <meta name="ICBM" content="32.9997, -94.9675">
 
-        header {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 20px 0;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Deans Handyman Service LLC",
+      "image": "https://i.imgur.com/KMsvpls.jpg",
+      "url": "https://deanshandymanservice.me/",
+      "telephone": "+12819179914",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pittsburg",
+        "addressRegion": "TX",
+        "postalCode": "75686",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.9997,
+        "longitude": -94.9675
+      },
+      "areaServed": ["Texas", "Arkansas", "Louisiana", "Oklahoma"],
+      "priceRange": "$$"
+    }
+    </script>
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em; /* Larger heading */
-        }
-
-        header .phone-number {
-            font-size: 1.8em; /* Very large phone number */
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        header .phone-number a {
-            color: var(--white-color);
-            text-decoration: none;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: var(--secondary-color);
-            border-radius: 0 0 8px 8px;
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.2em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white-color);
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.3em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #218838;
-        }
-
-        .section {
-            padding: 30px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .section:last-of-type {
-            border-bottom: none;
-        }
-
-        .section h3 {
-            font-size: 2em;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .service-card {
-            background-color: var(--white-color);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .service-card h4 {
-            font-size: 1.6em;
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-
-        .service-card p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: var(--text-color);
-            font-size: 1em;
-            margin-top: 20px;
-        }
-
-        footer .phone-number {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        footer .phone-number a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 15px;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
-
-            header .phone-number {
-                font-size: 1.5em;
-            }
-
-            .hero h2 {
-                font-size: 1.8em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .button {
-                padding: 12px 25px;
-                font-size: 1.1em;
-            }
-
-            .section h3 {
-                font-size: 1.7em;
-            }
-
-            .service-card h4 {
-                font-size: 1.4em;
-            }
-
-            .service-card p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Deans Handyman Service - Remote Tech Support</h1>
-            <p class="phone-number">Call Us Today: <a href="tel:+12819179914">(281) 917-9914</a></p>
-        </header>
 
-        <section class="hero">
-            <h2>Patient, Jargon-Free Tech Support for Seniors</h2>
-            <p>Helping you stay connected, safely and simply. Peace of mind for the whole family.</p>
-            <a href="tel:+12819179914" class="button">Call Us Today! (281) 917-9914</a>
-        </section>
-
-        <section class="section">
-            <h3>Our Core Services</h3>
-            <div class="service-card">
-                <h4>Digital House Call: One-Time Fix</h4>
-                <p>A friendly expert will patiently troubleshoot your internet, Wi-Fi, smart TV, or device issues. No fix, no fee. Just $45 flat rate.</p>
-                <a href="#" class="button">Get a Digital House Call</a>
-            </div>
-            <div class="service-card">
-                <h4>Peace of Mind Membership: Unlimited Support</h4>
-                <p>For just $25/month, enjoy unlimited scam checks and one monthly digital tune-up. Keep your devices running smoothly and stay safe online.</p>
-                <a href="#" class="button">Join the Membership</a>
-            </div>
-            <div class="service-card">
-                <h4>Cut the Cord: Simple Streaming Setup</h4>
-                <p>Tired of expensive cable bills? We'll help you switch to simple, affordable streaming on your Roku or Smart TV. Flat rate service.</p>
-                <a href="#" class="button">Cut the Cord Today</a>
-            </div>
-        </section>
-
-        <section class="section">
-            <h3>How It Works</h3>
-            <div class="service-card">
-                <h4>1. Call Us</h4>
-                <p>Reach out to us at <a href="tel:+12819179914">(281) 917-9914</a> to discuss your tech needs.</p>
-            </div>
-            <div class="service-card">
-                <h4>2. Pay Securely</h4>
-                <p>We'll provide a secure Square or PayPal link for your chosen service.</p>
-            </div>
-            <div class="service-card">
-                <h4>3. Schedule Your Session</h4>
-                <p>After payment, you'll be redirected to our Google Calendar to pick a convenient time.</p>
-            </div>
-            <div class="service-card">
-                <h4>4. Get Support</h4>
-                <p>Receive patient, jargon-free tech support via Google Meet, phone, or Windows Quick Assist.</p>
-            </div>
-        </section>
-
-        <!-- Testimonials Section (Optional, can be added later) -->
-        <!--
-        <section class="section">
-            <h3>What Our Clients Say</h3>
-            <div class="service-card">
-                <p>"Dean's team was incredibly patient and helped me set up my new smart TV without any fuss. Highly recommend!" - Satisfied Customer</p>
-            </div>
-        </section>
-        -->
-
-        <footer>
-            <p class="phone-number">Need Help? Call Us: <a href="tel:+12819179914">(281) 917-9914</a></p>
-            <p>&copy; 2026 Deans Handyman Service. All rights reserved.</p>
-        </footer>
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Project Details Sent!</h3>
+            <p style="color: var(--gray); font-size: 1.05rem;">Taking you to Dean's secure calendar to book your quick review call...</p>
+        </div>
     </div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service LLC Logo" class="logo-img">
+                <div class="logo-text">Dean's<br><span>Handyman Service LLC</span></div>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="starlink-install.html">Starlink</a>
+                <a href="areas.html">Service Areas</a>
+                <a href="gallery.html">Work</a>
+                <a href="blog.html">Blog</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="tel:2819179914" class="btn-pill"><i class="fas fa-phone-alt me-2"></i>(281) 917-9914</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Dean">📞</a>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-layout">
+                <div class="hero-text" data-aos="fade-right">
+                    <div style="background: rgba(34,197,94,0.2); color: var(--trust-green); padding: 0.5rem 1rem; border-radius: 50px; display: inline-block; font-weight: 700; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        ⭐ 5-Star Rated • Tech & Repair Specialist
+                    </div>
+                    <h1>Starlink, Wi-Fi & Smart Home Installs – Done Right</h1>
+                    <p>Your local tech specialist for reliable internet, networking, and smart devices across the Ark-La-Tex—backed by the industrial skills to handle heavy repairs.</p>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge">📡 Tech Specialist</div>
+                        <div class="trust-badge">🌐 Custom Networking</div>
+                        <div class="trust-badge">🛠️ Industrial Expertise</div>
+                    </div>
+
+                    <ul>
+                        <li>Starlink Gen 3, Mini & Custom Wi-Fi Network Solutions</li>
+                        <li>Smart Home Setups, Security Cameras & TV Mounting</li>
+                        <li>Electrical, Custom Fabrication & Heavy Handyman Repairs</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="contact.html" class="btn btn-accent" style="font-size: 1.2rem; padding: 1rem 2.5rem; margin-right: 1rem;">Get Free Quote</a>
+                        <a href="tel:2819179914" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem;">Call Dean</a>
+                    </div>
+                </div>
+
+                <div class="lead-card" id="contact" data-aos="fade-left">
+                    <h3 style="text-align: center; margin-bottom: 0.5rem;">Request a Free Quote</h3>
+                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">Fill this out and I'll text/call you to discuss.</p>
+                    
+                    <form id="quoteForm" action="https://formsubmit.co/deanshandymanservice1@gmail.com" method="POST" enctype="multipart/form-data">
+                        
+                        <input type="hidden" name="_subject" value="🚨 NEW VETTED LEAD (Home Page)">
+                        <input type="hidden" name="_next" value="https://calendar.app.google/wAGf72SYFC5io4nV9">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label for="client-name">Full Name</label>
+                            <input type="text" id="client-name" name="Client_Name" placeholder="First & Last Name" required>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="Phone_Number" placeholder="(555) 555-5555" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="Email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="Service_Requested" required>
+                                <option value="">Select one...</option>
+                                <option>Starlink Installation</option>
+                                <option>Wi-Fi / Network Setup</option>
+                                <option>Smart Home / Security Cameras</option>
+                                <option>Electrical / Wiring</option>
+                                <option>Handyman / General Repair</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Project Location</label>
+                            <input type="text" id="address" name="Location" placeholder="City & State" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">Project Details</label>
+                            <textarea id="details" name="Project_Details" rows="3" placeholder="What needs fixing, building, or installing?" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photo">Upload Photo (Optional)</label>
+                            <input type="file" id="photo" name="attachment" class="file-upload" accept="image/*">
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn btn-accent" style="width:100%; font-size: 1.2rem;">Check Availability & Get Quote</button>
+                        
+                        <p class="fee-disclosure">Transparent Pricing: All quotes reflect a cash/check discount. A 3% processing fee is automatically applied to all credit card transactions.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align: center;">Our Core Services</h2>
+                <p style="text-align: center; color: var(--gray); font-size: 1.2rem; margin-bottom: 3rem;">From specialized Starlink and networking installs to everyday home fixes – professional, on-site, and ready for rural properties.</p>
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="icon-box"><i class="fas fa-satellite-dish"></i></div>
+                        <h3>Starlink & Wi-Fi Setup</h3>
+                        <p>Gen 3 & Mini installations, professional mounting, cable routing, network optimization, and smart home integration.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                        <h3>Electrical Repairs</h3>
+                        <p>Troubleshooting, outlet/switch installs, lighting fixtures, and minor wiring. Safe and code-compliant solutions.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fas fa-tools"></i></div>
+                        <h3>Skilled Handyman</h3>
+                        <p>Industrial-grade repairs, custom fabrication, furniture assembly, and property maintenance for homes and ranches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Dean's Handyman Service LLC</h4>
+                <p>Pittsburg, TX 75686<br>Serving a 200-mile radius in TX, AR, LA, OK<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary); text-decoration: none;">(281) 917-9914</a><br>
+                Email: <a href="mailto:deanshandymanservice1@gmail.com" style="color: var(--primary); text-decoration: none;">deanshandymanservice1@gmail.com</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
