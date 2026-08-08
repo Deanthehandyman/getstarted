@@ -1,20 +1,45 @@
 # robots.txt for Dean's Handyman Service LLC
 # https://deanshandymanservice.me
-# Last updated: March 2026
+# Last updated: August 2026
 
 User-agent: *
-Allow: /
-Allow: /service-areas/
+# (Note: We removed the "Allow: /" lines because search engines automatically assume everything is allowed unless you tell them otherwise. This keeps the file cleaner!)
 
-# Block any non-public or temporary files
+# Block non-public, temporary, or duplicate files
 Disallow: /ideas.txt
 Disallow: /temp/
 Disallow: /private/
 Disallow: /*?*sort=
 
-# Prevent indexing of error pages
+# Prevent indexing of error pages 
 Disallow: /404.html
 Disallow: /500.html
 
+# --------------------------------------------------------
+# BLOCK AI SCRAPERS (Highly Recommended)
+# --------------------------------------------------------
+# Protecting your intellectual property—whether that's your 
+# business website copy, custom service areas, or excerpts 
+# from your written books—is a smart move today. These lines 
+# stop AI companies from scraping your hard work for free.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# --------------------------------------------------------
+# SITEMAP
 # Point to your sitemap so Google finds all 1,700+ new pages instantly
+# --------------------------------------------------------
 Sitemap: https://deanshandymanservice.me/sitemap.xml
