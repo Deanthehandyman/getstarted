@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyless Entry for Lake House Rentals | Dean's Handyman Service LLC</title>
+<meta name="description" content="Electronic deadbolt installation and guest-code setup for lake house rentals and managed properties across East Texas, Arkansas, Louisiana & Oklahoma. Book online today.">
+<link rel="canonical" href="https://deanshandymanservice.me/smart-home-install.html">
+<meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
+<meta name="geo.position" content="32.9997;-94.9675">
+<meta name="geo.region" content="US-TX;US-AR;US-LA;US-OK">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keyless Entry for Lake House Rentals | Dean's Handyman Service LLC">
+<meta property="og:description" content="Electronic deadbolt installation and guest-code setup for lake house rentals and managed properties across East Texas, Arkansas, Louisiana & Oklahoma. Book online today.">
+<meta property="og:url" content="https://deanshandymanservice.me/smart-home-install.html">
+<meta property="og:image" content="https://deanshandymanservice.me/truck.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Dean's Handyman Service LLC — Landing Page System
+   Tokens
+   --------
+   Night Sky Indigo  #1B2A4A  (header / hero surface)
+   Signal Blue       #2F6FED  (primary action, links)
+   Sawdust Cream     #F6F1E7  (page background)
+   Rust Copper       #C1622D  (secondary accent, highlights)
+   Charcoal Timber   #2B2620  (body text)
+   Pine Green        #35513B  (trust / service-area accent)
+*/
+
+:root{
+  --indigo:#1B2A4A;
+  --indigo-deep:#121D33;
+  --indigo-tint:#E9EFFC;
+  --blue:#2F6FED;
+  --cream:#F6F1E7;
+  --cream-dim:#EDE6D6;
+  --copper:#C1622D;
+  --copper-tint:#F7E8DD;
+  --charcoal:#2B2620;
+  --pine:#35513B;
+  --pine-tint:#E8F0E6;
+  --white:#FFFFFF;
+  --radius:10px;
+  --max:1080px;
+  --display: "Space Grotesk", "Arial Narrow", sans-serif;
+  --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--body);
+  color:var(--charcoal);
+  background:var(--cream);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0 0 .5em;letter-spacing:-0.01em;}
+p{margin:0 0 1em;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+@media(prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}
+  .reveal{opacity:1 !important;transform:none !important;}
+}
+
+/* Top bar */
+.topbar{
+  background:var(--indigo-deep);
+  color:var(--cream);
+  font-family:var(--mono);
+  font-size:13px;
+  animation:slideDown .5s ease both;
+}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 20px;flex-wrap:wrap;gap:6px;}
+.topbar a{color:var(--cream);text-decoration:none;}
+.topbar a:hover{color:#fff;text-decoration:underline;}
+
+/* Header / Hero */
+header.hero{
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(47,111,237,0.38), transparent 60%),
+    radial-gradient(700px 400px at -10% 110%, rgba(193,98,45,0.18), transparent 55%),
+    linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
+  background-size:160% 160%, 160% 160%, 100% 100%;
+  animation:heroDrift 18s ease-in-out infinite alternate;
+  color:var(--cream);
+  padding:44px 0 56px;
+  overflow:hidden;
+}
+@keyframes heroDrift{
+  0%{background-position:0% 0%, 0% 100%, 0 0;}
+  100%{background-position:30% 20%, 20% 80%, 0 0;}
+}
+@keyframes slideDown{from{opacity:0;transform:translateY(-100%);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero .eyebrow{animation:fadeInUp .65s ease .05s both;}
+.hero h1{animation:fadeInUp .65s ease .14s both;}
+.hero .sub{animation:fadeInUp .65s ease .23s both;}
+.hero .cta-row{animation:fadeInUp .65s ease .32s both;}
+.hero .trust-row{animation:fadeInUp .65s ease .41s both;}
+.brand{animation:fadeInUp .5s ease both;}
+.brand{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-bottom:34px;flex-wrap:wrap;
+}
+.brand .logo{
+  font-family:var(--display);font-weight:700;font-size:19px;color:#fff;text-decoration:none;
+  display:flex;align-items:center;gap:10px;
+}
+.brand .logo .mark{
+  display:inline-flex;gap:3px;align-items:flex-end;height:18px;
+}
+.brand .logo .mark span{
+  width:4px;background:var(--blue);display:block;border-radius:1px;
+  animation:rise 1.8s ease-in-out infinite;
+}
+.brand .logo .mark span:nth-child(1){height:6px;animation-delay:0s;}
+.brand .logo .mark span:nth-child(2){height:11px;animation-delay:.15s;}
+.brand .logo .mark span:nth-child(3){height:16px;animation-delay:.3s;}
+.brand .logo .mark span:nth-child(4){height:18px;background:var(--copper);animation-delay:.45s;}
+@keyframes rise{0%,100%{opacity:.55;}50%{opacity:1;}}
+.brand .callnow{
+  font-family:var(--mono);color:var(--cream);text-decoration:none;font-size:14px;
+  border:1px solid rgba(246,241,231,0.35);padding:8px 14px;border-radius:100px;
+}
+.brand .callnow:hover{border-color:#fff;}
+
+.eyebrow{
+  font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--blue);background:rgba(47,111,237,0.12);border:1px solid rgba(47,111,237,0.4);
+  display:inline-block;padding:5px 12px;border-radius:100px;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(30px,4.6vw,48px);color:#fff;max-width:16ch;}
+.hero .sub{font-size:18px;color:#DCE3F2;max-width:56ch;margin-bottom:26px;}
+
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.btn{
+  font-family:var(--body);font-weight:700;font-size:15px;
+  padding:14px 22px;border-radius:8px;text-decoration:none;display:inline-block;
+  border:2px solid transparent;
+}
+.btn-primary{background:var(--copper);color:#fff;}
+.btn-primary:hover{background:#A8531F;}
+.btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);}
+.btn-secondary:hover{border-color:#fff;}
+
+.trust-row{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:13px;color:#C9D2E8;}
+.trust-row strong{color:#fff;font-family:var(--body);}
+
+/* Signal bars signature — reception strength meter */
+.signal{display:inline-flex;align-items:flex-end;gap:3px;height:14px;margin-right:8px;vertical-align:middle;}
+.signal span{width:4px;background:var(--blue);border-radius:1px;}
+.signal span:nth-child(1){height:30%;}
+.signal span:nth-child(2){height:55%;}
+.signal span:nth-child(3){height:75%;}
+.signal span:nth-child(4){height:100%;}
+
+/* Sections */
+section{padding:60px 0;}
+.section-band{position:relative;}
+.section-band.band-white{background:var(--white);}
+.section-band.band-blue{background:var(--indigo-tint);}
+.section-band.band-pine{background:var(--pine-tint);}
+.section-band.band-copper{background:var(--copper-tint);}
+.section-head{max-width:60ch;margin-bottom:34px;}
+.section-head .eyebrow{background:rgba(53,81,59,0.1);border-color:rgba(53,81,59,0.35);color:var(--pine);}
+.section-head h2{font-size:clamp(24px,3.4vw,34px);color:var(--indigo-deep);}
+
+/* Service grid / feature cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.card{
+  background:var(--white);border:1px solid var(--cream-dim);border-radius:var(--radius);
+  padding:24px;
+  transition:transform .28s cubic-bezier(.2,.7,.3,1), box-shadow .28s ease, border-color .28s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 30px rgba(27,42,74,0.14);
+  border-color:rgba(47,111,237,0.35);
+}
+.card h3{font-size:18px;color:var(--indigo-deep);}
+.card p{font-size:15px;color:#4a4438;margin-bottom:0;}
+.card .tag{
+  font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--copper);display:block;margin-bottom:8px;
+}
+.quote-card{display:flex;flex-direction:column;gap:14px;}
+.quote-card .quote-text{
+  font-family:var(--display);font-weight:500;font-size:16px;font-style:italic;
+  color:var(--indigo-deep);margin:0;line-height:1.5;
+}
+.quote-card .quote-text::before{content:"\201C";}
+.quote-card .quote-text::after{content:"\201D";}
+.quote-card .quote-who{
+  font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--pine);
+}
+
+/* Area band */
+.area-band{
+  background:var(--pine);color:#EAF0E7;
+}
+.area-band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:26px 20px;}
+.area-band .towns{font-family:var(--mono);font-size:14px;color:#D3E0D0;}
+.area-band strong{color:#fff;font-family:var(--body);}
+
+/* Steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.steps li{
+  display:flex;gap:16px;align-items:flex-start;background:var(--white);
+  border:1px solid var(--cream-dim);border-radius:var(--radius);padding:18px 20px;
+}
+.steps .num{
+  font-family:var(--mono);font-weight:700;color:var(--blue);font-size:14px;
+  border:1px solid var(--blue);border-radius:100px;min-width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.steps h3{font-size:16px;margin-bottom:4px;}
+.steps p{font-size:14px;color:#4a4438;margin-bottom:0;}
+
+/* FAQ */
+.faq details{
+  background:var(--white);border:1px solid var(--cream-dim);border-radius:var(--radius);
+  padding:16px 20px;margin-bottom:12px;
+}
+.faq summary{
+  font-family:var(--display);font-weight:700;font-size:16px;cursor:pointer;color:var(--indigo-deep);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";font-size:20px;color:var(--copper);}
+.faq details[open] summary::after{content:"–";}
+.faq p{margin-top:10px;font-size:15px;color:#4a4438;}
+
+/* Final CTA */
+.final-cta{
+  background:linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);color:#fff;text-align:center;
+}
+.final-cta h2{color:#fff;font-size:clamp(24px,3.6vw,32px);}
+.final-cta .sub{color:#DCE3F2;max-width:52ch;margin:0 auto 26px;}
+.final-cta .cta-row{justify-content:center;}
+
+/* Footer */
+footer{background:var(--indigo-deep);color:#B9C2D8;font-size:13px;padding:34px 0;}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+footer a{color:#DCE3F2;text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+footer .pay{font-family:var(--mono);font-size:12px;color:#8D98B5;margin-top:6px;}
+
+/* Scroll reveal system */
+.reveal{
+  opacity:0;transform:translateY(26px);
+  transition:opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.grid .card.reveal{transform:translateY(26px) scale(.94);}
+.grid .card.reveal.in-view{transform:translateY(0) scale(1);}
+.grid .card:nth-child(1).reveal{transition-delay:.02s;}
+.grid .card:nth-child(2).reveal{transition-delay:.09s;}
+.grid .card:nth-child(3).reveal{transition-delay:.16s;}
+.grid .card:nth-child(4).reveal{transition-delay:.23s;}
+.grid .card:nth-child(5).reveal{transition-delay:.30s;}
+.grid .card:nth-child(6).reveal{transition-delay:.37s;}
+.steps li:nth-child(1).reveal{transition-delay:.02s;}
+.steps li:nth-child(2).reveal{transition-delay:.1s;}
+.steps li:nth-child(3).reveal{transition-delay:.18s;}
+.steps li:nth-child(4).reveal{transition-delay:.26s;}
+.faq details:nth-child(1).reveal{transition-delay:.02s;}
+.faq details:nth-child(2).reveal{transition-delay:.08s;}
+.faq details:nth-child(3).reveal{transition-delay:.14s;}
+.faq details:nth-child(4).reveal{transition-delay:.2s;}
+.area-band.reveal{opacity:0;transform:translateX(-24px);transition:opacity .6s ease, transform .6s ease;}
+.area-band.reveal.in-view{opacity:1;transform:translateX(0);}
+
+/* Button micro-interaction */
+.btn{transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(193,98,45,0.35);}
+.btn-secondary:hover{transform:translateY(-2px);}
+.btn:active{transform:translateY(0);}
+
+/* Steps + FAQ hover */
+.steps li{transition:box-shadow .25s ease, transform .25s ease;}
+.steps li:hover{box-shadow:0 10px 20px rgba(27,42,74,0.08);transform:translateY(-2px);}
+.faq details{transition:box-shadow .25s ease, border-color .25s ease;}
+.faq details[open]{box-shadow:0 10px 24px rgba(27,42,74,0.1);border-color:rgba(47,111,237,0.3);}
+
+@media(max-width:640px){
+  .brand{padding-bottom:22px;}
+  .trust-row{flex-direction:column;gap:8px;}
+  .area-band .wrap{flex-direction:column;align-items:flex-start;}
+  footer .wrap{flex-direction:column;}
+}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://deanshandymanservice.me/smart-home-install.html#business",
+      "name": "Dean's Handyman Service LLC",
+      "image": "https://deanshandymanservice.me/truck.jpg",
+      "telephone": "+12819179914",
+      "email": "deanshandymanservice1@gmail.com",
+      "url": "https://deanshandymanservice.me/smart-home-install.html",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pittsburg",
+        "addressRegion": "TX",
+        "postalCode": "75686",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.9997,
+        "longitude": -94.9675
+      },
+      "areaServed": [
+        "Texas",
+        "Arkansas",
+        "Louisiana",
+        "Oklahoma"
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Smart Home Installation",
+      "provider": {
+        "@id": "https://deanshandymanservice.me/smart-home-install.html#business"
+      },
+      "areaServed": "Ark-La-Tex region",
+      "name": "Keyless Entry for Lake House Rentals | Dean's Handyman Service LLC",
+      "description": "Electronic deadbolt installation and guest-code setup for lake house rentals and managed properties across East Texas, Arkansas, Louisiana & Oklahoma. Book online today."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you install keyless locks for my rental property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We install and program electronic deadbolts for lake house rentals and managed properties, including setting up guest codes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you mount TVs with the cables hidden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We locate studs, mount the TV level and secure, and route cables inside the wall for a clean look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of furniture or equipment can you assemble?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beds, shelving, desks, patio furniture, and fitness equipment are all common flat-rate assembly jobs for us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer a warranty on smart home installs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If workmanship fails within 30 days, we come back and fix it at no charge."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>&#9733; 5-Star Rated &middot; Licensed &amp; Insured &middot; Serving TX &middot; AR &middot; LA &middot; OK</span>
+    <a href="tel:2819179914">Call/Text (281) 917-9914</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <a class="logo" href="https://deanshandymanservice.me">
+        <span class="mark"><span></span><span></span><span></span><span></span></span>
+        Dean's Handyman Service LLC
+      </a>
+      <a class="callnow" href="tel:2819179914">&#9742; (281) 917-9914</a>
+    </div>
+    <span class="eyebrow"><span class="signal"><span></span><span></span><span></span><span></span></span>Rental &amp; Lake House Specialist</span>
+    <h1>Keyless Entry Installation for Rentals &amp; Lake Houses</h1>
+    <p class="sub">Electronic deadbolt installation and guest-code programming for lake house rentals and managed properties &mdash; plus TV mounting, smart cameras, and flat-rate assembly while we're on-site.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://deanshandymanservice.square.site/contact-us">Contact Us — Free Quote</a>
+      <a class="btn btn-secondary" href="tel:2819179914">Call or Text (281) 917-9914</a>
+    </div>
+    <div class="trust-row"><span><strong>5-Star Rated</strong></span><span><strong>Lake House Rental Specialist</strong></span><span><strong>Flat-Rate Assembly</strong></span></div>
+  </div>
+</header>
+
+<div class="area-band reveal">
+  <div class="wrap">
+    <div><strong>Mobile service, no shop visit required.</strong> Based in Pittsburg, TX &mdash; serving a 200-mile radius.</div>
+    <div class="towns">Pittsburg &middot; Mt Pleasant &middot; Tyler &middot; Longview &middot; Texarkana &middot; Shreveport &middot; Broken Bow &middot; Lake Bob Sandlin</div>
+  </div>
+</div>
+
+<section class="section-band band-pine">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Real Customer Reviews</span>
+      <h2>What Customers Are Saying</h2>
+      <p>Verified feedback from real jobs across the Ark-La-Tex. <a href="https://www.yelp.com/biz/deans-handyman-service-pittsburg-3" style="color:var(--pine);text-decoration:underline;font-weight:600">See more reviews on Yelp &rarr;</a></p>
+    </div>
+    <div class="grid"><div class="card reveal quote-card"><p class="quote-text">Dean came all the way out to Broken Bow for our cabin. The Starlink install is invisible &mdash; no wires showing anywhere. Worth every penny.</p><span class="quote-who">Cabin Owner &middot; Broken Bow, OK</span></div><div class="card reveal quote-card"><p class="quote-text">I had a mess of electrical in my RV. Dean fixed what three other &lsquo;pros&rsquo; couldn&rsquo;t figure out. He is extremely technical and knows his stuff.</p><span class="quote-who">RV Owner &middot; Ark-La-Tex</span></div><div class="card reveal quote-card"><p class="quote-text">Professional work. I needed a custom gate bracket for my shop in Gilmer. Dean handled it perfectly. Solid work.</p><span class="quote-who">Shop Owner &middot; Gilmer, TX</span></div></div>
+  </div>
+</section>
+
+<section class="section-band band-blue" style="padding:32px 0">
+  <div class="wrap" style="text-align:center">
+    <p style="margin:0;font-size:15px;color:var(--indigo-deep)">
+      Ready to book? Visit our full <a href="https://deanshandymanservice.me/service-smart-home.html" style="color:var(--blue);font-weight:700;text-decoration:underline">Smart Home &amp; Access</a> page on our main site for complete details and booking.
+    </p>
+  </div>
+</section>
+
+<section class="section-band band-white">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What's Included</span>
+      <h2>Smart Home Setup Without the Guesswork</h2>
+      <p>From keyless entry for a short-term rental to a properly mounted TV with cables you can't see, done cleanly and configured before we leave.</p>
+    </div>
+    <div class="grid"><div class="card reveal"><span class="tag">Keyless Entry</span><h3>Electronic Deadbolt Installation</h3><p>Professional installation and code setup for keyless deadbolts &mdash; ideal for lake house rentals and properties you manage remotely.</p></div><div class="card reveal"><span class="tag">TV Mounting</span><h3>TV Mounting with Hidden Cables</h3><p>Studs located, mount leveled, and cables run inside the wall so all you see is the screen.</p></div><div class="card reveal"><span class="tag">Home Automation</span><h3>Smart Plugs, Cameras &amp; Sensors</h3><p>Setup and configuration of smart cameras, doorbells, plugs, and sensors tied into one app you actually understand.</p></div><div class="card reveal"><span class="tag">Assembly</span><h3>Furniture &amp; Equipment Assembly</h3><p>Flat-rate assembly for beds, shelving, patio furniture, and fitness equipment &mdash; done right, no leftover screws.</p></div><div class="card reveal"><span class="tag">Networking</span><h3>Wi-Fi Coverage for Smart Devices</h3><p>Making sure every smart device actually has a reliable signal to talk to, not just the ones near the router.</p></div><div class="card reveal"><span class="tag">Rentals</span><h3>Property Manager &amp; Rental Turnovers</h3><p>Fast turnaround for property managers prepping a rental between guests or tenants.</p></div></div>
+  </div>
+</section>
+
+<section class="section-band band-blue">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>Getting Your Home Smarter</h2>
+      <p>A tight, predictable process whether it's one deadbolt or a full room of devices.</p>
+    </div>
+    <ul class="steps"><li class="reveal"><span class="num">1</span><div><h3>Tell Us What You Need</h3><p>Book online or call/text with the devices you have or want installed.</p></div></li><li class="reveal"><span class="num">2</span><div><h3>Install &amp; Configure</h3><p>Hardware mounted and wired cleanly, apps and codes configured on-site.</p></div></li><li class="reveal"><span class="num">3</span><div><h3>Test Together</h3><p>We walk through the app and access codes with you before we leave.</p></div></li><li class="reveal"><span class="num">4</span><div><h3>Support After</h3><p>If something's not right within 30 days, we come back and fix it for free.</p></div></li></ul>
+  </div>
+</section>
+
+<section class="faq section-band band-copper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <details class="reveal"><summary>Can you install keyless locks for my rental property?</summary><p>Yes. We install and program electronic deadbolts for lake house rentals and managed properties, including setting up guest codes.</p></details><details class="reveal"><summary>Do you mount TVs with the cables hidden?</summary><p>Yes. We locate studs, mount the TV level and secure, and route cables inside the wall for a clean look.</p></details><details class="reveal"><summary>What kind of furniture or equipment can you assemble?</summary><p>Beds, shelving, desks, patio furniture, and fitness equipment are all common flat-rate assembly jobs for us.</p></details><details class="reveal"><summary>Do you offer a warranty on smart home installs?</summary><p>Yes. If workmanship fails within 30 days, we come back and fix it at no charge.</p></details>
+  </div>
+</section>
+
+<section class="section-band band-white">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Other Services</span>
+      <h2>You Might Also Need</h2>
+    </div>
+    <div class="grid"><a class="card reveal" style="text-decoration:none;padding:16px 20px" href="starlink-install.html"><h3 style="font-size:15px;margin:0">Starlink Installation &amp; Rural Wi-Fi</h3></a><a class="card reveal" style="text-decoration:none;padding:16px 20px" href="service-smart-home.html"><h3 style="font-size:15px;margin:0">Smart Locks, TV Mounting &amp; Automation</h3></a><a class="card reveal" style="text-decoration:none;padding:16px 20px" href="bath-kitchen-refresh.html"><h3 style="font-size:15px;margin:0">Recaulking &amp; Fixture Upgrades</h3></a><a class="card reveal" style="text-decoration:none;padding:16px 20px" href="exterior-repair.html"><h3 style="font-size:15px;margin:0">Fascia Repair &amp; Weatherproofing</h3></a><a class="card reveal" style="text-decoration:none;padding:16px 20px" href="service-site-assessments.html"><h3 style="font-size:15px;margin:0">Independent Property Reports</h3></a></div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Ready to Make Your Home (or Rental) Smarter?</h2>
+    <p class="sub">Book online in a couple of minutes, or call/text if you'd rather talk it through first.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://deanshandymanservice.square.site/contact-us">Contact Us — Free Quote</a>
+      <a class="btn btn-secondary" href="tel:2819179914">Call or Text (281) 917-9914</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div><strong style="color:#fff">Dean's Handyman Service LLC</strong></div>
+      <div>Pittsburg, Texas &middot; Mobile service across TX, AR, LA &amp; OK</div>
+      <div class="pay">Cash &middot; Check &middot; Zelle &middot; Cash App &middot; Venmo &middot; PayPal</div>
+    </div>
+    <div>
+      <div><a href="tel:2819179914">(281) 917-9914</a></div>
+      <div><a href="mailto:deanshandymanservice1@gmail.com">deanshandymanservice1@gmail.com</a></div>
+      <div><a href="https://deanshandymanservice.me">deanshandymanservice.me</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    items.forEach(function (el) { obs.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in-view'); });
+  }
+});
+
+</script>
+</body>
+</html>
