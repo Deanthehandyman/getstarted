@@ -90,22 +90,175 @@
 
     <section class="gallery-section">
         <div class="container">
-            <div class="widget-container" data-aos="fade-up">
-                <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-                <div class="pa-gallery-player-widget" 
-                     style="width:100%; height:600px; display:block;" 
-                     data-link="https://photos.app.goo.gl/ihv1j4HSQZGuD6wD9" 
-                     data-title="Dean's Handyman Projects · 2024–2026" 
-                     data-description="Real work photos – tap or click to enlarge">
-                </div>
+            <p class="gallery-intro" data-aos="fade-up">Real photos from real jobs across Texas, Arkansas, Louisiana, and Oklahoma. Tap any photo to enlarge it.</p>
+            <div class="filter-chips" data-aos="fade-up">
+<button class="chip active" data-filter="all" type="button">All</button>
+                <button class="chip" data-filter="On the Job" type="button">On the Job</button>
+                <button class="chip" data-filter="Electrical" type="button">Electrical</button>
+                <button class="chip" data-filter="Starlink" type="button">Starlink</button>
+                <button class="chip" data-filter="Network &amp; Wi-Fi" type="button">Network &amp; Wi-Fi</button>
+                <button class="chip" data-filter="Outdoor" type="button">Outdoor</button>
+                <button class="chip" data-filter="Interior" type="button">Interior</button>
+                <button class="chip" data-filter="Smart Home" type="button">Smart Home</button>
+            </div>
+            <div class="photo-grid" id="photo-grid" data-aos="fade-up">
+                <figure class="photo-card" data-cat="On the Job" data-full="https://files.catbox.moe/vfd0bb.jpg" data-caption="Work truck and RV on site — mobile service across the Ark-La-Tex">
+                    <img src="https://files.catbox.moe/vfd0bb.jpg" alt="Work truck and RV on site — mobile service across the Ark-La-Tex" loading="lazy">
+                    <figcaption>Work truck and RV on site — mobile service across the Ark-La-Tex</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Electrical" data-full="https://files.catbox.moe/91y3w8.jpg" data-caption="Porch ceiling fan installation">
+                    <img src="https://files.catbox.moe/91y3w8.jpg" alt="Porch ceiling fan installation" loading="lazy">
+                    <figcaption>Porch ceiling fan installation</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/163kzl.jpg" data-caption="Starlink dish on a roof mount">
+                    <img src="https://files.catbox.moe/163kzl.jpg" alt="Starlink dish on a roof mount" loading="lazy">
+                    <figcaption>Starlink dish on a roof mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/v8asls.jpg" data-caption="Starlink install with the dish on the roof peak">
+                    <img src="https://files.catbox.moe/v8asls.jpg" alt="Starlink install with the dish on the roof peak" loading="lazy">
+                    <figcaption>Starlink install with the dish on the roof peak</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Network &amp; Wi-Fi" data-full="https://files.catbox.moe/8up2fl.jpg" data-caption="Clean cable routing through an interior wall">
+                    <img src="https://files.catbox.moe/8up2fl.jpg" alt="Clean cable routing through an interior wall" loading="lazy">
+                    <figcaption>Clean cable routing through an interior wall</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/1kexya.jpg" data-caption="Starlink router mounted cleanly indoors">
+                    <img src="https://files.catbox.moe/1kexya.jpg" alt="Starlink router mounted cleanly indoors" loading="lazy">
+                    <figcaption>Starlink router mounted cleanly indoors</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/3hp7y5.jpg" data-caption="Weatherproof exterior cable penetration">
+                    <img src="https://files.catbox.moe/3hp7y5.jpg" alt="Weatherproof exterior cable penetration" loading="lazy">
+                    <figcaption>Weatherproof exterior cable penetration</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/jwdgjm.jpg" data-caption="Patio and exterior">
+                    <img src="https://files.catbox.moe/jwdgjm.jpg" alt="Patio and exterior" loading="lazy">
+                    <figcaption>Patio and exterior</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Interior" data-full="https://files.catbox.moe/3p5j0p.jpg" data-caption="Kitchen faucet installation">
+                    <img src="https://files.catbox.moe/3p5j0p.jpg" alt="Kitchen faucet installation" loading="lazy">
+                    <figcaption>Kitchen faucet installation</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/ue5ns1.jpg" data-caption="Starlink dish on a shingle roof mount">
+                    <img src="https://files.catbox.moe/ue5ns1.jpg" alt="Starlink dish on a shingle roof mount" loading="lazy">
+                    <figcaption>Starlink dish on a shingle roof mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/7558cm.jpg" data-caption="Starlink dish on a pole mount">
+                    <img src="https://files.catbox.moe/7558cm.jpg" alt="Starlink dish on a pole mount" loading="lazy">
+                    <figcaption>Starlink dish on a pole mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/03gs1s.jpg" data-caption="Starlink dish on a metal roof">
+                    <img src="https://files.catbox.moe/03gs1s.jpg" alt="Starlink dish on a metal roof" loading="lazy">
+                    <figcaption>Starlink dish on a metal roof</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/chavu8.jpg" data-caption="Sealed, leak-proof roof penetration">
+                    <img src="https://files.catbox.moe/chavu8.jpg" alt="Sealed, leak-proof roof penetration" loading="lazy">
+                    <figcaption>Sealed, leak-proof roof penetration</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/mli935.jpg" data-caption="Exterior deck and stairs">
+                    <img src="https://files.catbox.moe/mli935.jpg" alt="Exterior deck and stairs" loading="lazy">
+                    <figcaption>Exterior deck and stairs</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/x2kbfx.jpg" data-caption="Eave and soffit work">
+                    <img src="https://files.catbox.moe/x2kbfx.jpg" alt="Eave and soffit work" loading="lazy">
+                    <figcaption>Eave and soffit work</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/y5xuk3.jpg" data-caption="Trenching for an underground cable run">
+                    <img src="https://files.catbox.moe/y5xuk3.jpg" alt="Trenching for an underground cable run" loading="lazy">
+                    <figcaption>Trenching for an underground cable run</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/1h747j.jpg" data-caption="Outdoor conduit run along the house">
+                    <img src="https://files.catbox.moe/1h747j.jpg" alt="Outdoor conduit run along the house" loading="lazy">
+                    <figcaption>Outdoor conduit run along the house</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Network &amp; Wi-Fi" data-full="https://files.catbox.moe/vtiblr.jpg" data-caption="Network equipment setup">
+                    <img src="https://files.catbox.moe/vtiblr.jpg" alt="Network equipment setup" loading="lazy">
+                    <figcaption>Network equipment setup</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Interior" data-full="https://files.catbox.moe/v14rxk.jpg" data-caption="Under-cabinet equipment mount">
+                    <img src="https://files.catbox.moe/v14rxk.jpg" alt="Under-cabinet equipment mount" loading="lazy">
+                    <figcaption>Under-cabinet equipment mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Electrical" data-full="https://files.catbox.moe/wl0fjs.jpg" data-caption="Exterior electrical and conduit on a metal building">
+                    <img src="https://files.catbox.moe/wl0fjs.jpg" alt="Exterior electrical and conduit on a metal building" loading="lazy">
+                    <figcaption>Exterior electrical and conduit on a metal building</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/z68af3.jpg" data-caption="Starlink dish eave-mounted on a metal building">
+                    <img src="https://files.catbox.moe/z68af3.jpg" alt="Starlink dish eave-mounted on a metal building" loading="lazy">
+                    <figcaption>Starlink dish eave-mounted on a metal building</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/yaoudb.jpg" data-caption="Starlink dish mounted under the eave">
+                    <img src="https://files.catbox.moe/yaoudb.jpg" alt="Starlink dish mounted under the eave" loading="lazy">
+                    <figcaption>Starlink dish mounted under the eave</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/fbvayj.jpg" data-caption="Flat-mount Starlink on a commercial roof">
+                    <img src="https://files.catbox.moe/fbvayj.jpg" alt="Flat-mount Starlink on a commercial roof" loading="lazy">
+                    <figcaption>Flat-mount Starlink on a commercial roof</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/543zfc.jpg" data-caption="Starlink install on an RV roof">
+                    <img src="https://files.catbox.moe/543zfc.jpg" alt="Starlink install on an RV roof" loading="lazy">
+                    <figcaption>Starlink install on an RV roof</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/ucg3g8.jpg" data-caption="Greenhouse assembly">
+                    <img src="https://files.catbox.moe/ucg3g8.jpg" alt="Greenhouse assembly" loading="lazy">
+                    <figcaption>Greenhouse assembly</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Interior" data-full="https://files.catbox.moe/zc6hcs.jpg" data-caption="Bathroom safety grab bar installation">
+                    <img src="https://files.catbox.moe/zc6hcs.jpg" alt="Bathroom safety grab bar installation" loading="lazy">
+                    <figcaption>Bathroom safety grab bar installation</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Interior" data-full="https://files.catbox.moe/ni5tkh.jpg" data-caption="Kitchen with new appliances in place">
+                    <img src="https://files.catbox.moe/ni5tkh.jpg" alt="Kitchen with new appliances in place" loading="lazy">
+                    <figcaption>Kitchen with new appliances in place</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Interior" data-full="https://files.catbox.moe/ce0jes.jpg" data-caption="Interior wall mount">
+                    <img src="https://files.catbox.moe/ce0jes.jpg" alt="Interior wall mount" loading="lazy">
+                    <figcaption>Interior wall mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Outdoor" data-full="https://files.catbox.moe/sj0cs5.jpg" data-caption="Patio seating area">
+                    <img src="https://files.catbox.moe/sj0cs5.jpg" alt="Patio seating area" loading="lazy">
+                    <figcaption>Patio seating area</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Smart Home" data-full="https://files.catbox.moe/umcuwy.jpg" data-caption="Smart outdoor lighting kit ready to install">
+                    <img src="https://files.catbox.moe/umcuwy.jpg" alt="Smart outdoor lighting kit ready to install" loading="lazy">
+                    <figcaption>Smart outdoor lighting kit ready to install</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Network &amp; Wi-Fi" data-full="https://files.catbox.moe/g1k614.jpg" data-caption="Outdoor cable run along a fence">
+                    <img src="https://files.catbox.moe/g1k614.jpg" alt="Outdoor cable run along a fence" loading="lazy">
+                    <figcaption>Outdoor cable run along a fence</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/r0kozk.jpg" data-caption="Starlink dish on an eave mount">
+                    <img src="https://files.catbox.moe/r0kozk.jpg" alt="Starlink dish on an eave mount" loading="lazy">
+                    <figcaption>Starlink dish on an eave mount</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/c1zak6.jpg" data-caption="Starlink router setup">
+                    <img src="https://files.catbox.moe/c1zak6.jpg" alt="Starlink router setup" loading="lazy">
+                    <figcaption>Starlink router setup</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/ceztpw.jpg" data-caption="Eave-mounted Starlink dish">
+                    <img src="https://files.catbox.moe/ceztpw.jpg" alt="Eave-mounted Starlink dish" loading="lazy">
+                    <figcaption>Eave-mounted Starlink dish</figcaption>
+                </figure>
+                <figure class="photo-card" data-cat="Starlink" data-full="https://files.catbox.moe/io2gb0.jpg" data-caption="Dean installing a Starlink dish on a roof">
+                    <img src="https://files.catbox.moe/io2gb0.jpg" alt="Dean installing a Starlink dish on a roof" loading="lazy">
+                    <figcaption>Dean installing a Starlink dish on a roof</figcaption>
+                </figure>
+            </div>
+            <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+                <button class="lb-close" id="lb-close" aria-label="Close viewer" type="button">&times;</button>
+                <button class="lb-prev" id="lb-prev" aria-label="Previous photo" type="button">&#8249;</button>
+                <img id="lb-img" src="" alt="">
+                <button class="lb-next" id="lb-next" aria-label="Next photo" type="button">&#8250;</button>
+                <div class="lb-caption" id="lb-caption"></div>
+                <div class="lb-count" id="lb-count"></div>
             </div>
 
             <div class="album-cta" data-aos="zoom-in">
-                <h3>View the Full Collection</h3>
-                <p>Every project is documented for transparency and quality assurance. Browse more before & after photos in our complete album.</p>
-                <a href="https://photos.app.goo.gl/ihv1j4HSQZGuD6wD9" target="_blank" class="btn btn-accent" style="font-size: 1.3rem; padding: 1.2rem 3rem;">
-                    Open Google Photo Album <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                <h3>Want Results Like This?</h3>
+                <p>Every project is documented for transparency and quality assurance.</p>
+                <a href="contact.html" class="btn btn-accent" style="font-size: 1.3rem; padding: 1.2rem 3rem;">
+                    Get Your Free Quote <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
                 </a>
+                <p style="margin-top: 1.2rem; font-size: 1rem;"><a href="https://photos.app.goo.gl/ihv1j4HSQZGuD6wD9" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">Browse even more photos in our Google Photos album</a></p>
             </div>
         </div>
     </section>
@@ -171,6 +324,54 @@
                 spans[2].style.transform = 'none';
             }
         });
+
+        // ---- Project photo gallery: filters + lightbox ----
+        (function(){
+            var grid=document.getElementById('photo-grid');
+            if(!grid) return;
+            var cards=Array.prototype.slice.call(grid.querySelectorAll('.photo-card'));
+            var chips=document.querySelectorAll('.filter-chips .chip');
+            chips.forEach(function(chip){
+                chip.addEventListener('click',function(){
+                    chips.forEach(function(c){c.classList.remove('active');});
+                    chip.classList.add('active');
+                    var f=chip.getAttribute('data-filter');
+                    cards.forEach(function(card){
+                        card.classList.toggle('hidden', f!=='all' && card.getAttribute('data-cat')!==f);
+                    });
+                });
+            });
+            var lb=document.getElementById('lightbox'),
+                img=document.getElementById('lb-img'),
+                cap=document.getElementById('lb-caption'),
+                count=document.getElementById('lb-count'), idx=0;
+            function visible(){return cards.filter(function(c){return !c.classList.contains('hidden');});}
+            function show(i){
+                var v=visible(); if(!v.length) return;
+                idx=(i+v.length)%v.length;
+                img.src=v[idx].getAttribute('data-full');
+                img.alt=v[idx].getAttribute('data-caption');
+                cap.textContent=v[idx].getAttribute('data-caption');
+                count.textContent=(idx+1)+' of '+v.length;
+            }
+            function openLb(card){
+                lb.classList.add('open');
+                document.body.style.overflow='hidden';
+                show(visible().indexOf(card));
+            }
+            function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+            cards.forEach(function(card){card.addEventListener('click',function(){openLb(card);});});
+            document.getElementById('lb-close').addEventListener('click',closeLb);
+            document.getElementById('lb-prev').addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+            document.getElementById('lb-next').addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+            lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+            document.addEventListener('keydown',function(e){
+                if(!lb.classList.contains('open'))return;
+                if(e.key==='Escape')closeLb();
+                if(e.key==='ArrowLeft')show(idx-1);
+                if(e.key==='ArrowRight')show(idx+1);
+            });
+        })();
     </script>
 
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
