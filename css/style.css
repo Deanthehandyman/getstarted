@@ -46,13 +46,15 @@
 
 /* ---------- Base ---------- */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+/* Fallback for very old browsers without overflow:clip support */
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
 body{
   font-family:var(--body);
   line-height:1.6;
   color:var(--charcoal);
   background:var(--cream);
-  overflow-x:hidden;
+  overflow-x:clip;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
