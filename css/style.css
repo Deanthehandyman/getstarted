@@ -160,9 +160,11 @@ header:has(.nav-links.active) .menu-toggle span{background:#fff}
 header:has(.nav-links.active) .menu-toggle span:nth-child(1){transform:translateY(6.75px) rotate(45deg)!important}
 header:has(.nav-links.active) .menu-toggle span:nth-child(2){opacity:0!important}
 header:has(.nav-links.active) .menu-toggle span:nth-child(3){transform:translateY(-6.75px) rotate(-45deg)!important}
-/* Dim and lock the page behind the open panel */
+/* Dim and lock the page behind the open panel.
+   Scrim sits at z-index 999: below the sticky header's stacking context (1000),
+   so the slide-in panel and the X button stay bright and tappable above the dim. */
 body:has(.nav-links.active){overflow:hidden}
-body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:1000;
+body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999;
   background:rgba(16,27,49,.52);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
   animation:nav-scrim-in .35s ease}
 @keyframes nav-scrim-in{from{opacity:0}}
