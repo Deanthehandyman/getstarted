@@ -18,92 +18,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        :root {
-            --primary: #008bd2;
-            --primary-dark: #006fa8;
-            --accent: #f0a500;
-            --dark: #0f172a;
-            --gray: #475569;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --trust-green: #22c55e;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            line-height: 1.7;
-            color: var(--dark);
-            background: var(--light);
-            overflow-x: hidden;
-        }
-        html { scroll-behavior: smooth; }
-
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.2; }
-        h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; }
-        h2 { font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
-        p { margin-bottom: 1rem; }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-
-        .btn-pill {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.9rem 1.8rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(0,139,210,0.25);
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-        .btn-pill:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-        }
-
-        header { background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
-        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-img { height: 60px; width: auto; }
-        .logo-text { font-weight: 800; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; color: var(--dark); }
-        .logo-text span { color: var(--primary); font-size: 0.8rem; display: block; }
-
-        .nav-links { display: flex; align-items: center; gap: 2rem; }
-        .nav-links a { color: var(--dark); font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-
-        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
-        .menu-toggle span { width: 28px; height: 3px; background: var(--dark); border-radius: 2px; transition: all 0.4s; }
-
-        @media (max-width: 992px) {
-            .menu-toggle { display: flex; }
-            .nav-links { position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: white; flex-direction: column; align-items: flex-start; padding: 120px 40px; gap: 1.5rem; transition: right 0.5s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.15); }
-            .nav-links.active { right: 0; }
-            .nav-links a { font-size: 1.2rem; }
-        }
-
-        .page-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat fixed;
-            color: white; padding: 100px 0 80px; text-align: center;
-        }
-
-        .content-box {
-            background: white; padding: 3rem; margin: 4rem auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        footer { background: var(--dark); color: #cbd5e1; padding: 80px 0 40px; }
-        footer h4 { color: white; margin-bottom: 1.5rem; }
-        footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
