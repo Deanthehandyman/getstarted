@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>FAQs | Dean's Handyman Service LLC – Pittsburg, TX</title>
-    <meta name="description" content="Answers to common questions about Starlink installation, travel fees, service radius, RV setups, and more from Dean's Handyman Service LLC. Serving TX, AR, LA, OK with first 100 miles FREE.">
+    <meta name="description" content="Answers to common questions about Starlink installation, travel fees, service radius, RV setups, and more from Dean's Handyman Service LLC. Serving TX, AR, LA, OK — first 40 miles of the round trip free.">
     <meta name="keywords" content="Starlink installation FAQ, handyman travel fees, mobile handyman radius, RV internet questions, Dean's Handyman payment options">
     
     <link rel="canonical" href="https://deanshandymanservice.me/faqs.html" />
@@ -47,7 +47,7 @@
           "name": "How do your travel fees work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The first 100 miles of travel are FREE. For jobs beyond 100 miles, a small trip fee is added to cover fuel and equipment transport."
+            "text": "The first 40 miles of the round trip from Pittsburg, TX are on me \u2014 beyond that a trip fee applies."
           }
         },
         {
@@ -126,9 +126,8 @@
     <section class="faq-section">
         <div class="container">
             <div class="faq-item" data-aos="fade-up">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     Do you really travel a 200-mile radius?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. Based in Pittsburg, TX (75686), we travel across East Texas and into Oklahoma, Arkansas, and Louisiana. We specialize in reaching rural locations and off-grid properties that standard local services won't cover.</p>
@@ -136,19 +135,17 @@
             </div>
 
             <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     How do your travel fees work?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>The first <strong>100 miles of travel are FREE</strong>. For jobs beyond 100 miles, a small trip fee is added to cover fuel and equipment transport. We utilize a mobile workshop to ensure all tools are on-site for remote jobs.</p>
+                    <p>The first <strong>40 miles of the round trip are on me</strong>. Beyond that a trip fee applies. We utilize a mobile workshop to ensure all tools are on-site for remote jobs.</p>
                 </div>
             </div>
 
             <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     Do you provide the Starlink hardware?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
                     <p>No. You must order your kit directly from <a href="https://www.starlink.com" target="_blank">Starlink.com</a>. However, if you use our referral link found on our <a href="starlink-install.html">Starlink page</a>, you will receive your <strong>2nd Month of Service for FREE</strong>.</p>
@@ -156,9 +153,8 @@
             </div>
 
             <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     Do you work on RVs?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
                     <p>Absolutely. We are experts in <strong>RV connectivity and maintenance</strong>. We specialize in Starlink Mini 12V DC power conversions and magnetic vehicle mounts for travelers who need reliable internet without a massive inverter.</p>
@@ -166,9 +162,8 @@
             </div>
 
             <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     What payment methods do you accept?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
                     <p>We accept all major secure digital payments, including <strong>Square, Venmo, PayPal, and Cash App</strong>. Secure links are provided on our homepage and in invoices — pay after the job is completed to your satisfaction. (Note: A 3% fee applies to credit card payments.)</p>
@@ -176,9 +171,8 @@
             </div>
 
             <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="faq-question" onclick="toggleAnswer(this)">
+                <div class="faq-question" onclick="toggleAnswer(this)" tabindex="0" role="button" aria-expanded="false">
                     Still have a question?
-                    <span style="font-size: 1.4rem; transition: transform 0.3s;">▼</span>
                 </div>
                 <div class="faq-answer">
                     <p>We're happy to help! Reach out directly or use our AI chatbot for instant answers. You can also send photos of your project for a quick assessment.</p>
@@ -234,23 +228,25 @@
             }
         });
 
-        // Simple accordion toggle
+        // Accordion toggle: 'open' goes on the parent .faq-item (that's what the CSS reveals)
         function toggleAnswer(el) {
-            const answer = el.nextElementSibling;
-            const arrow = el.querySelector('span');
-            if (answer.classList.contains('open')) {
-                answer.classList.remove('open');
-                arrow.style.transform = 'rotate(0deg)';
-            } else {
-                // Close others
-                document.querySelectorAll('.faq-answer.open').forEach(open => {
-                    open.classList.remove('open');
-                    open.previousElementSibling.querySelector('span').style.transform = 'rotate(0deg)';
-                });
-                answer.classList.add('open');
-                arrow.style.transform = 'rotate(180deg)';
+            const item = el.closest('.faq-item');
+            const willOpen = !item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(open => {
+                open.classList.remove('open');
+                open.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            if (willOpen) {
+                item.classList.add('open');
+                el.setAttribute('aria-expanded', 'true');
             }
         }
+        // Keyboard support: Enter/Space opens a focused question
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleAnswer(q); }
+            });
+        });
     </script>
 
     <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
