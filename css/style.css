@@ -51,6 +51,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
 @supports not (overflow:clip){html,body{overflow-x:hidden}}
 body{
   font-family:var(--body);
+  font-size:17px;
   line-height:1.6;
   color:var(--charcoal);
   background:var(--cream);
@@ -178,7 +179,7 @@ body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999
     radial-gradient(700px 420px at -10% 110%,rgba(193,98,45,.22),transparent 55%),
     linear-gradient(180deg,var(--indigo) 0%,var(--indigo-deep) 100%);
   color:var(--cream);
-  padding:110px 0 90px;min-height:82vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:88px 0 68px;min-height:64vh;display:flex;align-items:center;position:relative;overflow:hidden;
 }
 .hero h1{color:#fff;text-shadow:0 4px 16px rgba(0,0,0,.45)}
 .hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;width:100%}
