@@ -175,9 +175,8 @@ body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999
 /* ---------- Hero ---------- */
 .hero{
   background:
-    radial-gradient(1000px 480px at 85% -10%,rgba(47,111,237,.4),transparent 60%),
-    radial-gradient(700px 420px at -10% 110%,rgba(193,98,45,.22),transparent 55%),
-    linear-gradient(180deg,var(--indigo) 0%,var(--indigo-deep) 100%);
+    linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
+    url('truck.jpg') center/cover no-repeat;
   color:var(--cream);
   padding:88px 0 68px;min-height:64vh;display:flex;align-items:center;position:relative;overflow:hidden;
 }
