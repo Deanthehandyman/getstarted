@@ -194,8 +194,8 @@ body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999
 /* Smaller interior hero */
 .page-hero{
   background:
-    radial-gradient(800px 380px at 80% -10%,rgba(47,111,237,.35),transparent 60%),
-    linear-gradient(180deg,var(--indigo) 0%,var(--indigo-deep) 100%);
+    linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+    url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat;
   color:var(--cream);padding:72px 0 60px;text-align:center;
 }
 .page-hero h1{color:#fff;margin-bottom:.5rem}
