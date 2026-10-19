@@ -1,9 +1,9 @@
 # robots.txt for Dean's Handyman Service LLC
 # https://deanshandymanservice.me
-# Last updated: August 2026
+# Last updated: October 2026
 
 User-agent: *
-# (Note: We removed the "Allow: /" lines because search engines automatically assume everything is allowed unless you tell them otherwise. This keeps the file cleaner!)
+Allow: /
 
 # Block non-public, temporary, or duplicate files
 Disallow: /ideas.txt
@@ -16,30 +16,33 @@ Disallow: /404.html
 Disallow: /500.html
 
 # --------------------------------------------------------
-# BLOCK AI SCRAPERS (Highly Recommended)
+# explicitly ALLOW AI Search Assistants & Answer Engines
+# (So ChatGPT, Gemini, Claude, and Perplexity recommend us to local customers)
 # --------------------------------------------------------
-# Protecting your intellectual property—whether that's your 
-# business website copy, custom service areas, or excerpts 
-# from your written books—is a smart move today. These lines 
-# stop AI companies from scraping your hard work for free.
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
+User-agent: Googlebot
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
-User-agent: anthropic-ai
-Disallow: /
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Optional: Still block pure bulk archive scraping (doesn't affect search/AI answers)
+User-agent: CCBot
 Disallow: /
 
 # --------------------------------------------------------
 # SITEMAP
-# Point to your sitemap so Google finds all 1,700+ new pages instantly
+# Point to your sitemap so Google finds all 1,700+ pages
 # --------------------------------------------------------
 Sitemap: https://deanshandymanservice.me/sitemap.xml
