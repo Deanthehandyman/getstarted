@@ -1,4 +1,4 @@
-# robots.txt for Dean's Handyman Service LLC
+# robots.txt for Dean's Handyman Service
 # https://deanshandymanservice.me
 # Last updated: October 2026
 
@@ -43,6 +43,6 @@ Disallow: /
 
 # --------------------------------------------------------
 # SITEMAP
-# Point to your sitemap so Google finds all 1,700+ pages
+# Point to your sitemap so Google finds all 108 pages
 # --------------------------------------------------------
 Sitemap: https://deanshandymanservice.me/sitemap.xml
