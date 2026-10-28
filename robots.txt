@@ -37,12 +37,36 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
 # Optional: Still block pure bulk archive scraping (doesn't affect search/AI answers)
 User-agent: CCBot
 Disallow: /
 
 # --------------------------------------------------------
 # SITEMAP
-# Point to your sitemap so Google finds all 108 pages
+# Point to your sitemap so Google finds all 110 pages
 # --------------------------------------------------------
 Sitemap: https://deanshandymanservice.me/sitemap.xml
