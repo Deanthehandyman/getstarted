@@ -27,6 +27,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+.hub-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:760px;margin:0 auto}
+.hub-card{display:flex;flex-direction:column;gap:.5rem;background:#fff;border:2px solid #e2e8f0;border-top:8px solid var(--accent);border-radius:14px;padding:1.6rem 1.4rem;text-decoration:none;box-shadow:0 8px 24px rgba(16,27,49,.08);transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.hub-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(16,27,49,.14);border-color:var(--indigo)}
+.hub-card-title{font-family:'Space Grotesk',sans-serif;font-size:1.45rem;font-weight:700;color:var(--dark);line-height:1.2}
+.hub-card-desc{color:#475569;font-size:1.02rem;line-height:1.5;flex:1}
+.hub-card-arrow{font-weight:700;color:var(--accent);font-size:1.05rem;margin-top:.5rem}
+@media(max-width:760px){.hub-cards{grid-template-columns:1fr}.hub-card{padding:1.4rem 1.25rem}}
+    </style>
 
 <script type="application/ld+json">
 {
@@ -80,72 +89,37 @@
 
     <section class="hero" style="min-height: 50vh; text-align: center;">
         <div class="container" data-aos="fade-down">
-            <h1>Request a Free Quote</h1>
-            <p style="font-size: 1.4rem; font-weight: 600;">Tell me about your project. I'll review it and reach out to schedule.</p>
+            <h1>Get a Quote</h1>
+            <p style="font-size: 1.4rem; font-weight: 600;">One page, three choices. Pick what you need and I'll take it from there.</p>
         </div>
     </section>
 
     <div class="container">
         <div style="max-width: 800px; margin: -5rem auto 5rem; background: white; border-radius: 16px; padding: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border-top: 8px solid var(--accent); position: relative; z-index: 10;" data-aos="fade-up">
-            <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--dark);">Project Details</h3>
+            <h2 style="text-align: center; margin-bottom: 0.75rem; color: var(--dark);">Start here — pick what you need</h2>
+            <p style="text-align: center; color: #475569; max-width: 540px; margin: 0 auto 2rem;">Each form takes about two minutes. Every request comes straight to me — I review it myself and reach out to schedule.</p>
 
-            <form id="leadForm" action="https://forms.zohopublic.com/deanshandymanservice1gm1/form/HandymanServiceRequest/formperma/--UP20ZDYm5rdNis9Fbua3PbkPlm0SR8QfhtZfjXOGg" method="GET" enctype="multipart/form-data" style="max-width:520px; margin:0 auto;">
-                <input type="hidden" name="_subject" value="New website lead — Dean's Handyman Service">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://deanshandymanservice.me/thank-you.html">
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-                <div class="form-group">
-                    <label for="client-name">Your Name *</label>
-                    <input type="text" id="client-name" name="Name" required autocomplete="name">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="Phone" required autocomplete="tel">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email (optional)</label>
-                    <input type="email" id="email" name="Email" autocomplete="email">
-                </div>
-                <div class="form-group">
-                    <label for="service">What do you need? *</label>
-                    <select id="service" name="Service" required>
-                        <option value="">Choose a service&hellip;</option>
-                        <option>Starlink Installation</option>
-                        <option>Wi-Fi / Networking</option>
-                        <option>Smart Home Devices</option>
-                        <option>Electrical Troubleshooting</option>
-                        <option>Furniture / Flat-Pack Assembly</option>
-                        <option>Playset Assembly</option>
-                        
-                        <option>RV / Mobile Tech</option>
-                        <option>Site Inspection / Property Report</option>
-                        <option>General Repairs</option>
-                        <option>Something Else</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="address">Project Location (city or address) *</label>
-                    <input type="text" id="address" name="Location" required autocomplete="street-address">
-                </div>
-                <div class="form-group">
-                    <label for="details">Tell me about the job *</label>
-                    <textarea id="details" name="Details" rows="5" required placeholder="What needs doing? Any deadlines, access notes, or details that help me quote it right."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="photo">Photo (optional &mdash; helps me quote accurately)</label>
-                    <input type="file" id="photo" name="Photo" accept="image/*" class="file-upload">
-                </div>
-                <button type="submit" class="btn btn-accent" style="width:100%; font-size:1.25rem; padding:1.1rem;">Send My Request</button>
-                <p style="font-size:.92rem; color:#666; text-align:center; margin-top:.75rem;">I&rsquo;ll review it and get back to you &mdash; usually the same day.</p>
-            </form>
+            <div class="hub-cards">
+                <a class="hub-card" href="https://forms.zohopublic.com/deanshandymanservice1gm1/form/StarlinkInstallationQuoteRequest/formperma/VTowyO3euk8LVtm1B9iv7XJwPuePlIsJCr_hi_r8MXA">
+                    <span class="hub-card-title">Starlink Install</span>
+                    <span class="hub-card-desc">Internet installed right, plus Wi-Fi that covers your property. Installs from $350.</span>
+                    <span class="hub-card-arrow">Start &rarr;</span>
+                </a>
+                <a class="hub-card" href="https://forms.zohopublic.com/deanshandymanservice1gm1/form/HandymanServiceRequest/formperma/--UP20ZDYm5rdNis9Fbua3PbkPlm0SR8QfhtZfjXOGg">
+                    <span class="hub-card-title">Handyman Work</span>
+                    <span class="hub-card-desc">Repairs, installs, and projects around the house — priced from my rate book before I start.</span>
+                    <span class="hub-card-arrow">Start &rarr;</span>
+                </a>
+                <a class="hub-card" href="https://forms.zohopublic.com/deanshandymanservice1gm1/form/SiteAssessmentRequest/formperma/anAa0TX5QG1Dhag8LEv7qU34xiMTPRPS_NxW6wx-wE">
+                    <span class="hub-card-title">Site Assessment</span>
+                    <span class="hub-card-desc">A written report on a property's condition and network options. From $150.</span>
+                    <span class="hub-card-arrow">Start &rarr;</span>
+                </a>
+            </div>
 
-            <div style="display:flex; flex-direction:column; gap:1.2rem; max-width:520px; margin:2.5rem auto 0; padding-top:2rem; border-top:1px solid #e2e8f0;">
-                <p style="text-align:center; font-weight:600; color:#475569; margin:0;">Prefer to reach me directly?</p>
-                <a href="https://calendar.app.google/TS7Ap1a5Bjmbv7yq9" class="btn btn-accent" style="width:100%; font-size:1.2rem; padding:1.2rem;" target="_blank" rel="noopener">Book / Request a Quote Online</a>
-                <a href="tel:2819179914" class="btn btn-primary" style="width:100%; font-size:1.2rem; padding:1.2rem;">Call or Text: (281) 917-9914</a>
-                <a href="sms:+12819179914" class="btn btn-primary" style="width:100%; font-size:1.2rem; padding:1.2rem;">Text Me Project Details & Photos</a>
-                <p style="font-size:0.9rem; color:#666; text-align:center; margin-top:0.5rem;">The fastest way to get scheduled is through the online booking calendar. For custom projects, call or text me directly with a description and photos and I'll get you a quote.</p>
+            <div style="text-align:center; margin-top:2.5rem; padding-top:2rem; border-top:1px solid #e2e8f0;">
+                <p style="font-weight:600; color:#475569; margin:0 0 1.2rem;">Rather talk it out? Call or text <a href="tel:2819179914" style="color: var(--primary);">(281) 917-9914</a></p>
+                <a href="https://calendar.app.google/TS7Ap1a5Bjmbv7yq9" class="btn btn-accent" style="font-size:1.15rem; padding:1.1rem 2.5rem;" target="_blank" rel="noopener">Ready to pick a day? Book online</a>
             </div>
         </div>
     </div>
