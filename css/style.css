@@ -606,3 +606,15 @@ a.card{text-decoration:none;color:inherit}
   .landing-hero{padding:64px 0 72px}
   .area-band .container{flex-direction:column;align-items:flex-start}
 }
+
+/* Mobile stacking fix (2026-10-28, Dean screenshot): the About bio split and the
+   service-area split sections use inline `grid-template-columns: 1fr 1fr; gap: 4rem`,
+   which crushes both columns to ~130px on phones (quote card wrapped one word per
+   line). Inline styles can only be overridden with !important + an attribute match.
+   The inner stat mini-grids (gap: 1rem) intentionally stay two-column. */
+@media (max-width: 860px){
+  div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 4rem"]{
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+}
