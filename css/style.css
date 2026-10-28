@@ -484,3 +484,125 @@ footer .footer-bottom{
   .lb-prev{left:.4rem}.lb-next{right:.4rem}
   .lb-close{top:.8rem;right:.8rem}
 }
+
+/* ---------- Landing components (shared system) ----------
+   Ported from the former standalone landing pages (Oct 2026 unification):
+   same tokens as the rest of the site — indigo/cream/copper/pine,
+   Space Grotesk display, Inter body, IBM Plex Mono accents. */
+
+/* Landing hero (city & service landing pages) */
+.landing-hero{
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(47,111,237,.38), transparent 60%),
+    radial-gradient(700px 400px at -10% 110%, rgba(193,98,45,.18), transparent 55%),
+    linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
+  color:var(--cream);
+  padding:88px 0 96px;
+}
+.landing-hero h1{color:#fff;max-width:18ch}
+.landing-hero .sub{font-size:1.15rem;color:#DCE3F2;max-width:56ch;margin-bottom:1.75rem}
+.landing-hero .eyebrow{
+  font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
+  color:#9DB9F5;background:rgba(47,111,237,.14);border:1px solid rgba(47,111,237,.45);
+  display:inline-block;padding:.35rem .85rem;border-radius:999px;margin-bottom:1.1rem;text-align:left;
+}
+.cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.landing-hero .trust-badges{margin-bottom:0}
+
+/* Signal-bars signature mark (sits inside the landing eyebrow) */
+.signal{display:inline-flex;align-items:flex-end;gap:3px;height:14px;margin-right:8px;vertical-align:middle}
+.signal span{width:4px;background:var(--blue);border-radius:1px}
+.signal span:nth-child(1){height:30%}
+.signal span:nth-child(2){height:55%}
+.signal span:nth-child(3){height:75%}
+.signal span:nth-child(4){height:100%}
+
+/* Banded content sections */
+.section-band{padding:96px 0}
+.band-white{background:var(--white)}
+.band-blue{background:var(--indigo-tint)}
+.band-pine{background:var(--pine-tint)}
+.band-copper{background:var(--copper-tint)}
+.section-head{max-width:60ch;margin-bottom:2.5rem}
+.section-head h2{text-align:left}
+.section-head p{color:var(--muted)}
+.section-head .eyebrow{
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+  color:var(--pine);background:rgba(53,81,59,.1);border:1px solid rgba(53,81,59,.35);
+  display:inline-block;padding:.35rem .85rem;border-radius:999px;margin-bottom:1rem;text-align:left;
+}
+
+/* Card grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.75rem;box-shadow:var(--shadow-sm);
+  transition:transform .28s cubic-bezier(.2,.7,.3,1), box-shadow .28s ease, border-color .28s ease;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(47,111,237,.35)}
+a.card{text-decoration:none;color:inherit}
+.card h3{color:var(--indigo-deep)}
+.card p{font-size:.95rem;color:#4a4438;margin-bottom:0}
+.card .tag{
+  font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--copper);display:block;margin-bottom:.5rem;
+}
+.quote-card{display:flex;flex-direction:column;gap:.9rem}
+.quote-card .quote-text{
+  font-family:var(--display);font-weight:500;font-size:1.02rem;font-style:italic;
+  color:var(--indigo-deep);margin:0;line-height:1.5;
+}
+.quote-card .quote-text::before{content:"\201C"}
+.quote-card .quote-text::after{content:"\201D"}
+.quote-card .quote-who{
+  font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--pine);
+}
+
+/* Area band */
+.area-band{background:var(--pine);color:#EAF0E7}
+.area-band .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:1.6rem;padding-bottom:1.6rem}
+.area-band .towns{font-family:var(--mono);font-size:.9rem;color:#D3E0D0}
+.area-band strong{color:#fff}
+
+/* Numbered steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.steps li{
+  display:flex;gap:1rem;align-items:flex-start;background:var(--white);
+  border:1px solid var(--line);border-radius:var(--radius);padding:1.15rem 1.25rem;
+  transition:box-shadow .25s ease, transform .25s ease;
+}
+.steps li:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.steps .num{
+  font-family:var(--mono);font-weight:700;color:var(--blue);font-size:.9rem;
+  border:1px solid var(--blue);border-radius:999px;min-width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.steps h3{font-size:1.02rem;margin-bottom:.25rem}
+.steps p{font-size:.9rem;color:#4a4438;margin-bottom:0}
+
+/* Landing FAQ (native details/summary) */
+.faq details{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.25rem;margin-bottom:.75rem;transition:box-shadow .25s ease, border-color .25s ease;
+}
+.faq details[open]{box-shadow:var(--shadow-md);border-color:rgba(47,111,237,.3)}
+.faq summary{
+  font-family:var(--display);font-weight:700;font-size:1.02rem;cursor:pointer;color:var(--indigo-deep);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:.6rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.25rem;color:var(--copper)}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{margin-top:.6rem;font-size:.95rem;color:#4a4438}
+
+/* Final call-to-action band */
+.final-cta{background:linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);color:#fff;text-align:center;padding:96px 0}
+.final-cta h2{color:#fff}
+.final-cta .sub{color:#DCE3F2;max-width:52ch;margin:0 auto 1.75rem}
+.final-cta .cta-row{justify-content:center;margin-bottom:0}
+
+@media(max-width:768px){
+  .section-band,.final-cta{padding:64px 0}
+  .landing-hero{padding:64px 0 72px}
+  .area-band .container{flex-direction:column;align-items:flex-start}
+}

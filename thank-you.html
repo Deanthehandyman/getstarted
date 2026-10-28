@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,7 +30,9 @@
                 <div class="logo-text">Dean's<br><span>Handyman Service</span></div>
             </a>
 
-            <div class="menu-toggle" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
 
             <nav class="nav-links" id="nav-menu">
                 <a href="about.html">About</a>
@@ -67,7 +70,7 @@
         <div class="container">
             <div>
                 <h4>Dean's Handyman Service</h4>
-                <p>Pittsburg, TX 75686<br>Based in Camp County — Starlink installs across TX, AR, LA & OK (free within 20 mi; trip bands to ~110 mi; farther quoted up front)<br>Handyman work in the Pittsburg area (first 40 round-trip miles included in the $150 minimum, then $1/mi)<br>Professional tradesman with industrial training</p>
+                <p>Pittsburg, TX 75686<br>Based in Camp County — Starlink installs across TX, AR, LA &amp; OK (free within 20 mi; trip bands to ~110 mi; farther quoted up front)<br>Handyman work in the Pittsburg area (first 40 round-trip miles included in the $150 minimum, then $1/mi)<br>Professional tradesman with industrial training</p>
             </div>
             <div>
                 <h4>Quick Links</h4>
@@ -93,5 +96,6 @@ A 3% processing fee applies to credit card payments.
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </body>
 </html>

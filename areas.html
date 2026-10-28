@@ -53,6 +53,11 @@
                 <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service</span></div>
             </a>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+
             <nav class="nav-links" id="nav-menu">
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
@@ -65,6 +70,8 @@
             </nav>
         </div>
     </header>
+
+    <a href="tel:2819179914" class="mobile-fab" aria-label="Call Now">📞</a>
 
     <section class="page-hero">
         <div class="container">
@@ -381,9 +388,30 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 Dean's Handyman Service. All rights reserved.<br>
-A 3% processing fee applies to credit card payments.</p>
-<p style="margin-top: .75rem;"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="starlink-install.html">Starlink</a> · <a href="gallery.html">Work</a> · <a href="faqs.html">FAQs</a> · <a href="contact.html">Contact</a></p>
+            <div>
+                <h4>Dean's Handyman Service</h4>
+                <p>Pittsburg, TX 75686<br>Based in Camp County — Starlink installs across TX, AR, LA &amp; OK (free within 20 mi; trip bands to ~110 mi; farther quoted up front)<br>Handyman work in the Pittsburg area (first 40 round-trip miles included in the $150 minimum, then $1/mi)<br>Professional tradesman with industrial training</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a><br>
+                <a href="about.html">About</a><br>
+                <a href="services.html">Services</a><br>
+                <a href="starlink-install.html">Starlink Installation</a><br>
+                <a href="areas.html">Service Areas</a><br>
+                <a href="gallery.html">Work</a><br>
+                <a href="faqs.html">FAQs</a><br>
+                <a href="contact.html">Contact</a></p>
+            </div>
+            <div>
+                <h4>Contact Me</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary); text-decoration: none;">(281) 917-9914</a><br>
+                Email: <a href="mailto:dean@deanshandymanservice.me" style="color: var(--primary); text-decoration: none;">dean@deanshandymanservice.me</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service. All rights reserved.<br>
+A 3% processing fee applies to credit card payments.
         </div>
     </footer>
 
@@ -399,5 +427,7 @@ A 3% processing fee applies to credit card payments.</p>
             });
         });
     </script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    </body>
 </html>

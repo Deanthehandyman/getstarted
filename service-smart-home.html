@@ -63,7 +63,11 @@
                 <img src="https://i.imgur.com/CtBcYkI.png" alt="Dean's Handyman Service Logo" class="logo-img">
                 <div class="logo-text">Dean's<br><span>Handyman Service</span></div>
             </a>
-            <div class="menu-toggle" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+
             <nav class="nav-links" id="nav-menu">
                 <a href="about.html">About</a>
                 <a href="services.html" class="active">Services</a>
@@ -141,7 +145,10 @@
 
     <footer>
         <div class="container">
-            <div><h4>Dean's Handyman Service</h4><p>Pittsburg, TX 75686<br>Based in Camp County — Starlink installs across TX, AR, LA & OK; handyman work in the Pittsburg area.</p></div>
+            <div>
+                <h4>Dean's Handyman Service</h4>
+                <p>Pittsburg, TX 75686<br>Based in Camp County — Starlink installs across TX, AR, LA &amp; OK (free within 20 mi; trip bands to ~110 mi; farther quoted up front)<br>Handyman work in the Pittsburg area (first 40 round-trip miles included in the $150 minimum, then $1/mi)<br>Professional tradesman with industrial training</p>
+            </div>
             <div>
                 <h4>Quick Links</h4>
                 <p><a href="index.html">Home</a><br>
@@ -153,14 +160,21 @@
                 <a href="faqs.html">FAQs</a><br>
                 <a href="contact.html">Contact</a></p>
             </div>
-            <div><h4>Contact Directly</h4><p>Phone: <a href="tel:2819179914" style="color: white; text-decoration: none;">(281) 917-9914</a><br>Email: <a href="mailto:dean@deanshandymanservice.me" style="color: white; text-decoration: none;">dean@deanshandymanservice.me</a></p></div>
+            <div>
+                <h4>Contact Me</h4>
+                <p>Phone: <a href="tel:2819179914" style="color: var(--primary); text-decoration: none;">(281) 917-9914</a><br>
+                Email: <a href="mailto:dean@deanshandymanservice.me" style="color: var(--primary); text-decoration: none;">dean@deanshandymanservice.me</a></p>
+            </div>
         </div>
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem;">&copy; 2026 Dean's Handyman Service. All rights reserved.<br>
-A 3% processing fee applies to credit card payments.</div>
+        <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; font-size: 0.9rem; opacity: 0.8;">
+            © 2026 Dean's Handyman Service. All rights reserved.<br>
+A 3% processing fee applies to credit card payments.
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
   <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
-</body>
+    <script src="js/script.js"></script>
+    </body>
 </html>
