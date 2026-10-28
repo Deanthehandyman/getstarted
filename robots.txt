@@ -67,6 +67,6 @@ Disallow: /
 
 # --------------------------------------------------------
 # SITEMAP
-# Point to your sitemap so Google finds all 110 pages
+# Point to your sitemap so Google finds all 111 pages
 # --------------------------------------------------------
 Sitemap: https://deanshandymanservice.me/sitemap.xml
