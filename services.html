@@ -21,27 +21,78 @@
     <meta name="geo.placename" content="Pittsburg, Tyler, Longview, Texarkana, Shreveport">
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Technical and Handyman Services",
-      "provider": {
-        "@type": "HomeAndConstructionBusiness",
-        "name": "Dean's Handyman Service"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Technical and Handyman Services",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Dean's Handyman Service"
+  },
+  "areaServed": [
+    "Texas",
+    "Arkansas",
+    "Louisiana",
+    "Oklahoma"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tech & Handyman Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Starlink & Home Network Setup"
+        },
+        "price": "350",
+        "priceCurrency": "USD",
+        "description": "Installs from $350"
       },
-      "areaServed": ["Texas", "Arkansas", "Louisiana", "Oklahoma"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Tech & Handyman Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Starlink & Home Network Setup" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Home & Security Systems" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Network & Wi-Fi" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial-Grade Home Repairs" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "RV & Mobile Tech Support" } }
-        ]
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Smart Home & Security Systems"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Network & Wi-Fi"
+        },
+        "price": "150",
+        "priceCurrency": "USD",
+        "description": "Network Checkup — $150 flat"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Industrial-Grade Home Repairs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "RV & Mobile Tech Support"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "150",
+        "priceCurrency": "USD",
+        "description": "Starting at $150",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Site Assessments & Property Reports"
+        }
       }
-    }
+    ]
+  }
+}
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +101,38 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why hire a tech-focused handyman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern homes need more than just a hammer. I understand the software and hardware behind your devices, ensuring they're not just \"installed\" but fully optimized."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle rural property tech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. I specialize in bringing high-speed internet and smart security to rural ranches and properties where standard providers won't go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my job isn't listed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If it involves technology, electricity, or skilled fabrication, I likely do it. I specialize in the complex jobs that require a higher level of expertise."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -99,6 +182,7 @@
                     <p>More than an install. Your whole network, handled. Professional mounting for Gen 3 and Mini, whole-property Wi-Fi planning, and a local expert for setup and support after — for homes and RVs.</p>
                     <p style="margin-top: .75rem;"><span style="background: var(--indigo); color: #fff; padding: .3rem .8rem; border-radius: 99px; font-weight: 700; font-size: .85rem;">Installs from $350</span></p>
                     <a href="starlink-install.html" class="btn btn-primary" style="margin-top: 1rem;">Learn More</a>
+                    <p style="margin-top: .75rem;"><a href="starlink-install-cost.html" style="font-weight: 600; text-decoration: underline;">See the full Starlink cost breakdown</a></p>
                 </div>
 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">

@@ -35,6 +35,7 @@
 - Home: https://deanshandymanservice.me/
 - Services: https://deanshandymanservice.me/services.html
 - Starlink installation: https://deanshandymanservice.me/starlink-install.html
+- Starlink install cost guide: https://deanshandymanservice.me/starlink-install-cost.html
 - Home network and Wi-Fi: https://deanshandymanservice.me/home-network.html
 - Get a quote: https://deanshandymanservice.me/contact.html
 - Service areas: https://deanshandymanservice.me/areas.html
