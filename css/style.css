@@ -180,7 +180,7 @@ body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999
   background-color:var(--indigo-deep);
   background:
     linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
-    url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat;
+    url('https://deanshandymanservice.me/KMsvpls.jpg') center/cover no-repeat;
   color:var(--cream);
   padding:64px 0 52px;min-height:50vh;display:flex;align-items:center;position:relative;overflow:hidden;
 }
@@ -200,7 +200,7 @@ body:has(.nav-links.active)::after{content:"";position:fixed;inset:0;z-index:999
   background-color:var(--indigo-deep);
   background:
     linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
-    url('https://i.imgur.com/KMsvpls.jpg') center/cover no-repeat;
+    url('https://deanshandymanservice.me/KMsvpls.jpg') center/cover no-repeat;
   color:var(--cream);padding:72px 0 60px;text-align:center;
 }
 .page-hero h1{color:#fff;margin-bottom:.5rem}
